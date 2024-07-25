@@ -10,16 +10,13 @@ from matplotlib.lines import Line2D
 from matplotlib.patches import Patch
 from matplotlib.markers import MarkerStyle
 import json
-import ctypes
-from statsmodels.stats.multitest import multipletests,fdrcorrection
-from scipy.stats import ttest_ind,levene,linregress
 from matplotlib.patches import Circle, RegularPolygon
 from matplotlib.path import Path
 from matplotlib.projections import register_projection
 from matplotlib.projections.polar import PolarAxes
 from matplotlib.spines import Spine
 from matplotlib.transforms import Affine2D
-import pdb
+
 def help():
     with open("help.txt", "r", encoding="utf-8") as file:
         for line in file:
