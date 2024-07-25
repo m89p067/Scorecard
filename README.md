@@ -42,9 +42,9 @@ Afterward modify the default parameters with the information about your CSV file
 
 Other important parameters include the names of the columns containing the log2 fold change and adjusted p-values:
 *    'FC cond x' # replace with exact column name containing log2 fold change Treatment1 vs Control
-*    'FC cond y' # replace with exact column name containing log2 fold change Treatment1 vs Control
+*    'FC cond y' # replace with exact column name containing log2 fold change Treatment2 vs Control
 *    'padj cond x' # replace with exact column name containing adj p-values Treatment1 vs Control
-*    'padj cond y' # replace with exact column name containing adj p-values Treatment1 vs Control
+*    'padj cond y' # replace with exact column name containing adj p-values Treatment2 vs Control
 
 Your dataset should contain pre-computed fold change values (and related adjusted p-values) as columns in the CSV file.
 
