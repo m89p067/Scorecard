@@ -1,0 +1,68 @@
+At the beginning of the file include the import statement, for example:
+>>import scorecard_functions
+Initially, create the parameter set to tune the scorecard features.
+Type the following row of code to generate the parameter dictionary with defaults: 
+>>param_dict=scorecard_functions.generate_parameters()
+Afterward modify the default parameters with the information contained in your CSV file which will be imported as Pandas DataFrame:
+    'base_dir' # Path of the directory where the CSV resides
+    'filename'# filename of the CSV with the log2 Fold change and Adjusted p-values. Should include gene names or gene ID as separate column
+    'zscore'= # Perform standardization on log2 F.C. values
+    'Treatment1 name' # custom name of Treatment 1
+    'Treatment2 name' # custom name of Treatment 2
+    'Control name' # custom name of Control/Baseline
+    'fig_size' # figure size and limits
+    'save_dir' # path of the directory where saving scorecards and JSON outcomes
+    'colors' # Color codes of the markers in each area of the scorecard (inside the regions of interest)
+	'other_colors' # Color of the markers outside the regions of interest
+    'th_fold_change' # log2 fold change standard threshold (it will be automatically added another threshold based on 'multiplication factor')
+    'th_significance'  # Significance threshold i.e. 0.05 or lower
+    'font_size_quadrants'  # font size of the genes over the scorecard
+    'font_size_examples'  # Scorecard legend font size when typing the areas of interest
+    'marker_trasp'  # transparency of markers
+    'rect_trasp'  # transparency of shaded areas of the scorecard
+    'rect_colors'  # colors of shaded areas of the scorecard
+    'markers'  #  markers of the scorecard
+    'markers_sizes'  # Size of the markers plotted on the scorecard
+    'is_example'  # in scorecard legend use color names or charaters as codes
+    'use_notation'  # Use custom names inserted in 'Treatment1 name','Treatment2 name','Control name' when plotting axes labels
+    'gene_name'  # Name of the column of the DataFrame containing genes or proteins names or IDs (one per row)
+    'multiplication factor' # Factor to multiply the log2 Fold change threshold to detect extreme values
+    'CSV delimiter'  # delimiter in the CSV file (usually ',')
+    'Log Epsilon' # tiny value to adjust the log calculation
+    'Scorecard title' # add some short description regarding the experimental conditions on the scorecard title
+Other important parameters include the names of the columns containing the log2 fold change and adjusted p-values:
+    'FC cond x' # replace with exact column name containing log2 fold change Treatment1 vs Control
+    'FC cond y' # replace with exact column name containing log2 fold change Treatment1 vs Control
+    'padj cond x' # replace with exact column name containing adj p-values Treatment1 vs Control
+    'padj cond y' # replace with exact column name containing adj p-values Treatment1 vs Control
+Your dataset should contain pre-computed fold change values (and related adjusted p-values) as columns in the CSV file.
+For example the notation could be "Treatment1vsCtrl_Log2FoldChange","Treatment2vsCtrl_Log2FoldChange","Treatment4vsCtrl_Log2FoldChange"
+Remember that the CSV file should have the first row as header, reporting the column names matching the information provided in the dictionary of parameters.
+Now load the data into the computer memory as Pandas Dataframe by typing:
+>>df=scorecard_functions.data_loading(param_dict)
+It is suggested to create a legend of the color codes and the regions of interest by typing:
+>>scorecard_functions.scorecard_legend(param_dict)
+Run scorecard single quandrant calculations using the following steps. This function will store statistically significant entries for each quadrant together with plots of individual quandrants.
+Individual plots could be useful in case of crowded scorecards. For single quandrant calculations run:
+>>scorecard_functions.scorecard(df,param_dict)
+Run scorecard reconstruction from individual quandrants using this functiona call:
+>>scorecard_functions.reconstruct_scorecard(df,param_dict)
+Repeat the procedure for all comparisons requested. Theoretically one should have a main folder and several subfolders each one comparing two experimental conditions.
+The folders structure should as the following:
+
+            main_folder
+             |
+             |
+             |-------Exp. Comparison 1
+             |
+             |-------Exp. Comparison 2
+             |
+             |-------Exp. Comparison 3
+
+One could create a general overview of all wet-lab experimental conditions by calling the function
+>>scorecard_functions.multiple_view(main_folder)
+Remember that "main_folder" is a string containing the full path of the folder hosting all sub-directories with experimental comparisions.
+To build Volcano plots and highlight genes or entries belonging to the regions of interest of the scorecard type:
+>>scorecard_functions.make_volcano(main_folder)
+Another function provides a single gene or entry analysis as barplot
+>>scorecard_functions.multiple_bars(main_folder)

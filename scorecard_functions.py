@@ -28,7 +28,7 @@ def help():
     print("\n\n")
 def generate_parameters():
     the_dict={}
-    # Other information, assuming CSV file contains log2 fold change already computed
+    # General information, assuming CSV file contains log2 fold change already computed
     the_dict['FC cond x']='log2 fold change T1 vs T0' # replace with exact column name containing log2 fold change Treatment1 vs Control
     the_dict['FC cond y']='log2 fold change T2 vs T0' # replace with exact column name containing log2 fold change Treatment1 vs Control
     the_dict['padj cond x']='padj T1 vs T0' # replace with exact column name containing adj p-values Treatment1 vs Control
@@ -55,7 +55,7 @@ def generate_parameters():
     the_dict['markers']=['o','^','s','*','X','p','.'] #  markers of the scorecard
     the_dict['markers_sizes']= [14,12,10,8] # Size of the markers
     the_dict['is_example']=False # in scorecard legend use color names or charaters as codes for regions of interest (False means use letters A,B,C,D,E for the regions of inetrest)
-    the_dict['use_notation']=True # Use cutom names inserted in 'Treatment1 name','Treatment2 name','Control name' when plotting axes labels
+    the_dict['use_notation']=True # Use custom names inserted in 'Treatment1 name','Treatment2 name','Control name' when plotting axes labels
     the_dict['gene_name']='GN' # Name of the column name containing genes or proteins (one per row)
     the_dict['multiplication factor']=2 # Factor to multiply the log2 Fold change threshold for detecting extreme values
     the_dict['CSV delimiter']=';' # delimiter in the CSV file (usually ',')
