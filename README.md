@@ -1,4 +1,4 @@
 # Scorecard
 A scorecard to compare wet-lab experimental conditions
 
-![Scorecard example](https://github.com/m89p067/Scorecard/example_img/EXAMPLE_letters.jpg?raw=True)
+![Scorecard example](example_img/EXAMPLE_letters.jpg?raw=True)
