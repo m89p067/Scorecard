@@ -6,14 +6,14 @@ Type the following row of code to generate the parameter dictionary with default
 Afterward modify the default parameters with the information contained in your CSV file which will be imported as Pandas DataFrame:
     'base_dir' # Path of the directory where the CSV resides
     'filename'# filename of the CSV with the log2 Fold change and Adjusted p-values. Should include gene names or gene ID as separate column
-    'zscore'= # Perform standardization on log2 F.C. values
+    'zscore' # Perform standardization on log2 F.C. values
     'Treatment1 name' # custom name of Treatment 1
     'Treatment2 name' # custom name of Treatment 2
     'Control name' # custom name of Control/Baseline
     'fig_size' # figure size and limits
     'save_dir' # path of the directory where saving scorecards and JSON outcomes
     'colors' # Color codes of the markers in each area of the scorecard (inside the regions of interest)
-	'other_colors' # Color of the markers outside the regions of interest
+    'other_colors' # Color of the markers outside the regions of interest
     'th_fold_change' # log2 fold change standard threshold (it will be automatically added another threshold based on 'multiplication factor')
     'th_significance'  # Significance threshold i.e. 0.05 or lower
     'font_size_quadrants'  # font size of the genes over the scorecard
