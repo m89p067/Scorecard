@@ -78,7 +78,7 @@ Run scorecard reconstruction from individual quandrants using this functiona cal
 scorecard_functions.reconstruct_scorecard(df,param_dict)
 ```
 Repeat the procedure for all comparisons requested. Theoretically one should have a main folder and several subfolders each one comparing two experimental conditions.
-The folders structure should as the following:
+The folders structure should be as the following:
 
             main_folder
              |
