@@ -44,22 +44,28 @@ Other important parameters include the names of the columns containing the log2 
 *    'FC cond y' # replace with exact column name containing log2 fold change Treatment1 vs Control
 *    'padj cond x' # replace with exact column name containing adj p-values Treatment1 vs Control
 *    'padj cond y' # replace with exact column name containing adj p-values Treatment1 vs Control
+
 Your dataset should contain pre-computed fold change values (and related adjusted p-values) as columns in the CSV file.
+
 For example the notation could be "Treatment1vsCtrl_Log2FoldChange","Treatment2vsCtrl_Log2FoldChange","Treatment4vsCtrl_Log2FoldChange"
 Remember that the CSV file should have the first row as header, reporting the column names matching the information provided in the dictionary of parameters.
+
 Now load the data into the computer memory as Pandas Dataframe by typing:
 ```
 df=scorecard_functions.data_loading(param_dict)
 ```
+
 It is suggested to create a legend of the color codes and the regions of interest by typing:
 ```
 scorecard_functions.scorecard_legend(param_dict)
 ```
+
 Run scorecard single quandrant calculations using the following steps. This function will store statistically significant entries for each quadrant together with plots of individual quandrants.
 Individual plots could be useful in case of crowded scorecards. For single quandrant calculations run:
 ```
 scorecard_functions.scorecard(df,param_dict)
 ```
+
 Run scorecard reconstruction from individual quandrants using this functiona call:
 ```
 scorecard_functions.reconstruct_scorecard(df,param_dict)
@@ -81,10 +87,12 @@ One could create a general overview of all wet-lab experimental conditions by ca
 scorecard_functions.multiple_view(main_folder)
 ```
 Remember that "main_folder" is a string containing the full path of the folder hosting all sub-directories with experimental comparisions.
+
 To build Volcano plots and highlight genes or entries belonging to the regions of interest of the scorecard type:
 ```
 scorecard_functions.make_volcano(main_folder)
 ```
+
 Another function provides a single gene or entry analysis as barplot
 ```
 scorecard_functions.multiple_bars(main_folder)
