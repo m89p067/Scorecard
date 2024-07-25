@@ -15,7 +15,7 @@ param_dict=scorecard_functions.generate_parameters()
 Afterward modify the default parameters with the information contained in your CSV file which will be imported as Pandas DataFrame:
 *    'base_dir' # Path of the directory where the CSV resides
 *   'filename'# filename of the CSV with the log2 Fold change and Adjusted p-values. Should include gene names or gene ID as separate column
-*    'zscore'= # Perform standardization on log2 F.C. values
+*    'zscore' # Perform standardization on log2 F.C. values
 *    'Treatment1 name' # custom name of Treatment 1
 *    'Treatment2 name' # custom name of Treatment 2
 *    'Control name' # custom name of Control/Baseline
@@ -56,7 +56,7 @@ Remember that the CSV file should have the first row as header, reporting the co
 |     GN3| -0.2       | -6.1 | -5.7 | 0.001 | 0.03 | 0.09 |
 | ... | ... | ... |... |... |... |... |
 
-Now load the data into the computer memory as Pandas Dataframe by typing:
+Now load the CSV data into the computer memory as Pandas Dataframe by typing:
 ```
 df=scorecard_functions.data_loading(param_dict)
 ```
