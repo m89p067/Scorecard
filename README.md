@@ -55,6 +55,7 @@ Remember that the CSV file should have the first row as header, reporting the co
 |     GN2| 5.9    | 9.0 | 2.5 | 0.56 | 0.036 | 0.07 |
 |     GN3| -0.2       | -6.1 | -5.7 | 0.001 | 0.03 | 0.09 |
 | ... | ... | ... |... |... |... |... |
+
 Now load the data into the computer memory as Pandas Dataframe by typing:
 ```
 df=scorecard_functions.data_loading(param_dict)
