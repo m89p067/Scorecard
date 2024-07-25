@@ -12,7 +12,7 @@ Type the following row of code to generate the parameter dictionary with default
 ```
 param_dict=scorecard_functions.generate_parameters()
 ```
-Afterward modify the default parameters with the information about your CSV file which will be imported as a Pandas DataFrame:
+Afterward modify the default parameters with the information about your CSV file and dataset which will be imported as a Pandas DataFrame:
 *    'base_dir' # Path of the directory where the CSV resides
 *   'filename'# filename of the CSV with the log2 Fold change and Adjusted p-values. Should include gene names or gene ID as separate column
 *    'zscore' # Perform standardization on log2 F.C. values
