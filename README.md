@@ -47,7 +47,7 @@ Other important parameters include the names of the columns containing the log2 
 
 Your dataset should contain pre-computed fold change values (and related adjusted p-values) as columns in the CSV file.
 
-For example the notation could be "Treatment1vsCtrl_Log2FoldChange", "Treatment2vsCtrl_Log2FoldChange", "Treatment4vsCtrl_Log2FoldChange", etc... (with related p-values in similar notation)
+For example the notation could be "Treatment1vsCtrl_Log2FoldChange", "Treatment2vsCtrl_Log2FoldChange", "Treatment4vsCtrl_Log2FoldChange", etc... (with related p-values in similar notation). 
 Remember that the CSV file should have the first row as header, reporting the column names matching the information provided in the dictionary of parameters.
 | Gene ID | "Treatment1vsCtrl_Log2FoldChange" | "Treatment2vsCtrl_Log2FoldChange" | "Treatment3vsCtrl_Log2FoldChange" |"Treatment1vsCtrl_padj" |"Treatment2vsCtrl_padj" |"Treatment3vsCtrl_padj" |
 |--------:|-----------|-----------|-----------|-----------|-----------|-----------|
@@ -88,7 +88,7 @@ The folders structure should as the following:
              |
              |-------Exp. Comparison 3
 
-One could create a general overview of all wet-lab experimental conditions by calling the function
+One could create a general overview of all wet-lab experimental conditions by calling the function:
 ```
 scorecard_functions.multiple_view(main_folder)
 ```
