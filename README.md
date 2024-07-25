@@ -49,7 +49,12 @@ Your dataset should contain pre-computed fold change values (and related adjuste
 
 For example the notation could be "Treatment1vsCtrl_Log2FoldChange","Treatment2vsCtrl_Log2FoldChange","Treatment4vsCtrl_Log2FoldChange"
 Remember that the CSV file should have the first row as header, reporting the column names matching the information provided in the dictionary of parameters.
-
+| Gene ID | "Treatment1vsCtrl_Log2FoldChange" | "Treatment2vsCtrl_Log2FoldChange" | "Treatment3vsCtrl_Log2FoldChange" |"Treatment1vsCtrl_padj" |"Treatment2vsCtrl_padj" |"Treatment3vsCtrl_padj" |
+|--------:|-----------|-----------|-----------|-----------|-----------|-----------|
+|     GN1| 1.3 | 2.5 | 1.6 | 0.02 | 0.008 | 0.1 |
+|     GN2| 5.9    | 9.0 | 2.5 | 0.56 | 0.036 | 0.07 |
+|     GN3| -0.2       | -6.1 | -5.7 | 0.001 | 0.03 | 0.09 |
+| ... | ... | ... |... |... |... |... |
 Now load the data into the computer memory as Pandas Dataframe by typing:
 ```
 df=scorecard_functions.data_loading(param_dict)
