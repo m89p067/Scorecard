@@ -16,6 +16,7 @@ from matplotlib.projections import register_projection
 from matplotlib.projections.polar import PolarAxes
 from matplotlib.spines import Spine
 from matplotlib.transforms import Affine2D
+from collections import Counter
 
 def help():
     with open("help.txt", "r", encoding="utf-8") as file:
@@ -91,7 +92,7 @@ def data_loading(info_dict):
     if info_dict['zscore']==True :
         my_df['FC cond x']=zscore(my_df['FC cond x'])
         my_df['FC cond y']=zscore(my_df['FC cond y'])
-
+    
     if (my_df['FC cond x'].dtype != np.float64 or my_df['FC cond x'].dtype != np.int64):
         print('Data in column ',info_dict['FC cond x'],' contains not numeric data [ERROR!]')
         print('Attempt to remove not numeric rows')
@@ -1403,8 +1404,6 @@ def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,tex
             ax.invert_yaxis()  # labels read top-to-bottom
             ax.set_xlabel('$log_2$ Fold Change',fontsize=11)
             ax.set_title(titolo)
-            if try_adj_test:
-                adjust_text(flatten([text1,text2]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
             ax.axvline(x=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
             ax.axvline(x=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
             ax.axvline(x=0,color='grey',linestyle='dotted',lw=0.5)
@@ -1413,5 +1412,125 @@ def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,tex
             ax.tick_params(axis='y', labelsize=5)
             if the_folder[-1]!="/":
                 the_folder=the_folder+"/"
+            ax.spines[['right', 'top']].set_visible(False)
+            if try_adj_test:
+                adjust_text(flatten([text1,text2]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
             plt.savefig(the_folder+'Bars.png',dpi=300,bbox_inches='tight')
             plt.close()
+def save_to_file(thedir,*text):    
+    with open(thedir+'log_info.txt', mode='wt', encoding='utf-8') as myfile:
+        for lines in text:
+            myfile.write('\n'.join(str(line) for line in lines))
+            myfile.write('\n')
+def count_frequencies(my_directory):
+    '''
+    Summary of the entries/genes identified through the scorecard.
+    Reports all comparisons perfomed.
+    Input the main_folder as string.
+    '''
+    if my_directory[-1]!="/":
+        my_directory=my_directory+"/"
+    my_log=[]   
+    all_dir=[ f.path for f in scandir(my_directory) if f.is_dir() ]
+    all_data={}    
+    VARIABLES=[]
+    for the_folder in all_dir:
+        nome=the_folder.split('/')[-1]
+        results=[]
+        quadr_list=[]
+        my_data={}
+        results += [each for each in listdir(the_folder) if each.endswith('.json')]
+        for file in results:
+            quadrante=file.split('.')[0]
+            quadr_list.append(quadrante)
+            with open(the_folder+'/'+file) as f:
+                my_data[quadrante]=json.load(f)
+        all_data[nome]=my_data
+        VARIABLES.append(nome)
+    str1='Number of comparisons performed :'+str(len(all_dir))
+    print(str1)
+    print('\n')
+    my_log.append(str1)
+    for i,k in enumerate(VARIABLES):
+        print('-------------- Comparison ',i+1,' of ',len(all_dir))
+        print('Comparison : ',k)
+        conti=0
+        initi=True
+        list_q=[]
+        all_counts=[]
+        for qi,qr in enumerate(quadr_list):
+            tmp=all_data[k][qr]
+            
+            ctrl=tmp['params']['Control name']
+            IS_EXAMPLE=tmp['params']['is_example']
+            colori=tmp['params']['colors']
+            other_colori=tmp['params']['other_colors']
+            if IS_EXAMPLE:
+                etichette=[xc.upper() for xc in colori]
+            else:
+                etichette=['A','B','C','D','E']
+            titolo=tmp['params']['Scorecard title']
+            fig_size=tmp['params']['fig_size']
+            save_folder=tmp['params']['save_dir']
+            trt1=tmp['params']['Treatment1 name']
+            trt2=tmp['params']['Treatment2 name']
+            descr={'Quadrant1':'both '+trt1+' and '+trt2+' vs '+ctrl+' up-reg.',
+                   'Quadrant2':trt1+' down.reg. and '+trt2+' up-reg. (vs '+ctrl+')',
+                   'Quadrant3':'both '+trt1+' and '+trt2+' vs '+ctrl+' down-reg.',
+                   'Quadrant4':trt1+' up.reg. and '+trt2+' down-reg. (vs '+ctrl+')'}
+            if save_folder[-1]!="/":
+                save_folder=save_folder+"/"+trt1+" "+trt2+"/"
+            else:
+                save_folder=save_folder+trt1+" "+trt2+"/"
+            if not isdir(save_folder):
+                print('Run scorecard quadrants creation before attempting reconstruction')
+            th_fold_change=tmp['params']['th_fold_change']
+            th_significance=tmp['params']['th_significance']
+            font_size1=tmp['params']['font_size_quadrants']
+            trasp=tmp['params']['marker_trasp']
+            trasp_rect=tmp['params']['rect_trasp']
+            col_rect=tmp['params']['rect_colors']
+            markers=tmp['params']['markers']
+            sizes= tmp['params']['markers_sizes']
+            gene_name= tmp['params']['gene_name']
+            mf=tmp['params']['multiplication factor']
+            use_notation=tmp['params']['use_notation']
+            if initi:
+                print('Applying fold change thresholds of ',th_fold_change,' and ',th_fold_change*mf)
+                print('Also, filtering the data using a statistical threshold of ',th_significance)
+                initi=False
+                my_log.append('Applying fold change thresholds of '+str(th_fold_change)+' and '+str(th_fold_change*mf) )
+                my_log.append('Also, filtering the data using a statistical threshold of '+str(th_significance))
+            for key,value in tmp.items():
+                if len(value)>0 and key in etichette:
+                    str1='In '+qr+' the '+key+' group contains '+str(len(value))+' entries'
+                    print(str1)                    
+                    conti += len(value)
+                    list_q.append(qr)
+                    all_counts.append(value)
+                    my_log.append(str1)
+        for sel_q in set(list_q):
+            print(sel_q,' means ',descr[sel_q])
+        str1='In total the scorecard identified '+str(conti)+' entries inside the regions of interest'
+        print(str1)
+        print('\n')
+        my_log.append(str1+'\n')
+    calc=Counter(flatten(all_counts))
+    multi_entr=False
+    for key , value in calc.items():
+        if value>1:
+            str1='Entry :',key,' occurred ', value,' times during the ',len(all_dir),' comparisons'
+            print(str1)
+            my_log.append(str1)
+            multi_entr=True
+            for i,k in enumerate(VARIABLES):
+                for qi,qr in enumerate(quadr_list):
+                    tmp=all_data[k][qr]
+                    if key in tmp.keys():
+                        str1='Entry found in ',k,' [',qr,']'
+                        print(str1)
+                        my_log.append(str1)
+    if multi_entr==False:
+        print('No repeated entries found among experimental conditions being compared')
+        my_log.append('No repeated entries found among experimental conditions being compared')
+    save_to_file(my_directory,my_log)

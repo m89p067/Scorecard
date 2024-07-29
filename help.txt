@@ -3,17 +3,17 @@ At the beginning of the file include the import statement, for example:
 Initially, create the parameter set to tune the scorecard features.
 Type the following row of code to generate the parameter dictionary with defaults: 
 >>param_dict=scorecard_functions.generate_parameters()
-Afterward modify the default parameters with the information about your CSV file and dataset which will be imported as Pandas DataFrame:
+Afterward modify the default parameters with the information contained in your CSV file which will be imported as Pandas DataFrame:
     'base_dir' # Path of the directory where the CSV resides
     'filename'# filename of the CSV with the log2 Fold change and Adjusted p-values. Should include gene names or gene ID as separate column
-    'zscore' # Perform standardization on log2 F.C. values
+    'zscore'= # Perform standardization on log2 F.C. values
     'Treatment1 name' # custom name of Treatment 1
     'Treatment2 name' # custom name of Treatment 2
     'Control name' # custom name of Control/Baseline
     'fig_size' # figure size and limits
     'save_dir' # path of the directory where saving scorecards and JSON outcomes
     'colors' # Color codes of the markers in each area of the scorecard (inside the regions of interest)
-    'other_colors' # Color of the markers outside the regions of interest
+	'other_colors' # Color of the markers outside the regions of interest
     'th_fold_change' # log2 fold change standard threshold (it will be automatically added another threshold based on 'multiplication factor')
     'th_significance'  # Significance threshold i.e. 0.05 or lower
     'font_size_quadrants'  # font size of the genes over the scorecard
@@ -36,7 +36,7 @@ Other important parameters include the names of the columns containing the log2 
     'padj cond x' # replace with exact column name containing adj p-values Treatment1 vs Control
     'padj cond y' # replace with exact column name containing adj p-values Treatment1 vs Control
 Your dataset should contain pre-computed fold change values (and related adjusted p-values) as columns in the CSV file.
-For example the notation could be "Treatment1vsCtrl_Log2FoldChange", "Treatment2vsCtrl_Log2FoldChange", "Treatment4vsCtrl_Log2FoldChange", etc... (and similar notation for the p-values).
+For example the notation could be "Treatment1vsCtrl_Log2FoldChange","Treatment2vsCtrl_Log2FoldChange","Treatment4vsCtrl_Log2FoldChange"
 Remember that the CSV file should have the first row as header, reporting the column names matching the information provided in the dictionary of parameters.
 Now load the data into the computer memory as Pandas Dataframe by typing:
 >>df=scorecard_functions.data_loading(param_dict)
@@ -48,7 +48,7 @@ Individual plots could be useful in case of crowded scorecards. For single quand
 Run scorecard reconstruction from individual quandrants using this functiona call:
 >>scorecard_functions.reconstruct_scorecard(df,param_dict)
 Repeat the procedure for all comparisons requested. Theoretically one should have a main folder and several subfolders each one comparing two experimental conditions.
-The folders structure should be as the following:
+The folders structure should as the following:
 
             main_folder
              |
@@ -64,5 +64,7 @@ One could create a general overview of all wet-lab experimental conditions by ca
 Remember that "main_folder" is a string containing the full path of the folder hosting all sub-directories with experimental comparisions.
 To build Volcano plots and highlight genes or entries belonging to the regions of interest of the scorecard type:
 >>scorecard_functions.make_volcano(main_folder)
-Another function provides a single gene or entry analysis as barplot
+Another function provides a single gene or entry analysis as barplot:
 >>scorecard_functions.multiple_bars(main_folder)
+To get a summary of the number of entries/genes indentified by the scorecard type:
+>>scorecard_functions.count_frequencies(main_folder)
