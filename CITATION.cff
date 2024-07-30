@@ -5,7 +5,7 @@ authors:
   given-names: "Mauro"
   orcid: "https://orcid.org/0000-0001-7123-5577"
 title: "Scorecard for OMICS datasets"
-version: 0.0.1
+version: 0.1
 doi: 10.5281/zenodo.13137104
 date-released: 2024-07-30
 url: "https://github.com/m89p067/Scorecard"
