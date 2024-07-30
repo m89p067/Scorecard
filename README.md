@@ -1,4 +1,4 @@
-# A scorecard for omics expression evaluation
+# A scorecard for OMICS data expression evaluation
 A scorecard to compare wet-lab experimental conditions
 
 ![Scorecard example](example_img/EXAMPLE_letters.png?raw=True)
