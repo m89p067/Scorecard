@@ -1452,8 +1452,12 @@ def count_frequencies(my_directory):
     print('\n')
     my_log.append(str1)
     for i,k in enumerate(VARIABLES):
-        print('-------------- Comparison ',i+1,' of ',len(all_dir))
-        print('Comparison : ',k)
+        str0='-------------- Comparison '+str(i+1)+' of '+str(len(all_dir))
+        str01='Comparison : '+str(k)
+        print(str0)
+        print(str01)
+        my_log.append(str0)
+        my_log.append(str01)
         conti=0
         initi=True
         list_q=[]
