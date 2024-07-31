@@ -17,6 +17,7 @@ from matplotlib.projections.polar import PolarAxes
 from matplotlib.spines import Spine
 from matplotlib.transforms import Affine2D
 from collections import Counter
+import matplotlib
 
 def help():
     with open("help.txt", "r", encoding="utf-8") as file:
@@ -34,7 +35,7 @@ def generate_parameters():
     the_dict['FC cond y']='log2 fold change T2 vs T0' # replace with exact column name containing log2 fold change Treatment1 vs Control
     the_dict['padj cond x']='padj T1 vs T0' # replace with exact column name containing adj p-values Treatment1 vs Control
     the_dict['padj cond y']='padj T2 vs T0' # replace with exact column name containing adj p-values Treatment1 vs Control
- 
+    the_dict['incl aver']=False # Include intermediate regions (between F.C. thresholds)    
     the_dict['base_dir']=getcwd() # Path of the directory where the CSV resides
     the_dict['filename']='*.csv' # filename of the CSV with the log2 Fold change and Adjusted p-values. Should include gene names or gene ID as separate column
     the_dict['zscore']=False # Perform standardization on log2 F.C. values
@@ -45,7 +46,7 @@ def generate_parameters():
     the_dict['save_dir']=getcwd() # path of the directory where saving scorecards and JSON outcomes
     #the_dict['colors']=['seagreen','darkturquoise','dodgerblue','red','fuchsia'] # Color codes of the markers in each area of the scorecard
     the_dict['colors']=['green','teal','blue','red','magenta'] # Color codes of the markers in each area of the scorecard
-    the_dict['other_colors']=['darkorange','gold','lightpink'] # colors of points outside the regions of interest
+    the_dict['other_colors']=['orange','gold','plum','lightgrey'] # colors of points outside the regions of interest
     the_dict['th_fold_change']=2 # log2 fold change standard threshold (it will be automatically added another threshold based on 'multiplication factor')
     the_dict['th_significance']=0.01 # Significance threshold i.e. 0.05 or lower
     the_dict['font_size_quadrants']=8 # font size of the genes over the scorecard
@@ -115,9 +116,12 @@ def data_loading(info_dict):
         my_df['padj cond y'] = pd.to_numeric(my_df['padj cond y'], errors='coerce')
     if info_dict['multiplication factor']<1:
         print('ERROR: Change multiplication factor to a number >=1')
-    elif info_dict['multiplication factor']==1:
+    elif info_dict['multiplication factor']==1 and info_dict['incl aver']==False:
         print('This will prodice a four-way plot, not the scorecard')
         info_dict['note']='Four Way Plot'
+    elif info_dict['multiplication factor']==1 and info_dict['incl aver']==True:
+        print('ERROR: Mismatch in selection, place incl_aver as FALSE otherwise multiplication factor will be raised automatically')
+        info_dict['multiplication factor']=1.5
     return my_df
 def scorecard_legend(info_dict3):
     '''
@@ -155,6 +159,7 @@ def scorecard_legend(info_dict3):
     minimo,massimo=-fig_size,fig_size    
     ax.set_xlim(left=minimo,right=massimo)
     ax.set_ylim(bottom=minimo,top=massimo)
+    incl_ave=info_dict3['incl aver']
     
     ax.axhline(y=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
     ax.axvline(x=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)    
@@ -173,9 +178,11 @@ def scorecard_legend(info_dict3):
         ax.set_ylabel("$log_2$ Fold Change ("+info_dict3['Treatment2 name']+" vs "+info_dict3['Control name']+")")
     else:
         ax.set_xlabel("$log_2$ Fold Change ("+info_dict3['Treatment1 name']+")")
-        ax.set_ylabel("$log_2$ Fold Change ("+info_dict3['Treatment2 name']+")")        
+        ax.set_ylabel("$log_2$ Fold Change ("+info_dict3['Treatment2 name']+")")
+    
     labels=[xc.upper() for xc in colori]
-
+    if incl_ave:        
+        labels_ave=[xc.upper() for xc in other_colori]
     if mf > 1:
         ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change*mf), (massimo-th_fold_change*mf), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
         ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change*mf), (-massimo+th_fold_change*mf), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
@@ -196,7 +203,7 @@ def scorecard_legend(info_dict3):
         ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
         ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (th_fold_change*2), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
         ax.add_patch(Rectangle((minimo,-th_fold_change), (-minimo-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-        ax.add_patch(Rectangle((-th_fold_change,minimo), (th_fold_change*2), (-minimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+        ax.add_patch(Rectangle((-th_fold_change,minimo), (th_fold_change*2), (-minimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))        
     elif mf==1:
         ax.add_patch(Rectangle((th_fold_change, th_fold_change), (massimo-th_fold_change), (massimo-th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
         ax.add_patch(Rectangle((-th_fold_change, -th_fold_change), (-massimo+th_fold_change), (-massimo+th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
@@ -233,6 +240,21 @@ def scorecard_legend(info_dict3):
         ax.text(-th_fold_change/2,-mid_green, labels[4]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
         ax.text(-th_fold_change/2,mid_green, labels[4]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
         ax.set_title('Regions of interest and gene color scheme for p<'+str(th_significance)+' diff. expr. entries')
+        if incl_ave:
+            ax.text((th_fold_change*mf+th_fold_change)/2,(th_fold_change*mf+th_fold_change)/2, labels_ave[0]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[0] )
+            ax.text(-(th_fold_change*mf+th_fold_change)/2,-(th_fold_change*mf+th_fold_change)/2, labels_ave[0]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[0] )
+            ax.text(-(th_fold_change*mf+th_fold_change)/2,(th_fold_change*mf+th_fold_change)/2, labels_ave[0]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[0] )
+            ax.text((th_fold_change*mf+th_fold_change)/2,-(th_fold_change*mf+th_fold_change)/2, labels_ave[0]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[0] )
+
+            ax.text(th_fold_change/2,(th_fold_change*mf+th_fold_change)/2, labels_ave[1]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[1] )
+            ax.text(-th_fold_change/2,(th_fold_change*mf+th_fold_change)/2, labels_ave[1]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[1] )
+            ax.text(th_fold_change/2,-(th_fold_change*mf+th_fold_change)/2, labels_ave[1]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[1] )
+            ax.text(-th_fold_change/2,-(th_fold_change*mf+th_fold_change)/2, labels_ave[1]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[1] )
+
+            ax.text((th_fold_change*mf+th_fold_change)/2,th_fold_change/2, labels_ave[2]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[2]  )
+            ax.text((th_fold_change*mf+th_fold_change)/2,-th_fold_change/2, labels_ave[2]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[2]  )
+            ax.text(-(th_fold_change*mf+th_fold_change)/2, th_fold_change/2,labels_ave[2]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[2]  )
+            ax.text(-(th_fold_change*mf+th_fold_change)/2,-th_fold_change/2, labels_ave[2]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[2] )
     elif IS_EXAMPLE==False and mf > 1:
         
         ax.text(mid_green,mid_green, 'A',size=font_size1, ha='center', va='center',color=colori[0]  )
@@ -260,6 +282,21 @@ def scorecard_legend(info_dict3):
         ax.text(-th_fold_change/2,-mid_green, 'E',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
         ax.text(-th_fold_change/2,mid_green, 'E',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
         ax.set_title('Regions of interest and color scheme for p<'+str(th_significance)+' diff. expr. entries')
+        if incl_ave:
+            ax.text((th_fold_change*mf+th_fold_change)/2,(th_fold_change*mf+th_fold_change)/2, 'M',size=font_size1, ha='center', va='center',color=other_colori[0] )
+            ax.text(-(th_fold_change*mf+th_fold_change)/2,-(th_fold_change*mf+th_fold_change)/2,'M',size=font_size1, ha='center', va='center',color=other_colori[0] )
+            ax.text(-(th_fold_change*mf+th_fold_change)/2,(th_fold_change*mf+th_fold_change)/2, 'M',size=font_size1, ha='center', va='center',color=other_colori[0] )
+            ax.text((th_fold_change*mf+th_fold_change)/2,-(th_fold_change*mf+th_fold_change)/2,'M',size=font_size1, ha='center', va='center',color=other_colori[0] )
+
+            ax.text(th_fold_change/2,(th_fold_change*mf+th_fold_change)/2, 'R',size=font_size1, ha='center', va='center',color=other_colori[1] )
+            ax.text(-th_fold_change/2,(th_fold_change*mf+th_fold_change)/2, 'R',size=font_size1, ha='center', va='center',color=other_colori[1] )
+            ax.text(th_fold_change/2,-(th_fold_change*mf+th_fold_change)/2, 'R',size=font_size1, ha='center', va='center',color=other_colori[1] )
+            ax.text(-th_fold_change/2,-(th_fold_change*mf+th_fold_change)/2,'R',size=font_size1, ha='center', va='center',color=other_colori[1] )
+
+            ax.text((th_fold_change*mf+th_fold_change)/2,th_fold_change/2, 'S',size=font_size1, ha='center', va='center',color=other_colori[2] )
+            ax.text((th_fold_change*mf+th_fold_change)/2,-th_fold_change/2, 'S',size=font_size1, ha='center', va='center',color=other_colori[2] )
+            ax.text(-(th_fold_change*mf+th_fold_change)/2, th_fold_change/2,'S',size=font_size1, ha='center', va='center',color=other_colori[2] )
+            ax.text(-(th_fold_change*mf+th_fold_change)/2,-th_fold_change/2, 'S',size=font_size1, ha='center', va='center',color=other_colori[2] )
     elif IS_EXAMPLE==True and mf == 1:
         ax.text(mid_green,mid_green, labels[0]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[0]  )
         ax.text(-mid_green,-mid_green, labels[0]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[0]  )
@@ -274,6 +311,7 @@ def scorecard_legend(info_dict3):
         ax.text(th_fold_change/2,mid_green, labels[4]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
         ax.text(-th_fold_change/2,-mid_green, labels[4]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
         ax.text(-th_fold_change/2,mid_green, labels[4]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
+        ax.set_title('Four-way plot (p<'+str(th_significance)+')')
     elif IS_EXAMPLE==False and mf == 1:
         ax.text(mid_green,mid_green, 'A',size=font_size1, ha='center', va='center',color=colori[0]  )
         ax.text(-mid_green,-mid_green, 'A',size=font_size1, ha='center', va='center',color=colori[0]  )
@@ -288,6 +326,7 @@ def scorecard_legend(info_dict3):
         ax.text(th_fold_change/2,mid_green, 'E',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
         ax.text(-th_fold_change/2,-mid_green, 'E',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
         ax.text(-th_fold_change/2,mid_green, 'E',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
+        ax.set_title('Four-way plot (p<'+str(th_significance)+')')
     if IS_EXAMPLE==True and mf>1:
         plt.savefig(save_folder1+'SCORECARD_colors.png',dpi=300,bbox_inches='tight')
     elif IS_EXAMPLE==False and mf>1:
@@ -338,6 +377,9 @@ def scorecard(the_df,info_dict2):
     use_notation=info_dict2['use_notation']
     print('The dataset includes ',the_df.shape[0],' entries in total')
     labels=[xc.upper() for xc in colori]
+    incl_ave=info_dict2['incl aver']
+      
+    labels_ave=[xc.upper() for xc in other_colori]
     ###############################################################################################################################################
     ###############################################################################################################################################
     ###############################################################################################################################################
@@ -345,6 +387,11 @@ def scorecard(the_df,info_dict2):
     texts1,texts2,texts3,texts4,texts5=[],[],[],[],[]
     p_val_x1,p_val_x2,p_val_x3,p_val_x4,p_val_x5=[],[],[],[],[]
     p_val_y1,p_val_y2,p_val_y3,p_val_y4,p_val_y5=[],[],[],[],[]
+
+    texts100,texts200,texts300=[],[],[]
+    p_val_x100,p_val_x200,p_val_x300=[],[],[]
+    p_val_y100,p_val_y200,p_val_y300=[],[],[]
+    
     info_dict2['Total entries']=the_df.shape[0]
     common_up= the_df[(the_df['FC cond x'] > 0) & (the_df['FC cond y'] > 0) ] # FIRST QUADRANT 
     print('First quadrant will host ',common_up.shape[0],' entries')
@@ -364,6 +411,10 @@ def scorecard(the_df,info_dict2):
                     p_val_y1.append(pval_y)
             elif (fch_x>th_fold_change and fch_x<=th_fold_change*mf) and (fch_y>th_fold_change and fch_y<=th_fold_change*mf):
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[1],marker=MarkerStyle(markers[1], fillstyle='full'),s=sizes[2])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts100.append( ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[0]  ))
+                    p_val_x100.append(pval_x)
+                    p_val_y100.append(pval_y)
             elif (fch_x>th_fold_change*mf) and (fch_y>th_fold_change and fch_y<=th_fold_change*mf):
                 ax.scatter( fch_x,fch_y, facecolors = colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
                 if pval_x<th_significance and pval_y<th_significance:
@@ -390,10 +441,18 @@ def scorecard(the_df,info_dict2):
                     p_val_y5.append(pval_y)
             elif (fch_x>th_fold_change and fch_x<th_fold_change*mf) and (fch_y<=th_fold_change) :
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])        
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts200.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[1]  ))
+                    p_val_x200.append(pval_x) #S
+                    p_val_y200.append(pval_y)
             elif (fch_x<=th_fold_change ) and (fch_y>th_fold_change and fch_y<th_fold_change*mf):
-                ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts300.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[2]  ))
+                    p_val_x300.append(pval_x) #R
+                    p_val_y300.append(pval_y)
             else:
-                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])                        
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[-1], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])                        
         elif mf ==1:
             if fch_x>th_fold_change and fch_y>th_fold_change:
                 ax.scatter( fch_x,fch_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])
@@ -414,7 +473,7 @@ def scorecard(the_df,info_dict2):
                     p_val_x5.append(pval_x)
                     p_val_y5.append(pval_y)
             else:
-                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])            
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[-1], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])            
     if mf >1:
         ax.axhline(y=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
         ax.axvline(x=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
@@ -453,8 +512,24 @@ def scorecard(the_df,info_dict2):
         quadr[labels[3]+'_pval_y']=p_val_y4
         quadr[labels[4]+'_pval_x']=p_val_x5
         quadr[labels[4]+'_pval_y']=p_val_y5
-        
+
+        quadr[labels_ave[0]]=[el.get_text() for el in texts100]
+        quadr[labels_ave[1]]=[el.get_text() for el in texts200]
+        quadr[labels_ave[2]]=[el.get_text() for el in texts300]
+        quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
+        quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
+        quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
+        quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
+        quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
+        quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
+        quadr[labels_ave[0]+'_pval_x']=p_val_x100
+        quadr[labels_ave[0]+'_pval_y']=p_val_y100
+        quadr[labels_ave[1]+'_pval_x']=p_val_x200
+        quadr[labels_ave[1]+'_pval_y']=p_val_y200
+        quadr[labels_ave[2]+'_pval_x']=p_val_x300
+        quadr[labels_ave[2]+'_pval_y']=p_val_y300
     elif IS_EXAMPLE==False and mf >1:
+        labels_ave=['M','S','R']
         quadr['A']=[el.get_text() for el in texts1]
         quadr['B']=[el.get_text() for el in texts2]
         quadr['C']=[el.get_text() for el in texts3]
@@ -481,6 +556,23 @@ def scorecard(the_df,info_dict2):
         quadr['D_pval_y']=p_val_y4
         quadr['E_pval_x']=p_val_x5
         quadr['E_pval_y']=p_val_y5
+
+
+        quadr[labels_ave[0]]=[el.get_text() for el in texts100]
+        quadr[labels_ave[1]]=[el.get_text() for el in texts200]
+        quadr[labels_ave[2]]=[el.get_text() for el in texts300]
+        quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
+        quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
+        quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
+        quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
+        quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
+        quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
+        quadr[labels_ave[0]+'_pval_x']=p_val_x100
+        quadr[labels_ave[0]+'_pval_y']=p_val_y100
+        quadr[labels_ave[1]+'_pval_x']=p_val_x200
+        quadr[labels_ave[1]+'_pval_y']=p_val_y200
+        quadr[labels_ave[2]+'_pval_x']=p_val_x300
+        quadr[labels_ave[2]+'_pval_y']=p_val_y300
     elif IS_EXAMPLE==True and mf ==1:
         quadr[labels[0]]=[el.get_text() for el in texts1]
 
@@ -558,6 +650,9 @@ def scorecard(the_df,info_dict2):
     texts1,texts2,texts3,texts4,texts5=[],[],[],[],[]
     p_val_x1,p_val_x2,p_val_x3,p_val_x4,p_val_x5=[],[],[],[],[]
     p_val_y1,p_val_y2,p_val_y3,p_val_y4,p_val_y5=[],[],[],[],[]
+    texts100,texts200,texts300=[],[],[]
+    p_val_x100,p_val_x200,p_val_x300=[],[],[]
+    p_val_y100,p_val_y200,p_val_y300=[],[],[]
     common_down=the_df[(the_df['FC cond x'] < 0) & (the_df['FC cond y'] < 0) ]
     print('Third quadrant will host ',common_down.shape[0],' entries')
     info_dict2['Quadrant entries']=common_down.shape[0]
@@ -576,6 +671,10 @@ def scorecard(the_df,info_dict2):
                     p_val_y1.append(pval_y)
             elif (fch_x<-th_fold_change and fch_x>=-th_fold_change*mf) and (fch_y<-th_fold_change and fch_y>=-th_fold_change*mf):
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[1],marker=MarkerStyle(markers[1], fillstyle='full'),s=sizes[2])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts100.append( ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[0]  ))        
+                    p_val_x100.append(pval_x)
+                    p_val_y100.append(pval_y)
             elif (fch_x<-th_fold_change*mf) and (fch_y<-th_fold_change and fch_y>=-th_fold_change*mf):
                 ax.scatter( fch_x,fch_y, facecolors = colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
                 if pval_x<th_significance and pval_y<th_significance:
@@ -602,10 +701,18 @@ def scorecard(the_df,info_dict2):
                     p_val_y5.append(pval_y)
             elif (fch_x<-th_fold_change and fch_x>-th_fold_change*mf) and (fch_y>=-th_fold_change) :
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])        
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts200.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[1] ))
+                    p_val_x200.append(pval_x)
+                    p_val_y200.append(pval_y)
             elif (fch_x>=-th_fold_change ) and (fch_y<-th_fold_change and fch_y>-th_fold_change*mf):
-                ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts300.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[2]  ))
+                    p_val_x300.append(pval_x)
+                    p_val_y300.append(pval_y)
             else:
-                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])                        
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[-1], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])                        
         elif mf==1:
             if fch_x<-th_fold_change and fch_y<-th_fold_change:
                 ax.scatter( fch_x,fch_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])        
@@ -628,7 +735,7 @@ def scorecard(the_df,info_dict2):
                     p_val_y5.append(pval_y)
 
             else:
-                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])            
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[-1], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])            
     if mf >1:
         ax.axhline(y=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
         ax.axvline(x=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
@@ -672,8 +779,24 @@ def scorecard(the_df,info_dict2):
         quadr[labels[3]+'_pval_y']=p_val_y4
         quadr[labels[4]+'_pval_x']=p_val_x5
         quadr[labels[4]+'_pval_y']=p_val_y5
-        
+
+        quadr[labels_ave[0]]=[el.get_text() for el in texts100]
+        quadr[labels_ave[1]]=[el.get_text() for el in texts200]
+        quadr[labels_ave[2]]=[el.get_text() for el in texts300]
+        quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
+        quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
+        quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
+        quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
+        quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
+        quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
+        quadr[labels_ave[0]+'_pval_x']=p_val_x100
+        quadr[labels_ave[0]+'_pval_y']=p_val_y100
+        quadr[labels_ave[1]+'_pval_x']=p_val_x200
+        quadr[labels_ave[1]+'_pval_y']=p_val_y200
+        quadr[labels_ave[2]+'_pval_x']=p_val_x300
+        quadr[labels_ave[2]+'_pval_y']=p_val_y300        
     elif IS_EXAMPLE==False and mf >1:
+        labels_ave=['M','S','R']
         quadr['A']=[el.get_text() for el in texts1]
         quadr['B']=[el.get_text() for el in texts2]
         quadr['C']=[el.get_text() for el in texts3]
@@ -700,6 +823,21 @@ def scorecard(the_df,info_dict2):
         quadr['D_pval_y']=p_val_y4
         quadr['E_pval_x']=p_val_x5
         quadr['E_pval_y']=p_val_y5
+        quadr[labels_ave[0]]=[el.get_text() for el in texts100]
+        quadr[labels_ave[1]]=[el.get_text() for el in texts200]
+        quadr[labels_ave[2]]=[el.get_text() for el in texts300]
+        quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
+        quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
+        quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
+        quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
+        quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
+        quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
+        quadr[labels_ave[0]+'_pval_x']=p_val_x100
+        quadr[labels_ave[0]+'_pval_y']=p_val_y100
+        quadr[labels_ave[1]+'_pval_x']=p_val_x200
+        quadr[labels_ave[1]+'_pval_y']=p_val_y200
+        quadr[labels_ave[2]+'_pval_x']=p_val_x300
+        quadr[labels_ave[2]+'_pval_y']=p_val_y300
     elif IS_EXAMPLE==True and mf ==1:
         quadr[labels[0]]=[el.get_text() for el in texts1]
 
@@ -777,6 +915,9 @@ def scorecard(the_df,info_dict2):
     texts1,texts2,texts3,texts4,texts5=[],[],[],[],[]
     p_val_x1,p_val_x2,p_val_x3,p_val_x4,p_val_x5=[],[],[],[],[]
     p_val_y1,p_val_y2,p_val_y3,p_val_y4,p_val_y5=[],[],[],[],[]
+    texts100,texts200,texts300=[],[],[]
+    p_val_x100,p_val_x200,p_val_x300=[],[],[]
+    p_val_y100,p_val_y200,p_val_y300=[],[],[]
     common_1=the_df[(the_df['FC cond x'] < 0) & (the_df['FC cond y'] > 0) ] # Quadrant II
     print('Second quadrant will host ',common_1.shape[0],' entries')
     info_dict2['Quadrant entries']=common_1.shape[0]
@@ -795,6 +936,10 @@ def scorecard(the_df,info_dict2):
                     p_val_y1.append(pval_y)
             elif (fch_x<-th_fold_change and fch_x>=-th_fold_change*mf) and (fch_y>th_fold_change and fch_y<=th_fold_change*mf):
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[1],marker=MarkerStyle(markers[1], fillstyle='full'),s=sizes[2])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts100.append( ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[0]  ))        
+                    p_val_x100.append(pval_x)
+                    p_val_y100.append(pval_y)
             elif (fch_x<-th_fold_change*mf) and (fch_y>th_fold_change and fch_y<=th_fold_change*mf):
                 ax.scatter( fch_x,fch_y, facecolors = colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
                 if pval_x<th_significance and pval_y<th_significance:
@@ -821,10 +966,18 @@ def scorecard(the_df,info_dict2):
                     p_val_y5.append(pval_y)
             elif (fch_x<-th_fold_change and fch_x>-th_fold_change*mf) and (fch_y<=th_fold_change) :
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])        
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts200.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[1] ))
+                    p_val_x200.append(pval_x)
+                    p_val_y200.append(pval_y)
             elif (fch_x>=-th_fold_change ) and (fch_y>th_fold_change and fch_y<th_fold_change*mf):
-                ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts300.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[2]  ))
+                    p_val_x300.append(pval_x)
+                    p_val_y300.append(pval_y)
             else:
-                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])                        
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[-1], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])                        
         elif mf==1:
             if fch_x<-th_fold_change and fch_y>th_fold_change:
                 ax.scatter( fch_x,fch_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])        
@@ -845,7 +998,7 @@ def scorecard(the_df,info_dict2):
                     p_val_x5.append(pval_x)
                     p_val_y5.append(pval_y)
             else:
-                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])              
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[-1], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])              
     if mf>1:
         ax.axhline(y=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
         ax.axvline(x=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
@@ -890,8 +1043,23 @@ def scorecard(the_df,info_dict2):
         quadr[labels[3]+'_pval_y']=p_val_y4
         quadr[labels[4]+'_pval_x']=p_val_x5
         quadr[labels[4]+'_pval_y']=p_val_y5
-        
+        quadr[labels_ave[0]]=[el.get_text() for el in texts100]
+        quadr[labels_ave[1]]=[el.get_text() for el in texts200]
+        quadr[labels_ave[2]]=[el.get_text() for el in texts300]
+        quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
+        quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
+        quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
+        quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
+        quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
+        quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
+        quadr[labels_ave[0]+'_pval_x']=p_val_x100
+        quadr[labels_ave[0]+'_pval_y']=p_val_y100
+        quadr[labels_ave[1]+'_pval_x']=p_val_x200
+        quadr[labels_ave[1]+'_pval_y']=p_val_y200
+        quadr[labels_ave[2]+'_pval_x']=p_val_x300
+        quadr[labels_ave[2]+'_pval_y']=p_val_y300       
     elif IS_EXAMPLE==False and mf >1:
+        labels_ave=['M','S','R']
         quadr['A']=[el.get_text() for el in texts1]
         quadr['B']=[el.get_text() for el in texts2]
         quadr['C']=[el.get_text() for el in texts3]
@@ -918,6 +1086,21 @@ def scorecard(the_df,info_dict2):
         quadr['D_pval_y']=p_val_y4
         quadr['E_pval_x']=p_val_x5
         quadr['E_pval_y']=p_val_y5
+        quadr[labels_ave[0]]=[el.get_text() for el in texts100]
+        quadr[labels_ave[1]]=[el.get_text() for el in texts200]
+        quadr[labels_ave[2]]=[el.get_text() for el in texts300]
+        quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
+        quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
+        quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
+        quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
+        quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
+        quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
+        quadr[labels_ave[0]+'_pval_x']=p_val_x100
+        quadr[labels_ave[0]+'_pval_y']=p_val_y100
+        quadr[labels_ave[1]+'_pval_x']=p_val_x200
+        quadr[labels_ave[1]+'_pval_y']=p_val_y200
+        quadr[labels_ave[2]+'_pval_x']=p_val_x300
+        quadr[labels_ave[2]+'_pval_y']=p_val_y300
     elif IS_EXAMPLE==True and mf ==1:
         quadr[labels[0]]=[el.get_text() for el in texts1]
 
@@ -997,6 +1180,9 @@ def scorecard(the_df,info_dict2):
     texts1,texts2,texts3,texts4,texts5=[],[],[],[],[]
     p_val_x1,p_val_x2,p_val_x3,p_val_x4,p_val_x5=[],[],[],[],[]
     p_val_y1,p_val_y2,p_val_y3,p_val_y4,p_val_y5=[],[],[],[],[]
+    texts100,texts200,texts300=[],[],[]
+    p_val_x100,p_val_x200,p_val_x300=[],[],[]
+    p_val_y100,p_val_y200,p_val_y300=[],[],[]
     common_2=the_df[(the_df['FC cond x'] > 0) & (the_df['FC cond y'] < 0) ] # Quadrant IV
     print('Forth quadrant will host ',common_2.shape[0],' entries')
     info_dict2['Quadrant entries']=common_2.shape[0]
@@ -1015,6 +1201,10 @@ def scorecard(the_df,info_dict2):
                     p_val_y1.append(pval_y)
             elif (fch_x>th_fold_change and fch_x<=th_fold_change*mf) and (fch_y<-th_fold_change and fch_y>=-th_fold_change*mf):
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[1],marker=MarkerStyle(markers[1], fillstyle='full'),s=sizes[2])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts100.append( ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[0]  ))        
+                    p_val_x100.append(pval_x)
+                    p_val_y100.append(pval_y)
             elif (fch_x>th_fold_change*mf) and (fch_y<-th_fold_change and fch_y>=-th_fold_change*mf):
                 ax.scatter( fch_x,fch_y, facecolors = colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
                 if pval_x<th_significance and pval_y<th_significance:
@@ -1041,10 +1231,18 @@ def scorecard(the_df,info_dict2):
                     p_val_y5.append(pval_y)
             elif (fch_x>th_fold_change and fch_x<th_fold_change*mf) and (fch_y>=-th_fold_change) :
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])        
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts200.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[1] ))
+                    p_val_x200.append(pval_x)
+                    p_val_y200.append(pval_y)
             elif (fch_x<=th_fold_change ) and (fch_y<-th_fold_change and fch_y>-th_fold_change*mf):
-                ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts300.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[2]  ))
+                    p_val_x300.append(pval_x)
+                    p_val_y300.append(pval_y)
             else:
-                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])                        
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[-1], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])                        
         elif mf==1:
             if fch_x>th_fold_change and fch_y<-th_fold_change:
                 ax.scatter( fch_x,fch_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])        
@@ -1065,7 +1263,7 @@ def scorecard(the_df,info_dict2):
                     p_val_x5.append(pval_x)
                     p_val_y5.append(pval_y)
             else:
-                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])              
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[-1], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])              
     if mf>1:
         ax.axhline(y=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
         ax.axvline(x=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
@@ -1109,8 +1307,23 @@ def scorecard(the_df,info_dict2):
         quadr[labels[3]+'_pval_y']=p_val_y4
         quadr[labels[4]+'_pval_x']=p_val_x5
         quadr[labels[4]+'_pval_y']=p_val_y5
-        
+        quadr[labels_ave[0]]=[el.get_text() for el in texts100]
+        quadr[labels_ave[1]]=[el.get_text() for el in texts200]
+        quadr[labels_ave[2]]=[el.get_text() for el in texts300]
+        quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
+        quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
+        quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
+        quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
+        quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
+        quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
+        quadr[labels_ave[0]+'_pval_x']=p_val_x100
+        quadr[labels_ave[0]+'_pval_y']=p_val_y100
+        quadr[labels_ave[1]+'_pval_x']=p_val_x200
+        quadr[labels_ave[1]+'_pval_y']=p_val_y200
+        quadr[labels_ave[2]+'_pval_x']=p_val_x300
+        quadr[labels_ave[2]+'_pval_y']=p_val_y300        
     elif IS_EXAMPLE==False and mf>1:
+        labels_ave=['M','S','R']
         quadr['A']=[el.get_text() for el in texts1]
         quadr['B']=[el.get_text() for el in texts2]
         quadr['C']=[el.get_text() for el in texts3]
@@ -1137,6 +1350,21 @@ def scorecard(the_df,info_dict2):
         quadr['D_pval_y']=p_val_y4
         quadr['E_pval_x']=p_val_x5
         quadr['E_pval_y']=p_val_y5
+        quadr[labels_ave[0]]=[el.get_text() for el in texts100]
+        quadr[labels_ave[1]]=[el.get_text() for el in texts200]
+        quadr[labels_ave[2]]=[el.get_text() for el in texts300]
+        quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
+        quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
+        quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
+        quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
+        quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
+        quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
+        quadr[labels_ave[0]+'_pval_x']=p_val_x100
+        quadr[labels_ave[0]+'_pval_y']=p_val_y100
+        quadr[labels_ave[1]+'_pval_x']=p_val_x200
+        quadr[labels_ave[1]+'_pval_y']=p_val_y200
+        quadr[labels_ave[2]+'_pval_x']=p_val_x300
+        quadr[labels_ave[2]+'_pval_y']=p_val_y300
     elif IS_EXAMPLE==True and mf==1:
         quadr[labels[0]]=[el.get_text() for el in texts1]
     
@@ -1249,10 +1477,16 @@ def reconstruct_scorecard(my_directory):
             trt2=my_data[quadrante]['params']['Treatment2 name']            
         IS_EXAMPLE=my_data[quadrante]['params']['is_example']
         colori=my_data[quadrante]['params']['colors']
+        other_colori=my_data[quadrante]['params']['other_colors']
         if IS_EXAMPLE:
             etichette=[xc.upper() for xc in colori]
+            etichette2=[xc.upper() for xc in other_colori]
         else:
             etichette=['A','B','C','D','E']
+            etichette2=['M','S','R']
+        incl_ave=my_data[quadrante]['params']['incl aver']
+        if incl_ave:
+            etichette=etichette+etichette2
         titolo=my_data[quadrante]['params']['Scorecard title']
         fig_size=my_data[quadrante]['params']['fig_size']
         save_folder=my_data[quadrante]['params']['save_dir']    
@@ -1274,7 +1508,7 @@ def reconstruct_scorecard(my_directory):
         mf=my_data[quadrante]['params']['multiplication factor']
         if mf==1:
             print('Reconstruction of a Four-Way plot. Scorecard was not created!')
-            
+        incl_ave=my_data[quadrante]['params']['incl aver']    
         fig, ax = plt.subplots(figsize=(fig_size, fig_size))
         minimo,massimo=-fig_size,fig_size    
         ax.set_xlim(left=minimo,right=massimo)
@@ -1300,6 +1534,7 @@ def reconstruct_scorecard(my_directory):
             ax.set_xlabel("$log_2$ Fold Change (Treatment 1 vs Control)")
             ax.set_ylabel("$log_2$ Fold Change (Treatment 2 vs Control)")
         texts1,texts2,texts3,texts4,texts5=[],[],[],[],[]
+        texts100,texts200,texts300=[],[],[]
         if mf>1:
             
             ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change*mf), (massimo-th_fold_change*mf), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
@@ -1355,7 +1590,19 @@ def reconstruct_scorecard(my_directory):
                         elif eti==etichette[4]:
                             ax.scatter( fch_x,fch_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
                             texts5.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
-        adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+                        elif incl_ave==True and eti==etichette[5] :
+                            ax.scatter( fch_x,fch_y, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[2])
+                            texts100.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[0]  ))
+                        elif incl_ave==True and eti==etichette[6]:
+                            ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[2])
+                            texts200.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[1]  ))
+                        elif incl_ave==True and eti==etichette[7]:
+                            ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[2])
+                            texts300.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[2]  ))                
+        if incl_ave==False:
+            adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+        else:
+            adjust_text(flatten([texts1,texts2,texts3,texts4,texts5,texts100,texts200,texts300]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
         if use_notation:   
             ax.set_xlabel("$log_2$ Fold Change ("+trt1+" vs "+ctrl+")")
             ax.set_ylabel("$log_2$ Fold Change ("+trt2+" vs "+ctrl+")")
@@ -1518,8 +1765,13 @@ def make_volcano(my_directory):
         other_colori=my_data[quadrante]['params']['other_colors']
         if IS_EXAMPLE:
             etichette=[xc.upper() for xc in colori]
+            etichette2=[xc.upper() for xc in other_colori]
         else:
             etichette=['A','B','C','D','E']
+            etichette2=['M','S','R']
+        incl_ave=my_data[quadrante]['params']['incl aver']
+        if incl_ave:
+            etichette=etichette+etichette2
         titolo=my_data[quadrante]['params']['Scorecard title']
         fig_size=my_data[quadrante]['params']['fig_size']
         save_folder=my_data[quadrante]['params']['save_dir']
@@ -1547,6 +1799,10 @@ def make_volcano(my_directory):
         fig, (ax1, ax2) = plt.subplots(1,2,figsize=(18, 8),sharey=True)
         texts1x,texts2x,texts3x,texts4x,texts5x=[],[],[],[],[]
         texts1y,texts2y,texts3y,texts4y,texts5y=[],[],[],[],[]
+
+        texts100x,texts200x,texts300x=[],[],[]
+        texts100y,texts200y,texts300y=[],[],[]
+        
         for quadrante in quadr_list:
             for eti in etichette:
                 if eti in list(my_data[quadrante].keys()):
@@ -1583,12 +1839,28 @@ def make_volcano(my_directory):
                                 ax2.scatter( fch_y,pval_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
                                 texts5y.append(ax2.text(fch_y,pval_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
 
-        out_x=flatten([texts1x,texts2x,texts3x,texts4x,texts5x])
-        out_y=flatten([texts1y,texts2y,texts3y,texts4y,texts5y])
-        if len(out_x)>0 :
-            adjust_text(out_x, ax=ax1,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-        if len(out_y)>0:
-            adjust_text(out_y, ax=ax2,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+                            elif incl_ave==True and eti==etichette[5]:
+                                ax1.scatter( fch_x,pval_x, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[2])
+                                texts3x.append(ax1.text(fch_x,pval_x, my_gene,size=font_size1, ha='center', va='center',color=other_colori[0]  ))
+                                ax2.scatter( fch_y,pval_y, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[2])
+                                texts3y.append(ax2.text(fch_y,pval_y, my_gene,size=font_size1, ha='center', va='center',color=other_colori[0]  ))
+                            elif incl_ave==True and eti==etichette[6]:
+                                ax1.scatter( fch_x,pval_x, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[2])
+                                texts4x.append(ax1.text(fch_x,pval_x, my_gene,size=font_size1, ha='center', va='center',color=other_colori[1]  ))
+                                ax2.scatter( fch_y,pval_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[2])
+                                texts4y.append(ax2.text(fch_y,pval_y, my_gene,size=font_size1, ha='center', va='center',color=other_colori[1]  ))
+                            elif incl_ave==True and eti==etichette[7]:
+                                ax1.scatter( fch_x,pval_x, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[2])
+                                texts5x.append(ax1.text(fch_x,pval_x, my_gene,size=font_size1, ha='center', va='center',color=other_colori[2]  ))
+                                ax2.scatter( fch_y,pval_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[2])
+                                texts5y.append(ax2.text(fch_y,pval_y, my_gene,size=font_size1, ha='center', va='center',color=other_colori[2]  ))
+        if incl_ave==False :
+            out_x=flatten([texts1x,texts2x,texts3x,texts4x,texts5x])
+            out_y=flatten([texts1y,texts2y,texts3y,texts4y,texts5y])
+        else:
+            out_x=flatten([texts1x,texts2x,texts3x,texts4x,texts5x,texts100x,texts200x,texts300x])
+            out_y=flatten([texts1y,texts2y,texts3y,texts4y,texts5y,texts100y,texts200y,texts300y])            
+ 
 
         for ax,tmp_str in zip([ax1,ax2],[trt1,trt2]):    
             if mf>1:
@@ -1617,7 +1889,10 @@ def make_volcano(my_directory):
             elif mf==1:
                 ax.add_patch(Rectangle((xmin, -np.log10(th_significance)), -(xmin+th_fold_change), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
                 ax.add_patch(Rectangle((th_fold_change, -np.log10(th_significance)), (xmax-th_fold_change), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2])                         )
-
+        if len(out_x)>0 :
+            adjust_text(out_x, ax=ax1,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+        if len(out_y)>0:
+            adjust_text(out_y, ax=ax2,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
         if the_folder[-1]!="/":
             the_folder=the_folder+"/"
         plt.savefig(the_folder+'Volcano.png',dpi=300,bbox_inches='tight')
@@ -1655,10 +1930,15 @@ def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,tex
         IS_EXAMPLE=my_data[quadrante]['params']['is_example']
         colori=my_data[quadrante]['params']['colors']
         other_colori=my_data[quadrante]['params']['other_colors']
+        incl_ave=my_data[quadrante]['params']['incl aver']
         if IS_EXAMPLE:
             etichette=[xc.upper() for xc in colori]
+            etichette2=[xc.upper() for xc in other_colori]
         else:
             etichette=['A','B','C','D','E']
+            etichette2=['M','S','R']
+        if incl_ave:
+            etichette=etichette+etichette2
         titolo=my_data[quadrante]['params']['Scorecard title']
         fig_size=my_data[quadrante]['params']['fig_size']
         save_folder=my_data[quadrante]['params']['save_dir']
@@ -1734,6 +2014,31 @@ def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,tex
                                 Position = Position+1
                                 labels_x.append(trt1)
                                 labels_y.append(trt2)
+
+                            elif incl_ave==True and eti==etichette[5]:
+                                all_x.append( fch_x)
+                                all_y.append( fch_y)
+                                all_genes.append( my_gene)
+                                all_colors.append(other_colori[0])
+                                Position = Position+1
+                                labels_x.append(trt1)
+                                labels_y.append(trt2)
+                            elif incl_ave==True and eti==etichette[6]:
+                                all_x.append( fch_x)
+                                all_y.append( fch_y)
+                                all_genes.append( my_gene)
+                                all_colors.append(other_colori[1])
+                                Position = Position+1
+                                labels_x.append(trt1)
+                                labels_y.append(trt2)
+                            elif incl_ave==True and eti==etichette[7]:
+                                all_x.append( fch_x)
+                                all_y.append( fch_y)
+                                all_genes.append( my_gene)
+                                all_colors.append(other_colori[2])
+                                Position = Position+1
+                                labels_x.append(trt1)
+                                labels_y.append(trt2)                                
         str_x=[str(x) for x in all_x]
         str_y=[str(x) for x in all_y]
         lx=list(map(' '.join, zip(labels_x, str_x)))
@@ -1831,9 +2136,12 @@ def count_frequencies(my_directory):
         my_log.append(str0)
         my_log.append(str01)
         conti=0
+        conti2=0
         initi=True
         list_q=[]
         all_counts=[]
+        list_q2=[]
+        all_counts2=[]
         for qi,qr in enumerate(quadr_list):
             tmp=all_data[k][qr]
             n_entries=tmp['params']['Quadrant entries']
@@ -1842,10 +2150,14 @@ def count_frequencies(my_directory):
             IS_EXAMPLE=tmp['params']['is_example']
             colori=tmp['params']['colors']
             other_colori=tmp['params']['other_colors']
+            incl_ave=tmp['params']['incl aver']
             if IS_EXAMPLE:
                 etichette=[xc.upper() for xc in colori]
+                etichette2=[xc.upper() for xc in other_colori]
             else:
                 etichette=['A','B','C','D','E']
+                etichette2=['M','S','R']
+
             str8=qr+' total entries were '+str(n_entries)
             print(str8)
             titolo=tmp['params']['Scorecard title']
@@ -1894,17 +2206,36 @@ def count_frequencies(my_directory):
                     list_q.append(qr)
                     all_counts.append(value)
                     my_log.append(str1)
+                elif incl_ave==True and len(value)>0 and key in etichette2:
+                    str1='In '+qr+' the '+key+' group contains '+str(len(value))+' entries'
+                    print(str1)                    
+                    conti2 += len(value)
+                    list_q2.append(qr)
+                    all_counts2.append(value)
+                    my_log.append(str1)
             my_log.append(str8+'\n')
-        for sel_q in set(list_q):
-            str4=sel_q+' means '+descr[sel_q]            
-            print(str4)
-            #my_log.append(str4+'\n')
-        str1='In total the scorecard identified '+str(conti)+' entries inside the regions of interest'
+        if incl_ave==False:
+            for sel_q in set(list_q):
+                str4=sel_q+' means '+descr[sel_q]            
+                print(str4)
+                #my_log.append(str4+'\n')
+        else:
+            for sel_q in set(list_q+list_q2):
+                str4=sel_q+' means '+descr[sel_q]            
+                print(str4)
+                #my_log.append(str4+'\n')            
+        str1='In total the scorecard identified '+str(conti)+' entries inside the shaded regions of interest'
+        str11='The scorecard also identified '+str(conti2)+' entries between F.C. thresholds'
         print(str1)
-        print('\n')        
-        my_log.append(str1+'\n')
+        print(str11)
+        print('\n')
         
-    calc=Counter(flatten(all_counts))
+        my_log.append(str1+'\n')
+        my_log.append(str11+'\n')
+    if incl_ave==False:
+        calc=Counter(flatten(all_counts))
+    else:
+        calc=Counter(flatten(all_counts+all_counts2))
     multi_entr=False
     for key , value in calc.items():
         if value>1:
@@ -1923,3 +2254,169 @@ def count_frequencies(my_directory):
         print('No repeated entries found among experimental conditions being compared')
         my_log.append('No repeated entries found among experimental conditions being compared')
     save_to_file(my_directory,my_log)
+def heatmap(data, row_labels, col_labels, ax=None,cbar_kw=None, cbarlabel="", **kwargs):
+
+    if ax is None:
+        ax = plt.gca()
+
+    if cbar_kw is None:
+        cbar_kw = {}
+
+    # Plot the heatmap
+    im = ax.imshow(data, **kwargs)
+
+    # Create colorbar
+    cbar = ax.figure.colorbar(im, ax=ax, **cbar_kw)
+    cbar.ax.set_ylabel(cbarlabel, rotation=-90, va="bottom")
+
+    # Show all ticks and label them with the respective list entries.
+    ax.set_xticks(np.arange(data.shape[1]), labels=col_labels,fontsize=6)
+    ax.set_yticks(np.arange(data.shape[0]), labels=row_labels,fontsize=5)
+
+    # Let the horizontal axes labeling appear on top.
+    ax.tick_params(top=True, bottom=False,           labeltop=True, labelbottom=False)
+
+    # Rotate the tick labels and set their alignment.
+    plt.setp(ax.get_xticklabels(), rotation=-60, ha="right",   rotation_mode="anchor")
+
+    # Turn spines off and create white grid.
+    ax.spines[:].set_visible(False)
+
+    ax.set_xticks(np.arange(data.shape[1]+1)-.5, minor=True)
+    ax.set_yticks(np.arange(data.shape[0]+1)-.5, minor=True)
+    ax.grid(which="minor", color="w", linestyle='-', linewidth=3)
+    ax.tick_params(which="minor", bottom=False, left=False)
+
+    return im, cbar
+
+
+def annotate_heatmap(im, data=None, valfmt="{x:.2f}", textcolors=("black", "white"), threshold=None, **textkw):
+
+    if not isinstance(data, (list, np.ndarray)):
+        data = im.get_array()
+
+    # Normalize the threshold to the images color range.
+    if threshold is not None:
+        threshold = im.norm(threshold)
+    else:
+        threshold = im.norm(data.max())/2.
+
+    # Set default alignment to center, but allow it to be
+    # overwritten by textkw.
+    kw = dict(horizontalalignment="center",
+              verticalalignment="center")
+    kw.update(textkw)
+
+    # Get the formatter in case a string is supplied
+    if isinstance(valfmt, str):
+        valfmt = matplotlib.ticker.StrMethodFormatter(valfmt)
+
+    # Loop over the data and create a `Text` for each "pixel".
+    # Change the text's color depending on the data.
+    texts = []
+    for i in range(data.shape[0]):
+        for j in range(data.shape[1]):
+            kw.update(color=textcolors[int(im.norm(data[i, j]) > threshold)])
+            text = im.axes.text(j, i, valfmt(data[i, j], None),fontsize=6, **kw)
+            texts.append(text)
+
+    return texts
+def quadrants_heatmap(my_directory):
+    if my_directory[-1]!="/":
+        my_directory=my_directory+"/"
+    my_log=[]   
+    all_dir=[ f.path for f in scandir(my_directory) if f.is_dir() ]
+    all_data={}    
+    VARIABLES=[]
+    for the_folder in all_dir:
+        nome=the_folder.split('/')[-1]
+        results=[]
+        quadr_list=[]
+        my_data={}
+        results += [each for each in listdir(the_folder) if each.endswith('.json')]
+        for file in results:
+            quadrante=file.split('.')[0]
+            quadr_list.append(quadrante)
+            with open(the_folder+'/'+file) as f:
+                my_data[quadrante]=json.load(f)
+        all_data[nome]=my_data
+        VARIABLES.append(nome)
+    out_all=[]
+    for i,k in enumerate(VARIABLES):
+
+        conti=0
+        out={}
+        list_q=[]
+        all_counts=[]
+        for qi,qr in enumerate(quadr_list):
+            tmp=all_data[k][qr]
+            n_entries=tmp['params']['Quadrant entries']
+            tot_entries=tmp['params']['Total entries']
+            ctrl=tmp['params']['Control name']
+            IS_EXAMPLE=tmp['params']['is_example']
+            colori=tmp['params']['colors']
+            other_colori=tmp['params']['other_colors']
+            th_fold_change=tmp['params']['th_fold_change']
+            th_significance=tmp['params']['th_significance']
+            font_size1=tmp['params']['font_size_quadrants']
+            trasp=tmp['params']['marker_trasp']
+            trasp_rect=tmp['params']['rect_trasp']
+            col_rect=tmp['params']['rect_colors']
+            markers=tmp['params']['markers']
+            sizes= tmp['params']['markers_sizes']
+            gene_name= tmp['params']['gene_name']
+            mf=tmp['params']['multiplication factor']
+            use_notation=tmp['params']['use_notation']
+            incl_ave=tmp['params']['incl aver']
+            if IS_EXAMPLE==True and mf>1:
+                etichette=[xc.upper() for xc in colori]
+                etichette2=[xc.upper() for xc in other_colori]
+            elif IS_EXAMPLE==False and mf>1:
+                etichette=['A','B','C','D','E']
+                etichette2=['M','S','R']
+            elif IS_EXAMPLE==True and mf==1:
+                etichette=[xc.upper() for xc in colori[0,3,4]]
+            elif IS_EXAMPLE==False and mf==1:
+                etichette=['A','D','E']
+            titolo=tmp['params']['Scorecard title']
+            fig_size=tmp['params']['fig_size']
+            save_folder=tmp['params']['save_dir']
+            trt1=tmp['params']['Treatment1 name']
+            trt2=tmp['params']['Treatment2 name']
+
+            if save_folder[-1]!="/":
+                save_folder=save_folder+"/"+trt1+" "+trt2+"/"
+            else:
+                save_folder=save_folder+trt1+" "+trt2+"/"
+            if not isdir(save_folder):
+                print('Run scorecard quadrants creation before attempting reconstruction')
+
+            qr_str=qr.replace('uadrant', '')
+            for key,value in tmp.items():
+                if len(value)>0 and key in etichette:
+                    str1='In '+qr+' the '+key+' group contains '+str(len(value))+' entries'    
+                    conti += len(value) # Tot number of entries inside all regions of interest
+                    list_q.append(qr)
+                    all_counts.append(value)
+                    out[qr_str+' '+key]=int(len(value))
+                elif len(value)==0 and key in etichette:
+                    out[qr_str+' '+key]=0
+                elif incl_ave==True and len(value)>0 and key in etichette2:
+                    str1='In '+qr+' the '+key+' group contains '+str(len(value))+' entries'    
+                    conti += len(value) # Tot number of entries inside all regions of interest
+                    list_q.append(qr)
+                    all_counts.append(value)
+                    out[qr_str+' '+key]=int(len(value))
+                elif incl_ave==True and len(value)==0 and key in etichette2:
+                    out[qr_str+' '+key]=0
+        out_all.append(out)                    
+    df = pd.DataFrame.from_dict(out_all)
+    fig, ax = plt.subplots()
+    
+    im, cbar = heatmap(df.to_numpy(dtype=np.int32).T,df.columns.tolist(), VARIABLES,  ax=ax, cmap="YlGn", cbarlabel="Counts")
+    texts = annotate_heatmap(im, valfmt="{x:.0f}")
+
+    fig.tight_layout()
+
+    plt.savefig(my_directory+'HeatmapCounts.png',dpi=300,bbox_inches='tight')
+    plt.close()
