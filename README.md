@@ -1,5 +1,5 @@
 # A scorecard for OMICS data expression evaluation
-[![DOI](https://zenodo.org/badge/833497660.svg)](https://zenodo.org/doi/10.5281/zenodo.13137103)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13141919.svg)](https://doi.org/10.5281/zenodo.13141919)
 
 A scorecard to compare wet-lab experimental conditions, useful to find extreme or moderately changing expression values
 
