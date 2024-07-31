@@ -22,6 +22,7 @@ Afterward modify the default parameters with the information about your CSV file
 *    'Treatment2 name' # custom name of Treatment 2
 *    'Control name' # custom name of Control/Baseline
 *    'fig_size' # figure size and limits
+*    'incl aver' # Include intermediate regions (between F.C. thresholds)  
 *    'save_dir' # path of the directory where saving scorecards and JSON outcomes
 *    'colors' # Color codes of the markers in each area of the scorecard (inside the regions of interest)
 *    'other_colors' # Color of the markers outside the regions of interest
