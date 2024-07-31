@@ -2291,7 +2291,7 @@ def heatmap(data, row_labels, col_labels, ax=None,cbar_kw=None, cbarlabel="", **
     return im, cbar
 
 
-def annotate_heatmap(im, data=None, valfmt="{x:.2f}", textcolors=("black", "white"), threshold=None, **textkw):
+def annotate_heatmap(im, data=None, valfmt="{x:.2f}", textcolors=("black", "white"), threshold=None,large_im=False, **textkw):
 
     if not isinstance(data, (list, np.ndarray)):
         data = im.get_array()
@@ -2311,14 +2311,17 @@ def annotate_heatmap(im, data=None, valfmt="{x:.2f}", textcolors=("black", "whit
     # Get the formatter in case a string is supplied
     if isinstance(valfmt, str):
         valfmt = matplotlib.ticker.StrMethodFormatter(valfmt)
-
+    if large_im:
+        fs=3
+    else:
+        fs=4.5
     # Loop over the data and create a `Text` for each "pixel".
     # Change the text's color depending on the data.
     texts = []
     for i in range(data.shape[0]):
         for j in range(data.shape[1]):
             kw.update(color=textcolors[int(im.norm(data[i, j]) > threshold)])
-            text = im.axes.text(j, i, valfmt(data[i, j], None),fontsize=4.5, **kw)
+            text = im.axes.text(j, i, valfmt(data[i, j], None),fontsize=fs, **kw)
             texts.append(text)
 
     return texts
@@ -2416,7 +2419,10 @@ def quadrants_heatmap(my_directory):
     fig, ax = plt.subplots()
     
     im, cbar = heatmap(df.to_numpy(dtype=np.int32).T,df.columns.tolist(), VARIABLES,  ax=ax, cmap="YlGn", cbarlabel="Counts")
-    texts = annotate_heatmap(im, valfmt="{x:.0f}")
+    if len(VARIABLES)>6:
+        texts = annotate_heatmap(im, valfmt="{x:.0f}",large_im=True)
+    else:
+        texts = annotate_heatmap(im, valfmt="{x:.0f}",large_im=False)
 
     fig.tight_layout()
 
