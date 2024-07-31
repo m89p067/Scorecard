@@ -1484,6 +1484,7 @@ def reconstruct_scorecard(my_directory):
         else:
             etichette=['A','B','C','D','E']
             etichette2=['M','S','R']
+        
         incl_ave=my_data[quadrante]['params']['incl aver']
         if incl_ave:
             etichette=etichette+etichette2
@@ -2375,7 +2376,8 @@ def quadrants_heatmap(my_directory):
                 etichette=['A','B','C','D','E']
                 etichette2=['M','S','R']
             elif IS_EXAMPLE==True and mf==1:
-                etichette=[xc.upper() for xc in colori[0,3,4]]
+                property_col = [colori[i] for i in [0,3,4]]
+                etichette=[xc.upper() for xc in property_col]
             elif IS_EXAMPLE==False and mf==1:
                 etichette=['A','D','E']
             titolo=tmp['params']['Scorecard title']
