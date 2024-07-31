@@ -345,9 +345,10 @@ def scorecard(the_df,info_dict2):
     texts1,texts2,texts3,texts4,texts5=[],[],[],[],[]
     p_val_x1,p_val_x2,p_val_x3,p_val_x4,p_val_x5=[],[],[],[],[]
     p_val_y1,p_val_y2,p_val_y3,p_val_y4,p_val_y5=[],[],[],[],[]
-    
+    info_dict2['Total entries']=the_df.shape[0]
     common_up= the_df[(the_df['FC cond x'] > 0) & (the_df['FC cond y'] > 0) ] # FIRST QUADRANT 
     print('First quadrant will host ',common_up.shape[0],' entries')
+    info_dict2['Quadrant entries']=common_up.shape[0]
     lista=common_up[gene_name].tolist()    
     for my_gene in lista:
         fch_x=  the_df.loc[the_df[gene_name] == my_gene].iloc[0]['FC cond x']
@@ -559,6 +560,7 @@ def scorecard(the_df,info_dict2):
     p_val_y1,p_val_y2,p_val_y3,p_val_y4,p_val_y5=[],[],[],[],[]
     common_down=the_df[(the_df['FC cond x'] < 0) & (the_df['FC cond y'] < 0) ]
     print('Third quadrant will host ',common_down.shape[0],' entries')
+    info_dict2['Quadrant entries']=common_down.shape[0]
     lista2=common_down[gene_name].tolist() 
     for my_gene in lista2:
         fch_x=  the_df.loc[the_df[gene_name] == my_gene].iloc[0]['FC cond x']
@@ -777,6 +779,7 @@ def scorecard(the_df,info_dict2):
     p_val_y1,p_val_y2,p_val_y3,p_val_y4,p_val_y5=[],[],[],[],[]
     common_1=the_df[(the_df['FC cond x'] < 0) & (the_df['FC cond y'] > 0) ] # Quadrant II
     print('Second quadrant will host ',common_1.shape[0],' entries')
+    info_dict2['Quadrant entries']=common_1.shape[0]
     lista3=common_1[gene_name].tolist()
     for my_gene in lista3:
         fch_x=  the_df.loc[the_df[gene_name] == my_gene].iloc[0]['FC cond x']
@@ -996,6 +999,7 @@ def scorecard(the_df,info_dict2):
     p_val_y1,p_val_y2,p_val_y3,p_val_y4,p_val_y5=[],[],[],[],[]
     common_2=the_df[(the_df['FC cond x'] > 0) & (the_df['FC cond y'] < 0) ] # Quadrant IV
     print('Forth quadrant will host ',common_2.shape[0],' entries')
+    info_dict2['Quadrant entries']=common_2.shape[0]
     lista4=common_2[gene_name].tolist()
     for my_gene in lista4:
         fch_x=  the_df.loc[the_df[gene_name] == my_gene].iloc[0]['FC cond x']
@@ -1677,7 +1681,7 @@ def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,tex
         gene_name= my_data[quadrante]['params']['gene_name']
         offset=height/2
         mf=my_data[quadrante]['params']['multiplication factor']
-        use_notation=my_data[quadrante]['params']['use_notation']
+        use_notation=my_data[quadrante]['params']['use_notation']        
         Position=0
         fig = plt.figure()
         ax = fig.add_subplot(111)
@@ -1832,7 +1836,8 @@ def count_frequencies(my_directory):
         all_counts=[]
         for qi,qr in enumerate(quadr_list):
             tmp=all_data[k][qr]
-            
+            n_entries=tmp['params']['Quadrant entries']
+            tot_entries=tmp['params']['Total entries']
             ctrl=tmp['params']['Control name']
             IS_EXAMPLE=tmp['params']['is_example']
             colori=tmp['params']['colors']
@@ -1841,6 +1846,8 @@ def count_frequencies(my_directory):
                 etichette=[xc.upper() for xc in colori]
             else:
                 etichette=['A','B','C','D','E']
+            str8=qr+' total entries were '+str(n_entries)
+            print(str8)
             titolo=tmp['params']['Scorecard title']
             fig_size=tmp['params']['fig_size']
             save_folder=tmp['params']['save_dir']
@@ -1868,11 +1875,17 @@ def count_frequencies(my_directory):
             mf=tmp['params']['multiplication factor']
             use_notation=tmp['params']['use_notation']
             if initi:
-                print('Applying fold change thresholds of ',th_fold_change,' and ',th_fold_change*mf)
+                if mf>1:
+                    strf='Applying fold change thresholds of '+str(th_fold_change)+' and '+str(th_fold_change*mf)
+                elif mf==1:
+                    strf='Applying fold change threshold of '+str(th_fold_change)
+                print(strf)
                 print('Also, filtering the data using a statistical threshold of ',th_significance)
+                print('Analyzed ',tot_entries,' entries'+'\n')
                 initi=False
-                my_log.append('Applying fold change thresholds of '+str(th_fold_change)+' and '+str(th_fold_change*mf) )
+                my_log.append(strf )
                 my_log.append('Also, filtering the data using a statistical threshold of '+str(th_significance))
+                my_log.append('Analyzed '+str(tot_entries)+' entries'+'\n' )           
             for key,value in tmp.items():
                 if len(value)>0 and key in etichette:
                     str1='In '+qr+' the '+key+' group contains '+str(len(value))+' entries'
@@ -1881,12 +1894,16 @@ def count_frequencies(my_directory):
                     list_q.append(qr)
                     all_counts.append(value)
                     my_log.append(str1)
+            my_log.append(str8+'\n')
         for sel_q in set(list_q):
-            print(sel_q,' means ',descr[sel_q])
+            str4=sel_q+' means '+descr[sel_q]            
+            print(str4)
+            #my_log.append(str4+'\n')
         str1='In total the scorecard identified '+str(conti)+' entries inside the regions of interest'
         print(str1)
-        print('\n')
+        print('\n')        
         my_log.append(str1+'\n')
+        
     calc=Counter(flatten(all_counts))
     multi_entr=False
     for key , value in calc.items():
