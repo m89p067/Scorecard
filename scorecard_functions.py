@@ -113,6 +113,11 @@ def data_loading(info_dict):
         print('Attempt to remove not numeric rows')
         my_df=my_df.dropna(subset=['FC cond x','FC cond y','padj cond x','padj cond y'],how='any')
         my_df['padj cond y'] = pd.to_numeric(my_df['padj cond y'], errors='coerce')
+    if info_dict['multiplication factor']<1:
+        print('ERROR: Change multiplication factor to a number >=1')
+    elif info_dict['multiplication factor']==1:
+        print('This will prodice a four-way plot, not the scorecard')
+        info_dict['note']='Four Way Plot'
     return my_df
 def scorecard_legend(info_dict3):
     '''
@@ -120,6 +125,12 @@ def scorecard_legend(info_dict3):
     It could be used to guide data analysis. As input pass the parameters dictionary.
     '''
     mf=info_dict3['multiplication factor']
+    if mf<1:
+        print('ERROR: Change multiplication factor to a number >=1')
+
+    elif mf==1:
+        print('This will prodice a four-way plot, not the scorecard')
+        
     save_folder1=info_dict3['save_dir']   
     if save_folder1[-1]!="/":
         save_folder1=save_folder1+"/"+info_dict3['Treatment1 name']+" "+info_dict3['Treatment2 name']+"/"
@@ -144,15 +155,16 @@ def scorecard_legend(info_dict3):
     minimo,massimo=-fig_size,fig_size    
     ax.set_xlim(left=minimo,right=massimo)
     ax.set_ylim(bottom=minimo,top=massimo)
-    ax.axhline(y=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
-    ax.axvline(x=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+    
     ax.axhline(y=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
     ax.axvline(x=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)    
-    ax.axhline(y=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
-    ax.axvline(x=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
     ax.axhline(y=-th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
     ax.axvline(x=-th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
-
+    if mf > 1:
+        ax.axhline(y=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+        ax.axvline(x=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)        
+        ax.axhline(y=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+        ax.axvline(x=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
     ax.axvline(x=0,color='k',linestyle='solid',lw=2.0)
     ax.axhline(y=0,color='k',linestyle='solid',lw=2.0)
      
@@ -163,30 +175,39 @@ def scorecard_legend(info_dict3):
         ax.set_xlabel("$log_2$ Fold Change ("+info_dict3['Treatment1 name']+")")
         ax.set_ylabel("$log_2$ Fold Change ("+info_dict3['Treatment2 name']+")")        
     labels=[xc.upper() for xc in colori]
-    
-    ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change*mf), (massimo-th_fold_change*mf), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-    ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change*mf), (-massimo+th_fold_change*mf), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-    ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change*mf), (-massimo+th_fold_change*mf), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-    ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change*mf), (massimo-th_fold_change*mf), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
 
-    ax.add_patch(Rectangle((th_fold_change, th_fold_change*mf), (th_fold_change*mf-th_fold_change), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-    ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change), (massimo-th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-    ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-    ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change), (-massimo+th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-    ax.add_patch(Rectangle((th_fold_change, -th_fold_change*mf), (th_fold_change*mf-th_fold_change), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-    ax.add_patch(Rectangle((th_fold_change*mf,- th_fold_change), (massimo-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-    ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-    ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-    ax.add_patch(Rectangle((-th_fold_change, -th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-    ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change), (-massimo+th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+    if mf > 1:
+        ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change*mf), (massimo-th_fold_change*mf), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+        ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change*mf), (-massimo+th_fold_change*mf), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+        ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change*mf), (-massimo+th_fold_change*mf), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+        ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change*mf), (massimo-th_fold_change*mf), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
 
-    ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-    ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (th_fold_change*2), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-    ax.add_patch(Rectangle((minimo,-th_fold_change), (-minimo-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-    ax.add_patch(Rectangle((-th_fold_change,minimo), (th_fold_change*2), (-minimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+        ax.add_patch(Rectangle((th_fold_change, th_fold_change*mf), (th_fold_change*mf-th_fold_change), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+        ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change), (massimo-th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+        ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+        ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change), (-massimo+th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+        ax.add_patch(Rectangle((th_fold_change, -th_fold_change*mf), (th_fold_change*mf-th_fold_change), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+        ax.add_patch(Rectangle((th_fold_change*mf,- th_fold_change), (massimo-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+        ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+        ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+        ax.add_patch(Rectangle((-th_fold_change, -th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+        ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change), (-massimo+th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
 
+        ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+        ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (th_fold_change*2), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+        ax.add_patch(Rectangle((minimo,-th_fold_change), (-minimo-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+        ax.add_patch(Rectangle((-th_fold_change,minimo), (th_fold_change*2), (-minimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+    elif mf==1:
+        ax.add_patch(Rectangle((th_fold_change, th_fold_change), (massimo-th_fold_change), (massimo-th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+        ax.add_patch(Rectangle((-th_fold_change, -th_fold_change), (-massimo+th_fold_change), (-massimo+th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+        ax.add_patch(Rectangle((-th_fold_change, th_fold_change), (-massimo+th_fold_change), (massimo-th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+        ax.add_patch(Rectangle((th_fold_change, -th_fold_change), (massimo-th_fold_change), (-massimo+th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+        ax.add_patch(Rectangle((th_fold_change, -th_fold_change), (massimo-th_fold_change), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+        ax.add_patch(Rectangle((-th_fold_change, th_fold_change), (th_fold_change*2), (massimo-th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+        ax.add_patch(Rectangle((minimo,-th_fold_change), (-minimo-th_fold_change), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+        ax.add_patch(Rectangle((-th_fold_change,minimo), (th_fold_change*2), (-minimo-th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))        
     mid_green=(massimo+(th_fold_change*mf))/2
-    if IS_EXAMPLE:
+    if IS_EXAMPLE==True and mf > 1:
         ax.text(mid_green,mid_green, labels[0]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[0]  )
         ax.text(-mid_green,-mid_green, labels[0]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[0]  )
         ax.text(mid_green,-mid_green, labels[0]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[0]  )
@@ -212,7 +233,7 @@ def scorecard_legend(info_dict3):
         ax.text(-th_fold_change/2,-mid_green, labels[4]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
         ax.text(-th_fold_change/2,mid_green, labels[4]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
         ax.set_title('Regions of interest and gene color scheme for p<'+str(th_significance)+' diff. expr. entries')
-    else:
+    elif IS_EXAMPLE==False and mf > 1:
         
         ax.text(mid_green,mid_green, 'A',size=font_size1, ha='center', va='center',color=colori[0]  )
         ax.text(-mid_green,-mid_green, 'A',size=font_size1, ha='center', va='center',color=colori[0]  )
@@ -239,10 +260,42 @@ def scorecard_legend(info_dict3):
         ax.text(-th_fold_change/2,-mid_green, 'E',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
         ax.text(-th_fold_change/2,mid_green, 'E',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
         ax.set_title('Regions of interest and color scheme for p<'+str(th_significance)+' diff. expr. entries')
-    if IS_EXAMPLE:
-        plt.savefig(save_folder1+'EXAMPLE_colors.png',dpi=300,bbox_inches='tight')
-    else:
-        plt.savefig(save_folder1+'EXAMPLE_letters.png',dpi=300,bbox_inches='tight')
+    elif IS_EXAMPLE==True and mf == 1:
+        ax.text(mid_green,mid_green, labels[0]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[0]  )
+        ax.text(-mid_green,-mid_green, labels[0]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[0]  )
+        ax.text(mid_green,-mid_green, labels[0]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[0]  )
+        ax.text(-mid_green,mid_green, labels[0]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[0]  )
+        ax.text(mid_green,th_fold_change/2, labels[3]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[3]  )
+        ax.text(mid_green,-th_fold_change/2, labels[3]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[3]  )
+        ax.text(-mid_green,th_fold_change/2, labels[3]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[3]  )
+        ax.text(-mid_green,-th_fold_change/2, labels[3]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[3]  )
+
+        ax.text(th_fold_change/2,-mid_green, labels[4]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
+        ax.text(th_fold_change/2,mid_green, labels[4]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
+        ax.text(-th_fold_change/2,-mid_green, labels[4]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
+        ax.text(-th_fold_change/2,mid_green, labels[4]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
+    elif IS_EXAMPLE==False and mf == 1:
+        ax.text(mid_green,mid_green, 'A',size=font_size1, ha='center', va='center',color=colori[0]  )
+        ax.text(-mid_green,-mid_green, 'A',size=font_size1, ha='center', va='center',color=colori[0]  )
+        ax.text(mid_green,-mid_green, 'A',size=font_size1, ha='center', va='center',color=colori[0]  )
+        ax.text(-mid_green,mid_green, 'A',size=font_size1, ha='center', va='center',color=colori[0]  )
+        ax.text(mid_green,th_fold_change/2, 'D',size=font_size1, ha='center', va='center',color=colori[3]  )
+        ax.text(mid_green,-th_fold_change/2, 'D',size=font_size1, ha='center', va='center',color=colori[3]  )
+        ax.text(-mid_green,th_fold_change/2, 'D',size=font_size1, ha='center', va='center',color=colori[3]  )
+        ax.text(-mid_green,-th_fold_change/2, 'D',size=font_size1, ha='center', va='center',color=colori[3]  )
+
+        ax.text(th_fold_change/2,-mid_green, 'E',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
+        ax.text(th_fold_change/2,mid_green, 'E',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
+        ax.text(-th_fold_change/2,-mid_green, 'E',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
+        ax.text(-th_fold_change/2,mid_green, 'E',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
+    if IS_EXAMPLE==True and mf>1:
+        plt.savefig(save_folder1+'SCORECARD_colors.png',dpi=300,bbox_inches='tight')
+    elif IS_EXAMPLE==False and mf>1:
+        plt.savefig(save_folder1+'SCORECARD_letters.png',dpi=300,bbox_inches='tight')
+    elif IS_EXAMPLE==True and mf==1:
+        plt.savefig(save_folder1+'FOURWAYPLOT_colors.png',dpi=300,bbox_inches='tight')
+    elif IS_EXAMPLE==False and mf==1:
+        plt.savefig(save_folder1+'FOURWAYPLOT_letters.png',dpi=300,bbox_inches='tight')
     plt.close()      
 def scorecard(the_df,info_dict2):
     '''
@@ -276,6 +329,12 @@ def scorecard(the_df,info_dict2):
     sizes= info_dict2['markers_sizes']
     gene_name= info_dict2['gene_name']    
     mf=info_dict2['multiplication factor']
+    if mf<1:
+        print('ERROR: Change multiplication factor to a number >=1')
+        nota=''
+    elif mf==1:
+        print('This will prodice a four-way plot, not the scorecard')
+        nota=info_dict2['note']
     use_notation=info_dict2['use_notation']
     print('The dataset includes ',the_df.shape[0],' entries in total')
     labels=[xc.upper() for xc in colori]
@@ -294,59 +353,79 @@ def scorecard(the_df,info_dict2):
         fch_x=  the_df.loc[the_df[gene_name] == my_gene].iloc[0]['FC cond x']
         fch_y=  the_df.loc[the_df[gene_name] == my_gene].iloc[0]['FC cond y']
         pval_x=  the_df.loc[the_df[gene_name] == my_gene].iloc[0]['padj cond x']
-        pval_y=  the_df.loc[the_df[gene_name] == my_gene].iloc[0]['padj cond y'] 
-        if fch_x>th_fold_change*mf and fch_y>th_fold_change*mf:
-            ax.scatter( fch_x,fch_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])
-            if pval_x<th_significance and pval_y<th_significance:
-                texts1.append( ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[0]  ))
-                p_val_x1.append(pval_x)
-                p_val_y1.append(pval_y)
-        elif (fch_x>th_fold_change and fch_x<=th_fold_change*mf) and (fch_y>th_fold_change and fch_y<=th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[1],marker=MarkerStyle(markers[1], fillstyle='full'),s=sizes[2])
-        elif (fch_x>th_fold_change*mf) and (fch_y>th_fold_change and fch_y<=th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
-            if pval_x<th_significance and pval_y<th_significance:
-                texts2.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[1] ))
-                p_val_x2.append(pval_x)
-                p_val_y2.append(pval_y)
-        elif (fch_x>th_fold_change and fch_x<=th_fold_change*mf) and (fch_y>th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
-            if pval_x<th_significance and pval_y<th_significance:
-                texts3.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[2]  ))
-                p_val_x3.append(pval_x)
-                p_val_y3.append(pval_y)
-        elif (fch_x>th_fold_change*mf) and (fch_y<=th_fold_change) :
-            ax.scatter( fch_x,fch_y, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
-            if pval_x<th_significance and pval_y<th_significance:
-                texts4.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
-                p_val_x4.append(pval_x)
-                p_val_y4.append(pval_y)
-        elif (fch_x<=th_fold_change ) and (fch_y>th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
-            if pval_x<th_significance and pval_y<th_significance:
-                texts5.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
-                p_val_x5.append(pval_x)
-                p_val_y5.append(pval_y)
-        elif (fch_x>th_fold_change and fch_x<th_fold_change*mf) and (fch_y<=th_fold_change) :
-            ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])        
-        elif (fch_x<=th_fold_change ) and (fch_y>th_fold_change and fch_y<th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
-        else:
-            ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])                        
-
-    ax.axhline(y=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
-    ax.axvline(x=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+        pval_y=  the_df.loc[the_df[gene_name] == my_gene].iloc[0]['padj cond y']
+        if mf > 1:
+            if fch_x>th_fold_change*mf and fch_y>th_fold_change*mf:
+                ax.scatter( fch_x,fch_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts1.append( ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[0]  ))
+                    p_val_x1.append(pval_x)
+                    p_val_y1.append(pval_y)
+            elif (fch_x>th_fold_change and fch_x<=th_fold_change*mf) and (fch_y>th_fold_change and fch_y<=th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[1],marker=MarkerStyle(markers[1], fillstyle='full'),s=sizes[2])
+            elif (fch_x>th_fold_change*mf) and (fch_y>th_fold_change and fch_y<=th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts2.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[1] ))
+                    p_val_x2.append(pval_x)
+                    p_val_y2.append(pval_y)
+            elif (fch_x>th_fold_change and fch_x<=th_fold_change*mf) and (fch_y>th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts3.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[2]  ))
+                    p_val_x3.append(pval_x)
+                    p_val_y3.append(pval_y)
+            elif (fch_x>th_fold_change*mf) and (fch_y<=th_fold_change) :
+                ax.scatter( fch_x,fch_y, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts4.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
+                    p_val_x4.append(pval_x)
+                    p_val_y4.append(pval_y)
+            elif (fch_x<=th_fold_change ) and (fch_y>th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts5.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
+                    p_val_x5.append(pval_x)
+                    p_val_y5.append(pval_y)
+            elif (fch_x>th_fold_change and fch_x<th_fold_change*mf) and (fch_y<=th_fold_change) :
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])        
+            elif (fch_x<=th_fold_change ) and (fch_y>th_fold_change and fch_y<th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
+            else:
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])                        
+        elif mf ==1:
+            if fch_x>th_fold_change and fch_y>th_fold_change:
+                ax.scatter( fch_x,fch_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts1.append( ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[0]  ))
+                    p_val_x1.append(pval_x)
+                    p_val_y1.append(pval_y)
+            elif (fch_x>th_fold_change) and (fch_y<=th_fold_change) :
+                ax.scatter( fch_x,fch_y, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts4.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
+                    p_val_x4.append(pval_x)
+                    p_val_y4.append(pval_y)
+            elif (fch_x<=th_fold_change ) and (fch_y>th_fold_change):
+                ax.scatter( fch_x,fch_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts5.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
+                    p_val_x5.append(pval_x)
+                    p_val_y5.append(pval_y)
+            else:
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])            
+    if mf >1:
+        ax.axhline(y=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+        ax.axvline(x=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
     ax.axhline(y=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
     ax.axvline(x=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
 
-    #adjust_text(texts1, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-    #adjust_text(texts2, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-    #adjust_text(texts3, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-    #adjust_text(texts4, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-    #adjust_text(texts5, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-    adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+    if mf >1:
+        adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+    elif mf ==1:
+        adjust_text(flatten([texts1,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     quadr={}
-    if IS_EXAMPLE:
+    if IS_EXAMPLE==True and mf >1:
         quadr[labels[0]]=[el.get_text() for el in texts1]
         quadr[labels[1]]=[el.get_text() for el in texts2]
         quadr[labels[2]]=[el.get_text() for el in texts3]
@@ -374,7 +453,7 @@ def scorecard(the_df,info_dict2):
         quadr[labels[4]+'_pval_x']=p_val_x5
         quadr[labels[4]+'_pval_y']=p_val_y5
         
-    else:
+    elif IS_EXAMPLE==False and mf >1:
         quadr['A']=[el.get_text() for el in texts1]
         quadr['B']=[el.get_text() for el in texts2]
         quadr['C']=[el.get_text() for el in texts3]
@@ -401,6 +480,49 @@ def scorecard(the_df,info_dict2):
         quadr['D_pval_y']=p_val_y4
         quadr['E_pval_x']=p_val_x5
         quadr['E_pval_y']=p_val_y5
+    elif IS_EXAMPLE==True and mf ==1:
+        quadr[labels[0]]=[el.get_text() for el in texts1]
+
+        quadr[labels[3]]=[el.get_text() for el in texts4]
+        quadr[labels[4]]=[el.get_text() for el in texts5]
+        quadr[labels[0]+'_x']=[el.get_position()[0] for el in texts1]
+
+        quadr[labels[3]+'_x']=[el.get_position()[0] for el in texts4]
+        quadr[labels[4]+'_x']=[el.get_position()[0] for el in texts5]
+        quadr[labels[0]+'_y']=[el.get_position()[1] for el in texts1]
+
+        quadr[labels[3]+'_y']=[el.get_position()[1] for el in texts4]
+        quadr[labels[4]+'_y']=[el.get_position()[1] for el in texts5]
+        #quadr['ALL ENTRIES']=lista
+        quadr[labels[0]+'_pval_x']=p_val_x1
+        quadr[labels[0]+'_pval_y']=p_val_y1
+
+        quadr[labels[3]+'_pval_x']=p_val_x4
+        quadr[labels[3]+'_pval_y']=p_val_y4
+        quadr[labels[4]+'_pval_x']=p_val_x5
+        quadr[labels[4]+'_pval_y']=p_val_y5
+        
+    elif IS_EXAMPLE==False and mf ==1:
+        quadr['A']=[el.get_text() for el in texts1]
+
+        quadr['D']=[el.get_text() for el in texts4]
+        quadr['E']=[el.get_text() for el in texts5]
+        quadr['A_x']=[el.get_position()[0] for el in texts1]
+
+        quadr['D_x']=[el.get_position()[0] for el in texts4]
+        quadr['E_x']=[el.get_position()[0] for el in texts5]
+        quadr['A_y']=[el.get_position()[1] for el in texts1]
+
+        quadr['D_y']=[el.get_position()[1] for el in texts4]
+        quadr['E_y']=[el.get_position()[1] for el in texts5]
+        #quadr['ALL ENTRIES']=lista
+        quadr['A_pval_x']=p_val_x1
+        quadr['A_pval_y']=p_val_y1
+
+        quadr['D_pval_x']=p_val_x4
+        quadr['D_pval_y']=p_val_y4
+        quadr['E_pval_x']=p_val_x5
+        quadr['E_pval_y']=p_val_y5
     quadr['COLORS']=colori
     quadr['params']=info_dict2
     if use_notation:   
@@ -413,13 +535,16 @@ def scorecard(the_df,info_dict2):
         ax.set_title('Both Exp. Conditions up-regulated')
     ymin, ymax = ax.get_ylim()
     xmin, xmax = ax.get_xlim()
-    
-    ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change*mf), (xmax-th_fold_change*mf), (ymax-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-    ax.add_patch(Rectangle((th_fold_change, th_fold_change*mf), (th_fold_change*mf-th_fold_change), (ymax-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-    ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change), (xmax-th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-    ax.add_patch(Rectangle((th_fold_change*mf, ymin), (xmax-th_fold_change*mf), (th_fold_change-ymin),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-    ax.add_patch(Rectangle((xmin, th_fold_change*mf), (th_fold_change-xmin), (ymax-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-
+    if mf>1:
+        ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change*mf), (xmax-th_fold_change*mf), (ymax-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+        ax.add_patch(Rectangle((th_fold_change, th_fold_change*mf), (th_fold_change*mf-th_fold_change), (ymax-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+        ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change), (xmax-th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+        ax.add_patch(Rectangle((th_fold_change*mf, ymin), (xmax-th_fold_change*mf), (th_fold_change-ymin),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+        ax.add_patch(Rectangle((xmin, th_fold_change*mf), (th_fold_change-xmin), (ymax-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+    elif mf==1:
+        ax.add_patch(Rectangle((th_fold_change, th_fold_change), (xmax-th_fold_change), (ymax-th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))        
+        ax.add_patch(Rectangle((th_fold_change, ymin), (xmax-th_fold_change), (th_fold_change-ymin),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+        ax.add_patch(Rectangle((xmin, th_fold_change), (th_fold_change-xmin), (ymax-th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
     plt.savefig(save_folder+'Quadrant1.png',dpi=300,bbox_inches='tight')
     plt.close()  
     with open(save_folder+'Quadrant1.json', 'w') as json_file:
@@ -440,48 +565,71 @@ def scorecard(the_df,info_dict2):
         fch_y=  the_df.loc[the_df[gene_name] == my_gene].iloc[0]['FC cond y']
         pval_x=  the_df.loc[the_df[gene_name] == my_gene].iloc[0]['padj cond x']
         pval_y=  the_df.loc[the_df[gene_name] == my_gene].iloc[0]['padj cond y']
+        if mf>1:
+            if fch_x<-th_fold_change*mf and fch_y<-th_fold_change*mf:
+                ax.scatter( fch_x,fch_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])        
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts1.append( ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[0]  ))        
+                    p_val_x1.append(pval_x)
+                    p_val_y1.append(pval_y)
+            elif (fch_x<-th_fold_change and fch_x>=-th_fold_change*mf) and (fch_y<-th_fold_change and fch_y>=-th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[1],marker=MarkerStyle(markers[1], fillstyle='full'),s=sizes[2])
+            elif (fch_x<-th_fold_change*mf) and (fch_y<-th_fold_change and fch_y>=-th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts2.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[1] ))
+                    p_val_x2.append(pval_x)
+                    p_val_y2.append(pval_y)
+            elif (fch_x<-th_fold_change and fch_x>=-th_fold_change*mf) and (fch_y<-th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])          
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts3.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[2]  ))
+                    p_val_x3.append(pval_x)
+                    p_val_y3.append(pval_y)
+            elif (fch_x<-th_fold_change*mf) and (fch_y>=-th_fold_change) :
+                ax.scatter( fch_x,fch_y, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts4.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
+                    p_val_x4.append(pval_x)
+                    p_val_y4.append(pval_y)
+            elif (fch_x>=-th_fold_change ) and (fch_y<-th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts5.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
+                    p_val_x5.append(pval_x)
+                    p_val_y5.append(pval_y)
+            elif (fch_x<-th_fold_change and fch_x>-th_fold_change*mf) and (fch_y>=-th_fold_change) :
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])        
+            elif (fch_x>=-th_fold_change ) and (fch_y<-th_fold_change and fch_y>-th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
+            else:
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])                        
+        elif mf==1:
+            if fch_x<-th_fold_change and fch_y<-th_fold_change:
+                ax.scatter( fch_x,fch_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])        
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts1.append( ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[0]  ))        
+                    p_val_x1.append(pval_x)
+                    p_val_y1.append(pval_y)
 
-        if fch_x<-th_fold_change*mf and fch_y<-th_fold_change*mf:
-            ax.scatter( fch_x,fch_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])        
-            if pval_x<th_significance and pval_y<th_significance:
-                texts1.append( ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[0]  ))        
-                p_val_x1.append(pval_x)
-                p_val_y1.append(pval_y)
-        elif (fch_x<-th_fold_change and fch_x>=-th_fold_change*mf) and (fch_y<-th_fold_change and fch_y>=-th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[1],marker=MarkerStyle(markers[1], fillstyle='full'),s=sizes[2])
-        elif (fch_x<-th_fold_change*mf) and (fch_y<-th_fold_change and fch_y>=-th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
-            if pval_x<th_significance and pval_y<th_significance:
-                texts2.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[1] ))
-                p_val_x2.append(pval_x)
-                p_val_y2.append(pval_y)
-        elif (fch_x<-th_fold_change and fch_x>=-th_fold_change*mf) and (fch_y<-th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])          
-            if pval_x<th_significance and pval_y<th_significance:
-                texts3.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[2]  ))
-                p_val_x3.append(pval_x)
-                p_val_y3.append(pval_y)
-        elif (fch_x<-th_fold_change*mf) and (fch_y>=-th_fold_change) :
-            ax.scatter( fch_x,fch_y, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
-            if pval_x<th_significance and pval_y<th_significance:
-                texts4.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
-                p_val_x4.append(pval_x)
-                p_val_y4.append(pval_y)
-        elif (fch_x>=-th_fold_change ) and (fch_y<-th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
-            if pval_x<th_significance and pval_y<th_significance:
-                texts5.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
-                p_val_x5.append(pval_x)
-                p_val_y5.append(pval_y)
-        elif (fch_x<-th_fold_change and fch_x>-th_fold_change*mf) and (fch_y>=-th_fold_change) :
-            ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])        
-        elif (fch_x>=-th_fold_change ) and (fch_y<-th_fold_change and fch_y>-th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
-        else:
-            ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])                        
-        
-    ax.axhline(y=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
-    ax.axvline(x=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+            elif (fch_x<-th_fold_change) and (fch_y>=-th_fold_change) :
+                ax.scatter( fch_x,fch_y, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts4.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
+                    p_val_x4.append(pval_x)
+                    p_val_y4.append(pval_y)
+            elif (fch_x>=-th_fold_change ) and (fch_y<-th_fold_change):
+                ax.scatter( fch_x,fch_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts5.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
+                    p_val_x5.append(pval_x)
+                    p_val_y5.append(pval_y)
+
+            else:
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])            
+    if mf >1:
+        ax.axhline(y=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+        ax.axvline(x=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
     ax.axhline(y=-th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
     ax.axvline(x=-th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
 
@@ -490,9 +638,12 @@ def scorecard(the_df,info_dict2):
     #adjust_text(texts3, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     #adjust_text(texts4, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     #adjust_text(texts5, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-    adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+    if mf >1:
+        adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+    elif mf==1:
+        adjust_text(flatten([texts1,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     quadr={}
-    if IS_EXAMPLE:
+    if IS_EXAMPLE==True and mf >1:
         quadr[labels[0]]=[el.get_text() for el in texts1]
         quadr[labels[1]]=[el.get_text() for el in texts2]
         quadr[labels[2]]=[el.get_text() for el in texts3]
@@ -520,7 +671,7 @@ def scorecard(the_df,info_dict2):
         quadr[labels[4]+'_pval_x']=p_val_x5
         quadr[labels[4]+'_pval_y']=p_val_y5
         
-    else:
+    elif IS_EXAMPLE==False and mf >1:
         quadr['A']=[el.get_text() for el in texts1]
         quadr['B']=[el.get_text() for el in texts2]
         quadr['C']=[el.get_text() for el in texts3]
@@ -547,6 +698,49 @@ def scorecard(the_df,info_dict2):
         quadr['D_pval_y']=p_val_y4
         quadr['E_pval_x']=p_val_x5
         quadr['E_pval_y']=p_val_y5
+    elif IS_EXAMPLE==True and mf ==1:
+        quadr[labels[0]]=[el.get_text() for el in texts1]
+
+        quadr[labels[3]]=[el.get_text() for el in texts4]
+        quadr[labels[4]]=[el.get_text() for el in texts5]
+        quadr[labels[0]+'_x']=[el.get_position()[0] for el in texts1]
+       
+        quadr[labels[3]+'_x']=[el.get_position()[0] for el in texts4]
+        quadr[labels[4]+'_x']=[el.get_position()[0] for el in texts5]
+        quadr[labels[0]+'_y']=[el.get_position()[1] for el in texts1]
+        
+        quadr[labels[3]+'_y']=[el.get_position()[1] for el in texts4]
+        quadr[labels[4]+'_y']=[el.get_position()[1] for el in texts5]
+        #quadr['ALL ENTRIES']=lista2
+        quadr[labels[0]+'_pval_x']=p_val_x1
+        quadr[labels[0]+'_pval_y']=p_val_y1
+     
+        quadr[labels[3]+'_pval_x']=p_val_x4
+        quadr[labels[3]+'_pval_y']=p_val_y4
+        quadr[labels[4]+'_pval_x']=p_val_x5
+        quadr[labels[4]+'_pval_y']=p_val_y5
+        
+    elif IS_EXAMPLE==False and mf ==1:
+        quadr['A']=[el.get_text() for el in texts1]
+        
+        quadr['D']=[el.get_text() for el in texts4]
+        quadr['E']=[el.get_text() for el in texts5]
+        quadr['A_x']=[el.get_position()[0] for el in texts1]
+      
+        quadr['D_x']=[el.get_position()[0] for el in texts4]
+        quadr['E_x']=[el.get_position()[0] for el in texts5]
+        quadr['A_y']=[el.get_position()[1] for el in texts1]
+     
+        quadr['D_y']=[el.get_position()[1] for el in texts4]
+        quadr['E_y']=[el.get_position()[1] for el in texts5]
+        #quadr['ALL ENTRIES']=lista2
+        quadr['A_pval_x']=p_val_x1
+        quadr['A_pval_y']=p_val_y1
+      
+        quadr['D_pval_x']=p_val_x4
+        quadr['D_pval_y']=p_val_y4
+        quadr['E_pval_x']=p_val_x5
+        quadr['E_pval_y']=p_val_y5
     quadr['COLORS']=colori
     quadr['params']=info_dict2
     if use_notation:   
@@ -559,12 +753,16 @@ def scorecard(the_df,info_dict2):
         ax.set_title('Both Exp. Conditions down-regulated')
     ymin, ymax = ax.get_ylim()
     xmin, xmax = ax.get_xlim()
-    ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change*mf), (xmin+th_fold_change*mf), (ymin+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-    ax.add_patch(Rectangle((-th_fold_change, -th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (ymin+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-    ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change), (xmin+th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-    ax.add_patch(Rectangle((-th_fold_change*mf, ymax), (xmin+th_fold_change*mf), -(ymax+th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-    ax.add_patch(Rectangle((xmax, -th_fold_change*mf), -(xmax+th_fold_change), (ymin+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-
+    if mf>1:
+        ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change*mf), (xmin+th_fold_change*mf), (ymin+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+        ax.add_patch(Rectangle((-th_fold_change, -th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (ymin+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+        ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change), (xmin+th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+        ax.add_patch(Rectangle((-th_fold_change*mf, ymax), (xmin+th_fold_change*mf), -(ymax+th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+        ax.add_patch(Rectangle((xmax, -th_fold_change*mf), -(xmax+th_fold_change), (ymin+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+    elif mf==1:
+        ax.add_patch(Rectangle((-th_fold_change, -th_fold_change), (xmin+th_fold_change), (ymin+th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+        ax.add_patch(Rectangle((-th_fold_change, ymax), (xmin+th_fold_change), -(ymax+th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+        ax.add_patch(Rectangle((xmax, -th_fold_change), -(xmax+th_fold_change), (ymin+th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))        
 
     plt.savefig(save_folder+'Quadrant3.png',dpi=300,bbox_inches='tight')
     plt.close()  
@@ -585,47 +783,69 @@ def scorecard(the_df,info_dict2):
         fch_y=  the_df.loc[the_df[gene_name] == my_gene].iloc[0]['FC cond y']
         pval_x=  the_df.loc[the_df[gene_name] == my_gene].iloc[0]['padj cond x']
         pval_y=  the_df.loc[the_df[gene_name] == my_gene].iloc[0]['padj cond y']
-        if fch_x<-th_fold_change*mf and fch_y>th_fold_change*mf:
-            ax.scatter( fch_x,fch_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])        
-            if pval_x<th_significance and pval_y<th_significance:
-                texts1.append( ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[0]  ))        
-                p_val_x1.append(pval_x)
-                p_val_y1.append(pval_y)
-        elif (fch_x<-th_fold_change and fch_x>=-th_fold_change*mf) and (fch_y>th_fold_change and fch_y<=th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[1],marker=MarkerStyle(markers[1], fillstyle='full'),s=sizes[2])
-        elif (fch_x<-th_fold_change*mf) and (fch_y>th_fold_change and fch_y<=th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
-            if pval_x<th_significance and pval_y<th_significance:
-                texts2.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[1] ))
-                p_val_x2.append(pval_x)
-                p_val_y2.append(pval_y)
-        elif (fch_x<-th_fold_change and fch_x>=-th_fold_change*mf) and (fch_y>th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])          
-            if pval_x<th_significance and pval_y<th_significance:
-                texts3.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[2]  ))
-                p_val_x3.append(pval_x)
-                p_val_y3.append(pval_y)
-        elif (fch_x<-th_fold_change*mf) and (fch_y<=th_fold_change) :
-            ax.scatter( fch_x,fch_y, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
-            if pval_x<th_significance and pval_y<th_significance:
-                texts4.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
-                p_val_x4.append(pval_x)
-                p_val_y4.append(pval_y)
-        elif (fch_x>=-th_fold_change ) and (fch_y>th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
-            if pval_x<th_significance and pval_y<th_significance:
-                texts5.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
-                p_val_x5.append(pval_x)
-                p_val_y5.append(pval_y)
-        elif (fch_x<-th_fold_change and fch_x>-th_fold_change*mf) and (fch_y<=th_fold_change) :
-            ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])        
-        elif (fch_x>=-th_fold_change ) and (fch_y>th_fold_change and fch_y<th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
-        else:
-            ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])                        
-        
-    ax.axhline(y=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
-    ax.axvline(x=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+        if mf >1:
+            if fch_x<-th_fold_change*mf and fch_y>th_fold_change*mf:
+                ax.scatter( fch_x,fch_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])        
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts1.append( ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[0]  ))        
+                    p_val_x1.append(pval_x)
+                    p_val_y1.append(pval_y)
+            elif (fch_x<-th_fold_change and fch_x>=-th_fold_change*mf) and (fch_y>th_fold_change and fch_y<=th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[1],marker=MarkerStyle(markers[1], fillstyle='full'),s=sizes[2])
+            elif (fch_x<-th_fold_change*mf) and (fch_y>th_fold_change and fch_y<=th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts2.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[1] ))
+                    p_val_x2.append(pval_x)
+                    p_val_y2.append(pval_y)
+            elif (fch_x<-th_fold_change and fch_x>=-th_fold_change*mf) and (fch_y>th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])          
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts3.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[2]  ))
+                    p_val_x3.append(pval_x)
+                    p_val_y3.append(pval_y)
+            elif (fch_x<-th_fold_change*mf) and (fch_y<=th_fold_change) :
+                ax.scatter( fch_x,fch_y, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts4.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
+                    p_val_x4.append(pval_x)
+                    p_val_y4.append(pval_y)
+            elif (fch_x>=-th_fold_change ) and (fch_y>th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts5.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
+                    p_val_x5.append(pval_x)
+                    p_val_y5.append(pval_y)
+            elif (fch_x<-th_fold_change and fch_x>-th_fold_change*mf) and (fch_y<=th_fold_change) :
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])        
+            elif (fch_x>=-th_fold_change ) and (fch_y>th_fold_change and fch_y<th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
+            else:
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])                        
+        elif mf==1:
+            if fch_x<-th_fold_change and fch_y>th_fold_change:
+                ax.scatter( fch_x,fch_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])        
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts1.append( ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[0]  ))        
+                    p_val_x1.append(pval_x)
+                    p_val_y1.append(pval_y)
+            elif (fch_x<-th_fold_change) and (fch_y<=th_fold_change) :
+                ax.scatter( fch_x,fch_y, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts4.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
+                    p_val_x4.append(pval_x)
+                    p_val_y4.append(pval_y)
+            elif (fch_x>=-th_fold_change ) and (fch_y>th_fold_change):
+                ax.scatter( fch_x,fch_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts5.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
+                    p_val_x5.append(pval_x)
+                    p_val_y5.append(pval_y)
+            else:
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])              
+    if mf>1:
+        ax.axhline(y=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+        ax.axvline(x=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
     ax.axhline(y=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
     ax.axvline(x=-th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
 
@@ -634,10 +854,13 @@ def scorecard(the_df,info_dict2):
     #adjust_text(texts3, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     #adjust_text(texts4, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     #adjust_text(texts5, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-    adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+    if mf>1:
+        adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+    elif mf==1:
+        adjust_text(flatten([texts1,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     quadr={}
     
-    if IS_EXAMPLE:
+    if IS_EXAMPLE==True and mf >1:
         quadr[labels[0]]=[el.get_text() for el in texts1]
         quadr[labels[1]]=[el.get_text() for el in texts2]
         quadr[labels[2]]=[el.get_text() for el in texts3]
@@ -665,7 +888,7 @@ def scorecard(the_df,info_dict2):
         quadr[labels[4]+'_pval_x']=p_val_x5
         quadr[labels[4]+'_pval_y']=p_val_y5
         
-    else:
+    elif IS_EXAMPLE==False and mf >1:
         quadr['A']=[el.get_text() for el in texts1]
         quadr['B']=[el.get_text() for el in texts2]
         quadr['C']=[el.get_text() for el in texts3]
@@ -692,6 +915,51 @@ def scorecard(the_df,info_dict2):
         quadr['D_pval_y']=p_val_y4
         quadr['E_pval_x']=p_val_x5
         quadr['E_pval_y']=p_val_y5
+    elif IS_EXAMPLE==True and mf ==1:
+        quadr[labels[0]]=[el.get_text() for el in texts1]
+
+        quadr[labels[3]]=[el.get_text() for el in texts4]
+        quadr[labels[4]]=[el.get_text() for el in texts5]
+        quadr[labels[0]+'_x']=[el.get_position()[0] for el in texts1]
+ 
+        quadr[labels[3]+'_x']=[el.get_position()[0] for el in texts4]
+        quadr[labels[4]+'_x']=[el.get_position()[0] for el in texts5]
+        quadr[labels[0]+'_y']=[el.get_position()[1] for el in texts1]
+      
+        quadr[labels[3]+'_y']=[el.get_position()[1] for el in texts4]
+        quadr[labels[4]+'_y']=[el.get_position()[1] for el in texts5]
+        #quadr['ALL ENTRIES']=lista3
+        quadr[labels[0]+'_pval_x']=p_val_x1
+        quadr[labels[0]+'_pval_y']=p_val_y1
+  
+        quadr[labels[3]+'_pval_x']=p_val_x4
+        quadr[labels[3]+'_pval_y']=p_val_y4
+        quadr[labels[4]+'_pval_x']=p_val_x5
+        quadr[labels[4]+'_pval_y']=p_val_y5
+        
+    elif IS_EXAMPLE==False and mf ==1:
+        quadr['A']=[el.get_text() for el in texts1]
+
+        quadr['D']=[el.get_text() for el in texts4]
+        quadr['E']=[el.get_text() for el in texts5]
+        quadr['A_x']=[el.get_position()[0] for el in texts1]
+      
+        quadr['D_x']=[el.get_position()[0] for el in texts4]
+        quadr['E_x']=[el.get_position()[0] for el in texts5]
+        quadr['A_y']=[el.get_position()[1] for el in texts1]
+       
+        quadr['D_y']=[el.get_position()[1] for el in texts4]
+        quadr['E_y']=[el.get_position()[1] for el in texts5]
+        #quadr['ALL ENTRIES']=lista3
+        quadr['A_pval_x']=p_val_x1
+        quadr['A_pval_y']=p_val_y1
+       
+        quadr['D_pval_x']=p_val_x4
+        quadr['D_pval_y']=p_val_y4
+        quadr['E_pval_x']=p_val_x5
+        quadr['E_pval_y']=p_val_y5
+
+
     quadr['COLORS']=colori
     quadr['params']=info_dict2
     if use_notation:   
@@ -705,12 +973,16 @@ def scorecard(the_df,info_dict2):
 
     ymin, ymax = ax.get_ylim()
     xmin, xmax = ax.get_xlim()
-    ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change*mf), (xmin+th_fold_change*mf), (ymax-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-    ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (ymax-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-    ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change), (xmin+th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-    ax.add_patch(Rectangle((-th_fold_change*mf, ymin), (xmin+th_fold_change*mf), (th_fold_change-ymin),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-    ax.add_patch(Rectangle((xmax, th_fold_change*mf), -(xmax+th_fold_change), (ymax-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-    
+    if mf>1:
+        ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change*mf), (xmin+th_fold_change*mf), (ymax-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+        ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (ymax-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+        ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change), (xmin+th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+        ax.add_patch(Rectangle((-th_fold_change*mf, ymin), (xmin+th_fold_change*mf), (th_fold_change-ymin),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+        ax.add_patch(Rectangle((xmax, th_fold_change*mf), -(xmax+th_fold_change), (ymax-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+    elif mf==1:
+        ax.add_patch(Rectangle((-th_fold_change, th_fold_change), (xmin+th_fold_change), (ymax-th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+        ax.add_patch(Rectangle((-th_fold_change, ymin), (xmin+th_fold_change), (th_fold_change-ymin),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+        ax.add_patch(Rectangle((xmax, th_fold_change), -(xmax+th_fold_change), (ymax-th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))        
     plt.savefig(save_folder+'Quadrant2.png',dpi=300,bbox_inches='tight')
     plt.close()  
     with open(save_folder+'Quadrant2.json', 'w') as json_file:
@@ -730,47 +1002,69 @@ def scorecard(the_df,info_dict2):
         fch_y=  the_df.loc[the_df[gene_name] == my_gene].iloc[0]['FC cond y']
         pval_x=  the_df.loc[the_df[gene_name] == my_gene].iloc[0]['padj cond x']
         pval_y=  the_df.loc[the_df[gene_name] == my_gene].iloc[0]['padj cond y']
-        if fch_x>th_fold_change*mf and fch_y<-th_fold_change*mf:
-            ax.scatter( fch_x,fch_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])        
-            if pval_x<th_significance and pval_y<th_significance:
-                texts1.append( ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[0]  ))        
-                p_val_x1.append(pval_x)
-                p_val_y1.append(pval_y)
-        elif (fch_x>th_fold_change and fch_x<=th_fold_change*mf) and (fch_y<-th_fold_change and fch_y>=-th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[1],marker=MarkerStyle(markers[1], fillstyle='full'),s=sizes[2])
-        elif (fch_x>th_fold_change*mf) and (fch_y<-th_fold_change and fch_y>=-th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
-            if pval_x<th_significance and pval_y<th_significance:
-                texts2.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[1] ))
-                p_val_x2.append(pval_x)
-                p_val_y2.append(pval_y)
-        elif (fch_x>th_fold_change and fch_x<=th_fold_change*mf) and (fch_y<-th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])          
-            if pval_x<th_significance and pval_y<th_significance:
-                texts3.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[2]  ))
-                p_val_x3.append(pval_x)
-                p_val_y3.append(pval_y)
-        elif (fch_x>th_fold_change*mf) and (fch_y>=-th_fold_change) :
-            ax.scatter( fch_x,fch_y, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
-            if pval_x<th_significance and pval_y<th_significance:
-                texts4.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
-                p_val_x4.append(pval_x)
-                p_val_y4.append(pval_y)
-        elif (fch_x<=th_fold_change ) and (fch_y<-th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
-            if pval_x<th_significance and pval_y<th_significance:
-                texts5.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
-                p_val_x5.append(pval_x)
-                p_val_y5.append(pval_y)
-        elif (fch_x>th_fold_change and fch_x<th_fold_change*mf) and (fch_y>=-th_fold_change) :
-            ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])        
-        elif (fch_x<=th_fold_change ) and (fch_y<-th_fold_change and fch_y>-th_fold_change*mf):
-            ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
-        else:
-            ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])                        
-
-    ax.axhline(y=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
-    ax.axvline(x=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+        if mf>1:
+            if fch_x>th_fold_change*mf and fch_y<-th_fold_change*mf:
+                ax.scatter( fch_x,fch_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])        
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts1.append( ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[0]  ))        
+                    p_val_x1.append(pval_x)
+                    p_val_y1.append(pval_y)
+            elif (fch_x>th_fold_change and fch_x<=th_fold_change*mf) and (fch_y<-th_fold_change and fch_y>=-th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[1],marker=MarkerStyle(markers[1], fillstyle='full'),s=sizes[2])
+            elif (fch_x>th_fold_change*mf) and (fch_y<-th_fold_change and fch_y>=-th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts2.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[1] ))
+                    p_val_x2.append(pval_x)
+                    p_val_y2.append(pval_y)
+            elif (fch_x>th_fold_change and fch_x<=th_fold_change*mf) and (fch_y<-th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])          
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts3.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[2]  ))
+                    p_val_x3.append(pval_x)
+                    p_val_y3.append(pval_y)
+            elif (fch_x>th_fold_change*mf) and (fch_y>=-th_fold_change) :
+                ax.scatter( fch_x,fch_y, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts4.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
+                    p_val_x4.append(pval_x)
+                    p_val_y4.append(pval_y)
+            elif (fch_x<=th_fold_change ) and (fch_y<-th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts5.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
+                    p_val_x5.append(pval_x)
+                    p_val_y5.append(pval_y)
+            elif (fch_x>th_fold_change and fch_x<th_fold_change*mf) and (fch_y>=-th_fold_change) :
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])        
+            elif (fch_x<=th_fold_change ) and (fch_y<-th_fold_change and fch_y>-th_fold_change*mf):
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
+            else:
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])                        
+        elif mf==1:
+            if fch_x>th_fold_change and fch_y<-th_fold_change:
+                ax.scatter( fch_x,fch_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])        
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts1.append( ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[0]  ))        
+                    p_val_x1.append(pval_x)
+                    p_val_y1.append(pval_y)
+            elif (fch_x>th_fold_change) and (fch_y>=-th_fold_change) :
+                ax.scatter( fch_x,fch_y, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts4.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
+                    p_val_x4.append(pval_x)
+                    p_val_y4.append(pval_y)
+            elif (fch_x<=th_fold_change ) and (fch_y<-th_fold_change):
+                ax.scatter( fch_x,fch_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                if pval_x<th_significance and pval_y<th_significance:
+                    texts5.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
+                    p_val_x5.append(pval_x)
+                    p_val_y5.append(pval_y)
+            else:
+                ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[-1],marker=MarkerStyle(markers[-1], fillstyle='full'),s=sizes[-1])              
+    if mf>1:
+        ax.axhline(y=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+        ax.axvline(x=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
     ax.axhline(y=-th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
     ax.axvline(x=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
 
@@ -779,9 +1073,12 @@ def scorecard(the_df,info_dict2):
     #adjust_text(texts3, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     #adjust_text(texts4, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     #adjust_text(texts5, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-    adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+    if mf>1:
+        adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+    elif mf==1:
+        adjust_text(flatten([texts1,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     quadr={}
-    if IS_EXAMPLE:
+    if IS_EXAMPLE==True and mf>1:
         quadr[labels[0]]=[el.get_text() for el in texts1]
         quadr[labels[1]]=[el.get_text() for el in texts2]
         quadr[labels[2]]=[el.get_text() for el in texts3]
@@ -809,7 +1106,7 @@ def scorecard(the_df,info_dict2):
         quadr[labels[4]+'_pval_x']=p_val_x5
         quadr[labels[4]+'_pval_y']=p_val_y5
         
-    else:
+    elif IS_EXAMPLE==False and mf>1:
         quadr['A']=[el.get_text() for el in texts1]
         quadr['B']=[el.get_text() for el in texts2]
         quadr['C']=[el.get_text() for el in texts3]
@@ -836,6 +1133,49 @@ def scorecard(the_df,info_dict2):
         quadr['D_pval_y']=p_val_y4
         quadr['E_pval_x']=p_val_x5
         quadr['E_pval_y']=p_val_y5
+    elif IS_EXAMPLE==True and mf==1:
+        quadr[labels[0]]=[el.get_text() for el in texts1]
+    
+        quadr[labels[3]]=[el.get_text() for el in texts4]
+        quadr[labels[4]]=[el.get_text() for el in texts5]
+        quadr[labels[0]+'_x']=[el.get_position()[0] for el in texts1]
+       
+        quadr[labels[3]+'_x']=[el.get_position()[0] for el in texts4]
+        quadr[labels[4]+'_x']=[el.get_position()[0] for el in texts5]
+        quadr[labels[0]+'_y']=[el.get_position()[1] for el in texts1]
+      
+        quadr[labels[3]+'_y']=[el.get_position()[1] for el in texts4]
+        quadr[labels[4]+'_y']=[el.get_position()[1] for el in texts5]
+        #quadr['ALL ENTRIES']=lista4
+        quadr[labels[0]+'_pval_x']=p_val_x1
+        quadr[labels[0]+'_pval_y']=p_val_y1
+     
+        quadr[labels[3]+'_pval_x']=p_val_x4
+        quadr[labels[3]+'_pval_y']=p_val_y4
+        quadr[labels[4]+'_pval_x']=p_val_x5
+        quadr[labels[4]+'_pval_y']=p_val_y5
+        
+    elif IS_EXAMPLE==False and mf==1:
+        quadr['A']=[el.get_text() for el in texts1]
+   
+        quadr['D']=[el.get_text() for el in texts4]
+        quadr['E']=[el.get_text() for el in texts5]
+        quadr['A_x']=[el.get_position()[0] for el in texts1]
+       
+        quadr['D_x']=[el.get_position()[0] for el in texts4]
+        quadr['E_x']=[el.get_position()[0] for el in texts5]
+        quadr['A_y']=[el.get_position()[1] for el in texts1]
+      
+        quadr['D_y']=[el.get_position()[1] for el in texts4]
+        quadr['E_y']=[el.get_position()[1] for el in texts5]
+        #quadr['ALL ENTRIES']=lista4
+        quadr['A_pval_x']=p_val_x1
+        quadr['A_pval_y']=p_val_y1
+      
+        quadr['D_pval_x']=p_val_x4
+        quadr['D_pval_y']=p_val_y4
+        quadr['E_pval_x']=p_val_x5
+        quadr['E_pval_y']=p_val_y5
     quadr['COLORS']=colori
     quadr['params']=info_dict2
     if use_notation:   
@@ -849,12 +1189,16 @@ def scorecard(the_df,info_dict2):
 
     ymin, ymax = ax.get_ylim()
     xmin, xmax = ax.get_xlim()
-    ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change*mf), (xmax-th_fold_change*mf), (ymin+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-    ax.add_patch(Rectangle((th_fold_change, -th_fold_change*mf), (th_fold_change*mf-th_fold_change), (ymin+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-    ax.add_patch(Rectangle((th_fold_change*mf,-th_fold_change), (xmax-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-    ax.add_patch(Rectangle((th_fold_change*mf, ymax), (xmax-th_fold_change*mf), -(ymax+th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-    ax.add_patch(Rectangle((xmin, -th_fold_change*mf), (th_fold_change-xmin), (ymin+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-
+    if mf>1:
+        ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change*mf), (xmax-th_fold_change*mf), (ymin+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+        ax.add_patch(Rectangle((th_fold_change, -th_fold_change*mf), (th_fold_change*mf-th_fold_change), (ymin+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+        ax.add_patch(Rectangle((th_fold_change*mf,-th_fold_change), (xmax-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+        ax.add_patch(Rectangle((th_fold_change*mf, ymax), (xmax-th_fold_change*mf), -(ymax+th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+        ax.add_patch(Rectangle((xmin, -th_fold_change*mf), (th_fold_change-xmin), (ymin+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+    elif mf==1:
+        ax.add_patch(Rectangle((th_fold_change, -th_fold_change), (xmax-th_fold_change), (ymin+th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+        ax.add_patch(Rectangle((th_fold_change, ymax), (xmax-th_fold_change), -(ymax+th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+        ax.add_patch(Rectangle((xmin, -th_fold_change), (th_fold_change-xmin), (ymin+th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))        
     plt.savefig(save_folder+'Quadrant4.png',dpi=300,bbox_inches='tight')
     plt.close()  
     with open(save_folder+'Quadrant4.json', 'w') as json_file:
@@ -924,19 +1268,21 @@ def reconstruct_scorecard(my_directory):
         sizes= my_data[quadrante]['params']['markers_sizes']
         gene_name= my_data[quadrante]['params']['gene_name']        
         mf=my_data[quadrante]['params']['multiplication factor']
-        
-          
+        if mf==1:
+            print('Reconstruction of a Four-Way plot. Scorecard was not created!')
             
         fig, ax = plt.subplots(figsize=(fig_size, fig_size))
         minimo,massimo=-fig_size,fig_size    
         ax.set_xlim(left=minimo,right=massimo)
         ax.set_ylim(bottom=minimo,top=massimo)
-        ax.axhline(y=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
-        ax.axvline(x=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+        if mf>1:
+            ax.axhline(y=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+            ax.axvline(x=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
         ax.axhline(y=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
-        ax.axvline(x=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)    
-        ax.axhline(y=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
-        ax.axvline(x=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+        ax.axvline(x=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
+        if mf>1:
+            ax.axhline(y=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+            ax.axvline(x=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
         ax.axhline(y=-th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
         ax.axvline(x=-th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
 
@@ -948,51 +1294,63 @@ def reconstruct_scorecard(my_directory):
             ax.set_ylabel("$log_2$ Fold Change ("+trt2+" vs "+ctrl+")")
         else:
             ax.set_xlabel("$log_2$ Fold Change (Treatment 1 vs Control)")
-            ax.set_ylabel("$log_2$ Fold Change (Treatment 2 vs Control)")        
-        
+            ax.set_ylabel("$log_2$ Fold Change (Treatment 2 vs Control)")
         texts1,texts2,texts3,texts4,texts5=[],[],[],[],[]
-        ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change*mf), (massimo-th_fold_change*mf), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-        ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change*mf), (-massimo+th_fold_change*mf), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-        ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change*mf), (-massimo+th_fold_change*mf), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-        ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change*mf), (massimo-th_fold_change*mf), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+        if mf>1:
+            
+            ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change*mf), (massimo-th_fold_change*mf), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+            ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change*mf), (-massimo+th_fold_change*mf), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+            ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change*mf), (-massimo+th_fold_change*mf), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+            ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change*mf), (massimo-th_fold_change*mf), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
 
-        ax.add_patch(Rectangle((th_fold_change, th_fold_change*mf), (th_fold_change*mf-th_fold_change), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-        ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change), (massimo-th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-        ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-        ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change), (-massimo+th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-        ax.add_patch(Rectangle((th_fold_change, -th_fold_change*mf), (th_fold_change*mf-th_fold_change), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-        ax.add_patch(Rectangle((th_fold_change*mf,- th_fold_change), (massimo-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-        ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-        ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-        ax.add_patch(Rectangle((-th_fold_change, -th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-        ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change), (-massimo+th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((th_fold_change, th_fold_change*mf), (th_fold_change*mf-th_fold_change), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change), (massimo-th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change), (-massimo+th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((th_fold_change, -th_fold_change*mf), (th_fold_change*mf-th_fold_change), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((th_fold_change*mf,- th_fold_change), (massimo-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((-th_fold_change, -th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change), (-massimo+th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
 
-        ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-        ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (th_fold_change*2), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-        ax.add_patch(Rectangle((minimo,-th_fold_change), (-minimo-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-        ax.add_patch(Rectangle((-th_fold_change,minimo), (th_fold_change*2), (-minimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+            ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+            ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (th_fold_change*2), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+            ax.add_patch(Rectangle((minimo,-th_fold_change), (-minimo-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+            ax.add_patch(Rectangle((-th_fold_change,minimo), (th_fold_change*2), (-minimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+        elif mf==1:
+
+            ax.add_patch(Rectangle((th_fold_change, th_fold_change), (massimo-th_fold_change), (massimo-th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+            ax.add_patch(Rectangle((-th_fold_change, -th_fold_change), (-massimo+th_fold_change), (-massimo+th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+            ax.add_patch(Rectangle((-th_fold_change, th_fold_change), (-massimo+th_fold_change), (massimo-th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+            ax.add_patch(Rectangle((th_fold_change, -th_fold_change), (massimo-th_fold_change), (-massimo+th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+
+            ax.add_patch(Rectangle((th_fold_change, -th_fold_change), (massimo-th_fold_change), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+            ax.add_patch(Rectangle((-th_fold_change, th_fold_change), (th_fold_change*2), (massimo-th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+            ax.add_patch(Rectangle((minimo,-th_fold_change), (-minimo-th_fold_change), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+            ax.add_patch(Rectangle((-th_fold_change,minimo), (th_fold_change*2), (-minimo-th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
         for quadrante in quadr_list:
             for eti in etichette:
-                lista_tmp=my_data[quadrante][eti]
-                for idx_gene,my_gene in enumerate(lista_tmp):
-                    fch_x=  my_data[quadrante][eti+'_x'][idx_gene]
-                    fch_y=  my_data[quadrante][eti+'_y'][idx_gene]
-                    if eti==etichette[0]:
-                        ax.scatter( fch_x,fch_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])
-                        texts1.append( ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[0]  ))
-                    elif eti==etichette[1]:
-                        ax.scatter( fch_x,fch_y, facecolors = colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
-                        texts2.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[1] ))
-                    elif eti==etichette[2]:
-                        ax.scatter( fch_x,fch_y, facecolors = colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
-                        texts3.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[2]  ))
-                    elif eti==etichette[3]:
-                        ax.scatter( fch_x,fch_y, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
-                        texts4.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
-                    elif eti==etichette[4]:
-                        ax.scatter( fch_x,fch_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
-                        texts5.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
-        
+                if eti in list(my_data[quadrante].keys()):
+                    lista_tmp=my_data[quadrante][eti]
+                    for idx_gene,my_gene in enumerate(lista_tmp):
+                        fch_x=  my_data[quadrante][eti+'_x'][idx_gene]
+                        fch_y=  my_data[quadrante][eti+'_y'][idx_gene]
+                        if eti==etichette[0]:
+                            ax.scatter( fch_x,fch_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])
+                            texts1.append( ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[0]  ))
+                        elif eti==etichette[1]:
+                            ax.scatter( fch_x,fch_y, facecolors = colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
+                            texts2.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[1] ))
+                        elif eti==etichette[2]:
+                            ax.scatter( fch_x,fch_y, facecolors = colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
+                            texts3.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[2]  ))
+                        elif eti==etichette[3]:
+                            ax.scatter( fch_x,fch_y, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                            texts4.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
+                        elif eti==etichette[4]:
+                            ax.scatter( fch_x,fch_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                            texts5.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
         adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
         if use_notation:   
             ax.set_xlabel("$log_2$ Fold Change ("+trt1+" vs "+ctrl+")")
@@ -1002,7 +1360,10 @@ def reconstruct_scorecard(my_directory):
             ax.set_xlabel("$log_2$ Fold Change ("+trt1+")")
             ax.set_ylabel("$log_2$ Fold Change ("+trt2+")")   
             ax.set_title('Scorecard and regions of interest')
-        plt.savefig(save_folder+'Scorecard.png',dpi=300,bbox_inches='tight')
+        if mf>1:
+            plt.savefig(save_folder+'Scorecard.png',dpi=300,bbox_inches='tight')
+        elif mf==1:
+            plt.savefig(save_folder+'FourWayPlot.png',dpi=300,bbox_inches='tight')
         plt.close()
 
 def calc_scarto(radians_r,valore_r):
@@ -1178,58 +1539,60 @@ def make_volcano(my_directory):
         
         mf=my_data[quadrante]['params']['multiplication factor']
         use_notation=my_data[quadrante]['params']['use_notation']
-
             
         fig, (ax1, ax2) = plt.subplots(1,2,figsize=(18, 8),sharey=True)
         texts1x,texts2x,texts3x,texts4x,texts5x=[],[],[],[],[]
         texts1y,texts2y,texts3y,texts4y,texts5y=[],[],[],[],[]
         for quadrante in quadr_list:
             for eti in etichette:
-                lista_tmp=my_data[quadrante][eti]
-                if len(lista_tmp)>0:
-                    for idx_gene,my_gene in enumerate(lista_tmp):
-                        fch_x=  my_data[quadrante][eti+'_x'][idx_gene]
-                        fch_y=  my_data[quadrante][eti+'_y'][idx_gene]
-                        pval_x=  -log10_with_epsilon(my_data[quadrante][eti+'_pval_x'][idx_gene],epi)
-                        pval_y=  -log10_with_epsilon(my_data[quadrante][eti+'_pval_y'][idx_gene],epi)
-                        if eti==etichette[0] :
-                            ax1.scatter( fch_x,pval_x, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])
-                            texts1x.append( ax1.text(fch_x,pval_x, my_gene,size=font_size1, ha='center', va='center',color=colori[0]  ))
-                            ax2.scatter( fch_y,pval_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])
-                            texts1y.append( ax2.text(fch_y,pval_y, my_gene,size=font_size1, ha='center', va='center',color=colori[0]  ))
-                        elif eti==etichette[1]:
-                            ax1.scatter( fch_x,pval_x, facecolors = colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
-                            texts2x.append(ax1.text(fch_x,pval_x, my_gene,size=font_size1, ha='center', va='center',color=colori[1] ))
-                            ax2.scatter( fch_y,pval_y, facecolors = colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
-                            texts2y.append(ax2.text(fch_y,pval_y, my_gene,size=font_size1, ha='center', va='center',color=colori[1] ))
-                        elif eti==etichette[2]:
-                            ax1.scatter( fch_x,pval_x, facecolors = colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
-                            texts3x.append(ax1.text(fch_x,pval_x, my_gene,size=font_size1, ha='center', va='center',color=colori[2]  ))
-                            ax2.scatter( fch_y,pval_y, facecolors = colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
-                            texts3y.append(ax2.text(fch_y,pval_y, my_gene,size=font_size1, ha='center', va='center',color=colori[2]  ))
-                        elif eti==etichette[3]:
-                            ax1.scatter( fch_x,pval_x, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
-                            texts4x.append(ax1.text(fch_x,pval_x, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
-                            ax2.scatter( fch_y,pval_y, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
-                            texts4y.append(ax2.text(fch_y,pval_y, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
-                        elif eti==etichette[4]:
-                            ax1.scatter( fch_x,pval_x, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
-                            texts5x.append(ax1.text(fch_x,pval_x, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
-                            ax2.scatter( fch_y,pval_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
-                            texts5y.append(ax2.text(fch_y,pval_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
+                if eti in list(my_data[quadrante].keys()):
+                    lista_tmp=my_data[quadrante][eti]
+                    if len(lista_tmp)>0:
+                        for idx_gene,my_gene in enumerate(lista_tmp):
+                            fch_x=  my_data[quadrante][eti+'_x'][idx_gene]
+                            fch_y=  my_data[quadrante][eti+'_y'][idx_gene]
+                            pval_x=  -log10_with_epsilon(my_data[quadrante][eti+'_pval_x'][idx_gene],epi)
+                            pval_y=  -log10_with_epsilon(my_data[quadrante][eti+'_pval_y'][idx_gene],epi)
+                            if eti==etichette[0] :
+                                ax1.scatter( fch_x,pval_x, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])
+                                texts1x.append( ax1.text(fch_x,pval_x, my_gene,size=font_size1, ha='center', va='center',color=colori[0]  ))
+                                ax2.scatter( fch_y,pval_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])
+                                texts1y.append( ax2.text(fch_y,pval_y, my_gene,size=font_size1, ha='center', va='center',color=colori[0]  ))
+                            elif eti==etichette[1]:
+                                ax1.scatter( fch_x,pval_x, facecolors = colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
+                                texts2x.append(ax1.text(fch_x,pval_x, my_gene,size=font_size1, ha='center', va='center',color=colori[1] ))
+                                ax2.scatter( fch_y,pval_y, facecolors = colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
+                                texts2y.append(ax2.text(fch_y,pval_y, my_gene,size=font_size1, ha='center', va='center',color=colori[1] ))
+                            elif eti==etichette[2]:
+                                ax1.scatter( fch_x,pval_x, facecolors = colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
+                                texts3x.append(ax1.text(fch_x,pval_x, my_gene,size=font_size1, ha='center', va='center',color=colori[2]  ))
+                                ax2.scatter( fch_y,pval_y, facecolors = colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
+                                texts3y.append(ax2.text(fch_y,pval_y, my_gene,size=font_size1, ha='center', va='center',color=colori[2]  ))
+                            elif eti==etichette[3]:
+                                ax1.scatter( fch_x,pval_x, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                                texts4x.append(ax1.text(fch_x,pval_x, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
+                                ax2.scatter( fch_y,pval_y, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                                texts4y.append(ax2.text(fch_y,pval_y, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
+                            elif eti==etichette[4]:
+                                ax1.scatter( fch_x,pval_x, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                                texts5x.append(ax1.text(fch_x,pval_x, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
+                                ax2.scatter( fch_y,pval_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
+                                texts5y.append(ax2.text(fch_y,pval_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
+
         out_x=flatten([texts1x,texts2x,texts3x,texts4x,texts5x])
         out_y=flatten([texts1y,texts2y,texts3y,texts4y,texts5y])
-        if len(out_x)>0:
+        if len(out_x)>0 :
             adjust_text(out_x, ax=ax1,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
         if len(out_y)>0:
             adjust_text(out_y, ax=ax2,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
 
         for ax,tmp_str in zip([ax1,ax2],[trt1,trt2]):    
-            
-            ax.axvline(x=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+            if mf>1:
+                ax.axvline(x=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
             ax.axvline(x=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
             ax.axvline(x=0,color='grey',linestyle='dotted',lw=0.5)
-            ax.axvline(x=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+            if mf>1:
+                ax.axvline(x=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
             ax.axvline(x=-th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
 
             ax.axhline(y=-np.log10(th_significance),color='grey',linestyle='dashdot',lw=1.5)
@@ -1241,13 +1604,15 @@ def make_volcano(my_directory):
 
             ymin, ymax = ax.get_ylim()
             xmin, xmax = ax.get_xlim()
-
-            ax.add_patch(Rectangle((xmin, -np.log10(th_significance)), -(xmin+th_fold_change*mf), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-            ax.add_patch(Rectangle((th_fold_change*mf, -np.log10(th_significance)), (xmax-th_fold_change*mf), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2])                         )
-            ax.add_patch(Rectangle((-th_fold_change*mf, -np.log10(th_significance)), -(-th_fold_change*mf+th_fold_change), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((th_fold_change, -np.log10(th_significance)), (th_fold_change*mf-th_fold_change), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((-th_fold_change, -np.log10(th_significance)), (th_fold_change*2), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-            
+            if mf>1:
+                ax.add_patch(Rectangle((xmin, -np.log10(th_significance)), -(xmin+th_fold_change*mf), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+                ax.add_patch(Rectangle((th_fold_change*mf, -np.log10(th_significance)), (xmax-th_fold_change*mf), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2])                         )
+                ax.add_patch(Rectangle((-th_fold_change*mf, -np.log10(th_significance)), -(-th_fold_change*mf+th_fold_change), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+                ax.add_patch(Rectangle((th_fold_change, -np.log10(th_significance)), (th_fold_change*mf-th_fold_change), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+                ax.add_patch(Rectangle((-th_fold_change, -np.log10(th_significance)), (th_fold_change*2), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+            elif mf==1:
+                ax.add_patch(Rectangle((xmin, -np.log10(th_significance)), -(xmin+th_fold_change), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+                ax.add_patch(Rectangle((th_fold_change, -np.log10(th_significance)), (xmax-th_fold_change), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2])                         )
 
         if the_folder[-1]!="/":
             the_folder=the_folder+"/"
@@ -1319,51 +1684,52 @@ def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,tex
         all_x,all_y,all_genes,all_colors,labels_x,labels_y=[],[],[],[],[],[]
         for quadrante in quadr_list:
             for eti in etichette:
-                lista_tmp=my_data[quadrante][eti]
-                if len(lista_tmp)>0:                    
-                    for idx_gene,my_gene in enumerate(lista_tmp):
-                        fch_x= round( my_data[quadrante][eti+'_x'][idx_gene],2)
-                        fch_y= round( my_data[quadrante][eti+'_y'][idx_gene],2)
-                        if eti==etichette[0] :
-                            all_x.append( fch_x)
-                            all_y.append( fch_y)
-                            all_genes.append( my_gene)
-                            all_colors.append(colori[0])
-                            Position = Position+1
-                            labels_x.append(trt1)
-                            labels_y.append(trt2)
-                        elif eti==etichette[1]:
-                            all_x.append( fch_x)
-                            all_y.append( fch_y)
-                            all_genes.append( my_gene)
-                            all_colors.append(colori[1])
-                            Position = Position+1
-                            labels_x.append(trt1)
-                            labels_y.append(trt2) 
-                        elif eti==etichette[2]:
-                            all_x.append( fch_x)
-                            all_y.append( fch_y)
-                            all_genes.append( my_gene)
-                            all_colors.append(colori[2])
-                            Position = Position+1
-                            labels_x.append(trt1)
-                            labels_y.append(trt2)
-                        elif eti==etichette[3]:
-                            all_x.append( fch_x)
-                            all_y.append( fch_y)
-                            all_genes.append( my_gene)
-                            all_colors.append(colori[3])
-                            Position = Position+1
-                            labels_x.append(trt1)
-                            labels_y.append(trt2)
-                        elif eti==etichette[4]:
-                            all_x.append( fch_x)
-                            all_y.append( fch_y)
-                            all_genes.append( my_gene)
-                            all_colors.append(colori[4])
-                            Position = Position+1
-                            labels_x.append(trt1)
-                            labels_y.append(trt2)
+                if eti in list(my_data[quadrante].keys()):
+                    lista_tmp=my_data[quadrante][eti]
+                    if len(lista_tmp)>0:                    
+                        for idx_gene,my_gene in enumerate(lista_tmp):
+                            fch_x= round( my_data[quadrante][eti+'_x'][idx_gene],2)
+                            fch_y= round( my_data[quadrante][eti+'_y'][idx_gene],2)
+                            if eti==etichette[0] :
+                                all_x.append( fch_x)
+                                all_y.append( fch_y)
+                                all_genes.append( my_gene)
+                                all_colors.append(colori[0])
+                                Position = Position+1
+                                labels_x.append(trt1)
+                                labels_y.append(trt2)
+                            elif eti==etichette[1]:
+                                all_x.append( fch_x)
+                                all_y.append( fch_y)
+                                all_genes.append( my_gene)
+                                all_colors.append(colori[1])
+                                Position = Position+1
+                                labels_x.append(trt1)
+                                labels_y.append(trt2) 
+                            elif eti==etichette[2]:
+                                all_x.append( fch_x)
+                                all_y.append( fch_y)
+                                all_genes.append( my_gene)
+                                all_colors.append(colori[2])
+                                Position = Position+1
+                                labels_x.append(trt1)
+                                labels_y.append(trt2)
+                            elif eti==etichette[3]:
+                                all_x.append( fch_x)
+                                all_y.append( fch_y)
+                                all_genes.append( my_gene)
+                                all_colors.append(colori[3])
+                                Position = Position+1
+                                labels_x.append(trt1)
+                                labels_y.append(trt2)
+                            elif eti==etichette[4]:
+                                all_x.append( fch_x)
+                                all_y.append( fch_y)
+                                all_genes.append( my_gene)
+                                all_colors.append(colori[4])
+                                Position = Position+1
+                                labels_x.append(trt1)
+                                labels_y.append(trt2)
         str_x=[str(x) for x in all_x]
         str_y=[str(x) for x in all_y]
         lx=list(map(' '.join, zip(labels_x, str_x)))
@@ -1404,10 +1770,12 @@ def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,tex
             ax.invert_yaxis()  # labels read top-to-bottom
             ax.set_xlabel('$log_2$ Fold Change',fontsize=11)
             ax.set_title(titolo)
-            ax.axvline(x=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+            if mf>1:
+                ax.axvline(x=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
             ax.axvline(x=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
             ax.axvline(x=0,color='grey',linestyle='dotted',lw=0.5)
-            ax.axvline(x=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+            if mf>1:
+                ax.axvline(x=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
             ax.axvline(x=-th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
             ax.tick_params(axis='y', labelsize=5)
             if the_folder[-1]!="/":
