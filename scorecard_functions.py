@@ -298,34 +298,34 @@ def scorecard_legend(info_dict3):
             ax.text(-(th_fold_change*mf+th_fold_change)/2, th_fold_change/2,'S',size=font_size1, ha='center', va='center',color=other_colori[2] )
             ax.text(-(th_fold_change*mf+th_fold_change)/2,-th_fold_change/2, 'S',size=font_size1, ha='center', va='center',color=other_colori[2] )
     elif IS_EXAMPLE==True and mf == 1:
-        ax.text(mid_green,mid_green, labels[0]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[0]  )
-        ax.text(-mid_green,-mid_green, labels[0]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[0]  )
-        ax.text(mid_green,-mid_green, labels[0]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[0]  )
-        ax.text(-mid_green,mid_green, labels[0]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[0]  )
-        ax.text(mid_green,th_fold_change/2, labels[3]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[3]  )
-        ax.text(mid_green,-th_fold_change/2, labels[3]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[3]  )
-        ax.text(-mid_green,th_fold_change/2, labels[3]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[3]  )
-        ax.text(-mid_green,-th_fold_change/2, labels[3]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[3]  )
+        ax.text(mid_green,mid_green, labels[0].lower()+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[0]  )
+        ax.text(-mid_green,-mid_green, labels[0].lower()+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[0]  )
+        ax.text(mid_green,-mid_green, labels[0].lower()+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[0]  )
+        ax.text(-mid_green,mid_green, labels[0].lower()+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[0]  )
+        ax.text(mid_green,th_fold_change/2, labels[3].lower()+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[3]  )
+        ax.text(mid_green,-th_fold_change/2, labels[3].lower()+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[3]  )
+        ax.text(-mid_green,th_fold_change/2, labels[3].lower()+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[3]  )
+        ax.text(-mid_green,-th_fold_change/2, labels[3].lower()+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[3]  )
 
-        ax.text(th_fold_change/2,-mid_green, labels[4]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
-        ax.text(th_fold_change/2,mid_green, labels[4]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
-        ax.text(-th_fold_change/2,-mid_green, labels[4]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
-        ax.text(-th_fold_change/2,mid_green, labels[4]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
+        ax.text(th_fold_change/2,-mid_green, labels[4].lower()+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
+        ax.text(th_fold_change/2,mid_green, labels[4].lower()+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
+        ax.text(-th_fold_change/2,-mid_green, labels[4].lower()+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
+        ax.text(-th_fold_change/2,mid_green, labels[4].lower()+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
         ax.set_title('Four-way plot (p<'+str(th_significance)+')')
     elif IS_EXAMPLE==False and mf == 1:
-        ax.text(mid_green,mid_green, 'A',size=font_size1, ha='center', va='center',color=colori[0]  )
-        ax.text(-mid_green,-mid_green, 'A',size=font_size1, ha='center', va='center',color=colori[0]  )
-        ax.text(mid_green,-mid_green, 'A',size=font_size1, ha='center', va='center',color=colori[0]  )
-        ax.text(-mid_green,mid_green, 'A',size=font_size1, ha='center', va='center',color=colori[0]  )
-        ax.text(mid_green,th_fold_change/2, 'D',size=font_size1, ha='center', va='center',color=colori[3]  )
-        ax.text(mid_green,-th_fold_change/2, 'D',size=font_size1, ha='center', va='center',color=colori[3]  )
-        ax.text(-mid_green,th_fold_change/2, 'D',size=font_size1, ha='center', va='center',color=colori[3]  )
-        ax.text(-mid_green,-th_fold_change/2, 'D',size=font_size1, ha='center', va='center',color=colori[3]  )
+        ax.text(mid_green,mid_green, 'a',size=font_size1, ha='center', va='center',color=colori[0]  )
+        ax.text(-mid_green,-mid_green, 'a',size=font_size1, ha='center', va='center',color=colori[0]  )
+        ax.text(mid_green,-mid_green, 'a',size=font_size1, ha='center', va='center',color=colori[0]  )
+        ax.text(-mid_green,mid_green, 'a',size=font_size1, ha='center', va='center',color=colori[0]  )
+        ax.text(mid_green,th_fold_change/2, 'd',size=font_size1, ha='center', va='center',color=colori[3]  )
+        ax.text(mid_green,-th_fold_change/2, 'd',size=font_size1, ha='center', va='center',color=colori[3]  )
+        ax.text(-mid_green,th_fold_change/2, 'd',size=font_size1, ha='center', va='center',color=colori[3]  )
+        ax.text(-mid_green,-th_fold_change/2, 'd',size=font_size1, ha='center', va='center',color=colori[3]  )
 
-        ax.text(th_fold_change/2,-mid_green, 'E',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
-        ax.text(th_fold_change/2,mid_green, 'E',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
-        ax.text(-th_fold_change/2,-mid_green, 'E',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
-        ax.text(-th_fold_change/2,mid_green, 'E',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
+        ax.text(th_fold_change/2,-mid_green, 'e',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
+        ax.text(th_fold_change/2,mid_green, 'e',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
+        ax.text(-th_fold_change/2,-mid_green, 'e',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
+        ax.text(-th_fold_change/2,mid_green, 'e',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
         ax.set_title('Four-way plot (p<'+str(th_significance)+')')
     if IS_EXAMPLE==True and mf>1:
         plt.savefig(save_folder1+'SCORECARD_colors.png',dpi=300,bbox_inches='tight')
@@ -574,48 +574,48 @@ def scorecard(the_df,info_dict2):
         quadr[labels_ave[2]+'_pval_x']=p_val_x300
         quadr[labels_ave[2]+'_pval_y']=p_val_y300
     elif IS_EXAMPLE==True and mf ==1:
-        quadr[labels[0]]=[el.get_text() for el in texts1]
+        quadr[labels[0].lower()]=[el.get_text() for el in texts1]
 
-        quadr[labels[3]]=[el.get_text() for el in texts4]
-        quadr[labels[4]]=[el.get_text() for el in texts5]
-        quadr[labels[0]+'_x']=[el.get_position()[0] for el in texts1]
+        quadr[labels[3].lower()]=[el.get_text() for el in texts4]
+        quadr[labels[4].lower()]=[el.get_text() for el in texts5]
+        quadr[labels[0].lower()+'_x']=[el.get_position()[0] for el in texts1]
 
-        quadr[labels[3]+'_x']=[el.get_position()[0] for el in texts4]
-        quadr[labels[4]+'_x']=[el.get_position()[0] for el in texts5]
-        quadr[labels[0]+'_y']=[el.get_position()[1] for el in texts1]
+        quadr[labels[3].lower()+'_x']=[el.get_position()[0] for el in texts4]
+        quadr[labels[4].lower()+'_x']=[el.get_position()[0] for el in texts5]
+        quadr[labels[0].lower()+'_y']=[el.get_position()[1] for el in texts1]
 
-        quadr[labels[3]+'_y']=[el.get_position()[1] for el in texts4]
-        quadr[labels[4]+'_y']=[el.get_position()[1] for el in texts5]
+        quadr[labels[3].lower()+'_y']=[el.get_position()[1] for el in texts4]
+        quadr[labels[4].lower()+'_y']=[el.get_position()[1] for el in texts5]
         #quadr['ALL ENTRIES']=lista
-        quadr[labels[0]+'_pval_x']=p_val_x1
-        quadr[labels[0]+'_pval_y']=p_val_y1
+        quadr[labels[0].lower()+'_pval_x']=p_val_x1
+        quadr[labels[0].lower()+'_pval_y']=p_val_y1
 
-        quadr[labels[3]+'_pval_x']=p_val_x4
-        quadr[labels[3]+'_pval_y']=p_val_y4
-        quadr[labels[4]+'_pval_x']=p_val_x5
-        quadr[labels[4]+'_pval_y']=p_val_y5
+        quadr[labels[3].lower()+'_pval_x']=p_val_x4
+        quadr[labels[3].lower()+'_pval_y']=p_val_y4
+        quadr[labels[4].lower()+'_pval_x']=p_val_x5
+        quadr[labels[4].lower()+'_pval_y']=p_val_y5
         
     elif IS_EXAMPLE==False and mf ==1:
-        quadr['A']=[el.get_text() for el in texts1]
+        quadr['a']=[el.get_text() for el in texts1]
 
-        quadr['D']=[el.get_text() for el in texts4]
-        quadr['E']=[el.get_text() for el in texts5]
-        quadr['A_x']=[el.get_position()[0] for el in texts1]
+        quadr['d']=[el.get_text() for el in texts4]
+        quadr['e']=[el.get_text() for el in texts5]
+        quadr['a_x']=[el.get_position()[0] for el in texts1]
 
-        quadr['D_x']=[el.get_position()[0] for el in texts4]
-        quadr['E_x']=[el.get_position()[0] for el in texts5]
-        quadr['A_y']=[el.get_position()[1] for el in texts1]
+        quadr['d_x']=[el.get_position()[0] for el in texts4]
+        quadr['e_x']=[el.get_position()[0] for el in texts5]
+        quadr['a_y']=[el.get_position()[1] for el in texts1]
 
-        quadr['D_y']=[el.get_position()[1] for el in texts4]
-        quadr['E_y']=[el.get_position()[1] for el in texts5]
+        quadr['d_y']=[el.get_position()[1] for el in texts4]
+        quadr['e_y']=[el.get_position()[1] for el in texts5]
         #quadr['ALL ENTRIES']=lista
-        quadr['A_pval_x']=p_val_x1
-        quadr['A_pval_y']=p_val_y1
+        quadr['a_pval_x']=p_val_x1
+        quadr['a_pval_y']=p_val_y1
 
-        quadr['D_pval_x']=p_val_x4
-        quadr['D_pval_y']=p_val_y4
-        quadr['E_pval_x']=p_val_x5
-        quadr['E_pval_y']=p_val_y5
+        quadr['d_pval_x']=p_val_x4
+        quadr['d_pval_y']=p_val_y4
+        quadr['e_pval_x']=p_val_x5
+        quadr['e_pval_y']=p_val_y5
     quadr['COLORS']=colori
     quadr['params']=info_dict2
     if use_notation:   
@@ -839,48 +839,48 @@ def scorecard(the_df,info_dict2):
         quadr[labels_ave[2]+'_pval_x']=p_val_x300
         quadr[labels_ave[2]+'_pval_y']=p_val_y300
     elif IS_EXAMPLE==True and mf ==1:
-        quadr[labels[0]]=[el.get_text() for el in texts1]
+        quadr[labels[0].lower()]=[el.get_text() for el in texts1]
 
-        quadr[labels[3]]=[el.get_text() for el in texts4]
-        quadr[labels[4]]=[el.get_text() for el in texts5]
-        quadr[labels[0]+'_x']=[el.get_position()[0] for el in texts1]
+        quadr[labels[3].lower()]=[el.get_text() for el in texts4]
+        quadr[labels[4].lower()]=[el.get_text() for el in texts5]
+        quadr[labels[0].lower()+'_x']=[el.get_position()[0] for el in texts1]
        
-        quadr[labels[3]+'_x']=[el.get_position()[0] for el in texts4]
-        quadr[labels[4]+'_x']=[el.get_position()[0] for el in texts5]
-        quadr[labels[0]+'_y']=[el.get_position()[1] for el in texts1]
+        quadr[labels[3].lower()+'_x']=[el.get_position()[0] for el in texts4]
+        quadr[labels[4].lower()+'_x']=[el.get_position()[0] for el in texts5]
+        quadr[labels[0].lower()+'_y']=[el.get_position()[1] for el in texts1]
         
-        quadr[labels[3]+'_y']=[el.get_position()[1] for el in texts4]
-        quadr[labels[4]+'_y']=[el.get_position()[1] for el in texts5]
+        quadr[labels[3].lower()+'_y']=[el.get_position()[1] for el in texts4]
+        quadr[labels[4].lower()+'_y']=[el.get_position()[1] for el in texts5]
         #quadr['ALL ENTRIES']=lista2
-        quadr[labels[0]+'_pval_x']=p_val_x1
-        quadr[labels[0]+'_pval_y']=p_val_y1
+        quadr[labels[0].lower()+'_pval_x']=p_val_x1
+        quadr[labels[0].lower()+'_pval_y']=p_val_y1
      
-        quadr[labels[3]+'_pval_x']=p_val_x4
-        quadr[labels[3]+'_pval_y']=p_val_y4
-        quadr[labels[4]+'_pval_x']=p_val_x5
-        quadr[labels[4]+'_pval_y']=p_val_y5
+        quadr[labels[3].lower()+'_pval_x']=p_val_x4
+        quadr[labels[3].lower()+'_pval_y']=p_val_y4
+        quadr[labels[4].lower()+'_pval_x']=p_val_x5
+        quadr[labels[4].lower()+'_pval_y']=p_val_y5
         
     elif IS_EXAMPLE==False and mf ==1:
-        quadr['A']=[el.get_text() for el in texts1]
+        quadr['a']=[el.get_text() for el in texts1]
         
-        quadr['D']=[el.get_text() for el in texts4]
-        quadr['E']=[el.get_text() for el in texts5]
-        quadr['A_x']=[el.get_position()[0] for el in texts1]
+        quadr['d']=[el.get_text() for el in texts4]
+        quadr['e']=[el.get_text() for el in texts5]
+        quadr['a_x']=[el.get_position()[0] for el in texts1]
       
-        quadr['D_x']=[el.get_position()[0] for el in texts4]
-        quadr['E_x']=[el.get_position()[0] for el in texts5]
-        quadr['A_y']=[el.get_position()[1] for el in texts1]
+        quadr['d_x']=[el.get_position()[0] for el in texts4]
+        quadr['e_x']=[el.get_position()[0] for el in texts5]
+        quadr['a_y']=[el.get_position()[1] for el in texts1]
      
-        quadr['D_y']=[el.get_position()[1] for el in texts4]
-        quadr['E_y']=[el.get_position()[1] for el in texts5]
+        quadr['d_y']=[el.get_position()[1] for el in texts4]
+        quadr['e_y']=[el.get_position()[1] for el in texts5]
         #quadr['ALL ENTRIES']=lista2
-        quadr['A_pval_x']=p_val_x1
-        quadr['A_pval_y']=p_val_y1
+        quadr['a_pval_x']=p_val_x1
+        quadr['a_pval_y']=p_val_y1
       
-        quadr['D_pval_x']=p_val_x4
-        quadr['D_pval_y']=p_val_y4
-        quadr['E_pval_x']=p_val_x5
-        quadr['E_pval_y']=p_val_y5
+        quadr['d_pval_x']=p_val_x4
+        quadr['d_pval_y']=p_val_y4
+        quadr['e_pval_x']=p_val_x5
+        quadr['e_pval_y']=p_val_y5
     quadr['COLORS']=colori
     quadr['params']=info_dict2
     if use_notation:   
@@ -1102,48 +1102,48 @@ def scorecard(the_df,info_dict2):
         quadr[labels_ave[2]+'_pval_x']=p_val_x300
         quadr[labels_ave[2]+'_pval_y']=p_val_y300
     elif IS_EXAMPLE==True and mf ==1:
-        quadr[labels[0]]=[el.get_text() for el in texts1]
+        quadr[labels[0].lower()]=[el.get_text() for el in texts1]
 
-        quadr[labels[3]]=[el.get_text() for el in texts4]
-        quadr[labels[4]]=[el.get_text() for el in texts5]
-        quadr[labels[0]+'_x']=[el.get_position()[0] for el in texts1]
+        quadr[labels[3].lower()]=[el.get_text() for el in texts4]
+        quadr[labels[4].lower()]=[el.get_text() for el in texts5]
+        quadr[labels[0].lower()+'_x']=[el.get_position()[0] for el in texts1]
  
-        quadr[labels[3]+'_x']=[el.get_position()[0] for el in texts4]
-        quadr[labels[4]+'_x']=[el.get_position()[0] for el in texts5]
-        quadr[labels[0]+'_y']=[el.get_position()[1] for el in texts1]
+        quadr[labels[3].lower()+'_x']=[el.get_position()[0] for el in texts4]
+        quadr[labels[4].lower()+'_x']=[el.get_position()[0] for el in texts5]
+        quadr[labels[0].lower()+'_y']=[el.get_position()[1] for el in texts1]
       
-        quadr[labels[3]+'_y']=[el.get_position()[1] for el in texts4]
-        quadr[labels[4]+'_y']=[el.get_position()[1] for el in texts5]
+        quadr[labels[3].lower()+'_y']=[el.get_position()[1] for el in texts4]
+        quadr[labels[4].lower()+'_y']=[el.get_position()[1] for el in texts5]
         #quadr['ALL ENTRIES']=lista3
-        quadr[labels[0]+'_pval_x']=p_val_x1
-        quadr[labels[0]+'_pval_y']=p_val_y1
+        quadr[labels[0].lower()+'_pval_x']=p_val_x1
+        quadr[labels[0].lower()+'_pval_y']=p_val_y1
   
-        quadr[labels[3]+'_pval_x']=p_val_x4
-        quadr[labels[3]+'_pval_y']=p_val_y4
-        quadr[labels[4]+'_pval_x']=p_val_x5
-        quadr[labels[4]+'_pval_y']=p_val_y5
+        quadr[labels[3].lower()+'_pval_x']=p_val_x4
+        quadr[labels[3].lower()+'_pval_y']=p_val_y4
+        quadr[labels[4].lower()+'_pval_x']=p_val_x5
+        quadr[labels[4].lower()+'_pval_y']=p_val_y5
         
     elif IS_EXAMPLE==False and mf ==1:
-        quadr['A']=[el.get_text() for el in texts1]
+        quadr['a']=[el.get_text() for el in texts1]
 
-        quadr['D']=[el.get_text() for el in texts4]
-        quadr['E']=[el.get_text() for el in texts5]
-        quadr['A_x']=[el.get_position()[0] for el in texts1]
+        quadr['d']=[el.get_text() for el in texts4]
+        quadr['e']=[el.get_text() for el in texts5]
+        quadr['a_x']=[el.get_position()[0] for el in texts1]
       
-        quadr['D_x']=[el.get_position()[0] for el in texts4]
-        quadr['E_x']=[el.get_position()[0] for el in texts5]
-        quadr['A_y']=[el.get_position()[1] for el in texts1]
+        quadr['d_x']=[el.get_position()[0] for el in texts4]
+        quadr['e_x']=[el.get_position()[0] for el in texts5]
+        quadr['a_y']=[el.get_position()[1] for el in texts1]
        
-        quadr['D_y']=[el.get_position()[1] for el in texts4]
-        quadr['E_y']=[el.get_position()[1] for el in texts5]
+        quadr['d_y']=[el.get_position()[1] for el in texts4]
+        quadr['e_y']=[el.get_position()[1] for el in texts5]
         #quadr['ALL ENTRIES']=lista3
-        quadr['A_pval_x']=p_val_x1
-        quadr['A_pval_y']=p_val_y1
+        quadr['a_pval_x']=p_val_x1
+        quadr['a_pval_y']=p_val_y1
        
-        quadr['D_pval_x']=p_val_x4
-        quadr['D_pval_y']=p_val_y4
-        quadr['E_pval_x']=p_val_x5
-        quadr['E_pval_y']=p_val_y5
+        quadr['d_pval_x']=p_val_x4
+        quadr['d_pval_y']=p_val_y4
+        quadr['e_pval_x']=p_val_x5
+        quadr['e_pval_y']=p_val_y5
 
 
     quadr['COLORS']=colori
@@ -1366,48 +1366,47 @@ def scorecard(the_df,info_dict2):
         quadr[labels_ave[2]+'_pval_x']=p_val_x300
         quadr[labels_ave[2]+'_pval_y']=p_val_y300
     elif IS_EXAMPLE==True and mf==1:
-        quadr[labels[0]]=[el.get_text() for el in texts1]
-    
-        quadr[labels[3]]=[el.get_text() for el in texts4]
-        quadr[labels[4]]=[el.get_text() for el in texts5]
-        quadr[labels[0]+'_x']=[el.get_position()[0] for el in texts1]
-       
-        quadr[labels[3]+'_x']=[el.get_position()[0] for el in texts4]
-        quadr[labels[4]+'_x']=[el.get_position()[0] for el in texts5]
-        quadr[labels[0]+'_y']=[el.get_position()[1] for el in texts1]
-      
-        quadr[labels[3]+'_y']=[el.get_position()[1] for el in texts4]
-        quadr[labels[4]+'_y']=[el.get_position()[1] for el in texts5]
+        quadr[labels[0].lower()]=[el.get_text() for el in texts1]    
+        quadr[labels[3].lower()]=[el.get_text() for el in texts4]
+        quadr[labels[4].lower()]=[el.get_text() for el in texts5]
+        
+        quadr[labels[0].lower()+'_x']=[el.get_position()[0] for el in texts1]       
+        quadr[labels[3].lower()+'_x']=[el.get_position()[0] for el in texts4]
+        quadr[labels[4].lower()+'_x']=[el.get_position()[0] for el in texts5]
+        
+        quadr[labels[0].lower()+'_y']=[el.get_position()[1] for el in texts1]      
+        quadr[labels[3].lower()+'_y']=[el.get_position()[1] for el in texts4]
+        quadr[labels[4].lower()+'_y']=[el.get_position()[1] for el in texts5]
         #quadr['ALL ENTRIES']=lista4
-        quadr[labels[0]+'_pval_x']=p_val_x1
-        quadr[labels[0]+'_pval_y']=p_val_y1
+        quadr[labels[0].lower()+'_pval_x']=p_val_x1
+        quadr[labels[0].lower()+'_pval_y']=p_val_y1
      
-        quadr[labels[3]+'_pval_x']=p_val_x4
-        quadr[labels[3]+'_pval_y']=p_val_y4
-        quadr[labels[4]+'_pval_x']=p_val_x5
-        quadr[labels[4]+'_pval_y']=p_val_y5
+        quadr[labels[3].lower()+'_pval_x']=p_val_x4
+        quadr[labels[3].lower()+'_pval_y']=p_val_y4
+        quadr[labels[4].lower()+'_pval_x']=p_val_x5
+        quadr[labels[4].lower()+'_pval_y']=p_val_y5
         
     elif IS_EXAMPLE==False and mf==1:
-        quadr['A']=[el.get_text() for el in texts1]
+        quadr['a']=[el.get_text() for el in texts1]
    
-        quadr['D']=[el.get_text() for el in texts4]
-        quadr['E']=[el.get_text() for el in texts5]
-        quadr['A_x']=[el.get_position()[0] for el in texts1]
+        quadr['d']=[el.get_text() for el in texts4]
+        quadr['e']=[el.get_text() for el in texts5]
+        quadr['a_x']=[el.get_position()[0] for el in texts1]
        
-        quadr['D_x']=[el.get_position()[0] for el in texts4]
-        quadr['E_x']=[el.get_position()[0] for el in texts5]
-        quadr['A_y']=[el.get_position()[1] for el in texts1]
+        quadr['d_x']=[el.get_position()[0] for el in texts4]
+        quadr['e_x']=[el.get_position()[0] for el in texts5]
+        quadr['a_y']=[el.get_position()[1] for el in texts1]
       
-        quadr['D_y']=[el.get_position()[1] for el in texts4]
-        quadr['E_y']=[el.get_position()[1] for el in texts5]
+        quadr['d_y']=[el.get_position()[1] for el in texts4]
+        quadr['e_y']=[el.get_position()[1] for el in texts5]
         #quadr['ALL ENTRIES']=lista4
-        quadr['A_pval_x']=p_val_x1
-        quadr['A_pval_y']=p_val_y1
+        quadr['a_pval_x']=p_val_x1
+        quadr['a_pval_y']=p_val_y1
       
-        quadr['D_pval_x']=p_val_x4
-        quadr['D_pval_y']=p_val_y4
-        quadr['E_pval_x']=p_val_x5
-        quadr['E_pval_y']=p_val_y5
+        quadr['d_pval_x']=p_val_x4
+        quadr['d_pval_y']=p_val_y4
+        quadr['e_pval_x']=p_val_x5
+        quadr['e_pval_y']=p_val_y5
     quadr['COLORS']=colori
     quadr['params']=info_dict2
     if use_notation:   
@@ -1478,13 +1477,20 @@ def reconstruct_scorecard(my_directory):
         IS_EXAMPLE=my_data[quadrante]['params']['is_example']
         colori=my_data[quadrante]['params']['colors']
         other_colori=my_data[quadrante]['params']['other_colors']
+        mf=my_data[quadrante]['params']['multiplication factor']
         if IS_EXAMPLE:
-            etichette=[xc.upper() for xc in colori]
-            etichette2=[xc.upper() for xc in other_colori]
+            if mf>1:
+                etichette=[xc.upper() for xc in colori]
+                etichette2=[xc.upper() for xc in other_colori]
+            elif mf==1:
+                etichette=[xc.lower() for xc in colori]
+                etichette2=[xc.lower() for xc in other_colori]                
         else:
             etichette=['A','B','C','D','E']
             etichette2=['M','S','R']
-        
+            if mf==1:
+                etichette=[i_v_s.lower() for i_v_s in etichette]
+                etichette2=[i_v_s.lower() for i_v_s in etichette2]
         incl_ave=my_data[quadrante]['params']['incl aver']
         if incl_ave:
             etichette=etichette+etichette2
@@ -1506,7 +1512,7 @@ def reconstruct_scorecard(my_directory):
         markers=my_data[quadrante]['params']['markers']
         sizes= my_data[quadrante]['params']['markers_sizes']
         gene_name= my_data[quadrante]['params']['gene_name']        
-        mf=my_data[quadrante]['params']['multiplication factor']
+        
         if mf==1:
             print('Reconstruction of a Four-Way plot. Scorecard was not created!')
         incl_ave=my_data[quadrante]['params']['incl aver']    
@@ -1635,6 +1641,8 @@ def multiple_view(my_directory,scarto=3,marker_size=100): # "scarto" adjusts the
              |-------Exp. Comparison 2
              |
              |-------Exp. Comparison 3
+
+    Only works for the scorecard (two thresholds) not for the four-way plot.
     '''
     if my_directory[-1]!="/":
         my_directory=my_directory+"/"
@@ -1764,12 +1772,20 @@ def make_volcano(my_directory):
         IS_EXAMPLE=my_data[quadrante]['params']['is_example']
         colori=my_data[quadrante]['params']['colors']
         other_colori=my_data[quadrante]['params']['other_colors']
+        mf=my_data[quadrante]['params']['multiplication factor']
         if IS_EXAMPLE:
-            etichette=[xc.upper() for xc in colori]
-            etichette2=[xc.upper() for xc in other_colori]
+            if mf>1:
+                etichette=[xc.upper() for xc in colori]
+                etichette2=[xc.upper() for xc in other_colori]
+            elif mf==1:
+                etichette=[xc.lower() for xc in colori]
+                etichette2=[xc.lower() for xc in other_colori]                
         else:
             etichette=['A','B','C','D','E']
             etichette2=['M','S','R']
+            if mf==1:
+                etichette=[i_v_s.lower() for i_v_s in etichette]
+                etichette2=[i_v_s.lower() for i_v_s in etichette2]
         incl_ave=my_data[quadrante]['params']['incl aver']
         if incl_ave:
             etichette=etichette+etichette2
@@ -1792,11 +1808,8 @@ def make_volcano(my_directory):
         col_rect=my_data[quadrante]['params']['rect_colors']
         markers=my_data[quadrante]['params']['markers']
         sizes= my_data[quadrante]['params']['markers_sizes']
-        gene_name= my_data[quadrante]['params']['gene_name']
-        
-        mf=my_data[quadrante]['params']['multiplication factor']
-        use_notation=my_data[quadrante]['params']['use_notation']
-            
+        gene_name= my_data[quadrante]['params']['gene_name'] 
+        use_notation=my_data[quadrante]['params']['use_notation']            
         fig, (ax1, ax2) = plt.subplots(1,2,figsize=(18, 8),sharey=True)
         texts1x,texts2x,texts3x,texts4x,texts5x=[],[],[],[],[]
         texts1y,texts2y,texts3y,texts4y,texts5y=[],[],[],[],[]
@@ -1932,12 +1945,20 @@ def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,tex
         colori=my_data[quadrante]['params']['colors']
         other_colori=my_data[quadrante]['params']['other_colors']
         incl_ave=my_data[quadrante]['params']['incl aver']
+        mf=my_data[quadrante]['params']['multiplication factor']
         if IS_EXAMPLE:
-            etichette=[xc.upper() for xc in colori]
-            etichette2=[xc.upper() for xc in other_colori]
+            if mf>1:
+                etichette=[xc.upper() for xc in colori]
+                etichette2=[xc.upper() for xc in other_colori]
+            elif mf==1:
+                etichette=[xc.lower() for xc in colori]
+                etichette2=[xc.lower() for xc in other_colori]                
         else:
             etichette=['A','B','C','D','E']
             etichette2=['M','S','R']
+            if mf==1:
+                etichette=[i_v_s.lower() for i_v_s in etichette]
+                etichette2=[i_v_s.lower() for i_v_s in etichette2]
         if incl_ave:
             etichette=etichette+etichette2
         titolo=my_data[quadrante]['params']['Scorecard title']
@@ -1960,8 +1981,7 @@ def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,tex
         markers=my_data[quadrante]['params']['markers']
         sizes= my_data[quadrante]['params']['markers_sizes']
         gene_name= my_data[quadrante]['params']['gene_name']
-        offset=height/2
-        mf=my_data[quadrante]['params']['multiplication factor']
+        offset=height/2        
         use_notation=my_data[quadrante]['params']['use_notation']        
         Position=0
         fig = plt.figure()
@@ -2152,12 +2172,20 @@ def count_frequencies(my_directory):
             colori=tmp['params']['colors']
             other_colori=tmp['params']['other_colors']
             incl_ave=tmp['params']['incl aver']
+            mf=tmp['params']['multiplication factor']
             if IS_EXAMPLE:
-                etichette=[xc.upper() for xc in colori]
-                etichette2=[xc.upper() for xc in other_colori]
+                if mf>1:
+                    etichette=[xc.upper() for xc in colori]
+                    etichette2=[xc.upper() for xc in other_colori]
+                elif mf==1:
+                    etichette=[xc.lower() for xc in colori]
+                    etichette2=[xc.lower() for xc in other_colori]                
             else:
                 etichette=['A','B','C','D','E']
                 etichette2=['M','S','R']
+                if mf==1:
+                    etichette=[i_v_s.lower() for i_v_s in etichette]
+                    etichette2=[i_v_s.lower() for i_v_s in etichette2]
 
             str8=qr+' total entries were '+str(n_entries)
             print(str8)
@@ -2184,8 +2212,7 @@ def count_frequencies(my_directory):
             col_rect=tmp['params']['rect_colors']
             markers=tmp['params']['markers']
             sizes= tmp['params']['markers_sizes']
-            gene_name= tmp['params']['gene_name']
-            mf=tmp['params']['multiplication factor']
+            gene_name= tmp['params']['gene_name']            
             use_notation=tmp['params']['use_notation']
             if initi:
                 if mf>1:
@@ -2326,6 +2353,11 @@ def annotate_heatmap(im, data=None, valfmt="{x:.2f}", textcolors=("black", "whit
 
     return texts
 def quadrants_heatmap(my_directory):
+    '''
+    Overview of the number of identified entries for each group/quandrant.
+    It summarizes the information as a annotated heatmap, but report only the number of entries (not the expression values)
+    Pass the main_folder as argument.
+    '''
     if my_directory[-1]!="/":
         my_directory=my_directory+"/"
     my_log=[]   
@@ -2380,9 +2412,9 @@ def quadrants_heatmap(my_directory):
                 etichette2=['M','S','R']
             elif IS_EXAMPLE==True and mf==1:
                 property_col = [colori[i] for i in [0,3,4]]
-                etichette=[xc.upper() for xc in property_col]
+                etichette=[xc.lower() for xc in property_col]
             elif IS_EXAMPLE==False and mf==1:
-                etichette=['A','D','E']
+                etichette=['a','d','e']
             titolo=tmp['params']['Scorecard title']
             fig_size=tmp['params']['fig_size']
             save_folder=tmp['params']['save_dir']
