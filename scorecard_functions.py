@@ -411,7 +411,7 @@ def scorecard(the_df,info_dict2):
                     p_val_y1.append(pval_y)
             elif (fch_x>th_fold_change and fch_x<=th_fold_change*mf) and (fch_y>th_fold_change and fch_y<=th_fold_change*mf):
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[1],marker=MarkerStyle(markers[1], fillstyle='full'),s=sizes[2])
-                if pval_x<th_significance and pval_y<th_significance:
+                if pval_x<th_significance and pval_y<th_significance and incl_ave==True:
                     texts100.append( ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[0]  ))
                     p_val_x100.append(pval_x)
                     p_val_y100.append(pval_y)
@@ -441,13 +441,13 @@ def scorecard(the_df,info_dict2):
                     p_val_y5.append(pval_y)
             elif (fch_x>th_fold_change and fch_x<th_fold_change*mf) and (fch_y<=th_fold_change) :
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])        
-                if pval_x<th_significance and pval_y<th_significance:
+                if pval_x<th_significance and pval_y<th_significance and incl_ave==True:
                     texts200.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[1]  ))
                     p_val_x200.append(pval_x) #S
                     p_val_y200.append(pval_y)
             elif (fch_x<=th_fold_change ) and (fch_y>th_fold_change and fch_y<th_fold_change*mf):
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
-                if pval_x<th_significance and pval_y<th_significance:
+                if pval_x<th_significance and pval_y<th_significance and incl_ave==True:
                     texts300.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[2]  ))
                     p_val_x300.append(pval_x) #R
                     p_val_y300.append(pval_y)
@@ -480,8 +480,10 @@ def scorecard(the_df,info_dict2):
     ax.axhline(y=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
     ax.axvline(x=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
 
-    if mf >1:
+    if mf >1 and incl_ave==False:
         adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+    if mf >1 and incl_ave==True:
+        adjust_text(flatten([texts1,texts2,texts3,texts4,texts5,texts100,texts200,texts300]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     elif mf ==1:
         adjust_text(flatten([texts1,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     quadr={}
@@ -512,22 +514,22 @@ def scorecard(the_df,info_dict2):
         quadr[labels[3]+'_pval_y']=p_val_y4
         quadr[labels[4]+'_pval_x']=p_val_x5
         quadr[labels[4]+'_pval_y']=p_val_y5
-
-        quadr[labels_ave[0]]=[el.get_text() for el in texts100]
-        quadr[labels_ave[1]]=[el.get_text() for el in texts200]
-        quadr[labels_ave[2]]=[el.get_text() for el in texts300]
-        quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
-        quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
-        quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
-        quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
-        quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
-        quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
-        quadr[labels_ave[0]+'_pval_x']=p_val_x100
-        quadr[labels_ave[0]+'_pval_y']=p_val_y100
-        quadr[labels_ave[1]+'_pval_x']=p_val_x200
-        quadr[labels_ave[1]+'_pval_y']=p_val_y200
-        quadr[labels_ave[2]+'_pval_x']=p_val_x300
-        quadr[labels_ave[2]+'_pval_y']=p_val_y300
+        if incl_ave==True:
+            quadr[labels_ave[0]]=[el.get_text() for el in texts100]
+            quadr[labels_ave[1]]=[el.get_text() for el in texts200]
+            quadr[labels_ave[2]]=[el.get_text() for el in texts300]
+            quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
+            quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
+            quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
+            quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
+            quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
+            quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
+            quadr[labels_ave[0]+'_pval_x']=p_val_x100
+            quadr[labels_ave[0]+'_pval_y']=p_val_y100
+            quadr[labels_ave[1]+'_pval_x']=p_val_x200
+            quadr[labels_ave[1]+'_pval_y']=p_val_y200
+            quadr[labels_ave[2]+'_pval_x']=p_val_x300
+            quadr[labels_ave[2]+'_pval_y']=p_val_y300
     elif IS_EXAMPLE==False and mf >1:
         labels_ave=['M','S','R']
         quadr['A']=[el.get_text() for el in texts1]
@@ -557,22 +559,22 @@ def scorecard(the_df,info_dict2):
         quadr['E_pval_x']=p_val_x5
         quadr['E_pval_y']=p_val_y5
 
-
-        quadr[labels_ave[0]]=[el.get_text() for el in texts100]
-        quadr[labels_ave[1]]=[el.get_text() for el in texts200]
-        quadr[labels_ave[2]]=[el.get_text() for el in texts300]
-        quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
-        quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
-        quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
-        quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
-        quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
-        quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
-        quadr[labels_ave[0]+'_pval_x']=p_val_x100
-        quadr[labels_ave[0]+'_pval_y']=p_val_y100
-        quadr[labels_ave[1]+'_pval_x']=p_val_x200
-        quadr[labels_ave[1]+'_pval_y']=p_val_y200
-        quadr[labels_ave[2]+'_pval_x']=p_val_x300
-        quadr[labels_ave[2]+'_pval_y']=p_val_y300
+        if incl_ave==True:
+            quadr[labels_ave[0]]=[el.get_text() for el in texts100]
+            quadr[labels_ave[1]]=[el.get_text() for el in texts200]
+            quadr[labels_ave[2]]=[el.get_text() for el in texts300]
+            quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
+            quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
+            quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
+            quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
+            quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
+            quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
+            quadr[labels_ave[0]+'_pval_x']=p_val_x100
+            quadr[labels_ave[0]+'_pval_y']=p_val_y100
+            quadr[labels_ave[1]+'_pval_x']=p_val_x200
+            quadr[labels_ave[1]+'_pval_y']=p_val_y200
+            quadr[labels_ave[2]+'_pval_x']=p_val_x300
+            quadr[labels_ave[2]+'_pval_y']=p_val_y300
     elif IS_EXAMPLE==True and mf ==1:
         quadr[labels[0].lower()]=[el.get_text() for el in texts1]
 
@@ -671,7 +673,7 @@ def scorecard(the_df,info_dict2):
                     p_val_y1.append(pval_y)
             elif (fch_x<-th_fold_change and fch_x>=-th_fold_change*mf) and (fch_y<-th_fold_change and fch_y>=-th_fold_change*mf):
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[1],marker=MarkerStyle(markers[1], fillstyle='full'),s=sizes[2])
-                if pval_x<th_significance and pval_y<th_significance:
+                if pval_x<th_significance and pval_y<th_significance and incl_ave==True:
                     texts100.append( ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[0]  ))        
                     p_val_x100.append(pval_x)
                     p_val_y100.append(pval_y)
@@ -701,13 +703,13 @@ def scorecard(the_df,info_dict2):
                     p_val_y5.append(pval_y)
             elif (fch_x<-th_fold_change and fch_x>-th_fold_change*mf) and (fch_y>=-th_fold_change) :
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])        
-                if pval_x<th_significance and pval_y<th_significance:
+                if pval_x<th_significance and pval_y<th_significance and incl_ave==True:
                     texts200.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[1] ))
                     p_val_x200.append(pval_x)
                     p_val_y200.append(pval_y)
             elif (fch_x>=-th_fold_change ) and (fch_y<-th_fold_change and fch_y>-th_fold_change*mf):
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
-                if pval_x<th_significance and pval_y<th_significance:
+                if pval_x<th_significance and pval_y<th_significance and incl_ave==True:
                     texts300.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[2]  ))
                     p_val_x300.append(pval_x)
                     p_val_y300.append(pval_y)
@@ -747,9 +749,11 @@ def scorecard(the_df,info_dict2):
     #adjust_text(texts3, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     #adjust_text(texts4, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     #adjust_text(texts5, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-    if mf >1:
+    if mf >1 and incl_ave==False:
         adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-    elif mf==1:
+    if mf >1 and incl_ave==True:
+        adjust_text(flatten([texts1,texts2,texts3,texts4,texts5,texts100,texts200,texts300]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+    elif mf ==1:
         adjust_text(flatten([texts1,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     quadr={}
     if IS_EXAMPLE==True and mf >1:
@@ -779,22 +783,22 @@ def scorecard(the_df,info_dict2):
         quadr[labels[3]+'_pval_y']=p_val_y4
         quadr[labels[4]+'_pval_x']=p_val_x5
         quadr[labels[4]+'_pval_y']=p_val_y5
-
-        quadr[labels_ave[0]]=[el.get_text() for el in texts100]
-        quadr[labels_ave[1]]=[el.get_text() for el in texts200]
-        quadr[labels_ave[2]]=[el.get_text() for el in texts300]
-        quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
-        quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
-        quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
-        quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
-        quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
-        quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
-        quadr[labels_ave[0]+'_pval_x']=p_val_x100
-        quadr[labels_ave[0]+'_pval_y']=p_val_y100
-        quadr[labels_ave[1]+'_pval_x']=p_val_x200
-        quadr[labels_ave[1]+'_pval_y']=p_val_y200
-        quadr[labels_ave[2]+'_pval_x']=p_val_x300
-        quadr[labels_ave[2]+'_pval_y']=p_val_y300        
+        if incl_ave==True:
+            quadr[labels_ave[0]]=[el.get_text() for el in texts100]
+            quadr[labels_ave[1]]=[el.get_text() for el in texts200]
+            quadr[labels_ave[2]]=[el.get_text() for el in texts300]
+            quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
+            quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
+            quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
+            quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
+            quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
+            quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
+            quadr[labels_ave[0]+'_pval_x']=p_val_x100
+            quadr[labels_ave[0]+'_pval_y']=p_val_y100
+            quadr[labels_ave[1]+'_pval_x']=p_val_x200
+            quadr[labels_ave[1]+'_pval_y']=p_val_y200
+            quadr[labels_ave[2]+'_pval_x']=p_val_x300
+            quadr[labels_ave[2]+'_pval_y']=p_val_y300        
     elif IS_EXAMPLE==False and mf >1:
         labels_ave=['M','S','R']
         quadr['A']=[el.get_text() for el in texts1]
@@ -823,21 +827,22 @@ def scorecard(the_df,info_dict2):
         quadr['D_pval_y']=p_val_y4
         quadr['E_pval_x']=p_val_x5
         quadr['E_pval_y']=p_val_y5
-        quadr[labels_ave[0]]=[el.get_text() for el in texts100]
-        quadr[labels_ave[1]]=[el.get_text() for el in texts200]
-        quadr[labels_ave[2]]=[el.get_text() for el in texts300]
-        quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
-        quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
-        quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
-        quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
-        quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
-        quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
-        quadr[labels_ave[0]+'_pval_x']=p_val_x100
-        quadr[labels_ave[0]+'_pval_y']=p_val_y100
-        quadr[labels_ave[1]+'_pval_x']=p_val_x200
-        quadr[labels_ave[1]+'_pval_y']=p_val_y200
-        quadr[labels_ave[2]+'_pval_x']=p_val_x300
-        quadr[labels_ave[2]+'_pval_y']=p_val_y300
+        if incl_ave==True:
+            quadr[labels_ave[0]]=[el.get_text() for el in texts100]
+            quadr[labels_ave[1]]=[el.get_text() for el in texts200]
+            quadr[labels_ave[2]]=[el.get_text() for el in texts300]
+            quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
+            quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
+            quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
+            quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
+            quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
+            quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
+            quadr[labels_ave[0]+'_pval_x']=p_val_x100
+            quadr[labels_ave[0]+'_pval_y']=p_val_y100
+            quadr[labels_ave[1]+'_pval_x']=p_val_x200
+            quadr[labels_ave[1]+'_pval_y']=p_val_y200
+            quadr[labels_ave[2]+'_pval_x']=p_val_x300
+            quadr[labels_ave[2]+'_pval_y']=p_val_y300
     elif IS_EXAMPLE==True and mf ==1:
         quadr[labels[0].lower()]=[el.get_text() for el in texts1]
 
@@ -936,7 +941,7 @@ def scorecard(the_df,info_dict2):
                     p_val_y1.append(pval_y)
             elif (fch_x<-th_fold_change and fch_x>=-th_fold_change*mf) and (fch_y>th_fold_change and fch_y<=th_fold_change*mf):
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[1],marker=MarkerStyle(markers[1], fillstyle='full'),s=sizes[2])
-                if pval_x<th_significance and pval_y<th_significance:
+                if pval_x<th_significance and pval_y<th_significance and incl_ave==True:
                     texts100.append( ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[0]  ))        
                     p_val_x100.append(pval_x)
                     p_val_y100.append(pval_y)
@@ -966,13 +971,13 @@ def scorecard(the_df,info_dict2):
                     p_val_y5.append(pval_y)
             elif (fch_x<-th_fold_change and fch_x>-th_fold_change*mf) and (fch_y<=th_fold_change) :
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])        
-                if pval_x<th_significance and pval_y<th_significance:
+                if pval_x<th_significance and pval_y<th_significance and incl_ave==True:
                     texts200.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[1] ))
                     p_val_x200.append(pval_x)
                     p_val_y200.append(pval_y)
             elif (fch_x>=-th_fold_change ) and (fch_y>th_fold_change and fch_y<th_fold_change*mf):
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
-                if pval_x<th_significance and pval_y<th_significance:
+                if pval_x<th_significance and pval_y<th_significance and incl_ave==True:
                     texts300.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[2]  ))
                     p_val_x300.append(pval_x)
                     p_val_y300.append(pval_y)
@@ -1010,9 +1015,11 @@ def scorecard(the_df,info_dict2):
     #adjust_text(texts3, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     #adjust_text(texts4, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     #adjust_text(texts5, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-    if mf>1:
+    if mf >1 and incl_ave==False:
         adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-    elif mf==1:
+    if mf >1 and incl_ave==True:
+        adjust_text(flatten([texts1,texts2,texts3,texts4,texts5,texts100,texts200,texts300]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+    elif mf ==1:
         adjust_text(flatten([texts1,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     quadr={}
     
@@ -1043,21 +1050,22 @@ def scorecard(the_df,info_dict2):
         quadr[labels[3]+'_pval_y']=p_val_y4
         quadr[labels[4]+'_pval_x']=p_val_x5
         quadr[labels[4]+'_pval_y']=p_val_y5
-        quadr[labels_ave[0]]=[el.get_text() for el in texts100]
-        quadr[labels_ave[1]]=[el.get_text() for el in texts200]
-        quadr[labels_ave[2]]=[el.get_text() for el in texts300]
-        quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
-        quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
-        quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
-        quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
-        quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
-        quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
-        quadr[labels_ave[0]+'_pval_x']=p_val_x100
-        quadr[labels_ave[0]+'_pval_y']=p_val_y100
-        quadr[labels_ave[1]+'_pval_x']=p_val_x200
-        quadr[labels_ave[1]+'_pval_y']=p_val_y200
-        quadr[labels_ave[2]+'_pval_x']=p_val_x300
-        quadr[labels_ave[2]+'_pval_y']=p_val_y300       
+        if incl_ave==True:
+            quadr[labels_ave[0]]=[el.get_text() for el in texts100]
+            quadr[labels_ave[1]]=[el.get_text() for el in texts200]
+            quadr[labels_ave[2]]=[el.get_text() for el in texts300]
+            quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
+            quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
+            quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
+            quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
+            quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
+            quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
+            quadr[labels_ave[0]+'_pval_x']=p_val_x100
+            quadr[labels_ave[0]+'_pval_y']=p_val_y100
+            quadr[labels_ave[1]+'_pval_x']=p_val_x200
+            quadr[labels_ave[1]+'_pval_y']=p_val_y200
+            quadr[labels_ave[2]+'_pval_x']=p_val_x300
+            quadr[labels_ave[2]+'_pval_y']=p_val_y300       
     elif IS_EXAMPLE==False and mf >1:
         labels_ave=['M','S','R']
         quadr['A']=[el.get_text() for el in texts1]
@@ -1086,21 +1094,22 @@ def scorecard(the_df,info_dict2):
         quadr['D_pval_y']=p_val_y4
         quadr['E_pval_x']=p_val_x5
         quadr['E_pval_y']=p_val_y5
-        quadr[labels_ave[0]]=[el.get_text() for el in texts100]
-        quadr[labels_ave[1]]=[el.get_text() for el in texts200]
-        quadr[labels_ave[2]]=[el.get_text() for el in texts300]
-        quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
-        quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
-        quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
-        quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
-        quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
-        quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
-        quadr[labels_ave[0]+'_pval_x']=p_val_x100
-        quadr[labels_ave[0]+'_pval_y']=p_val_y100
-        quadr[labels_ave[1]+'_pval_x']=p_val_x200
-        quadr[labels_ave[1]+'_pval_y']=p_val_y200
-        quadr[labels_ave[2]+'_pval_x']=p_val_x300
-        quadr[labels_ave[2]+'_pval_y']=p_val_y300
+        if incl_ave==True:
+            quadr[labels_ave[0]]=[el.get_text() for el in texts100]
+            quadr[labels_ave[1]]=[el.get_text() for el in texts200]
+            quadr[labels_ave[2]]=[el.get_text() for el in texts300]
+            quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
+            quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
+            quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
+            quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
+            quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
+            quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
+            quadr[labels_ave[0]+'_pval_x']=p_val_x100
+            quadr[labels_ave[0]+'_pval_y']=p_val_y100
+            quadr[labels_ave[1]+'_pval_x']=p_val_x200
+            quadr[labels_ave[1]+'_pval_y']=p_val_y200
+            quadr[labels_ave[2]+'_pval_x']=p_val_x300
+            quadr[labels_ave[2]+'_pval_y']=p_val_y300
     elif IS_EXAMPLE==True and mf ==1:
         quadr[labels[0].lower()]=[el.get_text() for el in texts1]
 
@@ -1201,7 +1210,7 @@ def scorecard(the_df,info_dict2):
                     p_val_y1.append(pval_y)
             elif (fch_x>th_fold_change and fch_x<=th_fold_change*mf) and (fch_y<-th_fold_change and fch_y>=-th_fold_change*mf):
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[1],marker=MarkerStyle(markers[1], fillstyle='full'),s=sizes[2])
-                if pval_x<th_significance and pval_y<th_significance:
+                if pval_x<th_significance and pval_y<th_significance and incl_ave==True:
                     texts100.append( ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[0]  ))        
                     p_val_x100.append(pval_x)
                     p_val_y100.append(pval_y)
@@ -1231,13 +1240,13 @@ def scorecard(the_df,info_dict2):
                     p_val_y5.append(pval_y)
             elif (fch_x>th_fold_change and fch_x<th_fold_change*mf) and (fch_y>=-th_fold_change) :
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])        
-                if pval_x<th_significance and pval_y<th_significance:
+                if pval_x<th_significance and pval_y<th_significance and incl_ave==True:
                     texts200.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[1] ))
                     p_val_x200.append(pval_x)
                     p_val_y200.append(pval_y)
             elif (fch_x<=th_fold_change ) and (fch_y<-th_fold_change and fch_y>-th_fold_change*mf):
                 ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[2],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
-                if pval_x<th_significance and pval_y<th_significance:
+                if pval_x<th_significance and pval_y<th_significance and incl_ave==True:
                     texts300.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[2]  ))
                     p_val_x300.append(pval_x)
                     p_val_y300.append(pval_y)
@@ -1275,9 +1284,11 @@ def scorecard(the_df,info_dict2):
     #adjust_text(texts3, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     #adjust_text(texts4, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     #adjust_text(texts5, ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-    if mf>1:
+    if mf >1 and incl_ave==False:
         adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-    elif mf==1:
+    if mf >1 and incl_ave==True:
+        adjust_text(flatten([texts1,texts2,texts3,texts4,texts5,texts100,texts200,texts300]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+    elif mf ==1:
         adjust_text(flatten([texts1,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
     quadr={}
     if IS_EXAMPLE==True and mf>1:
@@ -1307,21 +1318,22 @@ def scorecard(the_df,info_dict2):
         quadr[labels[3]+'_pval_y']=p_val_y4
         quadr[labels[4]+'_pval_x']=p_val_x5
         quadr[labels[4]+'_pval_y']=p_val_y5
-        quadr[labels_ave[0]]=[el.get_text() for el in texts100]
-        quadr[labels_ave[1]]=[el.get_text() for el in texts200]
-        quadr[labels_ave[2]]=[el.get_text() for el in texts300]
-        quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
-        quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
-        quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
-        quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
-        quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
-        quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
-        quadr[labels_ave[0]+'_pval_x']=p_val_x100
-        quadr[labels_ave[0]+'_pval_y']=p_val_y100
-        quadr[labels_ave[1]+'_pval_x']=p_val_x200
-        quadr[labels_ave[1]+'_pval_y']=p_val_y200
-        quadr[labels_ave[2]+'_pval_x']=p_val_x300
-        quadr[labels_ave[2]+'_pval_y']=p_val_y300        
+        if incl_ave==True:
+            quadr[labels_ave[0]]=[el.get_text() for el in texts100]
+            quadr[labels_ave[1]]=[el.get_text() for el in texts200]
+            quadr[labels_ave[2]]=[el.get_text() for el in texts300]
+            quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
+            quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
+            quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
+            quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
+            quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
+            quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
+            quadr[labels_ave[0]+'_pval_x']=p_val_x100
+            quadr[labels_ave[0]+'_pval_y']=p_val_y100
+            quadr[labels_ave[1]+'_pval_x']=p_val_x200
+            quadr[labels_ave[1]+'_pval_y']=p_val_y200
+            quadr[labels_ave[2]+'_pval_x']=p_val_x300
+            quadr[labels_ave[2]+'_pval_y']=p_val_y300        
     elif IS_EXAMPLE==False and mf>1:
         labels_ave=['M','S','R']
         quadr['A']=[el.get_text() for el in texts1]
@@ -1350,21 +1362,22 @@ def scorecard(the_df,info_dict2):
         quadr['D_pval_y']=p_val_y4
         quadr['E_pval_x']=p_val_x5
         quadr['E_pval_y']=p_val_y5
-        quadr[labels_ave[0]]=[el.get_text() for el in texts100]
-        quadr[labels_ave[1]]=[el.get_text() for el in texts200]
-        quadr[labels_ave[2]]=[el.get_text() for el in texts300]
-        quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
-        quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
-        quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
-        quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
-        quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
-        quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
-        quadr[labels_ave[0]+'_pval_x']=p_val_x100
-        quadr[labels_ave[0]+'_pval_y']=p_val_y100
-        quadr[labels_ave[1]+'_pval_x']=p_val_x200
-        quadr[labels_ave[1]+'_pval_y']=p_val_y200
-        quadr[labels_ave[2]+'_pval_x']=p_val_x300
-        quadr[labels_ave[2]+'_pval_y']=p_val_y300
+        if incl_ave==True:
+            quadr[labels_ave[0]]=[el.get_text() for el in texts100]
+            quadr[labels_ave[1]]=[el.get_text() for el in texts200]
+            quadr[labels_ave[2]]=[el.get_text() for el in texts300]
+            quadr[labels_ave[0]+'_x']=[el.get_position()[0] for el in texts100]
+            quadr[labels_ave[1]+'_x']=[el.get_position()[0] for el in texts200]
+            quadr[labels_ave[2]+'_x']=[el.get_position()[0] for el in texts300]
+            quadr[labels_ave[0]+'_y']=[el.get_position()[1] for el in texts100]
+            quadr[labels_ave[1]+'_y']=[el.get_position()[1] for el in texts200]
+            quadr[labels_ave[2]+'_y']=[el.get_position()[1] for el in texts300]
+            quadr[labels_ave[0]+'_pval_x']=p_val_x100
+            quadr[labels_ave[0]+'_pval_y']=p_val_y100
+            quadr[labels_ave[1]+'_pval_x']=p_val_x200
+            quadr[labels_ave[1]+'_pval_y']=p_val_y200
+            quadr[labels_ave[2]+'_pval_x']=p_val_x300
+            quadr[labels_ave[2]+'_pval_y']=p_val_y300
     elif IS_EXAMPLE==True and mf==1:
         quadr[labels[0].lower()]=[el.get_text() for el in texts1]    
         quadr[labels[3].lower()]=[el.get_text() for el in texts4]
