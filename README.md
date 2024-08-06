@@ -5,6 +5,7 @@ This collection of functions creates a scorecard to compare wet-lab experimental
 
 ![Scorecard example](example_img/All_axemaples.png?raw=True)
 
+## Quick introduction
 At the beginning of the file include the import statement, for example:
 ```
 import scorecard_functions
