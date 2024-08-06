@@ -3,7 +3,7 @@
 
 A scorecard to compare wet-lab experimental conditions, useful to find extreme or moderately changing expression values
 
-![Scorecard example](example_img/EXAMPLE_letters.png?raw=True)
+![Scorecard example](example_img/All_axemaples.png?raw=True)
 
 At the beginning of the file include the import statement, for example:
 ```
