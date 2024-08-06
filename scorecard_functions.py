@@ -2228,7 +2228,7 @@ def count_frequencies(my_directory):
                 my_log.append('Analyzed '+str(tot_entries)+' entries'+'\n' )           
             for key,value in tmp.items():
                 if len(value)>0 and key in etichette:
-                    str1='In '+qr+' the '+key+' group contains '+str(len(value))+' entries'
+                    str1='In '+qr+' the <<'+key+'>> group contains '+str(len(value))+' entries'
                     print(str1)                    
                     conti += len(value)
                     list_q.append(qr)
@@ -2255,11 +2255,13 @@ def count_frequencies(my_directory):
         str1='In total the scorecard identified '+str(conti)+' entries inside the shaded regions of interest'
         str11='The scorecard also identified '+str(conti2)+' entries between F.C. thresholds'
         print(str1)
-        print(str11)
+        if incl_ave:
+            print(str11)
         print('\n')
         
         my_log.append(str1+'\n')
-        my_log.append(str11+'\n')
+        if incl_ave:
+            my_log.append(str11+'\n')
     if incl_ave==False:
         calc=Counter(flatten(all_counts))
     else:
