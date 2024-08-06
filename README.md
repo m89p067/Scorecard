@@ -111,3 +111,7 @@ To get a summary of the number of entries/genes indentified by the scorecard typ
 ```
 scorecard_functions.count_frequencies(main_folder)
 ```
+Also the summary of the number of entries/genes indentified by the scorecard can be visualized as heatmap:
+```
+scorecard_functions.quadrants_heatmap(main_folder)
+```
