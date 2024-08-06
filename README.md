@@ -1,7 +1,7 @@
 # Scorecard to compare wet-lab experimental conditions 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13141919.svg)](https://doi.org/10.5281/zenodo.13141919)
 
-A scorecard to compare wet-lab experimental conditions, useful to find extreme or moderately changing expression values
+This Python library of functions creates a scorecard to compare wet-lab experimental conditions, useful to identify extreme or moderately changing expression values based on fold change and statistical significance. The goal is to narrow down the information and provide a reduced set of relevant entries for further analysis.
 
 ![Scorecard example](example_img/All_axemaples.png?raw=True)
 
