@@ -1695,6 +1695,9 @@ def multiple_view(my_directory,scarto=3,marker_size=100): # "scarto" adjusts the
             all_gruppo=[*tmp2]
             etichette=[xc.upper() for xc in tmp2['COLORS']]
             colore=tmp2['COLORS']
+            if tmp2['params']['multiplication factor']==1:
+                print('Sorry only working for the scorecard; run using multiplication factor >1')
+                return
             for i_gruppo, gruppo in enumerate(all_gruppo):                
                 if gruppo in ['A', 'B', 'C', 'D', 'E']:                    
                     valore1=tmp2[gruppo+'_x']
