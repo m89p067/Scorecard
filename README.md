@@ -92,7 +92,7 @@ The folders structure should be as the following:
              |
              |-------Exp. Comparison 3
 
-One could create a general overview of all wet-lab experimental conditions by calling the function:
+One could create a general overview of all wet-lab experimental conditions by calling the function (only for the scorecard, not for the four-way plot):
 ```
 scorecard_functions.multiple_view(main_folder)
 ```
