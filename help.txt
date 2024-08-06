@@ -59,7 +59,7 @@ The folders structure should as the following:
              |
              |-------Exp. Comparison 3
 
-One could create a general overview of all wet-lab experimental conditions by calling the function
+One could create a general overview of all wet-lab experimental conditions by calling the function (noly works for the scorecard, not for the four-way plot).
 >>scorecard_functions.multiple_view(main_folder)
 Remember that "main_folder" is a string containing the full path of the folder hosting all sub-directories with experimental comparisions.
 To build Volcano plots and highlight genes or entries belonging to the regions of interest of the scorecard type:
