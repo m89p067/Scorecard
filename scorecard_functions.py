@@ -370,10 +370,11 @@ def scorecard(the_df,info_dict2):
     mf=info_dict2['multiplication factor']
     if mf<1:
         print('ERROR: Change multiplication factor to a number >=1')
-        nota=''
+        return
     elif mf==1:
         print('This will prodice a four-way plot, not the scorecard')
         nota=info_dict2['note']
+
     use_notation=info_dict2['use_notation']
     print('The dataset includes ',the_df.shape[0],' entries in total')
     labels=[xc.upper() for xc in colori]
