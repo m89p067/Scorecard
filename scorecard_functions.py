@@ -2366,7 +2366,7 @@ def count_frequencies(my_directory):
                     all_counts.append(value)
                     my_log.append(str1)
                 elif incl_ave==True and len(value)>0 and key in etichette2:
-                    str1='In '+qr+' the '+key+' group contains '+str(len(value))+' entries'
+                    str1='In '+qr+' the <<'+key+'>> group contains '+str(len(value))+' entries'
                     print(str1)                    
                     conti2 += len(value)
                     list_q2.append(qr)
