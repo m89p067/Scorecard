@@ -11,11 +11,11 @@ At the beginning of the file include the import statement, for example:
 import scorecard_functions
 ```
 Initially, create the parameter set to tune the scorecard features.
-Type the following row of code to generate the parameter dictionary with defaults: 
+The following line of code could be used to generate the parameter dictionary with default values: 
 ```
 param_dict=scorecard_functions.generate_parameters()
 ```
-Afterward modify the default parameters with the information about your CSV file and dataset which will be imported as a Pandas DataFrame:
+Afterward, one can modify the default parameters with users preferences. For example, one should define the information regarding name and location of the CSV file and dataset which will be imported as a Pandas DataFrame:
 *    'base_dir' # Path of the directory where the CSV resides
 *   'filename'# filename of the CSV with the log2 Fold change and Adjusted p-values. Should include gene names or gene ID as separate column
 *    'zscore' # Perform standardization on log2 F.C. values
