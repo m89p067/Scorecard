@@ -44,15 +44,15 @@ Afterward, one can modify the default parameters with users preferences. For exa
 *    'Log Epsilon' # tiny value to adjust the log calculation
 *    'Scorecard title' # add some short description regarding the experimental conditions on the scorecard title
 
-Other important parameters include the names of the columns containing the log2 fold change and adjusted p-values:
+Other important parameters are the column names in the CSV file containing the log2 fold change and the adjusted p-values:
 *    'FC cond x' # replace with exact column name containing log2 fold change Treatment1 vs Control
 *    'FC cond y' # replace with exact column name containing log2 fold change Treatment2 vs Control
 *    'padj cond x' # replace with exact column name containing adj p-values Treatment1 vs Control
 *    'padj cond y' # replace with exact column name containing adj p-values Treatment2 vs Control
 
-Your dataset should contain pre-computed fold change values (and related adjusted p-values) as columns in the CSV file.
+Indeed, your dataset should contain pre-computed fold change values (and related adjusted p-values) as columns in the CSV file.
 
-For example the notation could be "Treatment1vsCtrl_Log2FoldChange", "Treatment2vsCtrl_Log2FoldChange", "Treatment4vsCtrl_Log2FoldChange", etc... (with related p-values in similar notation). 
+For example the notation could be "Treatment1vsCtrl_Log2FoldChange", "Treatment2vsCtrl_Log2FoldChange", "Treatment4vsCtrl_Log2FoldChange", etc... (with related p-values in a similar record). 
 Remember that the CSV file should have the first row as header, reporting the column names matching the information provided in the dictionary of parameters.
 | Gene ID | "Treatment1vsCtrl_Log2FoldChange" | "Treatment2vsCtrl_Log2FoldChange" | "Treatment3vsCtrl_Log2FoldChange" |"Treatment1vsCtrl_padj" |"Treatment2vsCtrl_padj" |"Treatment3vsCtrl_padj" |
 |--------:|-----------|-----------|-----------|-----------|-----------|-----------|
