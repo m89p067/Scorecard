@@ -2316,7 +2316,7 @@ def count_frequencies(my_directory):
                 for qi,qr in enumerate(quadr_list):
                     tmp=all_data[k][qr]
                     for testo in etichette:
-                        if key in tmp[testo]:
+                        if (testo in tmp) and (key in tmp[testo]):
                             str10='Entry found in '+k+' ['+qr+'], inside region of interest <<'+testo+'>>'
                             print(str10)
                             my_log.append(str10)
