@@ -27,7 +27,7 @@ Afterward, one can modify the default parameters with users preferences. For exa
 *    'save_dir' # path of the directory where saving scorecards and JSON outcomes
 *    'colors' # Color codes of the markers in each area of the scorecard (inside the regions of interest)
 *    'other_colors' # Color of the markers outside the regions of interest
-*    'th_fold_change' # log2 fold change standard threshold (it will be automatically added another threshold based on 'multiplication factor')
+*    'th_fold_change' # log2 fold change standard threshold (another threshold will be automatically added based on 'multiplication factor')
 *    'th_significance'  # Significance threshold i.e. 0.05 or lower
 *    'font_size_quadrants'  # font size of the genes over the scorecard
 *    'font_size_examples'  # Scorecard legend font size when typing the areas of interest
