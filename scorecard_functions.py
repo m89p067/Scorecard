@@ -18,7 +18,7 @@ from matplotlib.spines import Spine
 from matplotlib.transforms import Affine2D
 from collections import Counter
 import matplotlib
-import pdb
+
 def contains_nested_list(lst):
     """
     Check if a list contains any nested lists.
