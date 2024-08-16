@@ -2462,7 +2462,7 @@ def heatmap(data, row_labels, col_labels, ax=None,cbar_kw=None, cbarlabel="",lab
     return im, cbar
 
 
-def annotate_heatmap(im, data=None, valfmt="{x:.2f}", textcolors=("black", "white"), threshold=None,large_im=False, **textkw):
+def annotate_heatmap(im, data=None, valfmt="{x:.2f}", textcolors=("black", "white"), threshold=None,fs=4.5, **textkw):
 
     if not isinstance(data, (list, np.ndarray)):
         data = im.get_array()
@@ -2482,10 +2482,7 @@ def annotate_heatmap(im, data=None, valfmt="{x:.2f}", textcolors=("black", "whit
     # Get the formatter in case a string is supplied
     if isinstance(valfmt, str):
         valfmt = matplotlib.ticker.StrMethodFormatter(valfmt)
-    if large_im:
-        fs=3
-    else:
-        fs=4.5
+
     # Loop over the data and create a `Text` for each "pixel".
     # Change the text's color depending on the data.
     texts = []
@@ -2496,7 +2493,7 @@ def annotate_heatmap(im, data=None, valfmt="{x:.2f}", textcolors=("black", "whit
             texts.append(text)
 
     return texts
-def quadrants_heatmap(my_directory,color_map='Greys',above_lab_rot=-60,horiz_alig="right"):
+def quadrants_heatmap(my_directory,color_map='Greys',above_lab_rot=-60,horiz_alig="right",font_counts=4.5):
     '''
     Overview of the number of identified entries for each group/quandrant.
     It summarizes the information as a annotated heatmap, but report only the number of entries (not the expression values)
@@ -2595,10 +2592,8 @@ def quadrants_heatmap(my_directory,color_map='Greys',above_lab_rot=-60,horiz_ali
     fig, ax = plt.subplots()
     
     im, cbar = heatmap(df.to_numpy(dtype=np.int32).T,df.columns.tolist(), VARIABLES,  ax=ax, cmap=color_map, cbarlabel="Counts",lab_rot=above_lab_rot,v_align=horiz_alig)
-    if len(VARIABLES)>6:
-        texts = annotate_heatmap(im, valfmt="{x:.0f}",large_im=True)
-    else:
-        texts = annotate_heatmap(im, valfmt="{x:.0f}",large_im=False)
+    texts = annotate_heatmap(im, valfmt="{x:.0f}",fs=font_counts)
+
 
     fig.tight_layout()
 
