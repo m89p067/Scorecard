@@ -18,7 +18,18 @@ from matplotlib.spines import Spine
 from matplotlib.transforms import Affine2D
 from collections import Counter
 import matplotlib
+import pdb
+def contains_nested_list(lst):
+    """
+    Check if a list contains any nested lists.
+    
+    Parameters:
+    lst (list): The list to check.
 
+    Returns:
+    bool: True if the list contains at least one nested list, False otherwise.
+    """
+    return any(isinstance(i, list) for i in lst)
 def help():
     with open("help.txt", "r", encoding="utf-8") as file:
         for line in file:
@@ -2166,6 +2177,7 @@ def count_frequencies(my_directory):
     print(str1)
     print('\n')
     my_log.append(str1)
+    keep_all=[]
     for i,k in enumerate(VARIABLES):
         str0='-------------- Comparison '+str(i+1)+' of '+str(len(all_dir))
         str01='Comparison : '+str(k)
@@ -2279,24 +2291,35 @@ def count_frequencies(my_directory):
         my_log.append(str1+'\n')
         if incl_ave:
             my_log.append(str11+'\n')
-    if incl_ave==False:
-        calc=Counter(flatten(all_counts))
-    else:
-        calc=Counter(flatten(all_counts+all_counts2))
+        if incl_ave==False:
+            keep_all.append(all_counts)
+        else:
+            keep_all.append(all_counts+all_counts2)
     multi_entr=False
+    out_list=flatten(keep_all)
+    while True:        
+        if contains_nested_list(out_list)==False:
+            break
+        else:
+            out_list=flatten(out_list)
+    calc=Counter(out_list)
+    str_1='******************** Entries counts:'
+    print(str_1)
+    my_log.append(str_1)
     for key , value in calc.items():
         if value>1:
-            str1='Entry :',key,' occurred ', value,' times during the ',len(all_dir),' comparisons'
+            str1='Symbol : '+key+' occurred '+ str(value)+' times during the '+str(len(all_dir))+' comparisons'
             print(str1)
             my_log.append(str1)
-            multi_entr=True
+            multi_entr=True            
             for i,k in enumerate(VARIABLES):
                 for qi,qr in enumerate(quadr_list):
                     tmp=all_data[k][qr]
-                    if key in tmp.keys():
-                        str1='Entry found in ',k,' [',qr,']'
-                        print(str1)
-                        my_log.append(str1)
+                    for testo in etichette:
+                        if key in tmp[testo]:
+                            str10='Entry found in '+k+' ['+qr+']'
+                            print(str10)
+                            my_log.append(str10)
     if multi_entr==False:
         print('No repeated entries found among experimental conditions being compared')
         my_log.append('No repeated entries found among experimental conditions being compared')
