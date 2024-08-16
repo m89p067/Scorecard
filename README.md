@@ -77,7 +77,7 @@ Individual plots could be useful in case of crowded scorecards. For single quand
 scorecard_functions.scorecard(df,param_dict)
 ```
 
-Run scorecard reconstruction from individual quandrants using this functiona call:
+Run scorecard reconstruction from individual quandrants using this function call:
 ```
 scorecard_functions.reconstruct_scorecard(df,param_dict)
 ```
