@@ -2426,7 +2426,7 @@ def count_frequencies(my_directory):
         print('No repeated entries found among experimental conditions being compared')
         my_log.append('No repeated entries found among experimental conditions being compared')
     save_to_file(my_directory,my_log)
-def heatmap(data, row_labels, col_labels, ax=None,cbar_kw=None, cbarlabel="", **kwargs):
+def heatmap(data, row_labels, col_labels, ax=None,cbar_kw=None, cbarlabel="",lab_rot=-60, **kwargs):
 
     if ax is None:
         ax = plt.gca()
@@ -2449,7 +2449,7 @@ def heatmap(data, row_labels, col_labels, ax=None,cbar_kw=None, cbarlabel="", **
     ax.tick_params(top=True, bottom=False,           labeltop=True, labelbottom=False)
 
     # Rotate the tick labels and set their alignment.
-    plt.setp(ax.get_xticklabels(), rotation=-60, ha="right",   rotation_mode="anchor")
+    plt.setp(ax.get_xticklabels(), rotation=lab_rot, ha="right",   rotation_mode="anchor")
 
     # Turn spines off and create white grid.
     ax.spines[:].set_visible(False)
@@ -2496,7 +2496,7 @@ def annotate_heatmap(im, data=None, valfmt="{x:.2f}", textcolors=("black", "whit
             texts.append(text)
 
     return texts
-def quadrants_heatmap(my_directory):
+def quadrants_heatmap(my_directory,color_map='Greys',above_lab_rot=-60):
     '''
     Overview of the number of identified entries for each group/quandrant.
     It summarizes the information as a annotated heatmap, but report only the number of entries (not the expression values)
@@ -2594,7 +2594,7 @@ def quadrants_heatmap(my_directory):
     df = pd.DataFrame.from_dict(out_all)
     fig, ax = plt.subplots()
     
-    im, cbar = heatmap(df.to_numpy(dtype=np.int32).T,df.columns.tolist(), VARIABLES,  ax=ax, cmap="YlGn", cbarlabel="Counts")
+    im, cbar = heatmap(df.to_numpy(dtype=np.int32).T,df.columns.tolist(), VARIABLES,  ax=ax, cmap=color_map, cbarlabel="Counts",lab_rot=above_lab_rot)
     if len(VARIABLES)>6:
         texts = annotate_heatmap(im, valfmt="{x:.0f}",large_im=True)
     else:
