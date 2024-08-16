@@ -2317,7 +2317,7 @@ def count_frequencies(my_directory):
                     tmp=all_data[k][qr]
                     for testo in etichette:
                         if key in tmp[testo]:
-                            str10='Entry found in '+k+' ['+qr+']'
+                            str10='Entry found in '+k+' ['+qr+'], inside region of interest <<'+testo+'>>'
                             print(str10)
                             my_log.append(str10)
     if multi_entr==False:
