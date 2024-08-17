@@ -2405,7 +2405,7 @@ def count_frequencies(my_directory):
         else:
             out_list=flatten(out_list)
     calc=Counter(out_list)
-    str_1='******************** Entries counts:'
+    str_1='******************** Record counts:'
     print(str_1)
     my_log.append(str_1)
     for key , value in calc.items():
