@@ -2417,16 +2417,23 @@ def count_frequencies(my_directory):
             for i,k in enumerate(VARIABLES):
                 for qi,qr in enumerate(quadr_list):
                     tmp=all_data[k][qr]
-                    for testo in etichette:
-                        if (testo in tmp) and (key in tmp[testo]):
-                            str10='Entry found in '+k+' ['+qr+'], inside region of interest <<'+testo+'>>'
-                            print(str10)
-                            my_log.append(str10)
+                    if incl_ave==False:
+                        for testo in etichette:
+                            if (testo in tmp) and (key in tmp[testo]):
+                                str10='Entry found in '+k+' ['+qr+'], inside region of interest <<'+testo+'>>'
+                                print(str10)
+                                my_log.append(str10)
+                    elif incl_ave==True:
+                        for testo in etichette+etichette2:
+                            if (testo in tmp) and (key in tmp[testo]):
+                                str10='Entry found in '+k+' ['+qr+'], inside region of interest <<'+testo+'>>'
+                                print(str10)
+                                my_log.append(str10)                        
     if multi_entr==False:
         print('No repeated entries found among experimental conditions being compared')
         my_log.append('No repeated entries found among experimental conditions being compared')
     save_to_file(my_directory,my_log)
-def heatmap(data, row_labels, col_labels, ax=None,cbar_kw=None, cbarlabel="",lab_rot=-60,v_align="right", **kwargs):
+def heatmap(data, row_labels, col_labels, ax=None,cbar_kw=None, cbarlabel="",lab_rot=-60,v_align="center", **kwargs):
 
     if ax is None:
         ax = plt.gca()
@@ -2493,7 +2500,7 @@ def annotate_heatmap(im, data=None, valfmt="{x:.2f}", textcolors=("black", "whit
             texts.append(text)
 
     return texts
-def quadrants_heatmap(my_directory,color_map='Greys',above_lab_rot=-60,horiz_alig="right",font_counts=4.5):
+def quadrants_heatmap(my_directory,color_map='Greys',above_lab_rot=-60,horiz_alig="center",font_counts=4.5):
     '''
     Overview of the number of identified entries for each group/quandrant.
     It summarizes the information as a annotated heatmap, but report only the number of entries (not the expression values)
