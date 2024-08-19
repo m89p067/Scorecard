@@ -956,7 +956,7 @@ def scorecard(the_df,info_dict2):
         ax.set_title('Both Exp. Conditions down-regulated ('+titolo+')')
     else:
         ax.set_xlabel("$log_2$ Fold Change ("+info_dict2['Treatment1 name']+")")
-        ax.set_ylabel("$log_2$ Fold Change ("+info_dict2['Treatment1 name']+")")   
+        ax.set_ylabel("$log_2$ Fold Change ("+info_dict2['Treatment2 name']+")")   
         ax.set_title('Both Exp. Conditions down-regulated')
     ymin, ymax = ax.get_ylim()
     xmin, xmax = ax.get_xlim()
