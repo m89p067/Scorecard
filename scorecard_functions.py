@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from os.path import join,isdir,exist
+from os.path import join,isdir,exists
 from scipy.stats import zscore
 from os import listdir,getcwd,makedirs,scandir
 import matplotlib.pyplot as plt
@@ -2618,7 +2618,7 @@ def quadrants_heatmap(my_directory,color_map='Greys',above_lab_rot=-60,horiz_ali
 
     plt.savefig(my_directory+'HeatmapCounts.png',dpi=300,bbox_inches='tight')
     plt.close()
-def common_entries(my_directory,do_excel=False):
+def common_entries(my_directory,do_excel=False,barcolor='silver',edgecolor='k',linewidth=1,fs_size=6):
     '''
     Should be called after count_frequencies functions because it re-uses the data
     created by this function. Input the main_folder as argument, and if the output should be
@@ -2636,10 +2636,11 @@ def common_entries(my_directory,do_excel=False):
         out_df['Symbol'] = out_df.index
         out_df = out_df.reset_index(drop=True)
         fig, ax = plt.subplots()
-        out_df['Symbol'].value_counts().plot(ax=ax, kind='barh')
+        out_df['Symbol'].value_counts().plot(ax=ax, kind='barh',color=barcolor,edgecolor=edgecolor,linewidth=linewidth)
         plt.gca().xaxis.set_major_locator(mticker.MultipleLocator(1))
         plt.xlabel("Total occurrencies")
         plt.ylabel("Entries")
+        plt.rc('ytick', labelsize=fs_size)
         plt.savefig(my_directory+'SymbolsCounts.png',dpi=300,bbox_inches='tight')
         plt.close()
         print('Created a frequency barplot')
