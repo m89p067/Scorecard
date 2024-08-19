@@ -19,6 +19,11 @@ from matplotlib.transforms import Affine2D
 from collections import Counter
 import matplotlib
 import matplotlib.ticker as mticker
+def merge_two_dicts(x, y):
+    """Given two dictionaries, merge them into a new dict as a shallow copy."""
+    z = x.copy()
+    z.update(y)
+    return z
 def contains_nested_list(lst):
     """
     Check if a list contains any nested lists.
@@ -2250,7 +2255,7 @@ def save_to_file(thedir,*text):
         for lines in text:
             myfile.write('\n'.join(str(line) for line in lines))
             myfile.write('\n')
-def count_frequencies(my_directory):
+def count_frequencies(my_directory,save_tab_info=True):
     '''
     Summary of the entries/genes identified through the scorecard.
     Reports all comparisons perfomed.
@@ -2280,6 +2285,7 @@ def count_frequencies(my_directory):
     print('\n')
     my_log.append(str1)
     keep_all=[]
+    my_rep=[]
     for i,k in enumerate(VARIABLES):
         str0='-------------- Comparison '+str(i+1)+' of '+str(len(all_dir))
         str01='Comparison : '+str(k)
@@ -2294,6 +2300,7 @@ def count_frequencies(my_directory):
         all_counts=[]
         list_q2=[]
         all_counts2=[]
+        tmp_qr=[]
         for qi,qr in enumerate(quadr_list):
             tmp=all_data[k][qr]
             n_entries=tmp['params']['Quadrant entries']
@@ -2373,6 +2380,7 @@ def count_frequencies(my_directory):
                     all_counts2.append(value)
                     my_log.append(str1)
             my_log.append(str8+'\n')
+            tmp_qr.append({qr:n_entries})
         if incl_ave==False:
             for sel_q in set(list_q):
                 str4=sel_q+' means '+descr[sel_q]            
@@ -2389,7 +2397,8 @@ def count_frequencies(my_directory):
         if incl_ave:
             print(str11)
         print('\n')
-        
+        res0 = {k_0: v_0 for d_0 in tmp_qr for k_0, v_0 in d_0.items()}
+        my_rep.append(merge_two_dicts({'Comparison':k,'Th FC':th_fold_change,'MF':mf,'Th sign':th_significance,'Tot':tot_entries},res0))
         my_log.append(str1+'\n')
         if incl_ave:
             my_log.append(str11+'\n')
@@ -2470,7 +2479,9 @@ def count_frequencies(my_directory):
         with open(my_directory+"symbol_rare.json","w") as f2:
             json.dump(dict_rare,f2, indent = 4)        
     save_to_file(my_directory,my_log)
-
+    df_rep= pd.DataFrame(my_rep)
+    if save_tab_info:
+        df_rep.to_csv(my_directory+'info_tab.csv', index=False)     
 def heatmap(data, row_labels, col_labels, ax=None,cbar_kw=None, cbarlabel="",lab_rot=-60,v_align="center", **kwargs):
 
     if ax is None:
