@@ -118,7 +118,8 @@ scorecard_functions.quadrants_heatmap(main_folder)
 ```
 
 To create a final report on single genes/entries run the following function. Remember to call it after *count_frequencies* because
-it re-uses information previously created by this function. Output file could be in CSV or Excel format.
+it re-uses information previously created by this function. Output file could be in CSV or Excel format showing total occurences.
 ```
 scorecard_functions.common_entries(main_folder)
 ```
+This function could also include a separate report about uncommon entries of the scorecard.
