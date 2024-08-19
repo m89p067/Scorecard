@@ -2398,7 +2398,7 @@ def count_frequencies(my_directory,save_tab_info=True):
             print(str11)
         print('\n')
         res0 = {k_0: v_0 for d_0 in tmp_qr for k_0, v_0 in d_0.items()}
-        my_rep.append(merge_two_dicts({'Comparison':k,'Th FC':th_fold_change,'MF':mf,'Th sign':th_significance,'Tot':tot_entries},res0))
+        my_rep.append(merge_two_dicts({'X-axis':trt1,'Y-axis':trt2,'Th FC':th_fold_change,'MF':mf,'Th sign':th_significance,'Tot':tot_entries},res0))
         my_log.append(str1+'\n')
         if incl_ave:
             my_log.append(str11+'\n')
