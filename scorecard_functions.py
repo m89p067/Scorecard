@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from os.path import join,isdir
+from os.path import join,isdir,exist
 from scipy.stats import zscore
 from os import listdir,getcwd,makedirs,scandir
 import matplotlib.pyplot as plt
@@ -18,7 +18,7 @@ from matplotlib.spines import Spine
 from matplotlib.transforms import Affine2D
 from collections import Counter
 import matplotlib
-
+import matplotlib.ticker as mticker
 def contains_nested_list(lst):
     """
     Check if a list contains any nested lists.
@@ -2407,8 +2407,10 @@ def count_frequencies(my_directory):
     calc=Counter(out_list)
     str_1='******************** Record counts:'
     print(str_1)
+    dict_res={}    
     my_log.append(str_1)
     for key , value in calc.items():
+        l1,l2,l3=[],[],[]
         if value>1:
             str1='Symbol : '+key+' occurred '+ str(value)+' times during the '+str(len(all_dir))+' comparisons'
             print(str1)
@@ -2423,16 +2425,26 @@ def count_frequencies(my_directory):
                                 str10='Entry found in '+k+' ['+qr+'], inside region of interest <<'+testo+'>>'
                                 print(str10)
                                 my_log.append(str10)
+                                l1.append(k)
+                                l2.append(qr.replace('uadrant', ''))
+                                l3.append(testo)
                     elif incl_ave==True:
                         for testo in etichette+etichette2:
                             if (testo in tmp) and (key in tmp[testo]):
                                 str10='Entry found in '+k+' ['+qr+'], inside region of interest <<'+testo+'>>'
                                 print(str10)
-                                my_log.append(str10)                        
+                                my_log.append(str10)
+                                l1.append(k)
+                                l2.append(qr.replace('uadrant', ''))
+                                l3.append(testo)
+            #dict_res[key]={'Exp Cond':l1,'Q':l2,'ROI':l3,'Occurr':value}
+            dict_res[key]={'Exp Cond':l1,'Q':l2,'ROI':l3}
     if multi_entr==False:
         print('No repeated entries found among experimental conditions being compared')
         my_log.append('No repeated entries found among experimental conditions being compared')
     save_to_file(my_directory,my_log)
+    with open(my_directory+"symbol_counts.json","w") as f:
+        json.dump(dict_res,f, indent = 4)
 def heatmap(data, row_labels, col_labels, ax=None,cbar_kw=None, cbarlabel="",lab_rot=-60,v_align="center", **kwargs):
 
     if ax is None:
@@ -2606,3 +2618,37 @@ def quadrants_heatmap(my_directory,color_map='Greys',above_lab_rot=-60,horiz_ali
 
     plt.savefig(my_directory+'HeatmapCounts.png',dpi=300,bbox_inches='tight')
     plt.close()
+def common_entries(my_directory,do_excel=False):
+    '''
+    Should be called after count_frequencies functions because it re-uses the data
+    created by this function. Input the main_folder as argument, and if the output should be
+    in CSV or Excel format (CSV is default).
+    Provides details about recurrent genes/symbols.
+    '''
+    if my_directory[-1]!="/":
+        my_directory=my_directory+"/"
+    file_exists = exists(my_directory+"symbol_counts.json")
+    if file_exists==True:
+        with open(my_directory+"symbol_counts.json") as f:
+            my_data=json.load(f)
+        df = pd.DataFrame.from_dict(my_data, orient='index')
+        out_df=df.explode(['Exp Cond'  ,           'Q',        'ROI'])
+        out_df['Symbol'] = out_df.index
+        out_df = out_df.reset_index(drop=True)
+        fig, ax = plt.subplots()
+        out_df['Symbol'].value_counts().plot(ax=ax, kind='barh')
+        plt.gca().xaxis.set_major_locator(mticker.MultipleLocator(1))
+        plt.xlabel("Total occurrencies")
+        plt.ylabel("Entries")
+        plt.savefig(my_directory+'SymbolsCounts.png',dpi=300,bbox_inches='tight')
+        plt.close()
+        print('Created a frequency barplot')
+        if do_excel:
+            out_df.to_excel(my_directory+'results.xlsx', index=False)
+            stringa='as Excel file'
+        else:
+            out_df.to_csv(my_directory+'results.csv', index=False)
+            stringa='as CSV file'
+        print('Created a report about occurrencies '+stringa)
+    else:
+        print('Please run count_frequencies before calling this function')        
