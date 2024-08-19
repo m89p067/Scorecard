@@ -2638,7 +2638,7 @@ def common_entries(my_directory,do_excel=False,barcolor='silver',edgecolor='k',l
         fig, ax = plt.subplots()
         out_df['Symbol'].value_counts().plot(ax=ax, kind='barh',color=barcolor,edgecolor=edgecolor,linewidth=linewidth)
         plt.gca().xaxis.set_major_locator(mticker.MultipleLocator(1))
-        plt.xlabel("Total occurrencies")
+        plt.xlabel("Total occurrences")
         plt.ylabel("Entries")
         plt.yticks(fontsize=fs_size)
         plt.savefig(my_directory+'SymbolsCounts.png',dpi=300,bbox_inches='tight')
