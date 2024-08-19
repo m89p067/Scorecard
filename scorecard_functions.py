@@ -2398,6 +2398,7 @@ def count_frequencies(my_directory):
         else:
             keep_all.append(all_counts+all_counts2)
     multi_entr=False
+    found_rare=False
     out_list=flatten(keep_all)
     while True:        
         if contains_nested_list(out_list)==False:
@@ -2407,10 +2408,12 @@ def count_frequencies(my_directory):
     calc=Counter(out_list)
     str_1='******************** Record counts:'
     print(str_1)
-    dict_res={}    
+    dict_res={}
+    dict_rare={} 
     my_log.append(str_1)
     for key , value in calc.items():
         l1,l2,l3=[],[],[]
+        lu1,lu2,lu3=[],[],[]
         if value>1:
             str1='Symbol : '+key+' occurred '+ str(value)+' times during the '+str(len(all_dir))+' comparisons'
             print(str1)
@@ -2439,12 +2442,35 @@ def count_frequencies(my_directory):
                                 l3.append(testo)
             #dict_res[key]={'Exp Cond':l1,'Q':l2,'ROI':l3,'Occurr':value}
             dict_res[key]={'Exp Cond':l1,'Q':l2,'ROI':l3}
+        elif value==1: #Rare events
+            found_rare=True
+            for i,k in enumerate(VARIABLES):
+                for qi,qr in enumerate(quadr_list):
+                    tmp=all_data[k][qr]
+                    if incl_ave==False:
+                        for testo in etichette:
+                            if (testo in tmp) and (key in tmp[testo]):
+                                lu1.append(k)
+                                lu2.append(qr.replace('uadrant', ''))
+                                lu3.append(testo)
+                    elif incl_ave==True:
+                        for testo in etichette+etichette2:
+                            if (testo in tmp) and (key in tmp[testo]):
+                                lu1.append(k)
+                                lu2.append(qr.replace('uadrant', ''))
+                                lu3.append(testo)
+            dict_rare[key]={'Exp Cond':lu1,'Q':lu2,'ROI':lu3}
     if multi_entr==False:
         print('No repeated entries found among experimental conditions being compared')
         my_log.append('No repeated entries found among experimental conditions being compared')
+    else:
+        with open(my_directory+"symbol_counts.json","w") as f:
+            json.dump(dict_res,f, indent = 4)
+    if found_rare==True:
+        with open(my_directory+"symbol_rare.json","w") as f2:
+            json.dump(dict_rare,f2, indent = 4)        
     save_to_file(my_directory,my_log)
-    with open(my_directory+"symbol_counts.json","w") as f:
-        json.dump(dict_res,f, indent = 4)
+
 def heatmap(data, row_labels, col_labels, ax=None,cbar_kw=None, cbarlabel="",lab_rot=-60,v_align="center", **kwargs):
 
     if ax is None:
@@ -2618,7 +2644,19 @@ def quadrants_heatmap(my_directory,color_map='Greys',above_lab_rot=-60,horiz_ali
 
     plt.savefig(my_directory+'HeatmapCounts.png',dpi=300,bbox_inches='tight')
     plt.close()
-def common_entries(my_directory,do_excel=False,barcolor='silver',edgecolor='k',linewidth=1,fs_size=6):
+def rare_entries(the_full_path):
+    file_exists = exists(the_full_path+"symbol_rare.json")
+    if file_exists==True:
+        with open(the_full_path+"symbol_rare.json") as f:
+            my_rare=json.load(f)
+        df_rare = pd.DataFrame.from_dict(my_rare, orient='index')
+        rare_df=df_rare.explode(['Exp Cond'  ,           'Q',        'ROI'])
+        rare_df['Symbol'] = rare_df.index
+        rare_df = rare_df.reset_index(drop=True)
+        return rare_df
+    else:
+        print('Rare symbols should be pre-computed with count_frequencies')
+def common_entries(my_directory,do_excel=False,barcolor='silver',edgecolor='k',linewidth=1,fs_size=6,incl_rare=True):
     '''
     Should be called after count_frequencies functions because it re-uses the data
     created by this function. Input the main_folder as argument, and if the output should be
@@ -2643,13 +2681,22 @@ def common_entries(my_directory,do_excel=False,barcolor='silver',edgecolor='k',l
         plt.yticks(fontsize=fs_size)
         plt.savefig(my_directory+'SymbolsCounts.png',dpi=300,bbox_inches='tight')
         plt.close()
-        print('Created a frequency barplot')
+        print('Created a frequency barplot')        
         if do_excel:
-            out_df.to_excel(my_directory+'results.xlsx', index=False)
+            out_df.to_excel(my_directory+'results_common.xlsx', index=False)
             stringa='as Excel file'
         else:
-            out_df.to_csv(my_directory+'results.csv', index=False)
+            out_df.to_csv(my_directory+'results_common.csv', index=False)
             stringa='as CSV file'
         print('Created a report about occurrencies '+stringa)
+        if incl_rare==True:
+            rare_data=rare_entries(my_directory)            
+            if do_excel:
+                rare_data.to_excel(my_directory+'results_rare.xlsx', index=False)
+                stringa='as Excel file'
+            else:
+                rare_data.to_csv(my_directory+'results_rare.csv', index=False)
+                stringa='as CSV file'
+            print('Also, created a report about rare occurrencies '+stringa)
     else:
         print('Please run count_frequencies before calling this function')        
