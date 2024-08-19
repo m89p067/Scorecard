@@ -1,7 +1,7 @@
 # Scorecard to compare wet-lab experimental conditions 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13141919.svg)](https://doi.org/10.5281/zenodo.13141919)
 
-This collection of functions creates a scorecard to compare wet-lab experimental conditions, useful to identify extreme or moderately changing expression values based on fold change and statistical significance. The goal is to narrow down the information to the relevant or extremely changing OMICS expression values by comparing several pairwise experimental conditions. On this reduced set of entries, the library could prodice additional data-driven insights for investigating the experimental findings.
+This collection of functions creates a scorecard to compare wet-lab experimental conditions, useful to identify extreme or moderately changing expression values based on fold change and statistical significance. The goal is to narrow down the information to the relevant or extremely changing OMICS expression values by comparing several pairwise experimental conditions. On this reduced set of entries, the library could produce additional data-driven insights for investigating the experimental findings.
 
 ![Scorecard example](example_img/All_axemaples.png?raw=True)
 
