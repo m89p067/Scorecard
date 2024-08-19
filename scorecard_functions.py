@@ -2640,7 +2640,7 @@ def common_entries(my_directory,do_excel=False,barcolor='silver',edgecolor='k',l
         plt.gca().xaxis.set_major_locator(mticker.MultipleLocator(1))
         plt.xlabel("Total occurrencies")
         plt.ylabel("Entries")
-        plt.rc('ytick', labelsize=fs_size)
+        plt.yticks(fontsize=fs_size)
         plt.savefig(my_directory+'SymbolsCounts.png',dpi=300,bbox_inches='tight')
         plt.close()
         print('Created a frequency barplot')
