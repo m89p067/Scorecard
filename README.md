@@ -116,3 +116,9 @@ Also, the summary of the number of entries/genes indentified by the scorecard ca
 ```
 scorecard_functions.quadrants_heatmap(main_folder)
 ```
+
+To create a final report on single genes/entries run the following function. Remember to call it after count_frequencies because
+it re-uses information previously created by this function. Output file could be in CSV or Excel format.
+```
+scorecard_functions.common_entries(main_folder)
+```
