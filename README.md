@@ -71,13 +71,14 @@ It is suggested to create a legend of the color codes and the regions of interes
 scorecard_functions.scorecard_legend(param_dict)
 ```
 
-Run scorecard single quandrant calculations using the following steps. This function will store statistically significant entries for each quadrant together with plots of individual quandrants.
-Individual plots could be useful in case of crowded scorecards. For single quandrant calculations run:
+Initially, run scorecard single quandrant calculations using the following code:
 ```
 scorecard_functions.scorecard(df,param_dict)
 ```
+This function will store statistically significant entries for each quadrant together with plots of individual quandrants.
+Individual plots could be useful in case of crowded scorecards.
 
-Run scorecard reconstruction from individual quandrants using this function call:
+After creating all four quadrants with previous function, one should execute scorecard reconstruction from individual quandrants using this function call:
 ```
 scorecard_functions.reconstruct_scorecard(df,param_dict)
 ```
