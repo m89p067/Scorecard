@@ -126,6 +126,7 @@ scorecard_functions.common_entries(main_folder)
 This function could also include a separate report about uncommon entries of the scorecard.
 
 In case of experimental comparisons over time, this function can track modifications of the expression values over the scorecard.
+The input folder should contain sub-folders with pre-computed data regarding the comparisons (common_entries should be called first).
 ```
-scorecard_functions.track_over_time(main_folder)
+scorecard_functions.track_over_time(desired_folder)
 ```
