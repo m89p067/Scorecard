@@ -19,6 +19,7 @@ from matplotlib.transforms import Affine2D
 from collections import Counter
 import matplotlib
 import matplotlib.ticker as mticker
+import pdb
 def merge_two_dicts(x, y):
     """Given two dictionaries, merge them into a new dict as a shallow copy."""
     z = x.copy()
@@ -168,7 +169,7 @@ def scorecard_legend(info_dict3):
     col_rect=info_dict3['rect_colors']
     markers=info_dict3['markers']
     sizes= info_dict3['markers_sizes']
-    use_notation=info_dict3['use_notation'],
+    use_notation=info_dict3['use_notation']
     IS_EXAMPLE=info_dict3['is_example']
     fig_size=info_dict3['fig_size']
     fig, ax = plt.subplots(figsize=(fig_size, fig_size))
@@ -2711,3 +2712,258 @@ def common_entries(my_directory,do_excel=False,barcolor='silver',edgecolor='k',l
             print('Also, created a report about rare occurrencies '+stringa)
     else:
         print('Please run count_frequencies before calling this function')        
+def all_elements_same(lst):
+    if not lst:  # Check if the list is empty
+        return True, "The list is empty, so technically all elements are the same."
+    
+    all_same = all(element == lst[0] for element in lst)
+    
+    if all_same:
+        return True # "All elements in the list are the same."
+    else:
+        return False # "At least one element in the list is different."
+# Function to add a random decimal to each point in the Axes
+def modify_marker_coordinates(x_data,y_data, scale=0.1):
+    return x_data+np.random.uniform(-scale, scale, size=1)[0],y_data+np.random.uniform(-scale, scale, size=1)[0]
+
+def track_over_time(my_directory,font_size1=8,alpha=0.5,th_sel=1,marker='o',marker_color='k',markersize=10,jitter=0.1):
+    if my_directory[-1]!="/":
+        my_directory=my_directory+"/"
+    file_exists1 = exists(my_directory+"results_common.xlsx")
+    file_exists2 = exists(my_directory+"results_common.csv")
+    if file_exists1==True or file_exists2==True:
+        if file_exists1==True:
+            info_common=pd.read_excel(my_directory+'results_common.xlsx', index_col=None, header=0)
+        elif file_exists2==True:
+            info_common=pd.read_csv(my_directory+'results_common.csv', index_col=False)
+    else:
+        print('Please run common_entries before calling this function')
+        return None
+
+    def_param=generate_parameters()
+    def_param['incl aver']=True
+    mf=def_param['multiplication factor']
+    save_folder=my_directory+'timecourse/'
+    colori=def_param['colors']
+    other_colori=def_param['other_colors']
+    th_fold_change=def_param['th_fold_change']
+    th_significance=def_param['th_significance']    
+    trasp=def_param['marker_trasp']
+    trasp_rect=def_param['rect_trasp']
+    col_rect=def_param['rect_colors']
+    markers=def_param['markers']
+    sizes= def_param['markers_sizes']
+    use_notation=def_param['use_notation']
+    IS_EXAMPLE=def_param['is_example']
+    fig_size=def_param['fig_size']
+    minimo,massimo=-fig_size,fig_size
+    incl_ave=def_param['incl aver']
+    conti=info_common['Symbol'].value_counts()
+    df_conti=pd.DataFrame({'entry':conti.index, 'occurrences':conti.values})
+    interest_entries = df_conti[df_conti['occurrences'] >= df_conti['occurrences'].max()-th_sel]
+    gene_list=interest_entries['entry'].to_list()
+    for id_gene, gene_name in enumerate(gene_list) :
+        tot_num_entr=interest_entries.loc[interest_entries['entry'] == gene_name, 'occurrences'].iloc[0]
+        df_sub_set=info_common[info_common['Symbol'] == gene_name]
+        aree1=df_sub_set['Q'].to_list()
+        aree2=df_sub_set['ROI'].to_list()
+        exp_cond=df_sub_set['Exp Cond'].to_list()
+        if all_elements_same(aree1)==False or all_elements_same(aree2)==False:
+            fig, ax = plt.subplots(figsize=(fig_size, fig_size))            
+            ax.set_xlim(left=minimo,right=massimo)
+            ax.set_ylim(bottom=minimo,top=massimo)
+            ax.axhline(y=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
+            ax.axvline(x=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)    
+            ax.axhline(y=-th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
+            ax.axvline(x=-th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
+            if mf > 1:
+                ax.axhline(y=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+                ax.axvline(x=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)        
+                ax.axhline(y=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+                ax.axvline(x=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+            ax.axvline(x=0,color='k',linestyle='solid',lw=2.0)
+            ax.axhline(y=0,color='k',linestyle='solid',lw=2.0)
+           
+            labels=[xc.upper() for xc in colori]
+            if incl_ave:        
+                labels_ave=[xc.upper() for xc in other_colori]
+            if IS_EXAMPLE==False:
+                labels=['A','B','C','D','E']
+                labels_ave=['M','R','S']
+            ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change*mf), (massimo-th_fold_change*mf), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+            ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change*mf), (-massimo+th_fold_change*mf), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+            ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change*mf), (-massimo+th_fold_change*mf), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+            ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change*mf), (massimo-th_fold_change*mf), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+
+            ax.add_patch(Rectangle((th_fold_change, th_fold_change*mf), (th_fold_change*mf-th_fold_change), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change), (massimo-th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change), (-massimo+th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((th_fold_change, -th_fold_change*mf), (th_fold_change*mf-th_fold_change), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((th_fold_change*mf,- th_fold_change), (massimo-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((-th_fold_change, -th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change), (-massimo+th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+
+            ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+            ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (th_fold_change*2), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+            ax.add_patch(Rectangle((minimo,-th_fold_change), (-minimo-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+            ax.add_patch(Rectangle((-th_fold_change,minimo), (th_fold_change*2), (-minimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))        
+
+            mid_green=(massimo+(th_fold_change*mf))/2
+            texts = []
+
+            for il_quadr,il_sett,la_cond in zip(aree1,aree2,exp_cond):
+                if il_sett.islower():
+                    print('Data looks from a four-way plot, this graph only works for the scorecard')
+                    return None
+                
+                if mf > 1:
+                    if il_quadr=='Q1' and il_sett==labels[0] :
+                        the_x,the_y=modify_marker_coordinates(mid_green,mid_green, scale=jitter)
+                        ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    elif il_quadr=='Q3' and il_sett==labels[0]:
+                        the_x,the_y=modify_marker_coordinates(-mid_green,-mid_green, scale=jitter)
+                        ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    elif il_quadr=='Q4' and il_sett==labels[0]:
+                        the_x,the_y=modify_marker_coordinates(mid_green,-mid_green, scale=jitter)
+                        ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    elif il_quadr=='Q2' and il_sett==labels[0]:
+                        the_x,the_y=modify_marker_coordinates(-mid_green,mid_green, scale=jitter)
+                        ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y,la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    elif il_quadr=='Q1' and il_sett==labels[1] :
+                        the_x,the_y=modify_marker_coordinates(mid_green,(th_fold_change*mf+th_fold_change)/2, scale=jitter)
+                        ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    elif il_quadr=='Q3' and il_sett==labels[1] :
+                        the_x,the_y=modify_marker_coordinates(-mid_green,(th_fold_change*mf+th_fold_change)/2, scale=jitter)
+                        ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    elif il_quadr=='Q2' and il_sett==labels[1] :
+                        the_x,the_y=modify_marker_coordinates(-mid_green,-(th_fold_change*mf+th_fold_change)/2, scale=jitter)
+                        ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    elif il_quadr=='Q4' and il_sett==labels[1] :
+                        the_x,the_y=modify_marker_coordinates(mid_green,-(th_fold_change*mf+th_fold_change)/2, scale=jitter)
+                        ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    elif il_quadr=='Q4' and il_sett==labels[2] :
+                        the_x,the_y=modify_marker_coordinates((th_fold_change*mf+th_fold_change)/2,-mid_green, scale=jitter)
+                        ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    elif il_quadr=='Q1' and il_sett==labels[2] :
+                        the_x,the_y=modify_marker_coordinates((th_fold_change*mf+th_fold_change)/2,mid_green, scale=jitter)
+                        ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    elif il_quadr=='Q3' and il_sett==labels[2] :
+                        the_x,the_y=modify_marker_coordinates(-(th_fold_change*mf+th_fold_change)/2,-mid_green, scale=jitter)
+                        ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    elif il_quadr=='Q2' and il_sett==labels[2] :
+                        the_x,the_y=modify_marker_coordinates(-(th_fold_change*mf+th_fold_change)/2,mid_green, scale=jitter)
+                        ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    elif il_quadr=='Q1' and il_sett==labels[3] :
+                        the_x,the_y=modify_marker_coordinates(mid_green,th_fold_change/2, scale=jitter)
+                        ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    elif il_quadr=='Q4' and il_sett==labels[3] :
+                        the_x,the_y=modify_marker_coordinates(mid_green,-th_fold_change/2, scale=jitter)
+                        ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    elif il_quadr=='Q2' and il_sett==labels[3] :
+                        the_x,the_y=modify_marker_coordinates(-mid_green,th_fold_change/2, scale=jitter)
+                        ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    elif il_quadr=='Q3' and il_sett==labels[3] :
+                        the_x,the_y=modify_marker_coordinates(-mid_green,-th_fold_change/2, scale=jitter)
+                        ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    elif il_quadr=='Q4' and il_sett==labels[4] :
+                        the_x,the_y=modify_marker_coordinates(th_fold_change/2,-mid_green, scale=jitter)
+                        ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    elif il_quadr=='Q1' and il_sett==labels[4] :
+                        the_x,the_y=modify_marker_coordinates(th_fold_change/2,mid_green, scale=jitter)
+                        ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    elif il_quadr=='Q3' and il_sett==labels[4] :
+                        the_x,the_y=modify_marker_coordinates(-th_fold_change/2,-mid_green, scale=jitter)
+                        ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    elif il_quadr=='Q2' and il_sett==labels[4] :
+                        the_x,the_y=modify_marker_coordinates(-th_fold_change/2,mid_green, scale=jitter)
+                        ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                        texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                    
+                    if incl_ave:
+                        if il_quadr=='Q1' and il_sett==labels_ave[0] :
+                            the_x,the_y=modify_marker_coordinates((th_fold_change*mf+th_fold_change)/2,(th_fold_change*mf+th_fold_change)/2, scale=jitter)
+                            ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                            texts.append(ax.text(the_x,the_y,la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                        elif il_quadr=='Q3' and il_sett==labels_ave[0] :
+                            the_x,the_y=modify_marker_coordinates(-(th_fold_change*mf+th_fold_change)/2,-(th_fold_change*mf+th_fold_change)/2, scale=jitter)
+                            ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                            texts.append(ax.text(the_x,the_y,la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                        elif il_quadr=='Q2' and il_sett==labels_ave[0] :
+                            the_x,the_y=modify_marker_coordinates(-(th_fold_change*mf+th_fold_change)/2,(th_fold_change*mf+th_fold_change)/2, scale=jitter)
+                            ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                            texts.append(ax.text(the_x,the_y,la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+                        elif il_quadr=='Q4' and il_sett==labels_ave[0] :
+                            the_x,the_y=modify_marker_coordinates((th_fold_change*mf+th_fold_change)/2,-(th_fold_change*mf+th_fold_change)/2, scale=jitter)
+                            ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                            texts.append(ax.text(the_x,the_y,la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
+
+                        elif il_quadr=='Q1' and il_sett==labels_ave[1] :
+                            the_x,the_y=modify_marker_coordinates(th_fold_change/2,(th_fold_change*mf+th_fold_change)/2, scale=jitter)
+                            ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                            texts.append(ax.text(the_x,the_y, labels_ave[1]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[1],alpha=alpha ))
+                        elif il_quadr=='Q2' and il_sett==labels_ave[1] :
+                            the_x,the_y=modify_marker_coordinates(-th_fold_change/2,(th_fold_change*mf+th_fold_change)/2, scale=jitter)
+                            ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                            texts.append(ax.text(the_x,the_y, labels_ave[1]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[1] ,alpha=alpha))
+                        elif il_quadr=='Q4' and il_sett==labels_ave[1] :
+                            the_x,the_y=modify_marker_coordinates(th_fold_change/2,-(th_fold_change*mf+th_fold_change)/2, scale=jitter)
+                            ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                            texts.append(ax.text(the_x,the_y, labels_ave[1]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[1] ,alpha=alpha))
+                        elif il_quadr=='Q3' and il_sett==labels_ave[1] :
+                            the_x,the_y=modify_marker_coordinates(-th_fold_change/2,-(th_fold_change*mf+th_fold_change)/2, scale=jitter)
+                            ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                            texts.append(ax.text(the_x,the_y, labels_ave[1]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[1],alpha=alpha ))
+
+                        elif il_quadr=='Q1' and il_sett==labels_ave[2] :
+                            the_x,the_y=modify_marker_coordinates((th_fold_change*mf+th_fold_change)/2,th_fold_change/2, scale=jitter)
+                            ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                            texts.append(ax.text(the_x,the_y, labels_ave[2]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[2] ,alpha=alpha ))
+                        elif il_quadr=='Q4' and il_sett==labels_ave[2] :
+                            the_x,the_y=modify_marker_coordinates((th_fold_change*mf+th_fold_change)/2,-th_fold_change/2, scale=jitter)
+                            ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                            texts.append(ax.text(the_x,the_y, labels_ave[2]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[2] ,alpha=alpha ))
+                        elif il_quadr=='Q2' and il_sett==labels_ave[2] :
+                            the_x,the_y=modify_marker_coordinates(-(th_fold_change*mf+th_fold_change)/2, th_fold_change/2, scale=jitter)
+                            ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                            texts.append(ax.text(the_x,the_y,labels_ave[2]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[2] ,alpha=alpha ))
+                        elif il_quadr=='Q3' and il_sett==labels_ave[2] :
+                            the_x,the_y=modify_marker_coordinates(-(th_fold_change*mf+th_fold_change)/2,-th_fold_change/2, scale=jitter)
+                            ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
+                            texts.append(ax.text(the_x,the_y, labels_ave[2]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[2] ,alpha=alpha))
+
+##            def_param['Treatment1 name']=new_list2[0]
+##            def_param['Treatment2 name']=new_list2[1]
+##            if use_notation:   
+##                ax.set_xlabel("$log_2$ Fold Change ("+def_param['Treatment1 name']+" vs "+def_param['Control name']+")")
+##                ax.set_ylabel("$log_2$ Fold Change ("+def_param['Treatment2 name']+" vs "+def_param['Control name']+")")
+##            else:
+##                ax.set_xlabel("$log_2$ Fold Change ("+def_param['Treatment1 name']+")")
+##                ax.set_ylabel("$log_2$ Fold Change ("+def_param['Treatment2 name']+")")
+            adjust_text(texts,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+            ax.set_title('Changes over time: '+gene_name)
+            if not isdir(save_folder):
+                makedirs(save_folder)
+            plt.savefig(save_folder+gene_name.replace(".", "_")+'.png',dpi=300,bbox_inches='tight')
+            plt.close()
