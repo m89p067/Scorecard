@@ -344,6 +344,17 @@ def scorecard_legend(info_dict3):
         ax.text(-th_fold_change/2,-mid_green, 'e',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
         ax.text(-th_fold_change/2,mid_green, 'e',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
         ax.set_title('Four-way plot (p<'+str(th_significance)+')')
+    plt.tick_params(
+                axis='x',          # changes apply to the x-axis
+                which='both',      # both major and minor ticks are affected
+                bottom=False,      # ticks along the bottom edge are off
+                top=False,         # ticks along the top edge are off
+                labelbottom=False) # labels along the bottom edge are off
+    plt.tick_params(
+                axis='y', # changes apply to the x-axis
+                which='both', # both major and minor ticks are affected, # ticks along the bottom edge are off
+                left=False, # ticks along the top edge are off
+                labelleft=False,) # labels along the bottom edge are off
     if IS_EXAMPLE==True and mf>1:
         plt.savefig(save_folder1+'SCORECARD_colors.png',dpi=300,bbox_inches='tight')
     elif IS_EXAMPLE==False and mf>1:
@@ -1568,7 +1579,7 @@ def scorecard(the_df,info_dict2):
     with open(save_folder+'Quadrant4.json', 'w') as json_file:
         json.dump(quadr,json_file,  indent = 4)    
 
-def reconstruct_scorecard(my_directory):
+def reconstruct_scorecard(my_directory,scarto=0.07):
     '''
     The functions loads each Scorecard quandrant in memory and builds the Cartesian plane with the Scorecard for a global view of the dataset.
     It will be stored on the hard disk into the specified folder.
@@ -1650,9 +1661,7 @@ def reconstruct_scorecard(my_directory):
             print('Reconstruction of a Four-Way plot. Scorecard was not created!')
         incl_ave=my_data[quadrante]['params']['incl aver']    
         fig, ax = plt.subplots(figsize=(fig_size, fig_size))
-        minimo,massimo=-fig_size,fig_size    
-        ax.set_xlim(left=minimo,right=massimo)
-        ax.set_ylim(bottom=minimo,top=massimo)
+            
         if mf>1:
             ax.axhline(y=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
             ax.axvline(x=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
@@ -1675,39 +1684,8 @@ def reconstruct_scorecard(my_directory):
             ax.set_ylabel("$log_2$ Fold Change (Treatment 2 vs Control)")
         texts1,texts2,texts3,texts4,texts5=[],[],[],[],[]
         texts100,texts200,texts300=[],[],[]
-        if mf>1:
-            
-            ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change*mf), (massimo-th_fold_change*mf), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-            ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change*mf), (-massimo+th_fold_change*mf), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-            ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change*mf), (-massimo+th_fold_change*mf), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-            ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change*mf), (massimo-th_fold_change*mf), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+        all_x,all_y=[],[]
 
-            ax.add_patch(Rectangle((th_fold_change, th_fold_change*mf), (th_fold_change*mf-th_fold_change), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change), (massimo-th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change), (-massimo+th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((th_fold_change, -th_fold_change*mf), (th_fold_change*mf-th_fold_change), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((th_fold_change*mf,- th_fold_change), (massimo-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((-th_fold_change, -th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (-massimo+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change), (-massimo+th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-
-            ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-            ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (th_fold_change*2), (massimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-            ax.add_patch(Rectangle((minimo,-th_fold_change), (-minimo-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-            ax.add_patch(Rectangle((-th_fold_change,minimo), (th_fold_change*2), (-minimo-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-        elif mf==1:
-
-            ax.add_patch(Rectangle((th_fold_change, th_fold_change), (massimo-th_fold_change), (massimo-th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-            ax.add_patch(Rectangle((-th_fold_change, -th_fold_change), (-massimo+th_fold_change), (-massimo+th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-            ax.add_patch(Rectangle((-th_fold_change, th_fold_change), (-massimo+th_fold_change), (massimo-th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-            ax.add_patch(Rectangle((th_fold_change, -th_fold_change), (massimo-th_fold_change), (-massimo+th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-
-            ax.add_patch(Rectangle((th_fold_change, -th_fold_change), (massimo-th_fold_change), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-            ax.add_patch(Rectangle((-th_fold_change, th_fold_change), (th_fold_change*2), (massimo-th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-            ax.add_patch(Rectangle((minimo,-th_fold_change), (-minimo-th_fold_change), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-            ax.add_patch(Rectangle((-th_fold_change,minimo), (th_fold_change*2), (-minimo-th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
         for quadrante in quadr_list:
             for eti in etichette:
                 if eti in list(my_data[quadrante].keys()):
@@ -1718,27 +1696,41 @@ def reconstruct_scorecard(my_directory):
                         if eti==etichette[0]:
                             ax.scatter( fch_x,fch_y, facecolors = colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[0], fillstyle='full'),s=sizes[0])
                             texts1.append( ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[0]  ))
+                            all_x.append(fch_x)
+                            all_y.append(fch_y)
                         elif eti==etichette[1]:
                             ax.scatter( fch_x,fch_y, facecolors = colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
                             texts2.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[1] ))
+                            all_x.append(fch_x)
+                            all_y.append(fch_y)
                         elif eti==etichette[2]:
                             ax.scatter( fch_x,fch_y, facecolors = colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[2], fillstyle='full'),s=sizes[1])
                             texts3.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[2]  ))
+                            all_x.append(fch_x)
+                            all_y.append(fch_y)
                         elif eti==etichette[3]:
                             ax.scatter( fch_x,fch_y, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
                             texts4.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
                         elif eti==etichette[4]:
                             ax.scatter( fch_x,fch_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
                             texts5.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
+                            all_x.append(fch_x)
+                            all_y.append(fch_y)
                         elif incl_ave==True and eti==etichette[5] :
                             ax.scatter( fch_x,fch_y, facecolors = other_colori[0], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[1], fillstyle='full'),s=sizes[2])
                             texts100.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[0]  ))
+                            all_x.append(fch_x)
+                            all_y.append(fch_y)
                         elif incl_ave==True and eti==etichette[6]:
                             ax.scatter( fch_x,fch_y, facecolors = other_colori[1], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
                             texts200.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[1]  ))
+                            all_x.append(fch_x)
+                            all_y.append(fch_y)
                         elif incl_ave==True and eti==etichette[7]:
                             ax.scatter( fch_x,fch_y, facecolors = other_colori[2], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[4], fillstyle='full'),s=sizes[2])
                             texts300.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[2]  ))                
+                            all_x.append(fch_x)
+                            all_y.append(fch_y)
         if incl_ave==False:
             adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
         else:
@@ -1751,6 +1743,46 @@ def reconstruct_scorecard(my_directory):
             ax.set_xlabel("$log_2$ Fold Change ("+trt1+")")
             ax.set_ylabel("$log_2$ Fold Change ("+trt2+")")   
             ax.set_title('Scorecard and regions of interest')
+        minimo_x,massimo_x=min(all_x)+(scarto*min(all_x)), max(all_x)+(scarto*max(all_x))
+        minimo_y,massimo_y=min(all_y)+(scarto*min(all_y)), max(all_y)+(scarto*max(all_y))
+        
+        ax.set_xlim(left=minimo_x,right=massimo_x)
+        ax.set_ylim(bottom=minimo_y,top=massimo_y)
+        
+        if mf>1:
+            
+            ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change*mf), (massimo_x-th_fold_change*mf), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+            ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change*mf), (minimo_x+th_fold_change*mf), (minimo_y+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+            ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change*mf), (minimo_x+th_fold_change*mf), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+            ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change*mf), (massimo_x-th_fold_change*mf), (minimo_y+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+
+            ax.add_patch(Rectangle((th_fold_change, th_fold_change*mf), (th_fold_change*mf-th_fold_change), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change), (massimo_x-th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change), (minimo_x+th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((th_fold_change, -th_fold_change*mf), (th_fold_change*mf-th_fold_change), (minimo_y+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((th_fold_change*mf,- th_fold_change), (massimo_x-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo_x-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((-th_fold_change, -th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (minimo_y+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+            ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change), (minimo_x+th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+
+            ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo_x-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+            ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (th_fold_change*2), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+            ax.add_patch(Rectangle((minimo_x,-th_fold_change), (minimo_x-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+            ax.add_patch(Rectangle((-th_fold_change,minimo_y), (th_fold_change*2), (minimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+        elif mf==1:
+
+            ax.add_patch(Rectangle((th_fold_change, th_fold_change), (massimo_x-th_fold_change), (massimo_y-th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+            ax.add_patch(Rectangle((-th_fold_change, -th_fold_change), (minimo_x+th_fold_change), (minimo_y+th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+            ax.add_patch(Rectangle((-th_fold_change, th_fold_change), (minimo_x+th_fold_change), (massimo_y-th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+            ax.add_patch(Rectangle((th_fold_change, -th_fold_change), (massimo_x-th_fold_change), (minimo_y+th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+
+            ax.add_patch(Rectangle((th_fold_change, -th_fold_change), (massimo_x-th_fold_change), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+            ax.add_patch(Rectangle((-th_fold_change, th_fold_change), (th_fold_change*2), (massimo_y-th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+            ax.add_patch(Rectangle((minimo_x,-th_fold_change), (minimo_x-th_fold_change), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+            ax.add_patch(Rectangle((-th_fold_change,minimo_y), (th_fold_change*2), (minimo_y-th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+
         if mf>1:
             plt.savefig(save_folder+'Scorecard.png',dpi=300,bbox_inches='tight')
         elif mf==1:
