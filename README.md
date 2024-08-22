@@ -124,3 +124,8 @@ it re-uses information previously created by this function. Output file could be
 scorecard_functions.common_entries(main_folder)
 ```
 This function could also include a separate report about uncommon entries of the scorecard.
+
+In case of experimental comparisons over time, this function can track modifications of the expression values over the scorecard.
+```
+scorecard_functions.track_over_time(main_folder)
+```
