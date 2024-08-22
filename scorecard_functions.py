@@ -2758,11 +2758,11 @@ def all_elements_same(lst):
 def modify_marker_coordinates(x_data,y_data, scale=0.1):
     return x_data+np.random.uniform(-scale, scale, size=1)[0],y_data+np.random.uniform(-scale, scale, size=1)[0]
 
-def track_over_time(my_directory,font_size1=8,alpha=0.5,th_sel=1,marker='o',marker_color='k',markersize=10,jitter=0.1):
+def track_over_time(my_directory,font_size1=8,alpha=0.5,th_sel=1,marker='o',marker_color='k',markersize=10,jitter=0.1,is_time=True):
     '''
-    Function to show where extreme variations fall over time. Useful for the full scorecard (aka 'incl_ave'=True)
-    Input the main_folder containing all comparisions (an experimental condition tracked over time)
-    Requires common_entries to be called before it. Outputs are single scorecards within the directory /timecourse/
+    Function to show where extreme variations fall over time or experiments. Useful for the full scorecard (aka 'incl_ave'=True)
+    Input the main_folder containing all comparisions (a gene tracked over time or on different experiments)
+    Requires common_entries to be called before it. Outputs are single scorecards within the main directory (if different experiments set is_time=False)
     Points on the scorecard are not actual data but centers of the areas of interests 
     '''
     if my_directory[-1]!="/":
@@ -2777,11 +2777,15 @@ def track_over_time(my_directory,font_size1=8,alpha=0.5,th_sel=1,marker='o',mark
     else:
         print('Please run common_entries before calling this function')
         return None
-
+    if is_time==True:
+        stringa_tipo='time '
+    else:
+        stringa_tipo='experiments '
+    print('Comparisons look like over '+stringa_tipo)
     def_param=generate_parameters()
     def_param['incl aver']=True
     mf=def_param['multiplication factor']
-    save_folder=my_directory+'timecourse/'
+    save_folder=my_directory+stringa_tipo+'course/'
     colori=def_param['colors']
     other_colori=def_param['other_colors']
     th_fold_change=def_param['th_fold_change']
@@ -2802,6 +2806,7 @@ def track_over_time(my_directory,font_size1=8,alpha=0.5,th_sel=1,marker='o',mark
     gene_list=interest_entries['entry'].to_list()
     for id_gene, gene_name in enumerate(gene_list) :
         tot_num_entr=interest_entries.loc[interest_entries['entry'] == gene_name, 'occurrences'].iloc[0]
+        print('Symbol:',gene_name,' case ',id_gene+1,'/',len(gene_list),' encountered in ',tot_num_entr,' scorecards')
         df_sub_set=info_common[info_common['Symbol'] == gene_name]
         aree1=df_sub_set['Q'].to_list()
         aree2=df_sub_set['ROI'].to_list()
@@ -2856,7 +2861,7 @@ def track_over_time(my_directory,font_size1=8,alpha=0.5,th_sel=1,marker='o',mark
                 if il_sett.islower():
                     print('Data looks from a four-way plot, this graph only works for the scorecard')
                     return None
-                
+                   
                 if mf > 1:
                     if il_quadr=='Q1' and il_sett==labels[0] :
                         the_x,the_y=modify_marker_coordinates(mid_green,mid_green, scale=jitter)
@@ -2960,39 +2965,39 @@ def track_over_time(my_directory,font_size1=8,alpha=0.5,th_sel=1,marker='o',mark
                         elif il_quadr=='Q1' and il_sett==labels_ave[1] :
                             the_x,the_y=modify_marker_coordinates(th_fold_change/2,(th_fold_change*mf+th_fold_change)/2, scale=jitter)
                             ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
-                            texts.append(ax.text(the_x,the_y, labels_ave[1]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[1],alpha=alpha ))
+                            texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
                         elif il_quadr=='Q2' and il_sett==labels_ave[1] :
                             the_x,the_y=modify_marker_coordinates(-th_fold_change/2,(th_fold_change*mf+th_fold_change)/2, scale=jitter)
                             ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
-                            texts.append(ax.text(the_x,the_y, labels_ave[1]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[1] ,alpha=alpha))
+                            texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
                         elif il_quadr=='Q4' and il_sett==labels_ave[1] :
                             the_x,the_y=modify_marker_coordinates(th_fold_change/2,-(th_fold_change*mf+th_fold_change)/2, scale=jitter)
                             ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
-                            texts.append(ax.text(the_x,the_y, labels_ave[1]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[1] ,alpha=alpha))
+                            texts.append(ax.text(the_x,the_y,la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
                         elif il_quadr=='Q3' and il_sett==labels_ave[1] :
                             the_x,the_y=modify_marker_coordinates(-th_fold_change/2,-(th_fold_change*mf+th_fold_change)/2, scale=jitter)
                             ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
-                            texts.append(ax.text(the_x,the_y, labels_ave[1]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[1],alpha=alpha ))
+                            texts.append(ax.text(the_x,the_y,la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
 
                         elif il_quadr=='Q1' and il_sett==labels_ave[2] :
                             the_x,the_y=modify_marker_coordinates((th_fold_change*mf+th_fold_change)/2,th_fold_change/2, scale=jitter)
                             ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
-                            texts.append(ax.text(the_x,the_y, labels_ave[2]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[2] ,alpha=alpha ))
+                            texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
                         elif il_quadr=='Q4' and il_sett==labels_ave[2] :
                             the_x,the_y=modify_marker_coordinates((th_fold_change*mf+th_fold_change)/2,-th_fold_change/2, scale=jitter)
                             ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
-                            texts.append(ax.text(the_x,the_y, labels_ave[2]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[2] ,alpha=alpha ))
+                            texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
                         elif il_quadr=='Q2' and il_sett==labels_ave[2] :
                             the_x,the_y=modify_marker_coordinates(-(th_fold_change*mf+th_fold_change)/2, th_fold_change/2, scale=jitter)
                             ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
-                            texts.append(ax.text(the_x,the_y,labels_ave[2]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[2] ,alpha=alpha ))
+                            texts.append(ax.text(the_x,the_y,la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
                         elif il_quadr=='Q3' and il_sett==labels_ave[2] :
                             the_x,the_y=modify_marker_coordinates(-(th_fold_change*mf+th_fold_change)/2,-th_fold_change/2, scale=jitter)
                             ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
-                            texts.append(ax.text(the_x,the_y, labels_ave[2]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[2] ,alpha=alpha))
+                            texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
 
             adjust_text(texts,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-            ax.set_title('Changes over time: '+gene_name)
+            ax.set_title('Changes over '+stringa_tipo+': '+gene_name)
             if not isdir(save_folder):
                 makedirs(save_folder)
             plt.tick_params(
@@ -3006,5 +3011,8 @@ def track_over_time(my_directory,font_size1=8,alpha=0.5,th_sel=1,marker='o',mark
                         which='both', # both major and minor ticks are affected, # ticks along the bottom edge are off
                         left=False, # ticks along the top edge are off
                         labelleft=False,) # labels along the bottom edge are off
+            
             plt.savefig(save_folder+gene_name.replace(".", "_")+'.png',dpi=300,bbox_inches='tight')
             plt.close()
+        else:
+            print('All data falling on the same area of interest and / or quadrant; thus, not building graph')
