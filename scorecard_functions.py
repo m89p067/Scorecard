@@ -1,3 +1,9 @@
+# Filename: scorecard_functions.py
+# Author: Mauro Nascimben
+# Created: 2024-08-22
+# Description: Still under development.
+
+# Import statements
 import numpy as np
 import pandas as pd
 from os.path import join,isdir,exists
@@ -2758,7 +2764,7 @@ def all_elements_same(lst):
 def modify_marker_coordinates(x_data,y_data, scale=0.1):
     return x_data+np.random.uniform(-scale, scale, size=1)[0],y_data+np.random.uniform(-scale, scale, size=1)[0]
 
-def track_over_exper(my_directory,font_size1=8,alpha=0.5,th_sel=1,marker='o',marker_color='k',markersize=10,jitter=0.1,is_time=True):
+def track_over_exper(my_directory,font_size1=8,alpha=0.75,th_sel=1,marker='o',marker_color='k',markersize=10,jitter=0.1,is_time=True):
     '''
     Function to show where extreme variations fall over time or experiments. Useful for the full scorecard (aka 'incl_ave'=True)
     Input the main_folder containing all comparisions (a gene tracked over time or on different experiments)
