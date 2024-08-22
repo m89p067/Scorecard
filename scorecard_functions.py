@@ -2727,6 +2727,12 @@ def modify_marker_coordinates(x_data,y_data, scale=0.1):
     return x_data+np.random.uniform(-scale, scale, size=1)[0],y_data+np.random.uniform(-scale, scale, size=1)[0]
 
 def track_over_time(my_directory,font_size1=8,alpha=0.5,th_sel=1,marker='o',marker_color='k',markersize=10,jitter=0.1):
+    '''
+    Function to show where extreme variations fall over time. Useful for the full scorecard (aka 'incl_ave'=True)
+    Input the main_folder containing all comparisions a condition changing over time
+    Requires common_entries to be called before it. Outputs are single scorecards within the directory /timecourse/
+    Points on the scorecard are not actual data but centers of the areas of interests 
+    '''
     if my_directory[-1]!="/":
         my_directory=my_directory+"/"
     file_exists1 = exists(my_directory+"results_common.xlsx")
