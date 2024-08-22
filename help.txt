@@ -74,5 +74,6 @@ To create a final report on single genes/entries run the following function.
 Remember to call it after count_frequencies because it re-uses information previously created by this function. 
 Output file could be in CSV or Excel format.
 >>scorecard_functions.common_entries(main_folder)
-In case of experimental comparisons over time, this function can track modifications of the expression values over the scorecard. The input folder should contain sub-folders with pre-computed data regarding the comparisons (common_entries should be called first).
->>scorecard_functions.track_over_time(desired_folder)
+In case of experimental comparisons over time or experiments, this function can track modifications of the expression values over the scorecard. 
+The input folder should contain sub-folders with pre-computed data regarding the comparisons (common_entries should be called first).
+>>scorecard_functions.track_over_time(main_folder)
