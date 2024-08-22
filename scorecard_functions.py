@@ -2963,5 +2963,16 @@ def track_over_time(my_directory,font_size1=8,alpha=0.5,th_sel=1,marker='o',mark
             ax.set_title('Changes over time: '+gene_name)
             if not isdir(save_folder):
                 makedirs(save_folder)
+            plt.tick_params(
+                        axis='x',          # changes apply to the x-axis
+                        which='both',      # both major and minor ticks are affected
+                        bottom=False,      # ticks along the bottom edge are off
+                        top=False,         # ticks along the top edge are off
+                        labelbottom=False) # labels along the bottom edge are off
+            plt.tick_params(
+                        axis='y', # changes apply to the x-axis
+                        which='both', # both major and minor ticks are affected, # ticks along the bottom edge are off
+                        left=False, # ticks along the top edge are off
+                        labelleft=False,) # labels along the bottom edge are off
             plt.savefig(save_folder+gene_name.replace(".", "_")+'.png',dpi=300,bbox_inches='tight')
             plt.close()
