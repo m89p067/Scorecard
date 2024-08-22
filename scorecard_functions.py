@@ -2729,7 +2729,7 @@ def modify_marker_coordinates(x_data,y_data, scale=0.1):
 def track_over_time(my_directory,font_size1=8,alpha=0.5,th_sel=1,marker='o',marker_color='k',markersize=10,jitter=0.1):
     '''
     Function to show where extreme variations fall over time. Useful for the full scorecard (aka 'incl_ave'=True)
-    Input the main_folder containing all comparisions a condition changing over time
+    Input the main_folder containing all comparisions (an experimental condition tracked over time)
     Requires common_entries to be called before it. Outputs are single scorecards within the directory /timecourse/
     Points on the scorecard are not actual data but centers of the areas of interests 
     '''
@@ -2959,14 +2959,6 @@ def track_over_time(my_directory,font_size1=8,alpha=0.5,th_sel=1,marker='o',mark
                             ax.scatter(the_x,the_y,marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
                             texts.append(ax.text(the_x,the_y, labels_ave[2]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[2] ,alpha=alpha))
 
-##            def_param['Treatment1 name']=new_list2[0]
-##            def_param['Treatment2 name']=new_list2[1]
-##            if use_notation:   
-##                ax.set_xlabel("$log_2$ Fold Change ("+def_param['Treatment1 name']+" vs "+def_param['Control name']+")")
-##                ax.set_ylabel("$log_2$ Fold Change ("+def_param['Treatment2 name']+" vs "+def_param['Control name']+")")
-##            else:
-##                ax.set_xlabel("$log_2$ Fold Change ("+def_param['Treatment1 name']+")")
-##                ax.set_ylabel("$log_2$ Fold Change ("+def_param['Treatment2 name']+")")
             adjust_text(texts,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
             ax.set_title('Changes over time: '+gene_name)
             if not isdir(save_folder):
