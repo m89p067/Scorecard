@@ -2810,6 +2810,8 @@ def track_over_exper(my_directory,font_size1=8,alpha=0.75,th_sel=1,marker='o',ma
     df_conti=pd.DataFrame({'entry':conti.index, 'occurrences':conti.values})
     interest_entries = df_conti[df_conti['occurrences'] >= df_conti['occurrences'].max()-th_sel]
     gene_list=interest_entries['entry'].to_list()
+    keep_gene_id=[]
+    also_save_txt=False
     for id_gene, gene_name in enumerate(gene_list) :
         tot_num_entr=interest_entries.loc[interest_entries['entry'] == gene_name, 'occurrences'].iloc[0]
         print('Symbol:',gene_name,' case ',id_gene+1,'/',len(gene_list),' encountered in ',tot_num_entr,' scorecards')
@@ -2832,7 +2834,7 @@ def track_over_exper(my_directory,font_size1=8,alpha=0.75,th_sel=1,marker='o',ma
                 ax.axvline(x=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
             ax.axvline(x=0,color='k',linestyle='solid',lw=2.0)
             ax.axhline(y=0,color='k',linestyle='solid',lw=2.0)
-           
+            also_save_txt=True
             labels=[xc.upper() for xc in colori]
             if incl_ave:        
                 labels_ave=[xc.upper() for xc in other_colori]
@@ -3017,8 +3019,11 @@ def track_over_exper(my_directory,font_size1=8,alpha=0.75,th_sel=1,marker='o',ma
                         which='both', # both major and minor ticks are affected, # ticks along the bottom edge are off
                         left=False, # ticks along the top edge are off
                         labelleft=False,) # labels along the bottom edge are off
-            
+            keep_gene_id.append(gene_name)
             plt.savefig(save_folder+gene_name.replace(".", "_")+'.png',dpi=300,bbox_inches='tight')
             plt.close()
         else:
             print('All data falling on the same area of interest and / or quadrant; thus, not building graph')
+        if also_save_txt:
+            with open(save_folder+"gene_list_along_"+stringa_tipo.strip()+".json", "w") as fp:
+                json.dump(keep_gene_id, fp)
