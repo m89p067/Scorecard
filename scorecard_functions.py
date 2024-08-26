@@ -2308,17 +2308,20 @@ def count_frequencies(my_directory,save_tab_info=True):
     VARIABLES=[]
     for the_folder in all_dir:
         nome=the_folder.split('/')[-1]
-        results=[]
-        quadr_list=[]
-        my_data={}
-        results += [each for each in listdir(the_folder) if each.endswith('.json')]
-        for file in results:
-            quadrante=file.split('.')[0]
-            quadr_list.append(quadrante)
-            with open(the_folder+'/'+file) as f:
-                my_data[quadrante]=json.load(f)
-        all_data[nome]=my_data
-        VARIABLES.append(nome)
+        if 'time course' in nome or 'experiments course' in nome:            
+            continue
+        else:
+            results=[]
+            quadr_list=[]
+            my_data={}
+            results += [each for each in listdir(the_folder) if each.endswith('.json')]
+            for file in results:
+                quadrante=file.split('.')[0]
+                quadr_list.append(quadrante)
+                with open(the_folder+'/'+file) as f:
+                    my_data[quadrante]=json.load(f)
+            all_data[nome]=my_data
+            VARIABLES.append(nome)
     str1='Number of comparisons performed :'+str(len(all_dir))
     print(str1)
     print('\n')
