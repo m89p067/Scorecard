@@ -2891,11 +2891,11 @@ def track_over_exper(my_directory,font_size1=8,alpha=0.75,th_sel=1,marker='o',ma
                         the_x,the_y=modify_marker_coordinates(mid_green,(th_fold_change*mf+th_fold_change)/2, scale=jitter)
                         ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
                         texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
-                    elif il_quadr=='Q3' and il_sett==labels[1] :
+                    elif il_quadr=='Q2' and il_sett==labels[1] :
                         the_x,the_y=modify_marker_coordinates(-mid_green,(th_fold_change*mf+th_fold_change)/2, scale=jitter)
                         ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
                         texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
-                    elif il_quadr=='Q2' and il_sett==labels[1] :
+                    elif il_quadr=='Q3' and il_sett==labels[1] :
                         the_x,the_y=modify_marker_coordinates(-mid_green,-(th_fold_change*mf+th_fold_change)/2, scale=jitter)
                         ax.scatter(the_x,the_y, marker = marker, s = markersize, facecolors= marker_color, edgecolors= marker_color)
                         texts.append(ax.text(the_x,the_y, la_cond,size=font_size1, ha='center', va='center' ,alpha=alpha )  )
