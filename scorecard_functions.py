@@ -2591,7 +2591,7 @@ def annotate_heatmap(im, data=None, valfmt="{x:.2f}", textcolors=("black", "whit
             texts.append(text)
 
     return texts
-def quadrants_heatmap(my_directory,color_map='Greys',above_lab_rot=-60,horiz_alig="center",font_counts=4.5):
+def quadrants_heatmap(my_directory,color_map='Greys',above_lab_rot=-60,horiz_alig="center",font_counts=4.5,do_excel=True):
     '''
     Overview of the number of identified entries for each group/quandrant.
     It summarizes the information as a annotated heatmap, but report only the number of entries (not the expression values)
@@ -2605,6 +2605,8 @@ def quadrants_heatmap(my_directory,color_map='Greys',above_lab_rot=-60,horiz_ali
     VARIABLES=[]
     for the_folder in all_dir:
         nome=the_folder.split('/')[-1]
+        if 'time course' in nome or 'experiments course' in nome:            
+            continue
         results=[]
         quadr_list=[]
         my_data={}
@@ -2687,6 +2689,7 @@ def quadrants_heatmap(my_directory,color_map='Greys',above_lab_rot=-60,horiz_ali
                     out[qr_str+' '+key]=0
         out_all.append(out)                    
     df = pd.DataFrame.from_dict(out_all)
+    df = df.loc[:, df.any()]
     fig, ax = plt.subplots()
     
     im, cbar = heatmap(df.to_numpy(dtype=np.int32).T,df.columns.tolist(), VARIABLES,  ax=ax, cmap=color_map, cbarlabel="Counts",lab_rot=above_lab_rot,v_align=horiz_alig)
@@ -2697,6 +2700,10 @@ def quadrants_heatmap(my_directory,color_map='Greys',above_lab_rot=-60,horiz_ali
 
     plt.savefig(my_directory+'HeatmapCounts.png',dpi=300,bbox_inches='tight')
     plt.close()
+    if do_excel:
+        df.to_excel(my_directory+'freq_heatmap.xlsx', index=False)        
+    else:
+        df.to_csv(my_directory+'freq_heatmap.csv', index=False)        
 def rare_entries(the_full_path):
     file_exists = exists(the_full_path+"symbol_rare.json")
     if file_exists==True:
