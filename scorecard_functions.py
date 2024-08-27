@@ -2700,6 +2700,7 @@ def quadrants_heatmap(my_directory,color_map='Greys',above_lab_rot=-60,horiz_ali
 
     plt.savefig(my_directory+'HeatmapCounts.png',dpi=300,bbox_inches='tight')
     plt.close()
+    df = pd.concat([pd.Series(VARIABLES, index=df.index, name='Exp. Cond.'), df], axis=1)
     if do_excel:
         df.to_excel(my_directory+'freq_heatmap.xlsx', index=False)        
     else:
@@ -2774,7 +2775,7 @@ def all_elements_same(lst):
 def modify_marker_coordinates(x_data,y_data, scale=0.1):
     return x_data+np.random.uniform(-scale, scale, size=1)[0],y_data+np.random.uniform(-scale, scale, size=1)[0]
 
-def track_over_exper(my_directory,font_size1=8,alpha=0.75,th_sel=1,marker='o',marker_color='k',markersize=10,jitter=0.1,is_time=True):
+def track_over_exper(my_directory,font_size1=8,alpha=0.75,th_sel=1,marker='o',marker_color='k',markersize=10,jitter=0.1,is_time=True,also_save_txt=False):
     '''
     Function to show where extreme variations fall over time or experiments. Useful for the full scorecard (aka 'incl_ave'=True)
     Input the main_folder containing all comparisions (a gene tracked over time or on different experiments)
@@ -2797,6 +2798,7 @@ def track_over_exper(my_directory,font_size1=8,alpha=0.75,th_sel=1,marker='o',ma
         stringa_tipo='time '
     else:
         stringa_tipo='experiments '
+    
     print('Comparisons look like over '+stringa_tipo)
     def_param=generate_parameters()
     def_param['incl aver']=True
@@ -2818,10 +2820,13 @@ def track_over_exper(my_directory,font_size1=8,alpha=0.75,th_sel=1,marker='o',ma
     incl_ave=def_param['incl aver']
     conti=info_common['Symbol'].value_counts()
     df_conti=pd.DataFrame({'entry':conti.index, 'occurrences':conti.values})
-    interest_entries = df_conti[df_conti['occurrences'] >= df_conti['occurrences'].max()-th_sel]
+    if th_sel > df_conti['occurrences'].max():
+        print('Please reduce th_sel')
+        return None
+    else:
+        interest_entries = df_conti[df_conti['occurrences'] >= df_conti['occurrences'].max()-th_sel]
     gene_list=interest_entries['entry'].to_list()
-    keep_gene_id=[]
-    also_save_txt=False
+    keep_gene_id=[]    
     for id_gene, gene_name in enumerate(gene_list) :
         tot_num_entr=interest_entries.loc[interest_entries['entry'] == gene_name, 'occurrences'].iloc[0]
         print('Symbol:',gene_name,' case ',id_gene+1,'/',len(gene_list),' encountered in ',tot_num_entr,' scorecards')
