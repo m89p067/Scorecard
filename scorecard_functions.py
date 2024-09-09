@@ -25,7 +25,12 @@ from matplotlib.transforms import Affine2D
 from collections import Counter
 import matplotlib
 import matplotlib.ticker as mticker
+from itertools import combinations
 
+def identified_comparisons(strings1):
+    """Utility function to generate pairwise combinations (without repetition) of exp. cond."""
+    combinations2 = list(combinations(strings1, 2))
+    return combinations2
 def merge_two_dicts(x, y):
     """Given two dictionaries, merge them into a new dict as a shallow copy."""
     z = x.copy()
@@ -117,23 +122,27 @@ def data_loading(info_dict):
         my_df['FC cond x']=zscore(my_df['FC cond x'])
         my_df['FC cond y']=zscore(my_df['FC cond y'])
     
-    if (my_df['FC cond x'].dtype != np.float64 or my_df['FC cond x'].dtype != np.int64):
+    #if (my_df['FC cond x'].dtype != np.float64) or (my_df['FC cond x'].dtype != np.int64) or (my_df['FC cond x'].dtype != np.float32):
+    if np.isnan(np.sum(my_df['FC cond x'].to_numpy())):
         print('Data in column ',info_dict['FC cond x'],' contains not numeric data [ERROR!]')
         print('Attempt to remove not numeric rows')
         my_df=my_df.dropna(subset=['FC cond x','FC cond y','padj cond x','padj cond y'],how='any')
         my_df['FC cond x'] = pd.to_numeric(my_df['FC cond x'], errors='coerce')
-    if (my_df['FC cond y'].dtype != np.float64 or my_df['FC cond y'].dtype != np.int64):
+    #if (my_df['FC cond y'].dtype != np.float64) or (my_df['FC cond y'].dtype != np.int64) or (my_df['FC cond y'].dtype != np.float32):
+    if np.isnan(np.sum(my_df['FC cond y'].to_numpy())):
         print('Data in column ',info_dict['FC cond y'],' contains not numeric data [ERROR!]')
         print('Attempt to remove not numeric rows')
         my_df=my_df.dropna(subset=['FC cond x','FC cond y','padj cond x','padj cond y'],how='any')
         my_df['FC cond y'] = pd.to_numeric(my_df['FC cond y'], errors='coerce')
-    if (my_df['padj cond x'].dtype != np.float64 or my_df['padj cond x'].dtype != np.int64):
-        print('Data in column ',info_dict['FC cond x'],' contains not numeric data [ERROR!]')
+    #if (my_df['padj cond x'].dtype != np.float64) or (my_df['padj cond x'].dtype != np.int64) or (my_df['padj cond x'].dtype != np.float32):
+    if np.isnan(np.sum(my_df['padj cond x'].to_numpy())):
+        print('Data in column ',info_dict['padj cond x'],' contains not numeric data [ERROR!]')
         print('Attempt to remove not numeric rows')
         my_df=my_df.dropna(subset=['FC cond x','FC cond y','padj cond x','padj cond y'],how='any')
         my_df['padj cond x'] = pd.to_numeric(my_df['padj cond x'], errors='coerce')
-    if (my_df['padj cond y'].dtype != np.float64 or my_df['padj cond y'].dtype != np.int64):
-        print('Data in column ',info_dict['FC cond y'],' contains not numeric data [ERROR!]')
+    #if (my_df['padj cond y'].dtype != np.float64) or (my_df['padj cond y'].dtype != np.int64) or (my_df['padj cond y'].dtype != np.float32):
+    if np.isnan(np.sum(my_df['padj cond y'].to_numpy())):
+        print('Data in column ',info_dict['padj cond y'],' contains not numeric data [ERROR!]')
         print('Attempt to remove not numeric rows')
         my_df=my_df.dropna(subset=['FC cond x','FC cond y','padj cond x','padj cond y'],how='any')
         my_df['padj cond y'] = pd.to_numeric(my_df['padj cond y'], errors='coerce')
@@ -1602,6 +1611,8 @@ def reconstruct_scorecard(my_directory,scarto=0.07):
              |
              |-------Exp. Comparison 3
     '''
+    if my_directory[-1]!="/":
+        my_directory=my_directory+"/"
     all_dir=[ f.path for f in scandir(my_directory) if f.is_dir() ]
 
     for the_folder in all_dir:
@@ -1612,7 +1623,7 @@ def reconstruct_scorecard(my_directory,scarto=0.07):
         my_data={}
         results += [each for each in listdir(the_folder) if each.endswith('.json')]
         for file in results:
-            quadrante=file.split('_')[0]
+            quadrante=file.removesuffix('.json')
             quadr_list.append(quadrante)
             with open(the_folder+'/'+file) as f:
                 my_data[quadrante]=json.load(f)
@@ -1693,6 +1704,7 @@ def reconstruct_scorecard(my_directory,scarto=0.07):
         all_x,all_y=[],[]
 
         for quadrante in quadr_list:
+            print('Processing: ',quadrante)
             for eti in etichette:
                 if eti in list(my_data[quadrante].keys()):
                     lista_tmp=my_data[quadrante][eti]
@@ -1717,6 +1729,8 @@ def reconstruct_scorecard(my_directory,scarto=0.07):
                         elif eti==etichette[3]:
                             ax.scatter( fch_x,fch_y, facecolors = colori[3], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
                             texts4.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[3]  ))
+                            all_x.append(fch_x)
+                            all_y.append(fch_y)
                         elif eti==etichette[4]:
                             ax.scatter( fch_x,fch_y, facecolors = colori[4], edgecolors = "k", linewidths = 0.1, alpha = trasp[0],marker=MarkerStyle(markers[3], fillstyle='full'),s=sizes[1])
                             texts5.append(ax.text(fch_x,fch_y, my_gene,size=font_size1, ha='center', va='center',color=colori[4]  ))
@@ -1751,7 +1765,7 @@ def reconstruct_scorecard(my_directory,scarto=0.07):
             ax.set_title('Scorecard and regions of interest')
         minimo_x,massimo_x=min(all_x)+(scarto*min(all_x)), max(all_x)+(scarto*max(all_x))
         minimo_y,massimo_y=min(all_y)+(scarto*min(all_y)), max(all_y)+(scarto*max(all_y))
-        
+
         ax.set_xlim(left=minimo_x,right=massimo_x)
         ax.set_ylim(bottom=minimo_y,top=massimo_y)
         
