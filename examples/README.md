@@ -4,7 +4,7 @@ The folder contains a CSV file that could be used to generate an analysis sequen
 
 The dataset was created artificially, and it is not constituted by computations on biological samples: each column contains fake Fold Change and p-values representing ten bacteria cultured in the laboratory and exposed to a certain experimental condition (versus a control or baseline). The ten bacteria cultures could be compared to each other. Gene IDs are alphanumeric codes built by randomly mixing numbers and letters.
 
-The column names could be interpreted as post-processed RNA-seq data from bacteria cultured on Petri dishes:
+The dataset could be interpreted as post-processed RNA-seq data from bacteria cultured on Petri dishes:
 
 | Abbreviations | Bacteria |
 |-----:|---------------|
