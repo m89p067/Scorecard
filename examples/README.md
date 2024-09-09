@@ -1,6 +1,6 @@
-# Folder contents (toy example)
+# Toy Dataset
 
-The folder contains a CSV file that could be used to generate an analysis sequence for exploring Scorecard library functions.
+The folder contains a CSV file that could be used to generate an analysis sequence for exploring and demonstrating Scorecard library functions.
 
 The dataset was created artificially, and it is not constituted by computations on biological samples: each column contains fake Fold Change and p-values representing ten bacteria cultured in the laboratory and exposed to a certain experimental condition (versus a control or baseline). The ten bacteria cultures could be compared to each other. Gene IDs are alphanumeric codes built by randomly mixing numbers and letters.
 
