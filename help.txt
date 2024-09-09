@@ -23,7 +23,7 @@ Afterward, one can modify the default parameters with users preferences. For exa
     'rect_colors'  # colors of shaded areas of the scorecard
     'markers'  #  markers of the scorecard
     'markers_sizes'  # Size of the markers plotted on the scorecard
-    'is_example'  # in scorecard legend use color names or charaters as codes
+    'is_example'  # in scorecard legend use color names or characters as ROI identification codes
     'use_notation'  # Use custom names inserted in 'Treatment1 name','Treatment2 name','Control name' when plotting axes labels
     'gene_name'  # Name of the column of the DataFrame containing genes or proteins names or IDs (one per row)
     'multiplication factor' # Factor to multiply the log2 Fold change threshold to detect extreme values (setting it to 1 will produce a four-way plot, not the scorecard)
@@ -40,6 +40,7 @@ For example the notation could be "Treatment1vsCtrl_Log2FoldChange","Treatment2v
 Remember that the CSV file should have the first row as header, reporting the column names matching the information provided in the dictionary of parameters.
 Now load the data into the computer memory as Pandas Dataframe by typing:
 >>df=scorecard_functions.data_loading(param_dict)
+As a side note, the Scorecard library contains a utility function to generate a list of combinations (without repetitions) for iterating over all samples.
 It is suggested to create a legend of the color codes and the regions of interest by typing:
 >>scorecard_functions.scorecard_legend(param_dict)
 Run scorecard single quandrant calculations using the following steps. This function will store statistically significant entries for each quadrant together with plots of individual quandrants.
