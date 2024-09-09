@@ -18,5 +18,3 @@ The column names could be interpreted as post-processed RNA-seq data from bacter
 |GAS| Group A Streptococcus|
 |GBS| Group B Streptococcus|
 |NTHi| Nontypeable Haemophilus influenzae|
-
-As a side note, the Scorecard library contains a utility function to generate a list of combinations (without repetitions) for iterating over all samples.
