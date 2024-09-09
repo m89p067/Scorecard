@@ -10,7 +10,7 @@ At the beginning of the file include the import statement, for example:
 ```
 import scorecard_functions
 ```
-Initially, create the parameter set to tune the scorecard features.
+Initially, create the parameter set to tune the scorecard features. 
 The following line of code could be used to generate the parameter dictionary with default values: 
 ```
 param_dict=scorecard_functions.generate_parameters()
@@ -66,6 +66,7 @@ Now load the CSV data into the computer memory as Pandas Dataframe by typing:
 df=scorecard_functions.data_loading(param_dict)
 ```
 
+As a side note, the Scorecard library contains a utility function to generate a list of combinations (without repetitions) for iterating over all samples.
 It is suggested to create a legend of the color codes and the regions of interest by typing:
 ```
 scorecard_functions.scorecard_legend(param_dict)
