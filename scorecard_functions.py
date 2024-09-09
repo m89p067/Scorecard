@@ -1594,7 +1594,7 @@ def scorecard(the_df,info_dict2):
     with open(save_folder+'Quadrant4.json', 'w') as json_file:
         json.dump(quadr,json_file,  indent = 4)    
 
-def reconstruct_scorecard(my_directory,scarto=0.07):
+def reconstruct_scorecard(my_directory,add_space=0.07):
     '''
     The functions loads each Scorecard quandrant in memory and builds the Cartesian plane with the Scorecard for a global view of the dataset.
     It will be stored on the hard disk into the specified folder.
@@ -1623,7 +1623,7 @@ def reconstruct_scorecard(my_directory,scarto=0.07):
         my_data={}
         results += [each for each in listdir(the_folder) if each.endswith('.json')]
         for file in results:
-            quadrante=file.removesuffix('.json')
+            quadrante=file.split('.')[0]
             quadr_list.append(quadrante)
             with open(the_folder+'/'+file) as f:
                 my_data[quadrante]=json.load(f)
@@ -1763,8 +1763,8 @@ def reconstruct_scorecard(my_directory,scarto=0.07):
             ax.set_xlabel("$log_2$ Fold Change ("+trt1+")")
             ax.set_ylabel("$log_2$ Fold Change ("+trt2+")")   
             ax.set_title('Scorecard and regions of interest')
-        minimo_x,massimo_x=min(all_x)+(scarto*min(all_x)), max(all_x)+(scarto*max(all_x))
-        minimo_y,massimo_y=min(all_y)+(scarto*min(all_y)), max(all_y)+(scarto*max(all_y))
+        minimo_x,massimo_x=min(all_x)+(add_space*min(all_x)), max(all_x)+(add_space*max(all_x))
+        minimo_y,massimo_y=min(all_y)+(add_space*min(all_y)), max(all_y)+(add_space*max(all_y))
 
         ax.set_xlim(left=minimo_x,right=massimo_x)
         ax.set_ylim(bottom=minimo_y,top=massimo_y)
@@ -1812,7 +1812,7 @@ def reconstruct_scorecard(my_directory,scarto=0.07):
 def calc_scarto(radians_r,valore_r):
     d_angle=radians_r* 180.0 / np.pi    
     return (d_angle+valore_r)* np.pi / 180.0    
-def multiple_view(my_directory,scarto=3,marker_size=100): # "scarto" adjusts the jitter of the points +/- the radial axes
+def multiple_view(my_directory,add_space=3,marker_size=100): # "add_space" adjusts the jitter of the points +/- the radial axes
     '''
     The function will generate a view of all experimental comparisons, highlighting genes or entries beloning to the regions
     of interest of the scorecard. Pass as input the string of the main_folder containing all the subfolder with the experimental
@@ -1875,18 +1875,18 @@ def multiple_view(my_directory,scarto=3,marker_size=100): # "scarto" adjusts the
                     valore1=tmp2[gruppo+'_x']
                     valore2=tmp2[gruppo+'_y']                    
                     for x,y in zip(valore1,valore2):
-                        ax.scatter(calc_scarto(ANGLES[ind_i],-scarto), x, s=marker_size, c=colore[i_gruppo], zorder=10)
-                        ax.scatter(calc_scarto(ANGLES[ind_i],scarto), y, s=marker_size, c=colore[i_gruppo], zorder=10)
-                        ax.plot([calc_scarto(ANGLES[ind_i],-scarto),calc_scarto(ANGLES[ind_i],scarto)], [x,y], c=colore[i_gruppo], linewidth=0.5, label=gruppo)
+                        ax.scatter(calc_scarto(ANGLES[ind_i],-add_space), x, s=marker_size, c=colore[i_gruppo], zorder=10)
+                        ax.scatter(calc_scarto(ANGLES[ind_i],add_space), y, s=marker_size, c=colore[i_gruppo], zorder=10)
+                        ax.plot([calc_scarto(ANGLES[ind_i],-add_space),calc_scarto(ANGLES[ind_i],add_space)], [x,y], c=colore[i_gruppo], linewidth=0.5, label=gruppo)
                         all_x.append(x)
                         all_y.append(y)
                 elif gruppo in etichette:                    
                     valore1=tmp2[gruppo+'_x']
                     valore2=tmp2[gruppo+'_y']
                     for x,y in zip(valore1,valore2):
-                        ax.scatter(calc_scarto(ANGLES[ind_i],-scarto), x, s=marker_size, c=colore[i_gruppo], zorder=10)
-                        ax.scatter(calc_scarto(ANGLES[ind_i],scarto), y, s=marker_size, c=colore[i_gruppo], zorder=10)
-                        ax.plot([calc_scarto(ANGLES[ind_i],-scarto),calc_scarto(ANGLES[ind_i],scarto)], [x,y], c=colore[i_gruppo], linewidth=0.5, label=gruppo)
+                        ax.scatter(calc_scarto(ANGLES[ind_i],-add_space), x, s=marker_size, c=colore[i_gruppo], zorder=10)
+                        ax.scatter(calc_scarto(ANGLES[ind_i],add_space), y, s=marker_size, c=colore[i_gruppo], zorder=10)
+                        ax.plot([calc_scarto(ANGLES[ind_i],-add_space),calc_scarto(ANGLES[ind_i],add_space)], [x,y], c=colore[i_gruppo], linewidth=0.5, label=gruppo)
                         all_x.append(x)
                         all_y.append(y)
     labels = []
@@ -1945,13 +1945,13 @@ def make_volcano(my_directory):
 
     for the_folder in all_dir:
         nome=the_folder.split('/')[-1]
-        print('Scorecard reconstruction on '+nome+' folder')
+        print('Volcano plots on '+nome+' folder')
         results=[]
         quadr_list=[]
         my_data={}
         results += [each for each in listdir(the_folder) if each.endswith('.json')]
         for file in results:
-            quadrante=file.split('_')[0]
+            quadrante=file.split('.')[0]
             quadr_list.append(quadrante)
             with open(the_folder+'/'+file) as f:
                 my_data[quadrante]=json.load(f)
@@ -2124,7 +2124,7 @@ def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,tex
         my_data={}
         results += [each for each in listdir(the_folder) if each.endswith('.json')]
         for file in results:
-            quadrante=file.split('_')[0]
+            quadrante=file.removesuffix('.json')
             quadr_list.append(quadrante)
             with open(the_folder+'/'+file) as f:
                 my_data[quadrante]=json.load(f)        
