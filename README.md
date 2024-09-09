@@ -3,7 +3,7 @@
 
 This collection of functions creates a scorecard to compare wet-lab experimental conditions, useful to identify extreme or moderately changing expression values based on fold change and statistical significance. The goal is to narrow down the information to the relevant or extremely changing OMICS expression values by comparing several pairwise experimental conditions. On this reduced set of entries, the library could produce additional data-driven insights for investigating the experimental findings.
 
-![Scorecard example](example_img/All_axemaples.png?raw=True)
+![Scorecard example](examples/Scorecard_examples.png?raw=True)
 
 ## Quick introduction
 At the beginning of the file include the import statement, for example:
