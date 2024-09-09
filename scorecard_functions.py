@@ -26,7 +26,7 @@ from collections import Counter
 import matplotlib
 import matplotlib.ticker as mticker
 from itertools import combinations
-
+import pdb
 def identified_comparisons(strings1):
     """Utility function to generate pairwise combinations (without repetition) of exp. cond."""
     combinations2 = list(combinations(strings1, 2))
@@ -1751,64 +1751,74 @@ def reconstruct_scorecard(my_directory,add_space=0.07):
                             texts300.append(ax.text(fch_x,fch_y, my_gene,size=font_size1-1, ha='center', va='center',color=other_colori[2]  ))                
                             all_x.append(fch_x)
                             all_y.append(fch_y)
-        if incl_ave==False:
-            adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-        else:
-            adjust_text(flatten([texts1,texts2,texts3,texts4,texts5,texts100,texts200,texts300]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-        if use_notation:   
-            ax.set_xlabel("$log_2$ Fold Change ("+trt1+" vs "+ctrl+")")
-            ax.set_ylabel("$log_2$ Fold Change ("+trt2+" vs "+ctrl+")")
-            ax.set_title('Scorecard ('+titolo+')')
-        else:
-            ax.set_xlabel("$log_2$ Fold Change ("+trt1+")")
-            ax.set_ylabel("$log_2$ Fold Change ("+trt2+")")   
-            ax.set_title('Scorecard and regions of interest')
-        minimo_x,massimo_x=min(all_x)+(add_space*min(all_x)), max(all_x)+(add_space*max(all_x))
-        minimo_y,massimo_y=min(all_y)+(add_space*min(all_y)), max(all_y)+(add_space*max(all_y))
-
-        ax.set_xlim(left=minimo_x,right=massimo_x)
-        ax.set_ylim(bottom=minimo_y,top=massimo_y)
         
-        if mf>1:
+        if all_x !=[] and all_y !=[]:
+            if incl_ave==False:
+                adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+            else:
+                adjust_text(flatten([texts1,texts2,texts3,texts4,texts5,texts100,texts200,texts300]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+            if use_notation:   
+                ax.set_xlabel("$log_2$ Fold Change ("+trt1+" vs "+ctrl+")")
+                ax.set_ylabel("$log_2$ Fold Change ("+trt2+" vs "+ctrl+")")
+                ax.set_title('Scorecard ('+titolo+')')
+            else:
+                ax.set_xlabel("$log_2$ Fold Change ("+trt1+")")
+                ax.set_ylabel("$log_2$ Fold Change ("+trt2+")")   
+                ax.set_title('Scorecard and regions of interest')
+            minimo_x,massimo_x=min(all_x)+(add_space*min(all_x)), max(all_x)+(add_space*max(all_x))
+            minimo_y,massimo_y=min(all_y)+(add_space*min(all_y)), max(all_y)+(add_space*max(all_y))
+            if minimo_x>0:
+                minimo_x=-th_fold_change
+            if massimo_x<0:
+                massimo_x=th_fold_change
+            if minimo_y>0:
+                minimo_y=-th_fold_change
+            if massimo_y<0:
+                massimo_y=th_fold_change
+            ax.set_xlim(left=minimo_x,right=massimo_x)
+            ax.set_ylim(bottom=minimo_y,top=massimo_y)
             
-            ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change*mf), (massimo_x-th_fold_change*mf), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-            ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change*mf), (minimo_x+th_fold_change*mf), (minimo_y+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-            ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change*mf), (minimo_x+th_fold_change*mf), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-            ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change*mf), (massimo_x-th_fold_change*mf), (minimo_y+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+            if mf>1:
+                
+                ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change*mf), (massimo_x-th_fold_change*mf), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+                ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change*mf), (minimo_x+th_fold_change*mf), (minimo_y+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+                ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change*mf), (minimo_x+th_fold_change*mf), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+                ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change*mf), (massimo_x-th_fold_change*mf), (minimo_y+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
 
-            ax.add_patch(Rectangle((th_fold_change, th_fold_change*mf), (th_fold_change*mf-th_fold_change), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change), (massimo_x-th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change), (minimo_x+th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((th_fold_change, -th_fold_change*mf), (th_fold_change*mf-th_fold_change), (minimo_y+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((th_fold_change*mf,- th_fold_change), (massimo_x-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo_x-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((-th_fold_change, -th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (minimo_y+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-            ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change), (minimo_x+th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+                ax.add_patch(Rectangle((th_fold_change, th_fold_change*mf), (th_fold_change*mf-th_fold_change), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+                ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change), (massimo_x-th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+                ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+                ax.add_patch(Rectangle((-th_fold_change*mf, th_fold_change), (minimo_x+th_fold_change*mf), (th_fold_change*mf-th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+                ax.add_patch(Rectangle((th_fold_change, -th_fold_change*mf), (th_fold_change*mf-th_fold_change), (minimo_y+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+                ax.add_patch(Rectangle((th_fold_change*mf,- th_fold_change), (massimo_x-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+                ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+                ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo_x-th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+                ax.add_patch(Rectangle((-th_fold_change, -th_fold_change*mf), (-th_fold_change*mf+th_fold_change), (minimo_y+th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+                ax.add_patch(Rectangle((-th_fold_change*mf, -th_fold_change), (minimo_x+th_fold_change*mf), (-th_fold_change*mf+th_fold_change),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
 
-            ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo_x-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-            ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (th_fold_change*2), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-            ax.add_patch(Rectangle((minimo_x,-th_fold_change), (minimo_x-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-            ax.add_patch(Rectangle((-th_fold_change,minimo_y), (th_fold_change*2), (minimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-        elif mf==1:
+                ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo_x-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+                ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (th_fold_change*2), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+                ax.add_patch(Rectangle((minimo_x,-th_fold_change), (minimo_x-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+                ax.add_patch(Rectangle((-th_fold_change,minimo_y), (th_fold_change*2), (minimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+            elif mf==1:
 
-            ax.add_patch(Rectangle((th_fold_change, th_fold_change), (massimo_x-th_fold_change), (massimo_y-th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-            ax.add_patch(Rectangle((-th_fold_change, -th_fold_change), (minimo_x+th_fold_change), (minimo_y+th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-            ax.add_patch(Rectangle((-th_fold_change, th_fold_change), (minimo_x+th_fold_change), (massimo_y-th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-            ax.add_patch(Rectangle((th_fold_change, -th_fold_change), (massimo_x-th_fold_change), (minimo_y+th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+                ax.add_patch(Rectangle((th_fold_change, th_fold_change), (massimo_x-th_fold_change), (massimo_y-th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+                ax.add_patch(Rectangle((-th_fold_change, -th_fold_change), (minimo_x+th_fold_change), (minimo_y+th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+                ax.add_patch(Rectangle((-th_fold_change, th_fold_change), (minimo_x+th_fold_change), (massimo_y-th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+                ax.add_patch(Rectangle((th_fold_change, -th_fold_change), (massimo_x-th_fold_change), (minimo_y+th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
 
-            ax.add_patch(Rectangle((th_fold_change, -th_fold_change), (massimo_x-th_fold_change), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-            ax.add_patch(Rectangle((-th_fold_change, th_fold_change), (th_fold_change*2), (massimo_y-th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-            ax.add_patch(Rectangle((minimo_x,-th_fold_change), (minimo_x-th_fold_change), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-            ax.add_patch(Rectangle((-th_fold_change,minimo_y), (th_fold_change*2), (minimo_y-th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+                ax.add_patch(Rectangle((th_fold_change, -th_fold_change), (massimo_x-th_fold_change), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+                ax.add_patch(Rectangle((-th_fold_change, th_fold_change), (th_fold_change*2), (massimo_y-th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+                ax.add_patch(Rectangle((minimo_x,-th_fold_change), (minimo_x-th_fold_change), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+                ax.add_patch(Rectangle((-th_fold_change,minimo_y), (th_fold_change*2), (minimo_y-th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
 
-        if mf>1:
-            plt.savefig(save_folder+'Scorecard.png',dpi=300,bbox_inches='tight')
-        elif mf==1:
-            plt.savefig(save_folder+'FourWayPlot.png',dpi=300,bbox_inches='tight')
-        plt.close()
-
+            if mf>1:
+                plt.savefig(save_folder+'Scorecard.png',dpi=300,bbox_inches='tight')
+            elif mf==1:
+                plt.savefig(save_folder+'FourWayPlot.png',dpi=300,bbox_inches='tight')
+            plt.close()
+        else:
+            print(' No identified entities, please adjust thresholds')
 def calc_scarto(radians_r,valore_r):
     d_angle=radians_r* 180.0 / np.pi    
     return (d_angle+valore_r)* np.pi / 180.0    
@@ -2062,43 +2072,46 @@ def make_volcano(my_directory):
         else:
             out_x=flatten([texts1x,texts2x,texts3x,texts4x,texts5x,texts100x,texts200x,texts300x])
             out_y=flatten([texts1y,texts2y,texts3y,texts4y,texts5y,texts100y,texts200y,texts300y])            
- 
+        if out_x !=[] and out_y !=[]: 
 
-        for ax,tmp_str in zip([ax1,ax2],[trt1,trt2]):    
-            if mf>1:
-                ax.axvline(x=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
-            ax.axvline(x=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
-            ax.axvline(x=0,color='grey',linestyle='dotted',lw=0.5)
-            if mf>1:
-                ax.axvline(x=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
-            ax.axvline(x=-th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
+            for ax,tmp_str in zip([ax1,ax2],[trt1,trt2]):    
+                if mf>1:
+                    ax.axvline(x=th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+                ax.axvline(x=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
+                ax.axvline(x=0,color='grey',linestyle='dotted',lw=0.5)
+                if mf>1:
+                    ax.axvline(x=-th_fold_change*mf,color='grey',linestyle='dashdot',lw=1.5)
+                ax.axvline(x=-th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
 
-            ax.axhline(y=-np.log10(th_significance),color='grey',linestyle='dashdot',lw=1.5)
-            #ax.axhline(y=-np.log10(th_significance/mf),color='grey',linestyle='dashdot',lw=1.0)
+                ax.axhline(y=-np.log10(th_significance),color='grey',linestyle='dashdot',lw=1.5)
+                #ax.axhline(y=-np.log10(th_significance/mf),color='grey',linestyle='dashdot',lw=1.0)
 
-            ax.set_xlabel("log2 Fold Change ("+tmp_str+" vs "+ctrl+")")
-            ax.set_ylabel("-log10 Adjusted p-value")
-            ax.set_title('Data: '+tmp_str+' versus '+ctrl)
+                ax.set_xlabel("log2 Fold Change ("+tmp_str+" vs "+ctrl+")")
+                ax.set_ylabel("-log10 Adjusted p-value")
+                ax.set_title('Data: '+tmp_str+' versus '+ctrl)
 
-            ymin, ymax = ax.get_ylim()
-            xmin, xmax = ax.get_xlim()
-            if mf>1:
-                ax.add_patch(Rectangle((xmin, -np.log10(th_significance)), -(xmin+th_fold_change*mf), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-                ax.add_patch(Rectangle((th_fold_change*mf, -np.log10(th_significance)), (xmax-th_fold_change*mf), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2])                         )
-                ax.add_patch(Rectangle((-th_fold_change*mf, -np.log10(th_significance)), -(-th_fold_change*mf+th_fold_change), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-                ax.add_patch(Rectangle((th_fold_change, -np.log10(th_significance)), (th_fold_change*mf-th_fold_change), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
-                ax.add_patch(Rectangle((-th_fold_change, -np.log10(th_significance)), (th_fold_change*2), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
-            elif mf==1:
-                ax.add_patch(Rectangle((xmin, -np.log10(th_significance)), -(xmin+th_fold_change), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-                ax.add_patch(Rectangle((th_fold_change, -np.log10(th_significance)), (xmax-th_fold_change), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2])                         )
-        if len(out_x)>0 :
-            adjust_text(out_x, ax=ax1,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-        if len(out_y)>0:
-            adjust_text(out_y, ax=ax2,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-        if the_folder[-1]!="/":
-            the_folder=the_folder+"/"
-        plt.savefig(the_folder+'Volcano.png',dpi=300,bbox_inches='tight')
-        plt.close()  
+                ymin, ymax = ax.get_ylim()
+                xmin, xmax = ax.get_xlim()
+
+                if mf>1:
+                    ax.add_patch(Rectangle((xmin, -np.log10(th_significance)), -(xmin+th_fold_change*mf), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+                    ax.add_patch(Rectangle((th_fold_change*mf, -np.log10(th_significance)), (xmax-th_fold_change*mf), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2])                         )
+                    ax.add_patch(Rectangle((-th_fold_change*mf, -np.log10(th_significance)), -(-th_fold_change*mf+th_fold_change), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+                    ax.add_patch(Rectangle((th_fold_change, -np.log10(th_significance)), (th_fold_change*mf-th_fold_change), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[1],alpha=trasp_rect[1]))
+                    ax.add_patch(Rectangle((-th_fold_change, -np.log10(th_significance)), (th_fold_change*2), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
+                elif mf==1:
+                    ax.add_patch(Rectangle((xmin, -np.log10(th_significance)), -(xmin+th_fold_change), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+                    ax.add_patch(Rectangle((th_fold_change, -np.log10(th_significance)), (xmax-th_fold_change), (ymax-np.log10(th_significance)),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2])                         )
+            if len(out_x)>0 :
+                adjust_text(out_x, ax=ax1,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+            if len(out_y)>0:
+                adjust_text(out_y, ax=ax2,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+            if the_folder[-1]!="/":
+                the_folder=the_folder+"/"
+            plt.savefig(the_folder+'Volcano.png',dpi=300,bbox_inches='tight')
+            plt.close()
+        else:
+            print(' No identified entities, please adjust the thresholds')
 def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,text_adj_y=0.6):
     '''
     The graph created by this function shows each gene or entry previously extracted with the Scorecard, displaying the Log2 Fold Change
