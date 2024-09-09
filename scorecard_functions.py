@@ -26,7 +26,7 @@ from collections import Counter
 import matplotlib
 import matplotlib.ticker as mticker
 from itertools import combinations
-
+import pdb
 def identified_comparisons(strings1):
     """Utility function to generate pairwise combinations (without repetition) of exp. cond."""
     combinations2 = list(combinations(strings1, 2))
@@ -1812,7 +1812,7 @@ def reconstruct_scorecard(my_directory,add_space=0.07):
 def calc_scarto(radians_r,valore_r):
     d_angle=radians_r* 180.0 / np.pi    
     return (d_angle+valore_r)* np.pi / 180.0    
-def multiple_view(my_directory,add_space=3,marker_size=100): # "add_space" adjusts the jitter of the points +/- the radial axes
+def multiple_view(my_directory,add_space=3,marker_size=100,fs_size=10): # "add_space" adjusts the jitter of the points +/- the radial axes
     '''
     The function will generate a view of all experimental comparisons, highlighting genes or entries beloning to the regions
     of interest of the scorecard. Pass as input the string of the main_folder containing all the subfolder with the experimental
@@ -1861,8 +1861,8 @@ def multiple_view(my_directory,add_space=3,marker_size=100): # "add_space" adjus
     for ind_i,i_folder in enumerate(VARIABLES):
         nomi=i_folder.split(' ')
         VAR_NAMES.append(nomi[1]+'   '+nomi[0])
-        tmp=all_data[i_folder]
-        for i_key, key_name in enumerate(['Quadrant1', 'Quadrant2', 'Quadrant3', 'Quadrant4']):# Quadrants
+        tmp=all_data[i_folder]        
+        for i_key, key_name in enumerate(quadr_list):# Quadrants
             tmp2=tmp[key_name]
             all_gruppo=[*tmp2]
             etichette=[xc.upper() for xc in tmp2['COLORS']]
@@ -1908,7 +1908,7 @@ def multiple_view(my_directory,add_space=3,marker_size=100): # "add_space" adjus
             else:
               s1 = slice(0,n//2)
               s2 = slice(n//2,n)
-            lab = ax.text(x,y, chr(8592)+l_txt[s1]+"\n"+l_txt[s2]+chr(8594), transform=label.get_transform(),ha=label.get_ha(), va=label.get_va(),fontsize=10)
+            lab = ax.text(x,y, chr(8592)+l_txt[s1]+"\n"+l_txt[s2]+chr(8594), transform=label.get_transform(),ha=label.get_ha(), va=label.get_va(),fontsize=fs_size)
         else    :
             lab = ax.text(x,y, l_txt, transform=label.get_transform(),ha=label.get_ha(), va=label.get_va(),fontsize=16)
         lab.set_rotation(angle)
