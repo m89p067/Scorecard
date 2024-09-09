@@ -1,4 +1,4 @@
-# Folder contents
+# Folder contents (toy example)
 
 The folder contains a CSV file that could use to generate an analysis sequence to explore Scorecard library functions.
 
