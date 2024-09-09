@@ -26,7 +26,7 @@ from collections import Counter
 import matplotlib
 import matplotlib.ticker as mticker
 from itertools import combinations
-import pdb
+
 def identified_comparisons(strings1):
     """Utility function to generate pairwise combinations (without repetition) of exp. cond."""
     combinations2 = list(combinations(strings1, 2))
