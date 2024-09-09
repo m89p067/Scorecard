@@ -13,8 +13,8 @@ The column names could be interpeted as post-processed RNA-seq data from bacteri
 |EHEC| Enterohemorrhagic Escherichia coli|
 |VRSA| Vancomycin-Resistant Staphylococcus aureus|
 |CRE| Carbapenem-Resistant Enterobacteriaceae|
-|MDR_TB : Multidrug-Resistant Mycobacterium tuberculosis|
-|XDR_TB : Extensively Drug-Resistant Mycobacterium tuberculosis|
+|MDR_TB | Multidrug-Resistant Mycobacterium tuberculosis|
+|XDR_TB | Extensively Drug-Resistant Mycobacterium tuberculosis|
 |GAS| Group A Streptococcus|
 |GBS| Group B Streptococcus|
 |NTHi| Nontypeable Haemophilus influenzae|
