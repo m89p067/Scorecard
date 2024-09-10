@@ -2,7 +2,7 @@
 
 The folder contains a CSV file that could be used to generate an analysis sequence for exploring and demonstrating Scorecard library functions.
 
-The dataset was created artificially, and it is not constituted by computations on biological samples: each column contains fake Fold Change and p-values representing ten bacteria cultured in the laboratory and exposed to a certain experimental condition (versus a control or baseline). The ten bacteria cultures could be compared to each other. Gene IDs are alphanumeric codes built by randomly mixing numbers and letters.
+The dataset was generated synthetically and does not derive from analyses of biological specimens. Each column features fabricated Fold Change and p-values that correspond to ten hypothetical bacterial strains cultivated in a laboratory setting and subjected to a specific experimental condition in comparison to a control or baseline. These ten bacterial cultures can be evaluated against one another. Gene IDs are alphanumeric identifiers created by randomly combining letters and numbers.
 
 The dataset could be interpreted as post-processed RNA-seq data from bacteria cultured on Petri dishes:
 
