@@ -28,7 +28,7 @@ Afterward, one can modify the default parameters with users preferences. For exa
     'gene_name'  # Name of the column of the DataFrame containing genes or proteins names or IDs (one per row)
     'multiplication factor' # Factor to multiply the log2 Fold change threshold to detect extreme values (setting it to 1 will produce a four-way plot, not the scorecard)
     'CSV delimiter'  # delimiter in the CSV file (usually ',')
-    'Log Epsilon' # tiny value to adjust the log calculation
+    'Log Epsilon' # tiny value to adjust the log calculation (during Volcano plots)
     'Scorecard title' # add some short description regarding the experimental conditions on the scorecard title
 Other important parameters are the column names in the CSV file containing the log2 fold change and the adjusted p-values:
     'FC cond x' # replace with exact column name containing log2 fold change Treatment1 vs Control
