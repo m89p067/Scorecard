@@ -2551,7 +2551,7 @@ def count_frequencies(my_directory,save_tab_info=True):
     df_rep= pd.DataFrame(my_rep)
     if save_tab_info:
         df_rep.to_csv(my_directory+'info_tab.csv', index=False)     
-def heatmap(data, row_labels, col_labels, ax=None,cbar_kw=None, cbarlabel="",lab_rot=-60,v_align="center", **kwargs):
+def heatmap(data, row_labels, col_labels, ax=None,cbar_kw=None, cbarlabel="",lab_rot=-60,v_align="center", fs_x=6,fs_y=5,**kwargs):
 
     if ax is None:
         ax = plt.gca()
@@ -2567,8 +2567,8 @@ def heatmap(data, row_labels, col_labels, ax=None,cbar_kw=None, cbarlabel="",lab
     cbar.ax.set_ylabel(cbarlabel, rotation=-90, va="bottom")
 
     # Show all ticks and label them with the respective list entries.
-    ax.set_xticks(np.arange(data.shape[1]), labels=col_labels,fontsize=6)
-    ax.set_yticks(np.arange(data.shape[0]), labels=row_labels,fontsize=5)
+    ax.set_xticks(np.arange(data.shape[1]), labels=col_labels,fontsize=fs_x)
+    ax.set_yticks(np.arange(data.shape[0]), labels=row_labels,fontsize=fs_y)
 
     # Let the horizontal axes labeling appear on top.
     ax.tick_params(top=True, bottom=False,           labeltop=True, labelbottom=False)
@@ -2718,8 +2718,13 @@ def quadrants_heatmap(my_directory,color_map='Greys',above_lab_rot=-60,horiz_ali
     df = pd.DataFrame.from_dict(out_all)
     df = df.loc[:, df.any()]
     fig, ax = plt.subplots()
-    
-    im, cbar = heatmap(df.to_numpy(dtype=np.int32).T,df.columns.tolist(), VARIABLES,  ax=ax, cmap=color_map, cbarlabel="Counts",lab_rot=above_lab_rot,v_align=horiz_alig)
+    if df.shape[1]>20:
+        fs_x1=4
+        fs_y1=3
+    else:
+        fs_x1=6
+        fs_y1=5        
+    im, cbar = heatmap(df.to_numpy(dtype=np.int32).T,df.columns.tolist(), VARIABLES,  ax=ax, cmap=color_map, cbarlabel="Counts",lab_rot=above_lab_rot,v_align=horiz_alig,fs_x=fs_x1,fs_y=fs_y1)
     texts = annotate_heatmap(im, valfmt="{x:.0f}",fs=font_counts)
 
 
