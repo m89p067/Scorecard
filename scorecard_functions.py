@@ -2764,6 +2764,8 @@ def common_entries(my_directory,do_excel=False,barcolor='silver',edgecolor='k',l
         fig, ax = plt.subplots()
         out_df['Symbol'].value_counts().plot(ax=ax, kind='barh',color=barcolor,edgecolor=edgecolor,linewidth=linewidth)
         plt.gca().xaxis.set_major_locator(mticker.MultipleLocator(1))
+        if out_df['Symbol'].shape[0]>20:
+            plt.xticks(fontsize=fs_size+2,rotation = 90)
         plt.xlabel("Total occurrences")
         plt.ylabel("Entries")
         plt.yticks(fontsize=fs_size)
