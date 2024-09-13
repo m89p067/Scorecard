@@ -83,6 +83,8 @@ After creating all four quadrants with previous function, one should execute sco
 ```
 scorecard_functions.reconstruct_scorecard(df,param_dict)
 ```
+The parameters "use_figsize" and "figsize_factor" allow for personalization of the image dimension.
+Default dimension is set by "fig_size" in the initial parameters, otherwise set "use_figsize" as False per customization.
 Repeat the procedure for all comparisons requested. Theoretically one should have a main folder and several subfolders each one comparing two experimental conditions.
 The folders structure should be as the following:
 
