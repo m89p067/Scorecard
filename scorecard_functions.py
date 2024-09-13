@@ -1767,44 +1767,32 @@ def reconstruct_scorecard(my_directory,add_space=0.15,use_figsize=True,figsize_f
             
             minimo_x,massimo_x=min(all_x)+(add_space*min(all_x)), max(all_x)+(add_space*max(all_x))
             minimo_y,massimo_y=min(all_y)+(add_space*min(all_y)), max(all_y)+(add_space*max(all_y))
-            
-            if minimo_x>0 and massimo_x>0:
-                minimo_x=-massimo_x
-            elif massimo_x<0 and minimo_x<0:
-                massimo_x=-minimo_x
-            if minimo_y>0 and massimo_y>0:
-                minimo_y=-massimo_y
-            elif massimo_y<0 and minimo_y<0:
-                massimo_y=-minimo_y
+            val_check=np.absolute([minimo_x,minimo_y,massimo_x,massimo_y])
             if use_figsize:
-                if minimo_x>-th_fold_change*mf:
+                if any(num > fig_size  for num in val_check):
+                    tmp_extreme=max(val_check)+(max(val_check)*0.1)
+                    minimo_x=-tmp_extreme
+                    massimo_x=tmp_extreme
+                    minimo_y=-tmp_extreme
+                    massimo_y=tmp_extreme
+                else:
                     minimo_x=-fig_size
                     massimo_x=fig_size
-                if massimo_x<th_fold_change*mf:
-                    minimo_x=-fig_size
-                    massimo_x=fig_size
-
-                if minimo_y>-th_fold_change*mf:
-                    minimo_x=-fig_size
-                    massimo_x=fig_size
-                if massimo_y<th_fold_change*mf:
                     minimo_y=-fig_size
                     massimo_y=fig_size                
             else:
-                tmp_extreme=(th_fold_change*mf)*figsize_factor
-                if minimo_x>-th_fold_change*mf:
+                tmp_limit=(th_fold_change*mf)*figsize_factor
+                if any(num > tmp_limit  for num in val_check):
+                    tmp_extreme=max(val_check)+(max(val_check)*0.1)
                     minimo_x=-tmp_extreme
                     massimo_x=tmp_extreme
-                if massimo_x<th_fold_change*mf:
-                    minimo_x=-tmp_extreme
-                    massimo_x=tmp_extreme
-
-                if minimo_y>-th_fold_change*mf:
-                    minimo_x=-tmp_extreme
-                    massimo_x=tmp_extreme
-                if massimo_y<th_fold_change*mf:
                     minimo_y=-tmp_extreme
-                    massimo_y=tmp_extreme                 
+                    massimo_y=tmp_extreme
+                else:
+                    minimo_x=-tmp_limit
+                    massimo_x=tmp_limit
+                    minimo_y=-tmp_limit
+                    massimo_y=tmp_limit                 
             if mf>1:
                 
                 ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change*mf), (massimo_x-th_fold_change*mf), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
