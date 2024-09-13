@@ -1,6 +1,6 @@
 # Filename: scorecard_functions.py
 # Author: Mauro Nascimben
-# Created: 2024-09-09
+# Created: 2024-09-13
 # Description: Still under development.
 
 # Import statements
@@ -1594,12 +1594,14 @@ def scorecard(the_df,info_dict2):
     with open(save_folder+'Quadrant4.json', 'w') as json_file:
         json.dump(quadr,json_file,  indent = 4)    
 
-def reconstruct_scorecard(my_directory,add_space=0.07):
+def reconstruct_scorecard(my_directory,add_space=0.15,use_figsize=True,figsize_factor=1.5):
     '''
     The functions loads each Scorecard quandrant in memory and builds the Cartesian plane with the Scorecard for a global view of the dataset.
     It will be stored on the hard disk into the specified folder.
 
     As input pass a string with the folder address containing the subfolders with each experimental conditions.
+    The parameters use_figsize and figsize_factor allow for personalization of the image dimension.
+    Default dimension is set by fig_size in the initial parameters, otherwise set use_figsize as False per customization.
     For example, only pass the address of the main_folder as string:
 
         main_folder
@@ -1753,10 +1755,7 @@ def reconstruct_scorecard(my_directory,add_space=0.07):
                             all_y.append(fch_y)
         
         if all_x !=[] and all_y !=[]:
-            if incl_ave==False:
-                adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
-            else:
-                adjust_text(flatten([texts1,texts2,texts3,texts4,texts5,texts100,texts200,texts300]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+
             if use_notation:   
                 ax.set_xlabel("$log_2$ Fold Change ("+trt1+" vs "+ctrl+")")
                 ax.set_ylabel("$log_2$ Fold Change ("+trt2+" vs "+ctrl+")")
@@ -1765,19 +1764,47 @@ def reconstruct_scorecard(my_directory,add_space=0.07):
                 ax.set_xlabel("$log_2$ Fold Change ("+trt1+")")
                 ax.set_ylabel("$log_2$ Fold Change ("+trt2+")")   
                 ax.set_title('Scorecard and regions of interest')
+            
             minimo_x,massimo_x=min(all_x)+(add_space*min(all_x)), max(all_x)+(add_space*max(all_x))
             minimo_y,massimo_y=min(all_y)+(add_space*min(all_y)), max(all_y)+(add_space*max(all_y))
-            if minimo_x>0:
-                minimo_x=-th_fold_change
-            if massimo_x<0:
-                massimo_x=th_fold_change
-            if minimo_y>0:
-                minimo_y=-th_fold_change
-            if massimo_y<0:
-                massimo_y=th_fold_change
-            ax.set_xlim(left=minimo_x,right=massimo_x)
-            ax.set_ylim(bottom=minimo_y,top=massimo_y)
             
+            if minimo_x>0 and massimo_x>0:
+                minimo_x=-massimo_x
+            elif massimo_x<0 and minimo_x<0:
+                massimo_x=-minimo_x
+            if minimo_y>0 and massimo_y>0:
+                minimo_y=-massimo_y
+            elif massimo_y<0 and minimo_y<0:
+                massimo_y=-minimo_y
+            if use_figsize:
+                if minimo_x>-th_fold_change*mf:
+                    minimo_x=-fig_size
+                    massimo_x=fig_size
+                if massimo_x<th_fold_change*mf:
+                    minimo_x=-fig_size
+                    massimo_x=fig_size
+
+                if minimo_y>-th_fold_change*mf:
+                    minimo_x=-fig_size
+                    massimo_x=fig_size
+                if massimo_y<th_fold_change*mf:
+                    minimo_y=-fig_size
+                    massimo_y=fig_size                
+            else:
+                tmp_extreme=(th_fold_change*mf)*figsize_factor
+                if minimo_x>-th_fold_change*mf:
+                    minimo_x=-tmp_extreme
+                    massimo_x=tmp_extreme
+                if massimo_x<th_fold_change*mf:
+                    minimo_x=-tmp_extreme
+                    massimo_x=tmp_extreme
+
+                if minimo_y>-th_fold_change*mf:
+                    minimo_x=-tmp_extreme
+                    massimo_x=tmp_extreme
+                if massimo_y<th_fold_change*mf:
+                    minimo_y=-tmp_extreme
+                    massimo_y=tmp_extreme                 
             if mf>1:
                 
                 ax.add_patch(Rectangle((th_fold_change*mf, th_fold_change*mf), (massimo_x-th_fold_change*mf), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
@@ -1798,8 +1825,8 @@ def reconstruct_scorecard(my_directory,add_space=0.07):
 
                 ax.add_patch(Rectangle((th_fold_change*mf, -th_fold_change), (massimo_x-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
                 ax.add_patch(Rectangle((-th_fold_change, th_fold_change*mf), (th_fold_change*2), (massimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-                ax.add_patch(Rectangle((minimo_x,-th_fold_change), (minimo_x-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-                ax.add_patch(Rectangle((-th_fold_change,minimo_y), (th_fold_change*2), (minimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+                ax.add_patch(Rectangle((minimo_x,-th_fold_change), (-minimo_x-th_fold_change*mf), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+                ax.add_patch(Rectangle((-th_fold_change,minimo_y), (th_fold_change*2), (-minimo_y-th_fold_change*mf),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
             elif mf==1:
 
                 ax.add_patch(Rectangle((th_fold_change, th_fold_change), (massimo_x-th_fold_change), (massimo_y-th_fold_change),edgecolor='none' ,facecolor =col_rect[0],alpha=trasp_rect[0]))
@@ -1809,9 +1836,16 @@ def reconstruct_scorecard(my_directory,add_space=0.07):
 
                 ax.add_patch(Rectangle((th_fold_change, -th_fold_change), (massimo_x-th_fold_change), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
                 ax.add_patch(Rectangle((-th_fold_change, th_fold_change), (th_fold_change*2), (massimo_y-th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
-                ax.add_patch(Rectangle((minimo_x,-th_fold_change), (minimo_x-th_fold_change), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+                ax.add_patch(Rectangle((minimo_x,-th_fold_change), (-minimo_x-th_fold_change), (th_fold_change*2),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
                 ax.add_patch(Rectangle((-th_fold_change,minimo_y), (th_fold_change*2), (minimo_y-th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
+            ax.set_xlim(left=minimo_x,right=massimo_x)
+            ax.set_ylim(bottom=minimo_y,top=massimo_y)
 
+            if incl_ave==False:
+                adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+            else:
+                adjust_text(flatten([texts1,texts2,texts3,texts4,texts5,texts100,texts200,texts300]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
+                
             if mf>1:
                 plt.savefig(save_folder+'Scorecard.png',dpi=300,bbox_inches='tight')
             elif mf==1:
