@@ -4,7 +4,7 @@ authors:
 - family-names: "Nascimben"
   given-names: "Mauro"
   orcid: "https://orcid.org/0000-0001-7123-5577"
-title: "Scorecard to compare wet-lab experimental conditions"
+title: "A scorecard to compare wet-lab experimental conditions"
 version: 0.2
 doi: 10.5281/zenodo.13137104
 date-released: 2024-07-31
