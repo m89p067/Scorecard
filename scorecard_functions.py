@@ -1619,6 +1619,8 @@ def reconstruct_scorecard(my_directory,add_space=0.15,use_figsize=True,figsize_f
 
     for the_folder in all_dir:
         nome=the_folder.split('/')[-1]
+        if nome== "experiments course" or nome == "time course":
+            continue
         print('Scorecard reconstruction on '+nome+' folder')
         results=[]
         quadr_list=[]
