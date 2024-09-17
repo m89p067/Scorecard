@@ -2589,7 +2589,12 @@ def heatmap(data, row_labels, col_labels, ax=None,cbar_kw=None, cbarlabel="",lab
         cbar_kw = {}
 
     # Plot the heatmap
-    im = ax.imshow(data, **kwargs)
+    if data.size != 0:
+        im = ax.imshow(data, **kwargs)
+    else:
+        print('No entries identified on the scorecard to build an heatmap')
+        print('An error will be raised due to empty data')
+        return None
 
     # Create colorbar
     cbar = ax.figure.colorbar(im, ax=ax, **cbar_kw)
@@ -2766,7 +2771,7 @@ def quadrants_heatmap(my_directory,color_map='Greys',above_lab_rot=-60,horiz_ali
         df.to_excel(my_directory+'freq_heatmap.xlsx', index=False)        
     else:
         df.to_csv(my_directory+'freq_heatmap.csv', index=False)
-    plt.close()
+    
 def rare_entries(the_full_path):
     file_exists = exists(the_full_path+"symbol_rare.json")
     if file_exists==True:
