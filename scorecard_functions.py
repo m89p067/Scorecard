@@ -1843,6 +1843,7 @@ def reconstruct_scorecard(my_directory,add_space=0.15,use_figsize=True,figsize_f
             plt.close()
         else:
             print(' No identified entities, please adjust thresholds')
+            plt.close()
 def calc_scarto(radians_r,valore_r):
     d_angle=radians_r* 180.0 / np.pi    
     return (d_angle+valore_r)* np.pi / 180.0    
@@ -2136,6 +2137,7 @@ def make_volcano(my_directory):
             plt.close()
         else:
             print(' No identified entities, please adjust the thresholds')
+            plt.close()
 def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,text_adj_y=0.6):
     '''
     The graph created by this function shows each gene or entry previously extracted with the Scorecard, displaying the Log2 Fold Change
@@ -2340,6 +2342,7 @@ def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,tex
                 adjust_text(flatten([text1,text2]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
             plt.savefig(the_folder+'Bars.png',dpi=300,bbox_inches='tight')
             plt.close()
+    plt.close()
 def save_to_file(thedir,*text):    
     with open(thedir+'log_info.txt', mode='wt', encoding='utf-8') as myfile:
         for lines in text:
@@ -2574,7 +2577,8 @@ def count_frequencies(my_directory,save_tab_info=True):
     save_to_file(my_directory,my_log)
     df_rep= pd.DataFrame(my_rep)
     if save_tab_info:
-        df_rep.to_csv(my_directory+'info_tab.csv', index=False)     
+        df_rep.to_csv(my_directory+'info_tab.csv', index=False)
+    plt.close()
 def heatmap(data, row_labels, col_labels, ax=None,cbar_kw=None, cbarlabel="",lab_rot=-60,v_align="center", fs_x=6,fs_y=5,**kwargs):
 
     if ax is None:
@@ -2760,7 +2764,8 @@ def quadrants_heatmap(my_directory,color_map='Greys',above_lab_rot=-60,horiz_ali
     if do_excel:
         df.to_excel(my_directory+'freq_heatmap.xlsx', index=False)        
     else:
-        df.to_csv(my_directory+'freq_heatmap.csv', index=False)        
+        df.to_csv(my_directory+'freq_heatmap.csv', index=False)
+    plt.close()
 def rare_entries(the_full_path):
     file_exists = exists(the_full_path+"symbol_rare.json")
     if file_exists==True:
@@ -3100,3 +3105,4 @@ def track_over_exper(my_directory,font_size1=8,alpha=0.75,th_sel=1,marker='o',ma
         if also_save_txt:
             with open(save_folder+"gene_list_along_"+stringa_tipo.strip()+".json", "w") as fp:
                 json.dump(keep_gene_id, fp)
+        
