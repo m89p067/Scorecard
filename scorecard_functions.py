@@ -2342,7 +2342,8 @@ def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,tex
                 adjust_text(flatten([text1,text2]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
             plt.savefig(the_folder+'Bars.png',dpi=300,bbox_inches='tight')
             plt.close()
-    plt.close()
+        else:
+            plt.close()
 def save_to_file(thedir,*text):    
     with open(thedir+'log_info.txt', mode='wt', encoding='utf-8') as myfile:
         for lines in text:
