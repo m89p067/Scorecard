@@ -1,6 +1,6 @@
 # Filename: scorecard_functions.py
 # Author: Mauro Nascimben
-# Created: 2024-09-13
+# Created: 2024-09-20
 # Description: Still under development.
 
 # Import statements
