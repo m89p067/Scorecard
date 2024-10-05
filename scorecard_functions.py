@@ -1594,7 +1594,7 @@ def scorecard(the_df,info_dict2):
     with open(save_folder+'Quadrant4.json', 'w') as json_file:
         json.dump(quadr,json_file,  indent = 4)    
 
-def reconstruct_scorecard(my_directory,add_space=0.15,use_figsize=True,figsize_factor=1.5):
+def reconstruct_scorecard(my_directory,add_space=0.15,use_figsize=True,figsize_factor=1.5,use_savefolder=False):
     '''
     The functions loads each Scorecard quandrant in memory and builds the Cartesian plane with the Scorecard for a global view of the dataset.
     It will be stored on the hard disk into the specified folder.
@@ -1668,6 +1668,10 @@ def reconstruct_scorecard(my_directory,add_space=0.15,use_figsize=True,figsize_f
             save_folder=save_folder+trt1+" "+trt2+"/"
         if not isdir(save_folder):
             print('Run scorecard quadrants creation before attempting reconstruction')
+        else:
+            if use_savefolder==False:
+                save_folder=my_directory+trt1+" "+trt2+"/"
+            print('Saving scorecards in ',save_folder)
         th_fold_change=my_data[quadrante]['params']['th_fold_change']
         th_significance=my_data[quadrante]['params']['th_significance']
         font_size1=my_data[quadrante]['params']['font_size_quadrants']
