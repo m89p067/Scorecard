@@ -26,7 +26,11 @@ from collections import Counter
 import matplotlib
 import matplotlib.ticker as mticker
 from itertools import combinations
-
+def reformat_name(test_str):
+    for i in test_str:
+        if i.isdigit():
+            test_str=test_str.replace(i," "+i)
+    return test_str
 def identified_comparisons(strings1):
     """Utility function to generate pairwise combinations (without repetition) of exp. cond."""
     combinations2 = list(combinations(strings1, 2))
@@ -371,9 +375,9 @@ def scorecard_legend(info_dict3):
                 left=False, # ticks along the top edge are off
                 labelleft=False,) # labels along the bottom edge are off
     if IS_EXAMPLE==True and mf>1:
-        plt.savefig(save_folder1+'SCORECARD_colors.png',dpi=300,bbox_inches='tight')
+        plt.savefig(save_folder1+'LEGEND_colors.png',dpi=300,bbox_inches='tight')
     elif IS_EXAMPLE==False and mf>1:
-        plt.savefig(save_folder1+'SCORECARD_letters.png',dpi=300,bbox_inches='tight')
+        plt.savefig(save_folder1+'LEGEND_letters.png',dpi=300,bbox_inches='tight')
     elif IS_EXAMPLE==True and mf==1:
         plt.savefig(save_folder1+'FOURWAYPLOT_colors.png',dpi=300,bbox_inches='tight')
     elif IS_EXAMPLE==False and mf==1:
@@ -1851,7 +1855,7 @@ def reconstruct_scorecard(my_directory,add_space=0.15,use_figsize=True,figsize_f
 def calc_scarto(radians_r,valore_r):
     d_angle=radians_r* 180.0 / np.pi    
     return (d_angle+valore_r)* np.pi / 180.0    
-def multiple_view(my_directory,add_space=3,marker_size=100,fs_size=10): # "add_space" adjusts the jitter of the points +/- the radial axes
+def multiple_view(my_directory,add_space=3,marker_size=100,fs_size=10,single_quadr=False): # "add_space" adjusts the jitter of the points +/- the radial axes
     '''
     The function will generate a view of all experimental comparisons, highlighting genes or entries beloning to the regions
     of interest of the scorecard. Pass as input the string of the main_folder containing all the subfolder with the experimental
@@ -1876,6 +1880,8 @@ def multiple_view(my_directory,add_space=3,marker_size=100,fs_size=10): # "add_s
     VARIABLES=[]
     for the_folder in all_dir:
         nome=the_folder.split('/')[-1]
+        if nome== "experiments course" or nome == "time course":
+            continue
         results=[]
         quadr_list=[]
         my_data={}
@@ -1958,10 +1964,83 @@ def multiple_view(my_directory,add_space=3,marker_size=100,fs_size=10): # "add_s
     H1 = np.ones(len(HANGLES)) * -1
     H2 = np.ones(len(HANGLES))
     ax.fill(HANGLES, H0, GREY_LIGHT)
-
+    
     plt.savefig(my_directory+'Exp_Comp.png',dpi=300,bbox_inches='tight')
     plt.close()
+    
+    if single_quadr:
+        print('Adding single quadrant overview')
+        for i_key, key_name in enumerate(quadr_list):# Quadrants
+            fig = plt.figure(figsize=(10, 10))
+            ax = fig.add_subplot(111, polar=True)
+            all_x=[]
+            all_y=[]
+            VAR_NAMES=[] 
+            for ind_i,i_folder in enumerate(VARIABLES):
+                nomi=i_folder.split(' ')
+                VAR_NAMES.append(nomi[1]+'   '+nomi[0])
+                tmp=all_data[i_folder]        
+                # Performing Single Quadrant saves                  
+                tmp2=tmp[key_name]
+                all_gruppo=[*tmp2]
+                etichette=[xc.upper() for xc in tmp2['COLORS']]
+                colore=tmp2['COLORS']
+                if tmp2['params']['multiplication factor']==1:
+                    print('Sorry only working for the scorecard; run using multiplication factor >1')
+                    return
+                for i_gruppo, gruppo in enumerate(all_gruppo):                
+                    if gruppo in ['A', 'B', 'C', 'D', 'E']:                    
+                        valore1=tmp2[gruppo+'_x']
+                        valore2=tmp2[gruppo+'_y']                    
+                        for x,y in zip(valore1,valore2):
+                            ax.scatter(calc_scarto(ANGLES[ind_i],-add_space), x, s=marker_size, c=colore[i_gruppo], zorder=10)
+                            ax.scatter(calc_scarto(ANGLES[ind_i],add_space), y, s=marker_size, c=colore[i_gruppo], zorder=10)
+                            ax.plot([calc_scarto(ANGLES[ind_i],-add_space),calc_scarto(ANGLES[ind_i],add_space)], [x,y], c=colore[i_gruppo], linewidth=0.5, label=gruppo)
+                            all_x.append(x)
+                            all_y.append(y)
+                    elif gruppo in etichette:                    
+                        valore1=tmp2[gruppo+'_x']
+                        valore2=tmp2[gruppo+'_y']
+                        for x,y in zip(valore1,valore2):
+                            ax.scatter(calc_scarto(ANGLES[ind_i],-add_space), x, s=marker_size, c=colore[i_gruppo], zorder=10)
+                            ax.scatter(calc_scarto(ANGLES[ind_i],add_space), y, s=marker_size, c=colore[i_gruppo], zorder=10)
+                            ax.plot([calc_scarto(ANGLES[ind_i],-add_space),calc_scarto(ANGLES[ind_i],add_space)], [x,y], c=colore[i_gruppo], linewidth=0.5, label=gruppo)
+                            all_x.append(x)
+                            all_y.append(y)
 
+            labels = []
+            r_min,r_max=np.amin(all_x+all_y)-0.5,np.amax(all_x+all_y)+0.5    
+            ax.set_ylim(r_min,r_max)
+            plt.title('Exp. cond. comp. '+reformat_name(key_name)+' only', size=20, y=1.05)
+            ax.set_xticks(ANGLES[:-1])
+            ax.set_xticklabels(VAR_NAMES, size=14)
+            angles = np.rad2deg(ANGLES[:-1])-90
+            labels = []
+            for label, angle in zip(ax.get_xticklabels(), angles):
+                x,y = label.get_position()
+                l_txt=label.get_text()
+                n=len(l_txt)
+                if n>6:
+                    if n%2 == 0:
+                      s1 = slice(0,n//2)
+                      s2 = slice(n//2,n)
+                    else:
+                      s1 = slice(0,n//2)
+                      s2 = slice(n//2,n)
+                    lab = ax.text(x,y, chr(8592)+l_txt[s1]+"\n"+l_txt[s2]+chr(8594), transform=label.get_transform(),ha=label.get_ha(), va=label.get_va(),fontsize=fs_size)
+                else    :
+                    lab = ax.text(x,y, l_txt, transform=label.get_transform(),ha=label.get_ha(), va=label.get_va(),fontsize=16)
+                lab.set_rotation(angle)
+                labels.append(lab)
+            ax.set_xticklabels([])
+            HANGLES = np.linspace(0, 2 * np.pi)
+            H0 = np.zeros(len(HANGLES))
+            H1 = np.ones(len(HANGLES)) * -1
+            H2 = np.ones(len(HANGLES))
+            ax.fill(HANGLES, H0, GREY_LIGHT)
+
+            plt.savefig(my_directory+'Exp_Comp_'+key_name+'.png',dpi=300,bbox_inches='tight')
+            plt.close()        
 def make_volcano(my_directory):
     '''
     This routine saves standard Volcano plots of all the experimental comparisons carried out by the scorecard function.
