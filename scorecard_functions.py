@@ -27,6 +27,7 @@ import matplotlib
 import matplotlib.ticker as mticker
 from itertools import combinations
 def reformat_name(test_str):
+    """Internal utility function to adjust filenames"""
     for i in test_str:
         if i.isdigit():
             test_str=test_str.replace(i," "+i)
@@ -1871,6 +1872,7 @@ def multiple_view(my_directory,add_space=3,marker_size=100,fs_size=10,single_qua
              |-------Exp. Comparison 3
 
     Only works for the scorecard (two thresholds) not for the four-way plot.
+    Flag single_quadr=True to obtain additional single quandrant overview images
     '''
     if my_directory[-1]!="/":
         my_directory=my_directory+"/"
