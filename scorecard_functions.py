@@ -2009,40 +2009,42 @@ def multiple_view(my_directory,add_space=3,marker_size=100,fs_size=10,single_qua
                             ax.plot([calc_scarto(ANGLES[ind_i],-add_space),calc_scarto(ANGLES[ind_i],add_space)], [x,y], c=colore[i_gruppo], linewidth=0.5, label=gruppo)
                             all_x.append(x)
                             all_y.append(y)
+            if len(all_x)>0 and len(all_y)>0:
+                labels = []
+                r_min,r_max=np.amin(all_x+all_y)-0.5,np.amax(all_x+all_y)+0.5    
+                ax.set_ylim(r_min,r_max)
+                plt.title('Exp. cond. comp. '+reformat_name(key_name)+' only', size=20, y=1.05)
+                ax.set_xticks(ANGLES[:-1])
+                ax.set_xticklabels(VAR_NAMES, size=14)
+                angles = np.rad2deg(ANGLES[:-1])-90
+                labels = []
+                for label, angle in zip(ax.get_xticklabels(), angles):
+                    x,y = label.get_position()
+                    l_txt=label.get_text()
+                    n=len(l_txt)
+                    if n>6:
+                        if n%2 == 0:
+                          s1 = slice(0,n//2)
+                          s2 = slice(n//2,n)
+                        else:
+                          s1 = slice(0,n//2)
+                          s2 = slice(n//2,n)
+                        lab = ax.text(x,y, chr(8592)+l_txt[s1]+"\n"+l_txt[s2]+chr(8594), transform=label.get_transform(),ha=label.get_ha(), va=label.get_va(),fontsize=fs_size)
+                    else    :
+                        lab = ax.text(x,y, l_txt, transform=label.get_transform(),ha=label.get_ha(), va=label.get_va(),fontsize=16)
+                    lab.set_rotation(angle)
+                    labels.append(lab)
+                ax.set_xticklabels([])
+                HANGLES = np.linspace(0, 2 * np.pi)
+                H0 = np.zeros(len(HANGLES))
+                H1 = np.ones(len(HANGLES)) * -1
+                H2 = np.ones(len(HANGLES))
+                ax.fill(HANGLES, H0, GREY_LIGHT)
 
-            labels = []
-            r_min,r_max=np.amin(all_x+all_y)-0.5,np.amax(all_x+all_y)+0.5    
-            ax.set_ylim(r_min,r_max)
-            plt.title('Exp. cond. comp. '+reformat_name(key_name)+' only', size=20, y=1.05)
-            ax.set_xticks(ANGLES[:-1])
-            ax.set_xticklabels(VAR_NAMES, size=14)
-            angles = np.rad2deg(ANGLES[:-1])-90
-            labels = []
-            for label, angle in zip(ax.get_xticklabels(), angles):
-                x,y = label.get_position()
-                l_txt=label.get_text()
-                n=len(l_txt)
-                if n>6:
-                    if n%2 == 0:
-                      s1 = slice(0,n//2)
-                      s2 = slice(n//2,n)
-                    else:
-                      s1 = slice(0,n//2)
-                      s2 = slice(n//2,n)
-                    lab = ax.text(x,y, chr(8592)+l_txt[s1]+"\n"+l_txt[s2]+chr(8594), transform=label.get_transform(),ha=label.get_ha(), va=label.get_va(),fontsize=fs_size)
-                else    :
-                    lab = ax.text(x,y, l_txt, transform=label.get_transform(),ha=label.get_ha(), va=label.get_va(),fontsize=16)
-                lab.set_rotation(angle)
-                labels.append(lab)
-            ax.set_xticklabels([])
-            HANGLES = np.linspace(0, 2 * np.pi)
-            H0 = np.zeros(len(HANGLES))
-            H1 = np.ones(len(HANGLES)) * -1
-            H2 = np.ones(len(HANGLES))
-            ax.fill(HANGLES, H0, GREY_LIGHT)
-
-            plt.savefig(my_directory+'Exp_Comp_'+key_name+'.png',dpi=300,bbox_inches='tight')
-            plt.close()        
+                plt.savefig(my_directory+'Exp_Comp_'+key_name+'.png',dpi=300,bbox_inches='tight')
+                plt.close()
+            else:
+                print(" in "+key_name+" no entries to display, skipped")
 def make_volcano(my_directory):
     '''
     This routine saves standard Volcano plots of all the experimental comparisons carried out by the scorecard function.
