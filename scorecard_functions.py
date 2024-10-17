@@ -3206,14 +3206,14 @@ def track_over_exper(my_directory,font_size1=8,alpha=0.75,th_sel=1,marker='o',ma
             with open(save_folder+"gene_list_along_"+stringa_tipo.strip()+".json", "w") as fp:
                 json.dump(keep_gene_id, fp)
  
-def help_ranking(saving_folder,rank_df,exp_list,fs,ttl_off):
+def help_ranking(saving_folder,rank_df,exp_list,fs):
     fig, axes = plt.subplots(1,2,figsize=(18, 8), subplot_kw=dict(projection='polar'))
     
     for ax, dataset in zip(axes, exp_list):
         Value='Expr '+dataset
         # Reorder the dataframe
         rank_df = rank_df.sort_values(by=[Value])
-
+        interval_max , interval_min=100,10
         # Constants = parameters controling the plot layout:
         upperLimit = 100
         lowerLimit = 30
@@ -3222,9 +3222,9 @@ def help_ranking(saving_folder,rank_df,exp_list,fs,ttl_off):
         # Compute max and min in the dataset
         max_v = rank_df[Value].max()
         min_v = rank_df[Value].min()
-
-        slope = (max_v - lowerLimit) / max_v
-        heights = slope * rank_df[Value] + lowerLimit
+        scaled_mat = (rank_df[Value] - min_v / (max_v - min_v)) * (interval_max - interval_min) + interval_min
+        slope = (max(scaled_mat) - lowerLimit) / max(scaled_mat)
+        heights = slope * scaled_mat + lowerLimit
 
         # Compute the width of each bar. In total we have 2*Pi = 360°
         width = 2*np.pi / len(rank_df.index)
@@ -3232,7 +3232,7 @@ def help_ranking(saving_folder,rank_df,exp_list,fs,ttl_off):
         # Compute the angle each bar is centered on:
         indexes = list(range(1, len(rank_df.index)+1))
         angles = [element * width for element in indexes]
-        
+       
 
         # Draw bars
         bars = ax.bar(
@@ -3257,23 +3257,25 @@ def help_ranking(saving_folder,rank_df,exp_list,fs,ttl_off):
                 rotation = rotation + 180
             else: 
                 alignment = "left"
-
+            if bar.get_height()<0:
+                val_testo=upperLimit + labelPadding
+            else:
+                val_testo=lowerLimit + bar.get_height() + labelPadding
             ax.text(
                 x=angle, 
-                y=lowerLimit + bar.get_height() + labelPadding, 
+                y=val_testo, 
                 s=label, 
                 ha=alignment, 
                 va='center', 
                 rotation=rotation, 
                 rotation_mode="anchor")
-        if ttl_off>0:
-            ax.text(np.pi, ttl_off, dataset,fontsize=fs) # angle and radius
-        else:
-            ax.text(np.pi, 0.0, dataset,fontsize=fs) # angle and radius
         ax.axis('off')
+        ax.set_title(dataset,fontsize=fs)
+    plt.tight_layout()
     plt.savefig(saving_folder+'Ranking_Bars.png',dpi=300,bbox_inches='tight')
     plt.close()
-def ranking_bars(my_directory,title_size=16,title_offest=0.0):
+
+def ranking_bars(my_directory,title_size=16):
     '''
     The graph created by this function is similar to multiple_bars showing the experimental conditions being compared separetly.
     Bars are ranked according to expression values.
@@ -3424,17 +3426,13 @@ def ranking_bars(my_directory,title_size=16,title_offest=0.0):
                                 Position = Position+1
                                 labels_x.append(trt1)
                                 labels_y.append(trt2)                                
-        str_x=[str(x) for x in all_x]
-        str_y=[str(x) for x in all_y]
-        lx=list(map(' '.join, zip(labels_x, str_x)))
-        ly=list(map(' '.join, zip(labels_y, str_y)))
         zipped = list(zip(all_genes, all_x, all_y,all_colors))
         col_names=['Genes', 'Expr '+trt1, 'Expr '+trt2,'Color']
-        ex_df = pd.DataFrame(zipped, columns=col_names)
+        ex_df = pd.DataFrame(zipped, columns=col_names)        
         if Position>0:
             if the_folder[-1]!="/":
                 the_folder=the_folder+"/"
-            help_ranking(the_folder,ex_df,[trt1,trt2],title_size,title_offest)
+            help_ranking(the_folder,ex_df,[trt1,trt2],title_size)
         else:
             plt.close()
             
