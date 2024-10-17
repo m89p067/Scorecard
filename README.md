@@ -113,6 +113,10 @@ Another function provides a single gene or entry analysis as barplot
 ```
 scorecard_functions.multiple_bars(main_folder)
 ```
+Alternatively, the following function displays genes expression level ranking:
+```
+scorecard_functions.ranking_bars(main_folder)
+```
 To get a summary of the number of entries/genes indentified by the scorecard type:
 ```
 scorecard_functions.count_frequencies(main_folder)
