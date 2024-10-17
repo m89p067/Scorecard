@@ -1,6 +1,6 @@
 # Filename: scorecard_functions.py
 # Author: Mauro Nascimben
-# Created: 2024-09-20
+# Created: 2024-10-17
 # Description: Still under development.
 
 # Import statements
@@ -2063,10 +2063,14 @@ def make_volcano(my_directory):
              |-------Exp. Comparison 3
     
     '''
+    if my_directory[-1]!="/":
+        my_directory=my_directory+"/"
     all_dir=[ f.path for f in scandir(my_directory) if f.is_dir() ]
 
     for the_folder in all_dir:
         nome=the_folder.split('/')[-1]
+        if nome== "experiments course" or nome == "time course":
+            continue
         print('Volcano plots on '+nome+' folder')
         results=[]
         quadr_list=[]
@@ -2241,9 +2245,13 @@ def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,tex
              |
              |-------Exp. Comparison 3
     '''
+    if my_directory[-1]!="/":
+        my_directory=my_directory+"/"
     all_dir=[ f.path for f in scandir(my_directory) if f.is_dir() ]
     for the_folder in all_dir:
         nome=the_folder.split('/')[-1]
+        if nome== "experiments course" or nome == "time course":
+            continue
         print('Barplot on '+nome+' folder')
         results=[]
         quadr_list=[]
@@ -2768,7 +2776,6 @@ def quadrants_heatmap(my_directory,color_map='Greys',above_lab_rot=-60,horiz_ali
         VARIABLES.append(nome)
     out_all=[]
     for i,k in enumerate(VARIABLES):
-
         conti=0
         out={}
         list_q=[]
@@ -3198,4 +3205,236 @@ def track_over_exper(my_directory,font_size1=8,alpha=0.75,th_sel=1,marker='o',ma
         if also_save_txt:
             with open(save_folder+"gene_list_along_"+stringa_tipo.strip()+".json", "w") as fp:
                 json.dump(keep_gene_id, fp)
+ 
+def help_ranking(saving_folder,rank_df,exp_list,fs,ttl_off):
+    fig, axes = plt.subplots(1,2,figsize=(18, 8), subplot_kw=dict(projection='polar'))
+    
+    for ax, dataset in zip(axes, exp_list):
+        Value='Expr '+dataset
+        # Reorder the dataframe
+        rank_df = rank_df.sort_values(by=[Value])
+
+        # Constants = parameters controling the plot layout:
+        upperLimit = 100
+        lowerLimit = 30
+        labelPadding = 4
+
+        # Compute max and min in the dataset
+        max_v = rank_df[Value].max()
+        min_v = rank_df[Value].min()
+
+        slope = (max_v - lowerLimit) / max_v
+        heights = slope * rank_df[Value] + lowerLimit
+
+        # Compute the width of each bar. In total we have 2*Pi = 360°
+        width = 2*np.pi / len(rank_df.index)
+
+        # Compute the angle each bar is centered on:
+        indexes = list(range(1, len(rank_df.index)+1))
+        angles = [element * width for element in indexes]
         
+
+        # Draw bars
+        bars = ax.bar(
+            x=angles, 
+            height=heights, 
+            width=width, 
+            bottom=lowerLimit,
+            linewidth=2, 
+            edgecolor="white",
+            color=rank_df['Color'].tolist(),
+        )
+
+        # Add labels
+        for bar, angle, height, label in zip(bars,angles, heights, rank_df["Genes"]):
+
+            
+            rotation = np.rad2deg(angle)
+            # Flip some labels upside down
+            alignment = ""
+            if angle >= np.pi/2 and angle < 3*np.pi/2:
+                alignment = "right"
+                rotation = rotation + 180
+            else: 
+                alignment = "left"
+
+            ax.text(
+                x=angle, 
+                y=lowerLimit + bar.get_height() + labelPadding, 
+                s=label, 
+                ha=alignment, 
+                va='center', 
+                rotation=rotation, 
+                rotation_mode="anchor")
+        if ttl_off>0:
+            ax.text(np.pi, ttl_off, dataset,fontsize=fs) # angle and radius
+        else:
+            ax.text(np.pi, 0.0, dataset,fontsize=fs) # angle and radius
+        ax.axis('off')
+    plt.savefig(saving_folder+'Ranking_Bars.png',dpi=300,bbox_inches='tight')
+    plt.close()
+def ranking_bars(my_directory,title_size=16,title_offest=0.0):
+    '''
+    The graph created by this function is similar to multiple_bars showing the experimental conditions being compared separetly.
+    Bars are ranked according to expression values.
+    Colors reflect the color scheme employed in the Scorecard.
+
+    As input pass the string containing the main_folder hosting all subfolders with each experimental comparison created by the Scorecard function.
+
+            main_folder
+             |
+             |
+             |-------Exp. Comparison 1
+             |
+             |-------Exp. Comparison 2
+             |
+             |-------Exp. Comparison 3
+    '''
+    if my_directory[-1]!="/":
+        my_directory=my_directory+"/"
+    all_dir=[ f.path for f in scandir(my_directory) if f.is_dir() ]
+    for the_folder in all_dir:
+        nome=the_folder.split('/')[-1]
+        if nome== "experiments course" or nome == "time course":
+            continue
+        print('Ranking plot on '+nome+' folder')
+        results=[]
+        quadr_list=[]
+        my_data={}
+        results += [each for each in listdir(the_folder) if each.endswith('.json')]
+        for file in results:
+            quadrante=file.removesuffix('.json')
+            quadr_list.append(quadrante)
+            with open(the_folder+'/'+file) as f:
+                my_data[quadrante]=json.load(f)        
+        ctrl=my_data[quadrante]['params']['Control name']
+        IS_EXAMPLE=my_data[quadrante]['params']['is_example']
+        colori=my_data[quadrante]['params']['colors']
+        other_colori=my_data[quadrante]['params']['other_colors']
+        incl_ave=my_data[quadrante]['params']['incl aver']
+        mf=my_data[quadrante]['params']['multiplication factor']
+        if IS_EXAMPLE:
+            if mf>1:
+                etichette=[xc.upper() for xc in colori]
+                etichette2=[xc.upper() for xc in other_colori]
+            elif mf==1:
+                etichette=[xc.lower() for xc in colori]
+                etichette2=[xc.lower() for xc in other_colori]                
+        else:
+            etichette=['A','B','C','D','E']
+            etichette2=['M','S','R']
+            if mf==1:
+                etichette=[i_v_s.lower() for i_v_s in etichette]
+                etichette2=[i_v_s.lower() for i_v_s in etichette2]
+        if incl_ave:
+            etichette=etichette+etichette2
+        titolo=my_data[quadrante]['params']['Scorecard title']
+        fig_size=my_data[quadrante]['params']['fig_size']
+        save_folder=my_data[quadrante]['params']['save_dir']
+        trt1=my_data[quadrante]['params']['Treatment1 name']
+        trt2=my_data[quadrante]['params']['Treatment2 name']
+        if save_folder[-1]!="/":
+            save_folder=save_folder+"/"+trt1+" "+trt2+"/"
+        else:
+            save_folder=save_folder+trt1+" "+trt2+"/"
+        if not isdir(save_folder):
+            print('Run scorecard quadrants creation before attempting reconstruction')
+        th_fold_change=my_data[quadrante]['params']['th_fold_change']
+        th_significance=my_data[quadrante]['params']['th_significance']
+        font_size1=my_data[quadrante]['params']['font_size_quadrants']
+        trasp=my_data[quadrante]['params']['marker_trasp']
+        trasp_rect=my_data[quadrante]['params']['rect_trasp']
+        col_rect=my_data[quadrante]['params']['rect_colors']
+        markers=my_data[quadrante]['params']['markers']
+        sizes= my_data[quadrante]['params']['markers_sizes']
+        gene_name= my_data[quadrante]['params']['gene_name']              
+        use_notation=my_data[quadrante]['params']['use_notation']        
+        Position=0        
+        all_x,all_y,all_genes,all_colors,labels_x,labels_y=[],[],[],[],[],[]
+        for quadrante in quadr_list:
+            for eti in etichette:
+                if eti in list(my_data[quadrante].keys()):
+                    lista_tmp=my_data[quadrante][eti]
+                    if len(lista_tmp)>0:                    
+                        for idx_gene,my_gene in enumerate(lista_tmp):
+                            fch_x= round( my_data[quadrante][eti+'_x'][idx_gene],2)
+                            fch_y= round( my_data[quadrante][eti+'_y'][idx_gene],2)
+                            if eti==etichette[0] :
+                                all_x.append( fch_x)
+                                all_y.append( fch_y)
+                                all_genes.append( my_gene)
+                                all_colors.append(colori[0])
+                                Position = Position+1
+                                labels_x.append(trt1)
+                                labels_y.append(trt2)
+                            elif eti==etichette[1]:
+                                all_x.append( fch_x)
+                                all_y.append( fch_y)
+                                all_genes.append( my_gene)
+                                all_colors.append(colori[1])
+                                Position = Position+1
+                                labels_x.append(trt1)
+                                labels_y.append(trt2) 
+                            elif eti==etichette[2]:
+                                all_x.append( fch_x)
+                                all_y.append( fch_y)
+                                all_genes.append( my_gene)
+                                all_colors.append(colori[2])
+                                Position = Position+1
+                                labels_x.append(trt1)
+                                labels_y.append(trt2)
+                            elif eti==etichette[3]:
+                                all_x.append( fch_x)
+                                all_y.append( fch_y)
+                                all_genes.append( my_gene)
+                                all_colors.append(colori[3])
+                                Position = Position+1
+                                labels_x.append(trt1)
+                                labels_y.append(trt2)
+                            elif eti==etichette[4]:
+                                all_x.append( fch_x)
+                                all_y.append( fch_y)
+                                all_genes.append( my_gene)
+                                all_colors.append(colori[4])
+                                Position = Position+1
+                                labels_x.append(trt1)
+                                labels_y.append(trt2)
+
+                            elif incl_ave==True and eti==etichette[5]:
+                                all_x.append( fch_x)
+                                all_y.append( fch_y)
+                                all_genes.append( my_gene)
+                                all_colors.append(other_colori[0])
+                                Position = Position+1
+                                labels_x.append(trt1)
+                                labels_y.append(trt2)
+                            elif incl_ave==True and eti==etichette[6]:
+                                all_x.append( fch_x)
+                                all_y.append( fch_y)
+                                all_genes.append( my_gene)
+                                all_colors.append(other_colori[1])
+                                Position = Position+1
+                                labels_x.append(trt1)
+                                labels_y.append(trt2)
+                            elif incl_ave==True and eti==etichette[7]:
+                                all_x.append( fch_x)
+                                all_y.append( fch_y)
+                                all_genes.append( my_gene)
+                                all_colors.append(other_colori[2])
+                                Position = Position+1
+                                labels_x.append(trt1)
+                                labels_y.append(trt2)                                
+        str_x=[str(x) for x in all_x]
+        str_y=[str(x) for x in all_y]
+        lx=list(map(' '.join, zip(labels_x, str_x)))
+        ly=list(map(' '.join, zip(labels_y, str_y)))
+        zipped = list(zip(all_genes, all_x, all_y,all_colors))
+        col_names=['Genes', 'Expr '+trt1, 'Expr '+trt2,'Color']
+        ex_df = pd.DataFrame(zipped, columns=col_names)
+        if Position>0:
+            if the_folder[-1]!="/":
+                the_folder=the_folder+"/"
+            help_ranking(the_folder,ex_df,[trt1,trt2],title_size,title_offest)
+        else:
+            plt.close()
+            

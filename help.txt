@@ -62,6 +62,7 @@ The folders structure should as the following:
 
 The parameters "use_figsize" and "figsize_factor" allow for personalization of the image dimension.
 Default dimension is set by "fig_size" in the initial parameters, otherwise set "use_figsize" as False per customization.
+
 One could create a general overview of all wet-lab experimental conditions by calling the function (noly works for the scorecard, not for the four-way plot).
 >>scorecard_functions.multiple_view(main_folder)
 Remember that "main_folder" is a string containing the full path of the folder hosting all sub-directories with experimental comparisions.
@@ -69,6 +70,8 @@ To build Volcano plots and highlight genes or entries belonging to the regions o
 >>scorecard_functions.make_volcano(main_folder)
 Another function provides a single gene or entry analysis as barplot:
 >>scorecard_functions.multiple_bars(main_folder)
+Alternatively, displayes genes expression level ranking:
+>>scorecard_functions.ranking_bars(main_folder)
 To get a summary of the number of entries/genes indentified by the scorecard type:
 >>scorecard_functions.count_frequencies(main_folder)
 Also the summary of the number of entries/genes indentified by the scorecard can be visualized as heatmap:
