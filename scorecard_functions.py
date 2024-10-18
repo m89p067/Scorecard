@@ -2,7 +2,7 @@
 # Author: Mauro Nascimben
 # Created: 2024-10-17
 # Description: Still under development.
-
+import pdb
 # Import statements
 import numpy as np
 import pandas as pd
@@ -3439,3 +3439,109 @@ def ranking_bars(my_directory,title_size=16,remove_string=''):
         else:
             plt.close()
             print(' Skipping')
+def largest_diff(my_directory,top_entries=10,do_excel=False): 
+    '''
+    The function will scan for largest differentially expressed genes across all comparisons.
+    Input the main_folder containing all the preprocessed scorecard quadrants.
+    Also, pass the number of top entries to display (if 0 all are saved)
+
+            main_folder
+             |
+             |
+             |-------Exp. Comparison 1
+             |
+             |-------Exp. Comparison 2
+             |
+             |-------Exp. Comparison 3
+
+    Finally, the results are saved as CSV
+    '''
+    if my_directory[-1]!="/":
+        my_directory=my_directory+"/"
+    all_dir=[ f.path for f in scandir(my_directory) if f.is_dir() ]
+    all_data={}    
+    VARIABLES=[]
+    for the_folder in all_dir:
+        nome=the_folder.split('/')[-1]
+        if nome== "experiments course" or nome == "time course":
+            continue
+        results=[]
+        quadr_list=[]
+        my_data={}
+        results += [each for each in listdir(the_folder) if each.endswith('.json')]
+        for file in results:
+            quadrante=file.split('.')[0]
+            quadr_list.append(quadrante)
+            with open(the_folder+'/'+file) as f:
+                my_data[quadrante]=json.load(f)
+        all_data[nome]=my_data
+        VARIABLES.append(nome)
+    VARIABLES_N = len(VARIABLES)
+    all_x=[]
+    all_y=[]
+    all_genes=[]
+    all_colors=[]
+    VAR_NAMES1,VAR_NAMES2=[],[]
+    Quadr_list=[]
+    Eti_list=[]
+    Color_list=[]
+    for ind_i,i_folder in enumerate(VARIABLES):
+        nomi=i_folder.split(' ')        
+        tmp=all_data[i_folder]        
+        for i_key, key_name in enumerate(quadr_list):# Quadrants
+            tmp2=tmp[key_name]
+            col_list=tmp2['COLORS']
+            IS_EXAMPLE=tmp2['params']['is_example']
+            incl_ave=tmp2['params']['incl aver']
+            mf=tmp2['params']['multiplication factor']
+            all_gruppo=[*tmp2]            
+            if IS_EXAMPLE:
+                if mf>1:
+                    etichette=[xc.upper() for xc in colori]
+                    etichette2=[xc.upper() for xc in other_colori]
+                elif mf==1:
+                    etichette=[xc.lower() for xc in colori]
+                    etichette2=[xc.lower() for xc in other_colori]                
+            else:
+                etichette=['A','B','C','D','E']
+                etichette2=['M','S','R']
+                if mf==1:
+                    etichette=[i_v_s.lower() for i_v_s in etichette]
+                    etichette2=[i_v_s.lower() for i_v_s in etichette2]
+            if incl_ave:
+                etichette=etichette+etichette2
+                col_list=col_list+tmp2['params']['other_colors']
+            colore=tmp2['COLORS']
+            if tmp2['params']['multiplication factor']==1:
+                print('Sorry only working for the scorecard; run using multiplication factor >1')
+                return
+            for i_gruppo, gruppo in enumerate(all_gruppo):                
+                if gruppo in etichette:                                        
+                    valore1=tmp2[gruppo+'_x']
+                    valore2=tmp2[gruppo+'_y']
+                    if len(valore1)>0 and len(valore2)>0:
+                        colore_sel=col_list[etichette.index(gruppo)]
+                        for idx,(x,y) in enumerate(zip(valore1,valore2)):
+                            all_x.append(x)
+                            all_y.append(y)
+                            all_genes.append(tmp2[gruppo][idx])
+                            Quadr_list.append(key_name.replace("uadrant",""))
+                            Eti_list.append(gruppo)
+                            Color_list.append(colore_sel)
+                            VAR_NAMES1.append(nomi[1])
+                            VAR_NAMES2.append(nomi[0])
+    zipped = list(zip(VAR_NAMES1, VAR_NAMES2, Quadr_list,Eti_list,all_genes,all_x,all_y,Color_list))
+    names_of_cols=['Cond 1', 'Cond 2', 'Quadr', 'ROI','Entry','Expr Cond 1','Expr Cond 2','Color']
+    df = pd.DataFrame(zipped, columns=names_of_cols)
+    df['Magnitude'] = abs(df['Expr Cond 1'] - df['Expr Cond 2'])
+    if top_entries==0:
+        final_df = df.sort_values(by=['Magnitude'], ascending=True)
+    else:
+        final_df = df.nlargest(top_entries,'Magnitude')
+    if do_excel:
+        final_df.to_excel(my_directory+'Top_Entries.xlsx', index=False)
+        stringa='as Excel file'
+    else:
+        final_df.to_csv(my_directory+'Top_Entries.csv', index=False)
+        stringa='as CSV file'
+    print('Stored entries based on their differential expression '+stringa)
