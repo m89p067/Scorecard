@@ -113,7 +113,7 @@ Another function provides a single gene or entry analysis as barplot
 ```
 scorecard_functions.multiple_bars(main_folder)
 ```
-Alternatively, the following function displays genes expression level ranking as absolute values:
+Alternatively, the following function displays genes expression level ranking in two separate plots:
 ```
 scorecard_functions.ranking_bars(main_folder)
 ```
