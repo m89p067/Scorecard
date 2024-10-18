@@ -1856,7 +1856,7 @@ def reconstruct_scorecard(my_directory,add_space=0.15,use_figsize=True,figsize_f
 def calc_scarto(radians_r,valore_r):
     d_angle=radians_r* 180.0 / np.pi    
     return (d_angle+valore_r)* np.pi / 180.0    
-def multiple_view(my_directory,add_space=3,marker_size=100,fs_size=10,single_quadr=False): # "add_space" adjusts the jitter of the points +/- the radial axes
+def multiple_view(my_directory,add_space=3,marker_size=100,fs_size=10,single_quadr=False,confirm_ave=False): # "add_space" adjusts the jitter of the points +/- the radial axes
     '''
     The function will generate a view of all experimental comparisons, highlighting genes or entries beloning to the regions
     of interest of the scorecard. Pass as input the string of the main_folder containing all the subfolder with the experimental
@@ -1932,7 +1932,7 @@ def multiple_view(my_directory,add_space=3,marker_size=100,fs_size=10,single_qua
                 if mf==1:
                     etichette=[i_v_s.lower() for i_v_s in etichette]
                     etichette2=[i_v_s.lower() for i_v_s in etichette2]
-            if incl_ave:
+            if incl_ave==True and confirm_ave==True:
                 etichette=etichette+etichette2
                 colore=colore+other_colori
             for i_gruppo, gruppo in enumerate(all_gruppo):                
@@ -2016,7 +2016,7 @@ def multiple_view(my_directory,add_space=3,marker_size=100,fs_size=10,single_qua
                     if mf==1:
                         etichette=[i_v_s.lower() for i_v_s in etichette]
                         etichette2=[i_v_s.lower() for i_v_s in etichette2]
-                if incl_ave:
+                if incl_ave==True and confirm_ave==True:
                     etichette=etichette+etichette2
                     colore=colore+other_colori
                 if tmp2['params']['multiplication factor']==1:
