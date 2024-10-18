@@ -2229,7 +2229,7 @@ def make_volcano(my_directory):
         else:
             print(' No identified entities, please adjust the thresholds')
             plt.close()
-def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,text_adj_y=0.6):
+def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,text_adj_y=0.6,remove_string=''):
     '''
     The graph created by this function shows each gene or entry previously extracted with the Scorecard, displaying the Log2 Fold Change
     as bar plots. Paired bars depict the experimental conditions being compared. Colors reflect the color scheme employed in the Scorecard.
@@ -2386,6 +2386,8 @@ def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,tex
         str_y=[str(x) for x in all_y]
         lx=list(map(' '.join, zip(labels_x, str_x)))
         ly=list(map(' '.join, zip(labels_y, str_y)))
+        if len(remove_string)>0:
+            res_genes = list(map(lambda st: str.replace(st, remove_string, ""), all_genes))
         if Position>0:
             y_pos = np.arange(Position)
             if try_adj_test:
@@ -2418,7 +2420,7 @@ def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,tex
                         text2.append( ax.text(v - text_adj_y, y_pos[i]+offset, ly[i], color='k', fontsize=4, verticalalignment='center'))
                     else:
                         ax.text(v - text_adj_y, y_pos[i]+offset, ly[i], color='k', fontsize=4, verticalalignment='center')
-            ax.set_yticks(y_pos, labels=all_genes)
+            ax.set_yticks(y_pos, labels=res_genes)
             ax.invert_yaxis()  # labels read top-to-bottom
             ax.set_xlabel('$log_2$ Fold Change',fontsize=11)
             ax.set_title(titolo)
@@ -3206,7 +3208,7 @@ def track_over_exper(my_directory,font_size1=8,alpha=0.75,th_sel=1,marker='o',ma
             with open(save_folder+"gene_list_along_"+stringa_tipo.strip()+".json", "w") as fp:
                 json.dump(keep_gene_id, fp)
  
-def help_ranking(saving_folder,rank_df,exp_list,fs):
+def help_ranking(saving_folder,rank_df,exp_list,fs,cut_string=''):
     fig, axes = plt.subplots(1,2,figsize=(18, 8), subplot_kw=dict(projection='polar'))
     
     for ax, dataset in zip(axes, exp_list):
@@ -3223,6 +3225,7 @@ def help_ranking(saving_folder,rank_df,exp_list,fs):
         max_v = rank_df[Value].max()
         min_v = rank_df[Value].min()
         scaled_mat = (rank_df[Value] - min_v / (max_v - min_v)) * (interval_max - interval_min) + interval_min
+
         slope = (max(scaled_mat) - lowerLimit) / max(scaled_mat)
         heights = slope * scaled_mat + lowerLimit
 
@@ -3232,8 +3235,8 @@ def help_ranking(saving_folder,rank_df,exp_list,fs):
         # Compute the angle each bar is centered on:
         indexes = list(range(1, len(rank_df.index)+1))
         angles = [element * width for element in indexes]
-       
-
+        if len(cut_string)>0:       
+            rank_df["Genes"] = rank_df["Genes"].str.replace(cut_string, '')
         # Draw bars
         bars = ax.bar(
             x=angles, 
@@ -3275,7 +3278,7 @@ def help_ranking(saving_folder,rank_df,exp_list,fs):
     plt.savefig(saving_folder+'Ranking_Bars.png',dpi=300,bbox_inches='tight')
     plt.close()
 
-def ranking_bars(my_directory,title_size=16):
+def ranking_bars(my_directory,title_size=16,remove_string=''):
     '''
     Similar to multiple_bars but showing the experimental conditions being compared separetly.
     Bars are ranked according to expression values.
@@ -3429,10 +3432,10 @@ def ranking_bars(my_directory,title_size=16):
         zipped = list(zip(all_genes, all_x, all_y,all_colors))
         col_names=['Genes', 'Expr '+trt1, 'Expr '+trt2,'Color']
         ex_df = pd.DataFrame(zipped, columns=col_names)        
-        if Position>0:
+        if Position>0 and ex_df.shape[0]>3:
             if the_folder[-1]!="/":
                 the_folder=the_folder+"/"
-            help_ranking(the_folder,ex_df,[trt1,trt2],title_size)
+            help_ranking(the_folder,ex_df,[trt1,trt2],title_size,cut_string=remove_string)
         else:
             plt.close()
-            
+            print(' Skipping')
