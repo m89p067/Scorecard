@@ -138,3 +138,7 @@ The input folder should contain sub-folders with pre-computed data regarding the
 ```
 scorecard_functions.track_over_exper(main_folder)
 ```
+Additionally, the genes identified by the scorecard could be ranked by the absolute difference in their expression
+```
+scorecard_functions.largest_diff(main_folder)
+```
