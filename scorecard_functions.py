@@ -1900,8 +1900,6 @@ def multiple_view(my_directory,add_space=3,marker_size=100,fs_size=10,single_qua
     ANGLES += ANGLES[:1]
     fig = plt.figure(figsize=(10, 10))
     ax = fig.add_subplot(111, polar=True)
-    #fig.patch.set_facecolor(BG_WHITE)
-    #ax.set_facecolor(BG_WHITE)
     all_x=[]
     all_y=[]
     VAR_NAMES=[]    
@@ -1914,26 +1912,37 @@ def multiple_view(my_directory,add_space=3,marker_size=100,fs_size=10,single_qua
             all_gruppo=[*tmp2]
             etichette=[xc.upper() for xc in tmp2['COLORS']]
             colore=tmp2['COLORS']
+            IS_EXAMPLE=tmp2['params']['is_example']
+            incl_ave=tmp2['params']['incl aver']
+            mf=tmp2['params']['multiplication factor']
+            other_colori=tmp2['params']['other_colors']
             if tmp2['params']['multiplication factor']==1:
                 print('Sorry only working for the scorecard; run using multiplication factor >1')
                 return
+            if IS_EXAMPLE:
+                if mf>1:
+                    etichette=[xc.upper() for xc in colori]
+                    etichette2=[xc.upper() for xc in other_colori]
+                elif mf==1:
+                    etichette=[xc.lower() for xc in colori]
+                    etichette2=[xc.lower() for xc in other_colori]                
+            else:
+                etichette=['A','B','C','D','E']
+                etichette2=['M','S','R']
+                if mf==1:
+                    etichette=[i_v_s.lower() for i_v_s in etichette]
+                    etichette2=[i_v_s.lower() for i_v_s in etichette2]
+            if incl_ave:
+                etichette=etichette+etichette2
+                colore=colore+other_colori
             for i_gruppo, gruppo in enumerate(all_gruppo):                
-                if gruppo in ['A', 'B', 'C', 'D', 'E']:                    
-                    valore1=tmp2[gruppo+'_x']
-                    valore2=tmp2[gruppo+'_y']                    
-                    for x,y in zip(valore1,valore2):
-                        ax.scatter(calc_scarto(ANGLES[ind_i],-add_space), x, s=marker_size, c=colore[i_gruppo], zorder=10)
-                        ax.scatter(calc_scarto(ANGLES[ind_i],add_space), y, s=marker_size, c=colore[i_gruppo], zorder=10)
-                        ax.plot([calc_scarto(ANGLES[ind_i],-add_space),calc_scarto(ANGLES[ind_i],add_space)], [x,y], c=colore[i_gruppo], linewidth=0.5, label=gruppo)
-                        all_x.append(x)
-                        all_y.append(y)
-                elif gruppo in etichette:                    
+                if gruppo in etichette:                    
                     valore1=tmp2[gruppo+'_x']
                     valore2=tmp2[gruppo+'_y']
                     for x,y in zip(valore1,valore2):
-                        ax.scatter(calc_scarto(ANGLES[ind_i],-add_space), x, s=marker_size, c=colore[i_gruppo], zorder=10)
-                        ax.scatter(calc_scarto(ANGLES[ind_i],add_space), y, s=marker_size, c=colore[i_gruppo], zorder=10)
-                        ax.plot([calc_scarto(ANGLES[ind_i],-add_space),calc_scarto(ANGLES[ind_i],add_space)], [x,y], c=colore[i_gruppo], linewidth=0.5, label=gruppo)
+                        ax.scatter(calc_scarto(ANGLES[ind_i],-add_space), x, s=marker_size, c=colore[etichette.index(gruppo)], zorder=10)
+                        ax.scatter(calc_scarto(ANGLES[ind_i],add_space), y, s=marker_size, c=colore[etichette.index(gruppo)], zorder=10)
+                        ax.plot([calc_scarto(ANGLES[ind_i],-add_space),calc_scarto(ANGLES[ind_i],add_space)], [x,y], c=colore[etichette.index(gruppo)], linewidth=0.5, label=gruppo)
                         all_x.append(x)
                         all_y.append(y)
     labels = []
@@ -1987,26 +1996,40 @@ def multiple_view(my_directory,add_space=3,marker_size=100,fs_size=10,single_qua
                 all_gruppo=[*tmp2]
                 etichette=[xc.upper() for xc in tmp2['COLORS']]
                 colore=tmp2['COLORS']
+                IS_EXAMPLE=tmp2['params']['is_example']
+                incl_ave=tmp2['params']['incl aver']
+                mf=tmp2['params']['multiplication factor']
+                other_colori=tmp2['params']['other_colors']
+                if tmp2['params']['multiplication factor']==1:
+                    print('Sorry only working for the scorecard; run using multiplication factor >1')
+                    return
+                if IS_EXAMPLE:
+                    if mf>1:
+                        etichette=[xc.upper() for xc in colori]
+                        etichette2=[xc.upper() for xc in other_colori]
+                    elif mf==1:
+                        etichette=[xc.lower() for xc in colori]
+                        etichette2=[xc.lower() for xc in other_colori]                
+                else:
+                    etichette=['A','B','C','D','E']
+                    etichette2=['M','S','R']
+                    if mf==1:
+                        etichette=[i_v_s.lower() for i_v_s in etichette]
+                        etichette2=[i_v_s.lower() for i_v_s in etichette2]
+                if incl_ave:
+                    etichette=etichette+etichette2
+                    colore=colore+other_colori
                 if tmp2['params']['multiplication factor']==1:
                     print('Sorry only working for the scorecard; run using multiplication factor >1')
                     return
                 for i_gruppo, gruppo in enumerate(all_gruppo):                
-                    if gruppo in ['A', 'B', 'C', 'D', 'E']:                    
-                        valore1=tmp2[gruppo+'_x']
-                        valore2=tmp2[gruppo+'_y']                    
-                        for x,y in zip(valore1,valore2):
-                            ax.scatter(calc_scarto(ANGLES[ind_i],-add_space), x, s=marker_size, c=colore[i_gruppo], zorder=10)
-                            ax.scatter(calc_scarto(ANGLES[ind_i],add_space), y, s=marker_size, c=colore[i_gruppo], zorder=10)
-                            ax.plot([calc_scarto(ANGLES[ind_i],-add_space),calc_scarto(ANGLES[ind_i],add_space)], [x,y], c=colore[i_gruppo], linewidth=0.5, label=gruppo)
-                            all_x.append(x)
-                            all_y.append(y)
-                    elif gruppo in etichette:                    
+                    if  gruppo in etichette:                    
                         valore1=tmp2[gruppo+'_x']
                         valore2=tmp2[gruppo+'_y']
                         for x,y in zip(valore1,valore2):
-                            ax.scatter(calc_scarto(ANGLES[ind_i],-add_space), x, s=marker_size, c=colore[i_gruppo], zorder=10)
-                            ax.scatter(calc_scarto(ANGLES[ind_i],add_space), y, s=marker_size, c=colore[i_gruppo], zorder=10)
-                            ax.plot([calc_scarto(ANGLES[ind_i],-add_space),calc_scarto(ANGLES[ind_i],add_space)], [x,y], c=colore[i_gruppo], linewidth=0.5, label=gruppo)
+                            ax.scatter(calc_scarto(ANGLES[ind_i],-add_space), x, s=marker_size, c=colore[etichette.index(gruppo)], zorder=10)
+                            ax.scatter(calc_scarto(ANGLES[ind_i],add_space), y, s=marker_size, c=colore[etichette.index(gruppo)], zorder=10)
+                            ax.plot([calc_scarto(ANGLES[ind_i],-add_space),calc_scarto(ANGLES[ind_i],add_space)], [x,y], c=colore[etichette.index(gruppo)], linewidth=0.5, label=gruppo)
                             all_x.append(x)
                             all_y.append(y)
             if len(all_x)>0 and len(all_y)>0:
@@ -3511,7 +3534,6 @@ def largest_diff(my_directory,top_entries=10,do_excel=False):
             if incl_ave:
                 etichette=etichette+etichette2
                 col_list=col_list+tmp2['params']['other_colors']
-            colore=tmp2['COLORS']
             if tmp2['params']['multiplication factor']==1:
                 print('Sorry only working for the scorecard; run using multiplication factor >1')
                 return
