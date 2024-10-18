@@ -3277,7 +3277,7 @@ def help_ranking(saving_folder,rank_df,exp_list,fs):
 
 def ranking_bars(my_directory,title_size=16):
     '''
-    The graph created by this function is similar to multiple_bars showing the experimental conditions being compared separetly.
+    Similar to multiple_bars but showing the experimental conditions being compared separetly.
     Bars are ranked according to expression values.
     Colors reflect the color scheme employed in the Scorecard.
 
