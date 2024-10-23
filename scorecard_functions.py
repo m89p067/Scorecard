@@ -95,7 +95,8 @@ def generate_parameters():
     the_dict['multiplication factor']=2 # Factor to multiply the log2 Fold change threshold for detecting extreme values
     the_dict['CSV delimiter']=';' # delimiter in the CSV file (usually ',')
     the_dict['Log Epsilon']=1e-10 # tiny value to adjust the log calculation
-    the_dict['Scorecard title']='' # add some short description regarding the experimental conditions on the scorecard title    
+    the_dict['Scorecard title']='' # add some short description regarding the experimental conditions on the scorecard title
+    the_dict['labels font size']=18 # font size of x-axis, y-axis and title
     return the_dict
 def check_point(a,b,xp,yp):
     # line of equation y=f(x)=a*x+b
@@ -197,7 +198,7 @@ def scorecard_legend(info_dict3):
     ax.set_xlim(left=minimo,right=massimo)
     ax.set_ylim(bottom=minimo,top=massimo)
     incl_ave=info_dict3['incl aver']
-    
+    labels_fs=info_dict3['labels font size']
     ax.axhline(y=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
     ax.axvline(x=th_fold_change,color='grey',linestyle='dashdot',lw=1.0)    
     ax.axhline(y=-th_fold_change,color='grey',linestyle='dashdot',lw=1.0)
@@ -211,11 +212,11 @@ def scorecard_legend(info_dict3):
     ax.axhline(y=0,color='k',linestyle='solid',lw=2.0)
      
     if use_notation:   
-        ax.set_xlabel("$log_2$ Fold Change ("+info_dict3['Treatment1 name']+" vs "+info_dict3['Control name']+")")
-        ax.set_ylabel("$log_2$ Fold Change ("+info_dict3['Treatment2 name']+" vs "+info_dict3['Control name']+")")
+        ax.set_xlabel("$log_2$ Fold Change ("+info_dict3['Treatment1 name']+" vs "+info_dict3['Control name']+")",fontsize=labels_fs)
+        ax.set_ylabel("$log_2$ Fold Change ("+info_dict3['Treatment2 name']+" vs "+info_dict3['Control name']+")",fontsize=labels_fs)
     else:
-        ax.set_xlabel("$log_2$ Fold Change ("+info_dict3['Treatment1 name']+")")
-        ax.set_ylabel("$log_2$ Fold Change ("+info_dict3['Treatment2 name']+")")
+        ax.set_xlabel("$log_2$ Fold Change ("+info_dict3['Treatment1 name']+")",fontsize=labels_fs)
+        ax.set_ylabel("$log_2$ Fold Change ("+info_dict3['Treatment2 name']+")",fontsize=labels_fs)
     
     labels=[xc.upper() for xc in colori]
     if incl_ave:        
@@ -276,7 +277,7 @@ def scorecard_legend(info_dict3):
         ax.text(th_fold_change/2,mid_green, labels[4]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
         ax.text(-th_fold_change/2,-mid_green, labels[4]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
         ax.text(-th_fold_change/2,mid_green, labels[4]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
-        ax.set_title('Regions of interest and gene color scheme for p<'+str(th_significance)+' diff. expr. entries')
+        ax.set_title('Regions of interest and gene color scheme for p<'+str(th_significance)+' diff. expr. entries',fontsize=labels_fs)
         if incl_ave:
             ax.text((th_fold_change*mf+th_fold_change)/2,(th_fold_change*mf+th_fold_change)/2, labels_ave[0]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[0] )
             ax.text(-(th_fold_change*mf+th_fold_change)/2,-(th_fold_change*mf+th_fold_change)/2, labels_ave[0]+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=other_colori[0] )
@@ -318,7 +319,7 @@ def scorecard_legend(info_dict3):
         ax.text(th_fold_change/2,mid_green, 'E',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
         ax.text(-th_fold_change/2,-mid_green, 'E',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
         ax.text(-th_fold_change/2,mid_green, 'E',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
-        ax.set_title('Regions of interest and color scheme for p<'+str(th_significance)+' diff. expr. entries')
+        ax.set_title('Regions of interest and color scheme for p<'+str(th_significance)+' diff. expr. entries',fontsize=labels_fs)
         if incl_ave:
             ax.text((th_fold_change*mf+th_fold_change)/2,(th_fold_change*mf+th_fold_change)/2, 'M',size=font_size1, ha='center', va='center',color=other_colori[0] )
             ax.text(-(th_fold_change*mf+th_fold_change)/2,-(th_fold_change*mf+th_fold_change)/2,'M',size=font_size1, ha='center', va='center',color=other_colori[0] )
@@ -348,7 +349,7 @@ def scorecard_legend(info_dict3):
         ax.text(th_fold_change/2,mid_green, labels[4].lower()+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
         ax.text(-th_fold_change/2,-mid_green, labels[4].lower()+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
         ax.text(-th_fold_change/2,mid_green, labels[4].lower()+' (p<'+str(th_significance)+')',size=font_size1, ha='center', va='center',color=colori[4],rotation=90 )
-        ax.set_title('Four-way plot (p<'+str(th_significance)+')')
+        ax.set_title('Four-way plot (p<'+str(th_significance)+')',fontsize=labels_fs)
     elif IS_EXAMPLE==False and mf == 1:
         ax.text(mid_green,mid_green, 'a',size=font_size1, ha='center', va='center',color=colori[0]  )
         ax.text(-mid_green,-mid_green, 'a',size=font_size1, ha='center', va='center',color=colori[0]  )
@@ -363,7 +364,7 @@ def scorecard_legend(info_dict3):
         ax.text(th_fold_change/2,mid_green, 'e',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
         ax.text(-th_fold_change/2,-mid_green, 'e',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
         ax.text(-th_fold_change/2,mid_green, 'e',size=font_size1, ha='center', va='center',color=colori[4],rotation=0 )
-        ax.set_title('Four-way plot (p<'+str(th_significance)+')')
+        ax.set_title('Four-way plot (p<'+str(th_significance)+')',fontsize=labels_fs)
     plt.tick_params(
                 axis='x',          # changes apply to the x-axis
                 which='both',      # both major and minor ticks are affected
@@ -427,7 +428,7 @@ def scorecard(the_df,info_dict2):
     print('The dataset includes ',the_df.shape[0],' entries in total')
     labels=[xc.upper() for xc in colori]
     incl_ave=info_dict2['incl aver']
-      
+    labels_fs=info_dict2['labels font size']  
     labels_ave=[xc.upper() for xc in other_colori]
     ###############################################################################################################################################
     ###############################################################################################################################################
@@ -695,13 +696,13 @@ def scorecard(the_df,info_dict2):
     quadr['COLORS']=colori
     quadr['params']=info_dict2
     if use_notation:   
-        ax.set_xlabel("$log_2$ Fold Change ("+info_dict2['Treatment1 name']+" vs "+info_dict2['Control name']+")")
-        ax.set_ylabel("$log_2$ Fold Change ("+info_dict2['Treatment2 name']+" vs "+info_dict2['Control name']+")")
-        ax.set_title('Both Exp. Conditions up-regulated ('+titolo+')')
+        ax.set_xlabel("$log_2$ Fold Change ("+info_dict2['Treatment1 name']+" vs "+info_dict2['Control name']+")",fontsize=labels_fs)
+        ax.set_ylabel("$log_2$ Fold Change ("+info_dict2['Treatment2 name']+" vs "+info_dict2['Control name']+")",fontsize=labels_fs)
+        ax.set_title('Both Exp. Conditions up-regulated ('+titolo+')',fontsize=labels_fs)
     else:
-        ax.set_xlabel("$log_2$ Fold Change ("+info_dict2['Treatment1 name']+")")
-        ax.set_ylabel("$log_2$ Fold Change ("+info_dict2['Treatment2 name']+")") 
-        ax.set_title('Both Exp. Conditions up-regulated')
+        ax.set_xlabel("$log_2$ Fold Change ("+info_dict2['Treatment1 name']+")",fontsize=labels_fs)
+        ax.set_ylabel("$log_2$ Fold Change ("+info_dict2['Treatment2 name']+")",fontsize=labels_fs) 
+        ax.set_title('Both Exp. Conditions up-regulated',fontsize=labels_fs)
     ymin, ymax = ax.get_ylim()
     xmin, xmax = ax.get_xlim()
     if mf>1:
@@ -988,13 +989,13 @@ def scorecard(the_df,info_dict2):
     quadr['COLORS']=colori
     quadr['params']=info_dict2
     if use_notation:   
-        ax.set_xlabel("$log_2$ Fold Change ("+info_dict2['Treatment1 name']+" vs "+info_dict2['Control name']+")")
-        ax.set_ylabel("$log_2$ Fold Change ("+info_dict2['Treatment2 name']+" vs "+info_dict2['Control name']+")")
-        ax.set_title('Both Exp. Conditions down-regulated ('+titolo+')')
+        ax.set_xlabel("$log_2$ Fold Change ("+info_dict2['Treatment1 name']+" vs "+info_dict2['Control name']+")",fontsize=labels_fs)
+        ax.set_ylabel("$log_2$ Fold Change ("+info_dict2['Treatment2 name']+" vs "+info_dict2['Control name']+")",fontsize=labels_fs)
+        ax.set_title('Both Exp. Conditions down-regulated ('+titolo+')',fontsize=labels_fs)
     else:
-        ax.set_xlabel("$log_2$ Fold Change ("+info_dict2['Treatment1 name']+")")
-        ax.set_ylabel("$log_2$ Fold Change ("+info_dict2['Treatment2 name']+")")   
-        ax.set_title('Both Exp. Conditions down-regulated')
+        ax.set_xlabel("$log_2$ Fold Change ("+info_dict2['Treatment1 name']+")",fontsize=labels_fs)
+        ax.set_ylabel("$log_2$ Fold Change ("+info_dict2['Treatment2 name']+")",fontsize=labels_fs)   
+        ax.set_title('Both Exp. Conditions down-regulated',fontsize=labels_fs)
     ymin, ymax = ax.get_ylim()
     xmin, xmax = ax.get_xlim()
     if mf>1:
@@ -1281,13 +1282,13 @@ def scorecard(the_df,info_dict2):
     quadr['COLORS']=colori
     quadr['params']=info_dict2
     if use_notation:   
-        ax.set_xlabel("$log_2$ Fold Change ("+info_dict2['Treatment1 name']+" vs "+info_dict2['Control name']+")")
-        ax.set_ylabel("$log_2$ Fold Change ("+info_dict2['Treatment2 name']+" vs "+info_dict2['Control name']+")")
-        ax.set_title('Exp. Condition on X down-reg. and Exp. Condition on Y up-reg. ('+titolo+')')
+        ax.set_xlabel("$log_2$ Fold Change ("+info_dict2['Treatment1 name']+" vs "+info_dict2['Control name']+")",fontsize=labels_fs)
+        ax.set_ylabel("$log_2$ Fold Change ("+info_dict2['Treatment2 name']+" vs "+info_dict2['Control name']+")",fontsize=labels_fs)
+        ax.set_title('Exp. Condition on X down-reg. and Exp. Condition on Y up-reg. ('+titolo+')',fontsize=labels_fs)
     else:
-        ax.set_xlabel("$log_2$ Fold Change ("+info_dict2['Treatment1 name']+")")
-        ax.set_ylabel("$log_2$ Fold Change ("+info_dict2['Treatment2 name']+")")   
-        ax.set_title(info_dict2['Treatment1 name']+' down-reg. and '+info_dict2['Treatment2 name']+' up-reg.')
+        ax.set_xlabel("$log_2$ Fold Change ("+info_dict2['Treatment1 name']+")",fontsize=labels_fs)
+        ax.set_ylabel("$log_2$ Fold Change ("+info_dict2['Treatment2 name']+")",fontsize=labels_fs)   
+        ax.set_title(info_dict2['Treatment1 name']+' down-reg. and '+info_dict2['Treatment2 name']+' up-reg.',fontsize=labels_fs)
 
     ymin, ymax = ax.get_ylim()
     xmin, xmax = ax.get_xlim()
@@ -1574,13 +1575,13 @@ def scorecard(the_df,info_dict2):
     quadr['COLORS']=colori
     quadr['params']=info_dict2
     if use_notation:   
-        ax.set_xlabel("$log_2$ Fold Change ("+info_dict2['Treatment1 name']+" vs "+info_dict2['Control name']+")")
-        ax.set_ylabel("$log_2$ Fold Change ("+info_dict2['Treatment2 name']+" vs "+info_dict2['Control name']+")")
-        ax.set_title('Exp. Condition on X up-reg. and Exp. Condition on Y down-reg. ('+titolo+')')
+        ax.set_xlabel("$log_2$ Fold Change ("+info_dict2['Treatment1 name']+" vs "+info_dict2['Control name']+")",fontsize=labels_fs)
+        ax.set_ylabel("$log_2$ Fold Change ("+info_dict2['Treatment2 name']+" vs "+info_dict2['Control name']+")",fontsize=labels_fs)
+        ax.set_title('Exp. Condition on X up-reg. and Exp. Condition on Y down-reg. ('+titolo+')',fontsize=labels_fs)
     else:
-        ax.set_xlabel("$log_2$ Fold Change ("+info_dict2['Treatment1 name']+")")
-        ax.set_ylabel("$log_2$ Fold Change ("+info_dict2['Treatment2 name']+")")   
-        ax.set_title(info_dict2['Treatment1 name']+' up-reg. and '+info_dict2['Treatment2 name']+' down-reg.')
+        ax.set_xlabel("$log_2$ Fold Change ("+info_dict2['Treatment1 name']+")",fontsize=labels_fs)
+        ax.set_ylabel("$log_2$ Fold Change ("+info_dict2['Treatment2 name']+")",fontsize=labels_fs)   
+        ax.set_title(info_dict2['Treatment1 name']+' up-reg. and '+info_dict2['Treatment2 name']+' down-reg.',fontsize=labels_fs)
 
     ymin, ymax = ax.get_ylim()
     xmin, xmax = ax.get_xlim()
@@ -1686,7 +1687,7 @@ def reconstruct_scorecard(my_directory,add_space=0.15,use_figsize=True,figsize_f
         markers=my_data[quadrante]['params']['markers']
         sizes= my_data[quadrante]['params']['markers_sizes']
         gene_name= my_data[quadrante]['params']['gene_name']        
-        
+        labels_fs=my_data[quadrante]['params']['labels font size']
         if mf==1:
             print('Reconstruction of a Four-Way plot. Scorecard was not created!')
         incl_ave=my_data[quadrante]['params']['incl aver']    
@@ -1705,13 +1706,7 @@ def reconstruct_scorecard(my_directory,add_space=0.15,use_figsize=True,figsize_f
 
         ax.axvline(x=0,color='k',linestyle='solid',lw=2.0)
         ax.axhline(y=0,color='k',linestyle='solid',lw=2.0)
-         
-        if use_notation:   
-            ax.set_xlabel("$log_2$ Fold Change ("+trt1+" vs "+ctrl+")")
-            ax.set_ylabel("$log_2$ Fold Change ("+trt2+" vs "+ctrl+")")
-        else:
-            ax.set_xlabel("$log_2$ Fold Change (Treatment 1 vs Control)")
-            ax.set_ylabel("$log_2$ Fold Change (Treatment 2 vs Control)")
+
         texts1,texts2,texts3,texts4,texts5=[],[],[],[],[]
         texts100,texts200,texts300=[],[],[]
         all_x,all_y=[],[]
@@ -1768,13 +1763,13 @@ def reconstruct_scorecard(my_directory,add_space=0.15,use_figsize=True,figsize_f
         if all_x !=[] and all_y !=[]:
 
             if use_notation:   
-                ax.set_xlabel("$log_2$ Fold Change ("+trt1+" vs "+ctrl+")")
-                ax.set_ylabel("$log_2$ Fold Change ("+trt2+" vs "+ctrl+")")
-                ax.set_title('Scorecard ('+titolo+')')
+                ax.set_xlabel("$log_2$ Fold Change ("+trt1+" vs "+ctrl+")",fontsize=labels_fs)
+                ax.set_ylabel("$log_2$ Fold Change ("+trt2+" vs "+ctrl+")",fontsize=labels_fs)
+                ax.set_title('Scorecard ('+titolo+')',fontsize=labels_fs)
             else:
-                ax.set_xlabel("$log_2$ Fold Change ("+trt1+")")
-                ax.set_ylabel("$log_2$ Fold Change ("+trt2+")")   
-                ax.set_title('Scorecard and regions of interest')
+                ax.set_xlabel("$log_2$ Fold Change ("+trt1+")",fontsize=labels_fs)
+                ax.set_ylabel("$log_2$ Fold Change ("+trt2+")",fontsize=labels_fs)   
+                ax.set_title('Scorecard and regions of interest',fontsize=labels_fs)
             
             minimo_x,massimo_x=min(all_x)+(add_space*min(all_x)), max(all_x)+(add_space*max(all_x))
             minimo_y,massimo_y=min(all_y)+(add_space*min(all_y)), max(all_y)+(add_space*max(all_y))
@@ -1839,7 +1834,7 @@ def reconstruct_scorecard(my_directory,add_space=0.15,use_figsize=True,figsize_f
                 ax.add_patch(Rectangle((-th_fold_change,minimo_y), (th_fold_change*2), (minimo_y-th_fold_change),edgecolor='none' ,facecolor =col_rect[2],alpha=trasp_rect[2]))
             ax.set_xlim(left=minimo_x,right=massimo_x)
             ax.set_ylim(bottom=minimo_y,top=massimo_y)
-
+            plt.tight_layout()
             if incl_ave==False:
                 adjust_text(flatten([texts1,texts2,texts3,texts4,texts5]), ax=ax,arrowprops=dict(arrowstyle="-", color='k', lw=0.5))
             else:
@@ -2225,9 +2220,9 @@ def make_volcano(my_directory):
                 ax.axhline(y=-np.log10(th_significance),color='grey',linestyle='dashdot',lw=1.5)
                 #ax.axhline(y=-np.log10(th_significance/mf),color='grey',linestyle='dashdot',lw=1.0)
 
-                ax.set_xlabel("log2 Fold Change ("+tmp_str+" vs "+ctrl+")")
-                ax.set_ylabel("-log10 Adjusted p-value")
-                ax.set_title('Data: '+tmp_str+' versus '+ctrl)
+                ax.set_xlabel("log2 Fold Change ("+tmp_str+" vs "+ctrl+")",fontsize=labels_fs)
+                ax.set_ylabel("-log10 Adjusted p-value",fontsize=labels_fs)
+                ax.set_title('Data: '+tmp_str+' versus '+ctrl,fontsize=labels_fs)
 
                 ymin, ymax = ax.get_ylim()
                 xmin, xmax = ax.get_xlim()
@@ -2925,8 +2920,8 @@ def common_entries(my_directory,do_excel=False,barcolor='silver',edgecolor='k',l
         plt.gca().xaxis.set_major_locator(mticker.MultipleLocator(1))
         if out_df['Symbol'].shape[0]>20:
             plt.xticks(fontsize=fs_size+2,rotation = 90)
-        plt.xlabel("Total occurrences")
-        plt.ylabel("Entries")
+        plt.xlabel("Total occurrences",fontsize=20)
+        plt.ylabel("Entries",fontsize=20)
         plt.yticks(fontsize=fs_size)
         plt.savefig(my_directory+'SymbolsCounts.png',dpi=300,bbox_inches='tight')
         plt.close()
@@ -3557,7 +3552,7 @@ def largest_diff(my_directory,top_entries=10,do_excel=False):
     df = pd.DataFrame(zipped, columns=names_of_cols)
     df['Magnitude'] = abs(df['Expr Cond 1'] - df['Expr Cond 2'])
     if top_entries==0:
-        final_df = df.sort_values(by=['Magnitude'], ascending=True)
+        final_df = df.sort_values(by=['Magnitude'], ascending=False)
     else:
         final_df = df.nlargest(top_entries,'Magnitude')
     if do_excel:
