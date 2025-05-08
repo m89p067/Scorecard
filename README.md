@@ -16,39 +16,39 @@ The following line of code could be used to generate the parameter dictionary wi
 param_dict=scorecard_functions.generate_parameters()
 ```
 Afterward, one can modify the default parameters with users preferences. For example, one should define the information regarding name and location of the CSV file and dataset which will be imported as a Pandas DataFrame:
-*    'base_dir' # Path of the directory where the CSV resides
-*   'filename'# filename of the CSV with the log2 Fold change and Adjusted p-values. Should include gene names or gene ID as separate column
-*    'zscore' # Perform standardization on log2 F.C. values
-*    'Treatment1 name' # custom name of Treatment 1
-*    'Treatment2 name' # custom name of Treatment 2
-*    'Control name' # custom name of Control/Baseline
-*    'fig_size' # figure size and limits
-*    'incl aver' # Include intermediate regions (between F.C. thresholds)  
-*    'save_dir' # path of the directory where saving scorecards and JSON outcomes
-*    'colors' # Color codes of the markers in each area of the scorecard (inside the regions of interest)
-*    'other_colors' # Color of the markers outside the regions of interest
-*    'th_fold_change' # log2 fold change standard threshold (another threshold will be automatically added based on 'multiplication factor')
-*    'th_significance'  # Significance threshold i.e. 0.05 or lower
-*    'font_size_quadrants'  # font size of the genes over the scorecard
-*    'font_size_examples'  # Scorecard legend font size when typing the areas of interest
-*    'marker_trasp'  # transparency of markers
-*    'rect_trasp'  # transparency of shaded areas of the scorecard
-*    'rect_colors'  # colors of shaded areas of the scorecard
-*    'markers'  #  markers of the scorecard
-*    'markers_sizes'  # Size of the markers plotted on the scorecard
-*    'is_example'  # in scorecard legend use color names or charaters as codes
-*    'use_notation'  # Use custom names inserted in 'Treatment1 name','Treatment2 name','Control name' when plotting axes labels
-*    'gene_name'  # Name of the column of the DataFrame containing genes or proteins names or IDs (one per row)
-*    'multiplication factor' # Factor to multiply the log2 Fold change threshold to detect extreme values (setting it to 1 will produce a four-way plot, not the scorecard)
-*    'CSV delimiter'  # delimiter in the CSV file (usually ',')
-*    'Log Epsilon' # tiny value to adjust the log calculation (during Volcano plots)
-*    'Scorecard title' # add some short description regarding the experimental conditions on the scorecard title
+*    `base_dir` # Path of the directory where the CSV resides
+*    `filename` # filename of the CSV with the log2 Fold change and Adjusted p-values. Should include gene names or gene ID as separate column
+*    `zscore` # Perform standardization on log2 F.C. values
+*    `Treatment1 name` # custom name of Treatment 1
+*    `Treatment2 name` # custom name of Treatment 2
+*    `Control name` # custom name of Control/Baseline
+*    `fig_size` # figure size and limits
+*    `incl aver` # Include intermediate regions (between F.C. thresholds)  
+*    `save_dir` # path of the directory where saving scorecards and JSON outcomes
+*    `colors` # Color codes of the markers in each area of the scorecard (inside the regions of interest)
+*    `other_colors` # Color of the markers outside the regions of interest
+*    `th_fold_change` # log2 fold change standard threshold (another threshold will be automatically added based on 'multiplication factor')
+*    `th_significance`  # Significance threshold i.e. 0.05 or lower
+*    `font_size_quadrants`  # font size of the genes over the scorecard
+*    `font_size_examples`  # Scorecard legend font size when typing the areas of interest
+*    `marker_trasp`  # transparency of markers
+*    `rect_trasp`  # transparency of shaded areas of the scorecard
+*    `rect_colors`  # colors of shaded areas of the scorecard
+*    `markers`  #  markers of the scorecard
+*    `markers_sizes`  # Size of the markers plotted on the scorecard
+*    `is_example`  # in scorecard legend use color names or charaters as codes
+*    `use_notation`  # Use custom names inserted in 'Treatment1 name','Treatment2 name','Control name' when plotting axes labels
+*    `gene_name`  # Name of the column of the DataFrame containing genes or proteins names or IDs (one per row)
+*    `multiplication factor` # Factor to multiply the log2 Fold change threshold to detect extreme values (setting it to 1 will produce a four-way plot, not the scorecard)
+*    `CSV delimiter`  # delimiter in the CSV file (usually ',')
+*    `Log Epsilon` # tiny value to adjust the log calculation (during Volcano plots)
+*    `Scorecard title` # add some short description regarding the experimental conditions on the scorecard title
 
 Other important parameters are the column names in the CSV file containing the log2 fold change and the adjusted p-values:
-*    'FC cond x' # replace with exact column name containing log2 fold change Treatment1 vs Control
-*    'FC cond y' # replace with exact column name containing log2 fold change Treatment2 vs Control
-*    'padj cond x' # replace with exact column name containing adj p-values Treatment1 vs Control
-*    'padj cond y' # replace with exact column name containing adj p-values Treatment2 vs Control
+*    `FC cond x` # replace with exact column name containing log2 fold change Treatment1 vs Control
+*    `FC cond y` # replace with exact column name containing log2 fold change Treatment2 vs Control
+*    `padj cond x` # replace with exact column name containing adj p-values Treatment1 vs Control
+*    `padj cond y` # replace with exact column name containing adj p-values Treatment2 vs Control
 
 Indeed, your dataset should contain pre-computed fold change values (and related adjusted p-values) as columns in the CSV file.
 
