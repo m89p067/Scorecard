@@ -19,4 +19,4 @@ The dataset could be interpreted as post-processed RNA-seq data from bacteria cu
 |GBS| Group B Streptococcus|
 |NTHi| Nontypeable Haemophilus influenzae|
 
-The CSV tabular data can be downloaded from here: [CSV file - Toy-dataset](examples/ex_data.csv)
+The CSV tabular data can be downloaded from here: [CSV file - Toy-dataset](ex_data.csv)
