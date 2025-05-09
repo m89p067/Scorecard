@@ -142,5 +142,5 @@ Additionally, the genes identified by the scorecard could be ranked by the absol
 ```
 scorecard_functions.largest_diff(main_folder)
 ```
-Inside the \textit{example} folder, a synthetic dataset, including Fold Change values and p-values for ten hypothetical bacterial strains grown under specific lab conditions, can be found. The user can test Scorecard functionalities on it.
-[Toy-dataset](example/)
+Inside the *example* folder, a synthetic dataset, including Fold Change values and p-values for ten hypothetical bacterial strains grown under specific lab conditions, can be found. The user can test Scorecard functionalities on it.
+[Toy-dataset](examples/README.md)
