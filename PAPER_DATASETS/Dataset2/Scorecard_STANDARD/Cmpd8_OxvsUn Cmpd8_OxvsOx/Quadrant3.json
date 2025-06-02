@@ -1,0 +1,196 @@
+{
+    "A": [
+        "SA_RS05690",
+        "SA_RS05695",
+        "SA_RS05730",
+        "SA_RS05800",
+        "SA_RS09190",
+        "SA_RS12660",
+        "SA_RS13770"
+    ],
+    "B": [
+        "SA_RS15060"
+    ],
+    "C": [
+        "SA_RS01295",
+        "SA_RS03775",
+        "SA_RS03780",
+        "SA_RS10065",
+        "SA_RS12675"
+    ],
+    "D": [],
+    "E": [
+        "SA_RS05670"
+    ],
+    "A_x": [
+        -3.715343471,
+        -3.751909041,
+        -3.589509055,
+        -3.079238378,
+        -4.50854775,
+        -4.681348158,
+        -3.350608469
+    ],
+    "B_x": [
+        -3.293179594
+    ],
+    "C_x": [
+        -2.951243161,
+        -2.919619959,
+        -2.345252242,
+        -2.717468316,
+        -2.171134623
+    ],
+    "D_x": [],
+    "E_x": [
+        -1.884487362
+    ],
+    "A_y": [
+        -3.936792547,
+        -3.906843391,
+        -3.591712639,
+        -3.110672443,
+        -4.353556893,
+        -4.575689671,
+        -3.384887189
+    ],
+    "B_y": [
+        -2.998644848
+    ],
+    "C_y": [
+        -3.111659192,
+        -3.477210979,
+        -3.473354808,
+        -3.64386303,
+        -4.071312543
+    ],
+    "D_y": [],
+    "E_y": [
+        -3.554182127
+    ],
+    "A_pval_x": [
+        8.13e-05,
+        4.05e-06,
+        0.007198317,
+        0.000145528,
+        0.033322566,
+        1.42e-08,
+        0.00036958
+    ],
+    "A_pval_y": [
+        3.39e-07,
+        1.33e-09,
+        0.002885793,
+        0.000810562,
+        0.026228839,
+        1.06e-18,
+        0.038307097
+    ],
+    "B_pval_x": [
+        0.003745295
+    ],
+    "B_pval_y": [
+        0.026297609
+    ],
+    "C_pval_x": [
+        0.000308433,
+        1.47e-07,
+        1.31e-06,
+        2.54e-10,
+        0.000336876
+    ],
+    "C_pval_y": [
+        0.007184931,
+        1.78e-18,
+        1.56e-17,
+        1.82e-18,
+        8.42e-14
+    ],
+    "D_pval_x": [],
+    "D_pval_y": [],
+    "E_pval_x": [
+        0.042607013
+    ],
+    "E_pval_y": [
+        1.4500000000000002e-27
+    ],
+    "COLORS": [
+        "goldenrod",
+        "limegreen",
+        "dodgerblue",
+        "sandybrown",
+        "crimson"
+    ],
+    "params": {
+        "FC cond x": "Cmpd8_OxvsUn_log2FoldChange",
+        "FC cond y": "Cmpd8_OxvsOx_log2FoldChange",
+        "padj cond x": "Cmpd8_OxvsUn_padj",
+        "padj cond y": "Cmpd8_OxvsOx_padj",
+        "incl aver": false,
+        "base_dir": "D:/GED_VIS_PROJECT/Dataset3_REDO",
+        "filename": "USA100_comp.CSV",
+        "zscore": false,
+        "Treatment1 name": "Cmpd8_OxvsUn",
+        "Treatment2 name": "Cmpd8_OxvsOx",
+        "Control name": "Un",
+        "fig_size": 10,
+        "save_dir": "D:/GED_VIS_PROJECT/Dataset3_REDO/Scorecard_STANDARD",
+        "colors": [
+            "goldenrod",
+            "limegreen",
+            "dodgerblue",
+            "sandybrown",
+            "crimson"
+        ],
+        "other_colors": [
+            "darkcyan",
+            "indigo",
+            "orangered"
+        ],
+        "th_fold_change": 2,
+        "th_significance": 0.05,
+        "font_size_quadrants": 8,
+        "font_size_examples": 16,
+        "marker_trasp": [
+            0.95,
+            0.8,
+            0.65,
+            0.45
+        ],
+        "rect_trasp": [
+            0.25,
+            0.15,
+            0.4
+        ],
+        "rect_colors": [
+            "silver",
+            "lightgrey",
+            "darkgrey"
+        ],
+        "markers": [
+            "o",
+            "^",
+            "s",
+            "*",
+            "X",
+            "p",
+            "."
+        ],
+        "markers_sizes": [
+            14,
+            12,
+            10,
+            8
+        ],
+        "is_example": false,
+        "use_notation": false,
+        "gene_name": "gene_id",
+        "multiplication factor": 1.5,
+        "CSV delimiter": ";",
+        "Log Epsilon": 1e-10,
+        "Scorecard title": "MRSA USA100 cultures",
+        "labels font size": 18,
+        "Total entries": 3190,
+        "Quadrant entries": 1256
+    }
+}

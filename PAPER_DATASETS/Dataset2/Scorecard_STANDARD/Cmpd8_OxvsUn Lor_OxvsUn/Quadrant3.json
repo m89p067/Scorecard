@@ -1,0 +1,186 @@
+{
+    "A": [
+        "SA_RS15060",
+        "SA_RS05730",
+        "SA_RS05800",
+        "SA_RS06495"
+    ],
+    "B": [
+        "SA_RS12660"
+    ],
+    "C": [
+        "SA_RS14495",
+        "SA_RS15065",
+        "SA_RS05795",
+        "SA_RS12490",
+        "SA_RS12505",
+        "SA_RS12525"
+    ],
+    "D": [],
+    "E": [
+        "SA_RS12520"
+    ],
+    "A_x": [
+        -3.293179594,
+        -3.589509055,
+        -3.079238378,
+        -3.03144781
+    ],
+    "B_x": [
+        -4.681348158
+    ],
+    "C_x": [
+        -2.559721899,
+        -2.499355834,
+        -2.532634195,
+        -2.125221512,
+        -2.003819798,
+        -2.292731161
+    ],
+    "D_x": [],
+    "E_x": [
+        -1.991682025
+    ],
+    "A_y": [
+        -4.218885923,
+        -3.43396033,
+        -5.266514896,
+        -3.418720109
+    ],
+    "B_y": [
+        -2.346004126
+    ],
+    "C_y": [
+        -4.468572902,
+        -4.551101885,
+        -5.166328922,
+        -3.392927382,
+        -3.147476303,
+        -4.765782687
+    ],
+    "D_y": [],
+    "E_y": [
+        -3.559929626
+    ],
+    "A_pval_x": [
+        0.003745295,
+        0.007198317,
+        0.000145528,
+        0.021411564
+    ],
+    "A_pval_y": [
+        0.001831514,
+        0.000200576,
+        1.07e-07,
+        0.001817642
+    ],
+    "B_pval_x": [
+        1.42e-08
+    ],
+    "B_pval_y": [
+        0.004088348
+    ],
+    "C_pval_x": [
+        0.005306099,
+        0.007231016,
+        0.000359323,
+        0.001499773,
+        1.55e-05,
+        0.040932101
+    ],
+    "C_pval_y": [
+        4.02e-05,
+        9.54e-05,
+        1.03e-06,
+        6.71e-39,
+        7.14e-18,
+        3.29e-17
+    ],
+    "D_pval_x": [],
+    "D_pval_y": [],
+    "E_pval_x": [
+        0.021045033
+    ],
+    "E_pval_y": [
+        4.06e-14
+    ],
+    "COLORS": [
+        "goldenrod",
+        "limegreen",
+        "dodgerblue",
+        "sandybrown",
+        "crimson"
+    ],
+    "params": {
+        "FC cond x": "Cmpd8_OxvsUn_log2FoldChange",
+        "FC cond y": "Lor_OxvsUn_log2FoldChange",
+        "padj cond x": "Cmpd8_OxvsUn_padj",
+        "padj cond y": "Lor_OxvsUn_padj",
+        "incl aver": false,
+        "base_dir": "D:/GED_VIS_PROJECT/Dataset3_REDO",
+        "filename": "USA100_comp.CSV",
+        "zscore": false,
+        "Treatment1 name": "Cmpd8_OxvsUn",
+        "Treatment2 name": "Lor_OxvsUn",
+        "Control name": "Un",
+        "fig_size": 10,
+        "save_dir": "D:/GED_VIS_PROJECT/Dataset3_REDO/Scorecard_STANDARD",
+        "colors": [
+            "goldenrod",
+            "limegreen",
+            "dodgerblue",
+            "sandybrown",
+            "crimson"
+        ],
+        "other_colors": [
+            "darkcyan",
+            "indigo",
+            "orangered"
+        ],
+        "th_fold_change": 2,
+        "th_significance": 0.05,
+        "font_size_quadrants": 8,
+        "font_size_examples": 16,
+        "marker_trasp": [
+            0.95,
+            0.8,
+            0.65,
+            0.45
+        ],
+        "rect_trasp": [
+            0.25,
+            0.15,
+            0.4
+        ],
+        "rect_colors": [
+            "silver",
+            "lightgrey",
+            "darkgrey"
+        ],
+        "markers": [
+            "o",
+            "^",
+            "s",
+            "*",
+            "X",
+            "p",
+            "."
+        ],
+        "markers_sizes": [
+            14,
+            12,
+            10,
+            8
+        ],
+        "is_example": false,
+        "use_notation": false,
+        "gene_name": "gene_id",
+        "multiplication factor": 1.5,
+        "CSV delimiter": ";",
+        "Log Epsilon": 1e-10,
+        "Scorecard title": "MRSA USA100 cultures",
+        "labels font size": 18,
+        "Total entries": 3178,
+        "Quadrant entries": 1284
+    }
+}
