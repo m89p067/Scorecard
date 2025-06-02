@@ -1,0 +1,926 @@
+{
+    "EF.peg.2554": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t03"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.882": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t03"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1799": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t12"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.2156": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t12"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.991": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t12"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2256": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.2991": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.808": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.807": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.328": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.2366": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.810": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.811": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.696": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.331": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1924": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.984": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.2473": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.111": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.2438": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.363": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.988": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.473": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1128": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1127": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.2355": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.1527": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.3028": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.291": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1273": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2714": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.552": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2330": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1570": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2146": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1569": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2299": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.753": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2757": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.10": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.3044": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.443": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.55": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2379": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.795": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1911": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1747": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.194": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2583": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1825": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.511": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.989": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2202": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1362": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2250": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1130": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2930": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.3017": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1134": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.512": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1138": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1124": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t24"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.702": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.274": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.2838": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.2864": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.1195": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.1427": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.1142": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1140": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1141": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1144": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1146": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1151": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.2685": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1149": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.990": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2224": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2204": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1818": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2316": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1143": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1145": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1139": {
+        "Exp Cond": [
+            "V2A_t90 V2A_t60"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    }
+}
