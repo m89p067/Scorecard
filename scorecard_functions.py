@@ -26,6 +26,10 @@ import matplotlib
 import matplotlib.ticker as mticker
 from itertools import combinations
 def get_unique_tuples(list_of_tuples):
+    """
+    Detects and returns unique tuples from a list, considering
+    tuples with the same strings (regardless of order) as equivalent.
+    """
     unique_tuples = set()
     for tpl in list_of_tuples:
         # Sort the tuple to handle equivalent strings regardless of order
@@ -41,7 +45,8 @@ def reformat_name(test_str):
 def identified_comparisons(strings1):
     """Utility function to generate pairwise combinations (without repetition) of exp. cond."""
     combinations2 = list(combinations(strings1, 2))
-    return combinations2
+    combinations1=get_unique_tuples(combinations2)
+    return combinations1
 def merge_two_dicts(x, y):
     """Given two dictionaries, merge them into a new dict as a shallow copy."""
     z = x.copy()
