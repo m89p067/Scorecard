@@ -25,6 +25,13 @@ from collections import Counter
 import matplotlib
 import matplotlib.ticker as mticker
 from itertools import combinations
+def get_unique_tuples(list_of_tuples):
+    unique_tuples = set()
+    for tpl in list_of_tuples:
+        # Sort the tuple to handle equivalent strings regardless of order
+        sorted_tuple = tuple(sorted(tpl))
+        unique_tuples.add(sorted_tuple)
+    return [tuple(t) for t in unique_tuples]
 def reformat_name(test_str):
     """Internal utility function to adjust filenames"""
     for i in test_str:
