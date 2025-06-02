@@ -1,0 +1,415 @@
+{
+    "SAUSA300_RS03525": {
+        "Exp Cond": [
+            "CPT LZD",
+            "DEL CPT",
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "SAUSA300_RS04560": {
+        "Exp Cond": [
+            "CPT LZD",
+            "DEL CPT",
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "SAUSA300_RS08475": {
+        "Exp Cond": [
+            "CPT LZD",
+            "DEL CPT",
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "B",
+            "C",
+            "M"
+        ]
+    },
+    "SAUSA300_RS07100": {
+        "Exp Cond": [
+            "CPT LZD",
+            "DEL CPT",
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SAUSA300_RS11740": {
+        "Exp Cond": [
+            "CPT LZD",
+            "DEL CPT",
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "M",
+            "R",
+            "R"
+        ]
+    },
+    "SAUSA300_RS03320": {
+        "Exp Cond": [
+            "CPT LZD",
+            "DEL CPT"
+        ],
+        "Q": [
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "S",
+            "R"
+        ]
+    },
+    "SAUSA300_RS04795": {
+        "Exp Cond": [
+            "CPT LZD",
+            "DEL CPT",
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "S",
+            "M",
+            "S"
+        ]
+    },
+    "SAUSA300_RS06740": {
+        "Exp Cond": [
+            "CPT LZD",
+            "DEL CPT",
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "S",
+            "M",
+            "S"
+        ]
+    },
+    "SAUSA300_RS00115": {
+        "Exp Cond": [
+            "CPT LZD",
+            "DEL CPT",
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "R",
+            "S",
+            "M"
+        ]
+    },
+    "SAUSA300_RS05930": {
+        "Exp Cond": [
+            "CPT LZD",
+            "DEL CPT",
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "R",
+            "S",
+            "M"
+        ]
+    },
+    "SAUSA300_RS11705": {
+        "Exp Cond": [
+            "CPT LZD",
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "SAUSA300_RS02540": {
+        "Exp Cond": [
+            "CPT LZD",
+            "DEL LZD",
+            "VAN CPT",
+            "VAN DEL",
+            "VAN LZD"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "R",
+            "R",
+            "S",
+            "S",
+            "M"
+        ]
+    },
+    "SAUSA300_RS11380": {
+        "Exp Cond": [
+            "CPT LZD",
+            "DEL CPT",
+            "DEL LZD",
+            "VAN DEL",
+            "VAN LZD"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "R",
+            "S",
+            "M",
+            "R",
+            "R"
+        ]
+    },
+    "SAUSA300_RS11635": {
+        "Exp Cond": [
+            "CPT LZD",
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "SAUSA300_RS13325": {
+        "Exp Cond": [
+            "CPT LZD",
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "SAUSA300_RS11210": {
+        "Exp Cond": [
+            "DEL CPT",
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "S",
+            "S"
+        ]
+    },
+    "SAUSA300_RS12775": {
+        "Exp Cond": [
+            "DEL CPT",
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "S",
+            "S"
+        ]
+    },
+    "SAUSA300_RS03455": {
+        "Exp Cond": [
+            "VAN CPT",
+            "VAN DEL",
+            "VAN LZD"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "D",
+            "D",
+            "D"
+        ]
+    },
+    "SAUSA300_RS03465": {
+        "Exp Cond": [
+            "VAN CPT",
+            "VAN LZD"
+        ],
+        "Q": [
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "D",
+            "D"
+        ]
+    },
+    "SAUSA300_RS03475": {
+        "Exp Cond": [
+            "VAN CPT",
+            "VAN DEL",
+            "VAN LZD"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "D",
+            "D",
+            "D"
+        ]
+    },
+    "SAUSA300_RS06820": {
+        "Exp Cond": [
+            "VAN CPT",
+            "VAN DEL",
+            "VAN LZD"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "D",
+            "D",
+            "D"
+        ]
+    },
+    "SAUSA300_RS11135": {
+        "Exp Cond": [
+            "VAN CPT",
+            "VAN DEL",
+            "VAN LZD"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "D",
+            "D",
+            "D"
+        ]
+    },
+    "SAUSA300_RS10935": {
+        "Exp Cond": [
+            "VAN CPT",
+            "VAN DEL",
+            "VAN LZD"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "S",
+            "S",
+            "S"
+        ]
+    },
+    "SAUSA300_RS10950": {
+        "Exp Cond": [
+            "VAN CPT",
+            "VAN DEL",
+            "VAN LZD"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "S",
+            "S",
+            "S"
+        ]
+    },
+    "SAUSA300_RS11145": {
+        "Exp Cond": [
+            "VAN CPT",
+            "VAN LZD"
+        ],
+        "Q": [
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "S",
+            "S"
+        ]
+    }
+}

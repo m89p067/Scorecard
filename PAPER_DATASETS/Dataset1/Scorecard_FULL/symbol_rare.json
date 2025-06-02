@@ -1,0 +1,134 @@
+{
+    "SAUSA300_RS05460": {
+        "Exp Cond": [
+            "CPT LZD"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "SAUSA300_RS03530": {
+        "Exp Cond": [
+            "CPT LZD"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "S"
+        ]
+    },
+    "SAUSA300_RS10335": {
+        "Exp Cond": [
+            "CPT LZD"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "R"
+        ]
+    },
+    "SAUSA300_RS10185": {
+        "Exp Cond": [
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "SAUSA300_RS10190": {
+        "Exp Cond": [
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "SAUSA300_RS05635": {
+        "Exp Cond": [
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "SAUSA300_RS06200": {
+        "Exp Cond": [
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "R"
+        ]
+    },
+    "SAUSA300_RS03470": {
+        "Exp Cond": [
+            "VAN CPT"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "D"
+        ]
+    },
+    "SAUSA300_RS03930": {
+        "Exp Cond": [
+            "VAN CPT"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "D"
+        ]
+    },
+    "SAUSA300_RS11120": {
+        "Exp Cond": [
+            "VAN LZD"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "D"
+        ]
+    },
+    "SAUSA300_RS07850": {
+        "Exp Cond": [
+            "VAN LZD"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "S"
+        ]
+    },
+    "SAUSA300_RS11125": {
+        "Exp Cond": [
+            "VAN LZD"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "S"
+        ]
+    }
+}
