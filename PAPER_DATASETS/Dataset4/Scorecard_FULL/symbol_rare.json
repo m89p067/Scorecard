@@ -1,0 +1,2004 @@
+{
+    "EF.peg.402": {
+        "Exp Cond": [
+            "Ag_t03 AgXX_t03"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.97": {
+        "Exp Cond": [
+            "Ag_t03 AgXX_t03"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.2404": {
+        "Exp Cond": [
+            "Ag_t03 V2A_t03"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.2582": {
+        "Exp Cond": [
+            "Ag_t03 V2A_t03"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.682": {
+        "Exp Cond": [
+            "Ag_t03 V2A_t03"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.3020": {
+        "Exp Cond": [
+            "Ag_t03 V2A_t03"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.875": {
+        "Exp Cond": [
+            "Ag_t03 V2A_t03"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1851": {
+        "Exp Cond": [
+            "Ag_t03 V2A_t03"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.3040": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.3041": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.3039": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.2659": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.1909": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.1626": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.607": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.1410": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.620": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.452": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1458": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.243": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1219": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1074": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.3070": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.647": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.752": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1113": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2054": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1790": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.994": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2256": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.328": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.327": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.333": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.325": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.2838": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.324": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.329": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.331": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.326": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1527": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.990": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.3028": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1863": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.291": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.2330": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.2136": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.285": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.2299": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.2758": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.3044": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.2621": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.795": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1348": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.984": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.2861": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.8": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1795": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.886": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.589": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.339": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1704": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.2161": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1144": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.3034": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1146": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1125": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1128": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1151": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1127": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1129": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1120": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1142": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1135": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1126": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1118": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.2438": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1140": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1131": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1132": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1141": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1133": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1530": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1136": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.511": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.939": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1362": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.2147": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1544": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1152": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1143": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.2328": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1145": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1130": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.2928": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1139": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.3017": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1134": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1150": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1137": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.364": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1043": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1138": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1119": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1124": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.1148": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.510": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.2685": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.1531": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.1149": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.1452": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.311": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.227": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.694": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1981": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.552": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.3": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2298": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1570": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.538": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2146": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1569": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1667": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2310": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2962": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2757": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.10": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1454": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.281": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1746": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.443": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1523": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1567": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.332": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1911": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1188": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2175": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1747": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.194": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2583": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.541": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2862": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1859": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1768": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1223": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.760": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2202": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.3033": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2327": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2075": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1042": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2930": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.144": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1474": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.512": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1705": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1459": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2491": {
+        "Exp Cond": [
+            "V2A_t03 AgXX_t03"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.808": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.809": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.810": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.811": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.951": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.2714": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.382": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.2210": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.949": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.2216": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.2209": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.2473": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.988": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.111": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.2531": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.2554": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1877": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.887": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.995": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.2759": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.424": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2864": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.1449": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2316": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "EF.peg.2250": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "M"
+        ]
+    }
+}

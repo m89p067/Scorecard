@@ -1,0 +1,463 @@
+Number of comparisons performed :6
+-------------- Comparison 1 of 6
+Comparison : Ag_t03 AgXX_t03
+Applying fold change thresholds of 2 and 4
+Also, filtering the data using a statistical threshold of 0.001
+Analyzed 3025 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+Quadrant1 total entries were 1031
+
+Quadrant2 total entries were 443
+
+In Quadrant3 the <<A>> group contains 4 entries
+Quadrant3 total entries were 1080
+
+Quadrant4 total entries were 471
+
+In total the scorecard identified 6 entries inside the shaded regions of interest
+
+The scorecard also identified 0 entries between F.C. thresholds
+
+-------------- Comparison 2 of 6
+Comparison : Ag_t03 V2A_t03
+Applying fold change thresholds of 2 and 4
+Also, filtering the data using a statistical threshold of 0.001
+Analyzed 3025 entries
+
+In Quadrant1 the <<A>> group contains 1 entries
+Quadrant1 total entries were 1082
+
+Quadrant2 total entries were 464
+
+In Quadrant3 the <<A>> group contains 15 entries
+Quadrant3 total entries were 1059
+
+Quadrant4 total entries were 420
+
+In total the scorecard identified 16 entries inside the shaded regions of interest
+
+The scorecard also identified 0 entries between F.C. thresholds
+
+-------------- Comparison 3 of 6
+Comparison : Ag_t90 AgXX_t90
+Applying fold change thresholds of 2 and 4
+Also, filtering the data using a statistical threshold of 0.001
+Analyzed 3025 entries
+
+In Quadrant1 the <<A>> group contains 33 entries
+In Quadrant1 the <<B>> group contains 13 entries
+In Quadrant1 the <<C>> group contains 8 entries
+In Quadrant1 the <<M>> group contains 17 entries
+Quadrant1 total entries were 1028
+
+Quadrant2 total entries were 334
+
+In Quadrant3 the <<A>> group contains 20 entries
+In Quadrant3 the <<B>> group contains 1 entries
+In Quadrant3 the <<M>> group contains 3 entries
+Quadrant3 total entries were 1230
+
+Quadrant4 total entries were 433
+
+In total the scorecard identified 75 entries inside the shaded regions of interest
+
+The scorecard also identified 20 entries between F.C. thresholds
+
+-------------- Comparison 4 of 6
+Comparison : Ag_t90 V2A_t90
+Applying fold change thresholds of 2 and 4
+Also, filtering the data using a statistical threshold of 0.001
+Analyzed 3025 entries
+
+In Quadrant1 the <<A>> group contains 48 entries
+In Quadrant1 the <<B>> group contains 21 entries
+In Quadrant1 the <<C>> group contains 6 entries
+In Quadrant1 the <<M>> group contains 46 entries
+Quadrant1 total entries were 1116
+
+Quadrant2 total entries were 305
+
+In Quadrant3 the <<A>> group contains 42 entries
+In Quadrant3 the <<B>> group contains 22 entries
+In Quadrant3 the <<C>> group contains 6 entries
+In Quadrant3 the <<M>> group contains 12 entries
+Quadrant3 total entries were 1259
+
+Quadrant4 total entries were 345
+
+In total the scorecard identified 145 entries inside the shaded regions of interest
+
+The scorecard also identified 58 entries between F.C. thresholds
+
+-------------- Comparison 5 of 6
+Comparison : V2A_t03 AgXX_t03
+Applying fold change thresholds of 2 and 4
+Also, filtering the data using a statistical threshold of 0.001
+Analyzed 3025 entries
+
+In Quadrant1 the <<A>> group contains 1 entries
+Quadrant1 total entries were 1040
+
+Quadrant2 total entries were 434
+
+In Quadrant3 the <<A>> group contains 3 entries
+Quadrant3 total entries were 1045
+
+Quadrant4 total entries were 506
+
+In total the scorecard identified 4 entries inside the shaded regions of interest
+
+The scorecard also identified 0 entries between F.C. thresholds
+
+-------------- Comparison 6 of 6
+Comparison : V2A_t90 AgXX_t90
+Applying fold change thresholds of 2 and 4
+Also, filtering the data using a statistical threshold of 0.001
+Analyzed 3025 entries
+
+In Quadrant1 the <<A>> group contains 33 entries
+In Quadrant1 the <<B>> group contains 15 entries
+In Quadrant1 the <<C>> group contains 9 entries
+In Quadrant1 the <<M>> group contains 17 entries
+Quadrant1 total entries were 1054
+
+Quadrant2 total entries were 308
+
+In Quadrant3 the <<A>> group contains 23 entries
+In Quadrant3 the <<B>> group contains 1 entries
+In Quadrant3 the <<M>> group contains 4 entries
+Quadrant3 total entries were 1296
+
+Quadrant4 total entries were 367
+
+In total the scorecard identified 81 entries inside the shaded regions of interest
+
+The scorecard also identified 21 entries between F.C. thresholds
+
+******************** Record counts:
+Symbol : EF.peg.1868 occurred 4 times during the 6 comparisons
+Entry found in Ag_t03 AgXX_t03 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t03 V2A_t03 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in V2A_t03 AgXX_t03 [Quadrant3], inside region of interest <<A>>
+Symbol : EF.peg.2124 occurred 2 times during the 6 comparisons
+Entry found in Ag_t03 AgXX_t03 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Symbol : EF.peg.481 occurred 4 times during the 6 comparisons
+Entry found in Ag_t03 AgXX_t03 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t03 V2A_t03 [Quadrant3], inside region of interest <<A>>
+Entry found in V2A_t03 AgXX_t03 [Quadrant3], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Symbol : EF.peg.426 occurred 4 times during the 6 comparisons
+Entry found in Ag_t03 AgXX_t03 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t03 V2A_t03 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in V2A_t03 AgXX_t03 [Quadrant3], inside region of interest <<A>>
+Symbol : EF.peg.992 occurred 4 times during the 6 comparisons
+Entry found in Ag_t03 V2A_t03 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.2384 occurred 2 times during the 6 comparisons
+Entry found in Ag_t03 V2A_t03 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant3], inside region of interest <<A>>
+Symbol : EF.peg.658 occurred 2 times during the 6 comparisons
+Entry found in Ag_t03 V2A_t03 [Quadrant3], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Symbol : EF.peg.1803 occurred 2 times during the 6 comparisons
+Entry found in Ag_t03 V2A_t03 [Quadrant3], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Symbol : EF.peg.2546 occurred 2 times during the 6 comparisons
+Entry found in Ag_t03 V2A_t03 [Quadrant3], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Symbol : EF.peg.841 occurred 4 times during the 6 comparisons
+Entry found in Ag_t03 V2A_t03 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Symbol : EF.peg.2437 occurred 4 times during the 6 comparisons
+Entry found in Ag_t03 V2A_t03 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Symbol : EF.peg.1895 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.540 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.2172 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.2213 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.702 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.2211 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.2368 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.629 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.697 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.701 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.2173 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.2215 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.2212 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.970 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<B>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<C>>
+Symbol : EF.peg.1894 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.1893 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.2180 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.699 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.2364 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.1171 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.124 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.741 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.2374 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.1901 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.377 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.2176 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.2367 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.698 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.1892 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.1982 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Symbol : EF.peg.2991 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Symbol : EF.peg.1983 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<B>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Symbol : EF.peg.703 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Symbol : EF.peg.1980 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<B>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Symbol : EF.peg.2375 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Symbol : EF.peg.700 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Symbol : EF.peg.1970 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Symbol : EF.peg.1924 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<B>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Symbol : EF.peg.55 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<B>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Symbol : EF.peg.696 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Symbol : EF.peg.330 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Symbol : EF.peg.2174 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Symbol : EF.peg.2208 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<C>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<C>>
+Symbol : EF.peg.807 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<C>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<C>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.2214 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<C>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<C>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<A>>
+Symbol : EF.peg.1550 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Symbol : EF.peg.871 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Symbol : EF.peg.2521 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Symbol : EF.peg.2637 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Symbol : EF.peg.126 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Symbol : EF.peg.634 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Symbol : EF.peg.1538 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Symbol : EF.peg.635 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Symbol : EF.peg.882 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in Ag_t90 V2A_t90 [Quadrant3], inside region of interest <<A>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant3], inside region of interest <<A>>
+Symbol : EF.peg.2355 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant3], inside region of interest <<B>>
+Entry found in Ag_t90 V2A_t90 [Quadrant3], inside region of interest <<B>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant3], inside region of interest <<M>>
+Symbol : EF.peg.29 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Symbol : EF.peg.1828 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<C>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Symbol : EF.peg.2366 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<C>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Symbol : EF.peg.2845 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<C>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Symbol : EF.peg.753 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Symbol : EF.peg.1908 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Symbol : EF.peg.2224 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Symbol : EF.peg.2317 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<C>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<B>>
+Symbol : EF.peg.268 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Symbol : EF.peg.2204 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Symbol : EF.peg.383 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Symbol : EF.peg.2365 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Symbol : EF.peg.802 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in Ag_t90 V2A_t90 [Quadrant1], inside region of interest <<M>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant1], inside region of interest <<M>>
+Symbol : EF.peg.989 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant3], inside region of interest <<M>>
+Entry found in Ag_t90 V2A_t90 [Quadrant3], inside region of interest <<M>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant3], inside region of interest <<M>>
+Symbol : EF.peg.473 occurred 3 times during the 6 comparisons
+Entry found in Ag_t90 AgXX_t90 [Quadrant3], inside region of interest <<M>>
+Entry found in Ag_t90 V2A_t90 [Quadrant3], inside region of interest <<C>>
+Entry found in V2A_t90 AgXX_t90 [Quadrant3], inside region of interest <<B>>

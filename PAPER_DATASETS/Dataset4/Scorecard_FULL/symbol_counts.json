@@ -1,0 +1,1382 @@
+{
+    "EF.peg.1868": {
+        "Exp Cond": [
+            "Ag_t03 AgXX_t03",
+            "Ag_t03 V2A_t03",
+            "Ag_t90 V2A_t90",
+            "V2A_t03 AgXX_t03"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.2124": {
+        "Exp Cond": [
+            "Ag_t03 AgXX_t03",
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.481": {
+        "Exp Cond": [
+            "Ag_t03 AgXX_t03",
+            "Ag_t03 V2A_t03",
+            "V2A_t03 AgXX_t03",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.426": {
+        "Exp Cond": [
+            "Ag_t03 AgXX_t03",
+            "Ag_t03 V2A_t03",
+            "Ag_t90 V2A_t90",
+            "V2A_t03 AgXX_t03"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.992": {
+        "Exp Cond": [
+            "Ag_t03 V2A_t03",
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.2384": {
+        "Exp Cond": [
+            "Ag_t03 V2A_t03",
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.658": {
+        "Exp Cond": [
+            "Ag_t03 V2A_t03",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.1803": {
+        "Exp Cond": [
+            "Ag_t03 V2A_t03",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.2546": {
+        "Exp Cond": [
+            "Ag_t03 V2A_t03",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.841": {
+        "Exp Cond": [
+            "Ag_t03 V2A_t03",
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.2437": {
+        "Exp Cond": [
+            "Ag_t03 V2A_t03",
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.1895": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.540": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.2172": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.2213": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.702": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.2211": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.2368": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.629": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.697": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.701": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.2173": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.2215": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.2212": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.970": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "B",
+            "C"
+        ]
+    },
+    "EF.peg.1894": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.1893": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.2180": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.699": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.2364": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.1171": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.124": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.741": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.2374": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.1901": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.377": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.2176": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.2367": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.698": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.1892": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.1982": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "B",
+            "A",
+            "B"
+        ]
+    },
+    "EF.peg.2991": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "B",
+            "A",
+            "B"
+        ]
+    },
+    "EF.peg.1983": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "B",
+            "B",
+            "M"
+        ]
+    },
+    "EF.peg.703": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "B",
+            "A",
+            "B"
+        ]
+    },
+    "EF.peg.1980": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "B",
+            "B",
+            "M"
+        ]
+    },
+    "EF.peg.2375": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "B",
+            "A",
+            "B"
+        ]
+    },
+    "EF.peg.700": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "B",
+            "A",
+            "B"
+        ]
+    },
+    "EF.peg.1970": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "B",
+            "A",
+            "B"
+        ]
+    },
+    "EF.peg.1924": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "B",
+            "B",
+            "M"
+        ]
+    },
+    "EF.peg.55": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "B",
+            "B",
+            "M"
+        ]
+    },
+    "EF.peg.696": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "B",
+            "A",
+            "B"
+        ]
+    },
+    "EF.peg.330": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "B",
+            "A",
+            "B"
+        ]
+    },
+    "EF.peg.2174": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "B",
+            "A",
+            "B"
+        ]
+    },
+    "EF.peg.2208": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "C",
+            "M",
+            "C"
+        ]
+    },
+    "EF.peg.807": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "C",
+            "C",
+            "A"
+        ]
+    },
+    "EF.peg.2214": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "C",
+            "C",
+            "A"
+        ]
+    },
+    "EF.peg.1550": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.871": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.2521": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.2637": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.126": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.634": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.1538": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.635": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.882": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "EF.peg.2355": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "B",
+            "B",
+            "M"
+        ]
+    },
+    "EF.peg.29": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "EF.peg.1828": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "M",
+            "C",
+            "B"
+        ]
+    },
+    "EF.peg.2366": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "M",
+            "C",
+            "B"
+        ]
+    },
+    "EF.peg.2845": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "M",
+            "C",
+            "B"
+        ]
+    },
+    "EF.peg.753": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "EF.peg.1908": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "EF.peg.2224": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "EF.peg.2317": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "M",
+            "C",
+            "B"
+        ]
+    },
+    "EF.peg.268": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "EF.peg.2204": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "EF.peg.383": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "EF.peg.2365": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "EF.peg.802": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q1"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "EF.peg.989": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "EF.peg.473": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90",
+            "Ag_t90 V2A_t90",
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3",
+            "Q3",
+            "Q3"
+        ],
+        "ROI": [
+            "M",
+            "C",
+            "B"
+        ]
+    }
+}
