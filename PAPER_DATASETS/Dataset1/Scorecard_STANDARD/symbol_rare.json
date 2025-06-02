@@ -1,0 +1,57 @@
+{
+    "SAUSA300_RS10185": {
+        "Exp Cond": [
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "SAUSA300_RS10190": {
+        "Exp Cond": [
+            "DEL LZD"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "SAUSA300_RS03470": {
+        "Exp Cond": [
+            "VAN CPT"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "D"
+        ]
+    },
+    "SAUSA300_RS03930": {
+        "Exp Cond": [
+            "VAN CPT"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "D"
+        ]
+    },
+    "SAUSA300_RS11120": {
+        "Exp Cond": [
+            "VAN LZD"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "D"
+        ]
+    }
+}

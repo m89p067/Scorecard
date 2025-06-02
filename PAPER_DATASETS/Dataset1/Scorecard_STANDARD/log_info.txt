@@ -1,0 +1,136 @@
+Number of comparisons performed :7
+-------------- Comparison 1 of 7
+Comparison : CPT LZD
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 2457 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<B>> group contains 1 entries
+Quadrant1 total entries were 873
+
+Quadrant2 total entries were 144
+
+Quadrant3 total entries were 1033
+
+Quadrant4 total entries were 353
+
+In total the scorecard identified 3 entries inside the shaded regions of interest
+
+-------------- Comparison 2 of 7
+Comparison : DEL CPT
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 2457 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<C>> group contains 1 entries
+Quadrant1 total entries were 898
+
+Quadrant2 total entries were 320
+
+Quadrant3 total entries were 993
+
+Quadrant4 total entries were 178
+
+In total the scorecard identified 3 entries inside the shaded regions of interest
+
+-------------- Comparison 3 of 7
+Comparison : DEL LZD
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 2457 entries
+
+In Quadrant1 the <<A>> group contains 4 entries
+Quadrant1 total entries were 817
+
+Quadrant2 total entries were 194
+
+Quadrant3 total entries were 1124
+
+Quadrant4 total entries were 256
+
+In total the scorecard identified 4 entries inside the shaded regions of interest
+
+-------------- Comparison 4 of 7
+Comparison : VAN CPT
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 2457 entries
+
+Quadrant1 total entries were 855
+
+Quadrant2 total entries were 378
+
+In Quadrant3 the <<D>> group contains 7 entries
+Quadrant3 total entries were 626
+
+Quadrant4 total entries were 548
+
+In total the scorecard identified 7 entries inside the shaded regions of interest
+
+-------------- Comparison 5 of 7
+Comparison : VAN DEL
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 2457 entries
+
+Quadrant1 total entries were 764
+
+Quadrant2 total entries were 319
+
+In Quadrant3 the <<D>> group contains 4 entries
+Quadrant3 total entries were 683
+
+Quadrant4 total entries were 630
+
+In total the scorecard identified 4 entries inside the shaded regions of interest
+
+-------------- Comparison 6 of 7
+Comparison : VAN LZD
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 2457 entries
+
+Quadrant1 total entries were 745
+
+Quadrant2 total entries were 280
+
+In Quadrant3 the <<D>> group contains 6 entries
+Quadrant3 total entries were 727
+
+Quadrant4 total entries were 657
+
+In total the scorecard identified 6 entries inside the shaded regions of interest
+
+******************** Record counts:
+Symbol : SAUSA300_RS03525 occurred 3 times during the 7 comparisons
+Entry found in CPT LZD [Quadrant1], inside region of interest <<A>>
+Entry found in DEL CPT [Quadrant1], inside region of interest <<A>>
+Entry found in DEL LZD [Quadrant1], inside region of interest <<A>>
+Symbol : SAUSA300_RS04560 occurred 3 times during the 7 comparisons
+Entry found in CPT LZD [Quadrant1], inside region of interest <<A>>
+Entry found in DEL CPT [Quadrant1], inside region of interest <<A>>
+Entry found in DEL LZD [Quadrant1], inside region of interest <<A>>
+Symbol : SAUSA300_RS08475 occurred 2 times during the 7 comparisons
+Entry found in CPT LZD [Quadrant1], inside region of interest <<B>>
+Entry found in DEL CPT [Quadrant1], inside region of interest <<C>>
+Symbol : SAUSA300_RS03455 occurred 3 times during the 7 comparisons
+Entry found in VAN CPT [Quadrant3], inside region of interest <<D>>
+Entry found in VAN DEL [Quadrant3], inside region of interest <<D>>
+Entry found in VAN LZD [Quadrant3], inside region of interest <<D>>
+Symbol : SAUSA300_RS03465 occurred 2 times during the 7 comparisons
+Entry found in VAN CPT [Quadrant3], inside region of interest <<D>>
+Entry found in VAN LZD [Quadrant3], inside region of interest <<D>>
+Symbol : SAUSA300_RS03475 occurred 3 times during the 7 comparisons
+Entry found in VAN CPT [Quadrant3], inside region of interest <<D>>
+Entry found in VAN DEL [Quadrant3], inside region of interest <<D>>
+Entry found in VAN LZD [Quadrant3], inside region of interest <<D>>
+Symbol : SAUSA300_RS06820 occurred 3 times during the 7 comparisons
+Entry found in VAN CPT [Quadrant3], inside region of interest <<D>>
+Entry found in VAN DEL [Quadrant3], inside region of interest <<D>>
+Entry found in VAN LZD [Quadrant3], inside region of interest <<D>>
+Symbol : SAUSA300_RS11135 occurred 3 times during the 7 comparisons
+Entry found in VAN CPT [Quadrant3], inside region of interest <<D>>
+Entry found in VAN DEL [Quadrant3], inside region of interest <<D>>
+Entry found in VAN LZD [Quadrant3], inside region of interest <<D>>
