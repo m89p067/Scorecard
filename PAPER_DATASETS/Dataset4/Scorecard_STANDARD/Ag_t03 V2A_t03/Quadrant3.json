@@ -1,0 +1,176 @@
+{
+    "A": [
+        "EF.peg.1868",
+        "EF.peg.2404",
+        "EF.peg.2384",
+        "EF.peg.658",
+        "EF.peg.2582",
+        "EF.peg.481",
+        "EF.peg.1803",
+        "EF.peg.426",
+        "EF.peg.3020",
+        "EF.peg.875",
+        "EF.peg.1851"
+    ],
+    "B": [
+        "EF.peg.841"
+    ],
+    "C": [],
+    "D": [],
+    "E": [],
+    "A_x": [
+        -10.2692864619328,
+        -9.87962636306316,
+        -9.76637319596665,
+        -9.41535763712579,
+        -10.0948666027022,
+        -9.44154502300853,
+        -9.08591282315135,
+        -9.24939580284643,
+        -8.39148576954281,
+        -8.06936115101169,
+        -7.96265372374052
+    ],
+    "B_x": [
+        -9.23983687904084
+    ],
+    "C_x": [],
+    "D_x": [],
+    "E_x": [],
+    "A_y": [
+        -10.2692864619328,
+        -9.87962636306316,
+        -9.76637319596665,
+        -9.41535763712579,
+        -10.0948666027022,
+        -9.44154502300853,
+        -9.08591282315135,
+        -9.24939580284643,
+        -8.39148576954281,
+        -8.06936115101169,
+        -7.96265372374052
+    ],
+    "B_y": [
+        -4.8820551235682
+    ],
+    "C_y": [],
+    "D_y": [],
+    "E_y": [],
+    "A_pval_x": [
+        1.23523916343866e-08,
+        6.66161593722841e-08,
+        1.21579702834364e-07,
+        5.57200698857771e-07,
+        2.65044200695265e-06,
+        3.25423214963535e-06,
+        6.73768402024106e-06,
+        3.20350746496888e-05,
+        9.18430782364254e-05,
+        0.0003922554271842,
+        0.0007298706348534
+    ],
+    "A_pval_y": [
+        6.8228473039114e-09,
+        4.15402416202637e-08,
+        7.9034646957692e-08,
+        3.01500902644259e-07,
+        1.48285679824936e-06,
+        1.76194034018165e-06,
+        3.5697528322997e-06,
+        2.17443462913548e-05,
+        6.02634969474272e-05,
+        0.0002549088275778,
+        0.0004850885036145
+    ],
+    "B_pval_x": [
+        1.14826516060133e-05
+    ],
+    "B_pval_y": [
+        0.0007141857808529
+    ],
+    "C_pval_x": [],
+    "C_pval_y": [],
+    "D_pval_x": [],
+    "D_pval_y": [],
+    "E_pval_x": [],
+    "E_pval_y": [],
+    "COLORS": [
+        "turquoise",
+        "crimson",
+        "orangered",
+        "navy",
+        "greenyellow"
+    ],
+    "params": {
+        "FC cond x": "Ag_t03_logFC",
+        "FC cond y": "V2A_t03_logFC",
+        "padj cond x": "Ag_t03_padj",
+        "padj cond y": "V2A_t03_padj",
+        "incl aver": false,
+        "base_dir": "D:/GED_VIS_PROJECT/Dataset7_REDO",
+        "filename": "out.csv",
+        "zscore": false,
+        "Treatment1 name": "Ag_t03",
+        "Treatment2 name": "V2A_t03",
+        "Control name": "Ctrl",
+        "fig_size": 10,
+        "save_dir": "D:/GED_VIS_PROJECT/Dataset7_REDO/Scorecard_STANDARD",
+        "colors": [
+            "turquoise",
+            "crimson",
+            "orangered",
+            "navy",
+            "greenyellow"
+        ],
+        "other_colors": [
+            "lavenderblush",
+            "mistyrose",
+            "plum"
+        ],
+        "th_fold_change": 2.5,
+        "th_significance": 0.001,
+        "font_size_quadrants": 8,
+        "font_size_examples": 16,
+        "marker_trasp": [
+            0.95,
+            0.8,
+            0.65,
+            0.45
+        ],
+        "rect_trasp": [
+            0.25,
+            0.15,
+            0.4
+        ],
+        "rect_colors": [
+            "silver",
+            "lightgrey",
+            "darkgrey"
+        ],
+        "markers": [
+            "o",
+            "^",
+            "s",
+            "*",
+            "X",
+            "p",
+            "."
+        ],
+        "markers_sizes": [
+            14,
+            12,
+            10,
+            8
+        ],
+        "is_example": false,
+        "use_notation": true,
+        "gene_name": "GN",
+        "multiplication factor": 2.5,
+        "CSV delimiter": ",",
+        "Log Epsilon": 1e-10,
+        "Scorecard title": "Nosocomial Ent. faec. under metal stress",
+        "labels font size": 18,
+        "Total entries": 3025,
+        "Quadrant entries": 1059
+    }
+}
