@@ -1,0 +1,126 @@
+{
+    "A": [],
+    "B": [
+        "SA_RS13430"
+    ],
+    "C": [],
+    "D": [],
+    "E": [
+        "SA_RS03110"
+    ],
+    "A_x": [],
+    "B_x": [
+        -4.41417886
+    ],
+    "C_x": [],
+    "D_x": [],
+    "E_x": [
+        -1.889787643
+    ],
+    "A_y": [],
+    "B_y": [
+        2.03898173
+    ],
+    "C_y": [],
+    "D_y": [],
+    "E_y": [
+        3.46499388
+    ],
+    "A_pval_x": [],
+    "A_pval_y": [],
+    "B_pval_x": [
+        7.45e-16
+    ],
+    "B_pval_y": [
+        0.000969054
+    ],
+    "C_pval_x": [],
+    "C_pval_y": [],
+    "D_pval_x": [],
+    "D_pval_y": [],
+    "E_pval_x": [
+        0.015584027
+    ],
+    "E_pval_y": [
+        4.33e-11
+    ],
+    "COLORS": [
+        "goldenrod",
+        "limegreen",
+        "dodgerblue",
+        "sandybrown",
+        "crimson"
+    ],
+    "params": {
+        "FC cond x": "Cmpd8vsUn_log2FoldChange",
+        "FC cond y": "Lor_OxvsLor_log2FoldChange",
+        "padj cond x": "Cmpd8vsUn_padj",
+        "padj cond y": "Lor_OxvsLor_padj",
+        "incl aver": false,
+        "base_dir": "D:/GED_VIS_PROJECT/Dataset3_REDO",
+        "filename": "USA100_comp.CSV",
+        "zscore": false,
+        "Treatment1 name": "Cmpd8vsUn",
+        "Treatment2 name": "Lor_OxvsLor",
+        "Control name": "Un",
+        "fig_size": 10,
+        "save_dir": "D:/GED_VIS_PROJECT/Dataset3_REDO/Scorecard_STANDARD",
+        "colors": [
+            "goldenrod",
+            "limegreen",
+            "dodgerblue",
+            "sandybrown",
+            "crimson"
+        ],
+        "other_colors": [
+            "darkcyan",
+            "indigo",
+            "orangered"
+        ],
+        "th_fold_change": 2,
+        "th_significance": 0.05,
+        "font_size_quadrants": 8,
+        "font_size_examples": 16,
+        "marker_trasp": [
+            0.95,
+            0.8,
+            0.65,
+            0.45
+        ],
+        "rect_trasp": [
+            0.25,
+            0.15,
+            0.4
+        ],
+        "rect_colors": [
+            "silver",
+            "lightgrey",
+            "darkgrey"
+        ],
+        "markers": [
+            "o",
+            "^",
+            "s",
+            "*",
+            "X",
+            "p",
+            "."
+        ],
+        "markers_sizes": [
+            14,
+            12,
+            10,
+            8
+        ],
+        "is_example": false,
+        "use_notation": false,
+        "gene_name": "gene_id",
+        "multiplication factor": 1.5,
+        "CSV delimiter": ";",
+        "Log Epsilon": 1e-10,
+        "Scorecard title": "MRSA USA100 cultures",
+        "labels font size": 18,
+        "Total entries": 3158,
+        "Quadrant entries": 785
+    }
+}
