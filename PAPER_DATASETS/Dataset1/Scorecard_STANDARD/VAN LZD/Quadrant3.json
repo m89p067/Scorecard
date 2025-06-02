@@ -1,0 +1,142 @@
+{
+    "A": [],
+    "B": [],
+    "C": [],
+    "D": [
+        "SAUSA300_RS03455",
+        "SAUSA300_RS03465",
+        "SAUSA300_RS03475",
+        "SAUSA300_RS06820",
+        "SAUSA300_RS11120",
+        "SAUSA300_RS11135"
+    ],
+    "E": [],
+    "A_x": [],
+    "B_x": [],
+    "C_x": [],
+    "D_x": [
+        -4.31,
+        -4.26,
+        -3.71,
+        -3.5,
+        -3.35,
+        -3.61
+    ],
+    "E_x": [],
+    "A_y": [],
+    "B_y": [],
+    "C_y": [],
+    "D_y": [
+        -0.76,
+        -0.58,
+        -0.77,
+        -0.97,
+        -0.75,
+        -1.08
+    ],
+    "E_y": [],
+    "A_pval_x": [],
+    "A_pval_y": [],
+    "B_pval_x": [],
+    "B_pval_y": [],
+    "C_pval_x": [],
+    "C_pval_y": [],
+    "D_pval_x": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "D_pval_y": [
+        0.00395,
+        0.03443,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    ],
+    "E_pval_x": [],
+    "E_pval_y": [],
+    "COLORS": [
+        "green",
+        "teal",
+        "blue",
+        "red",
+        "magenta"
+    ],
+    "params": {
+        "FC cond x": "48hr VAN vs 48 hr NO ABX log2FC",
+        "FC cond y": "48hr LZD vs 48 hr NO ABX log2FC",
+        "padj cond x": "48hr VAN vs 48 hr NO ABX Adj. p-value",
+        "padj cond y": "48hr LZD vs 48 hr NO ABX Adj. p-value",
+        "incl aver": false,
+        "base_dir": "D:/GED_VIS_PROJECT/Dataset1_REDO",
+        "filename": "Cartel1.CSV",
+        "zscore": false,
+        "Treatment1 name": "VAN",
+        "Treatment2 name": "LZD",
+        "Control name": "NO ABX",
+        "fig_size": 10,
+        "save_dir": "D:/GED_VIS_PROJECT/Dataset1_REDO/Scorecard",
+        "colors": [
+            "green",
+            "teal",
+            "blue",
+            "red",
+            "magenta"
+        ],
+        "other_colors": [
+            "orange",
+            "gold",
+            "plum",
+            "lightgrey"
+        ],
+        "th_fold_change": 2,
+        "th_significance": 0.05,
+        "font_size_quadrants": 8,
+        "font_size_examples": 16,
+        "marker_trasp": [
+            0.95,
+            0.8,
+            0.65,
+            0.45
+        ],
+        "rect_trasp": [
+            0.25,
+            0.15,
+            0.4
+        ],
+        "rect_colors": [
+            "silver",
+            "lightgrey",
+            "darkgrey"
+        ],
+        "markers": [
+            "o",
+            "^",
+            "s",
+            "*",
+            "X",
+            "p",
+            "."
+        ],
+        "markers_sizes": [
+            14,
+            12,
+            10,
+            8
+        ],
+        "is_example": false,
+        "use_notation": true,
+        "gene_name": "Orf",
+        "multiplication factor": 1.5,
+        "CSV delimiter": ";",
+        "Log Epsilon": 1e-10,
+        "Scorecard title": "After 48hr",
+        "labels font size": 18,
+        "Total entries": 2457,
+        "Quadrant entries": 727
+    }
+}
