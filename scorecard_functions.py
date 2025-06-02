@@ -2118,6 +2118,7 @@ def make_volcano(my_directory):
                 etichette=[i_v_s.lower() for i_v_s in etichette]
                 etichette2=[i_v_s.lower() for i_v_s in etichette2]
         incl_ave=my_data[quadrante]['params']['incl aver']
+        labels_fs=my_data[quadrante]['params']['labels font size']
         if incl_ave:
             etichette=etichette+etichette2
         titolo=my_data[quadrante]['params']['Scorecard title']
