@@ -1,0 +1,161 @@
+{
+    "A": [],
+    "B": [],
+    "C": [],
+    "D": [],
+    "E": [],
+    "A_x": [],
+    "B_x": [],
+    "C_x": [],
+    "D_x": [],
+    "E_x": [],
+    "A_y": [],
+    "B_y": [],
+    "C_y": [],
+    "D_y": [],
+    "E_y": [],
+    "A_pval_x": [],
+    "A_pval_y": [],
+    "B_pval_x": [],
+    "B_pval_y": [],
+    "C_pval_x": [],
+    "C_pval_y": [],
+    "D_pval_x": [],
+    "D_pval_y": [],
+    "E_pval_x": [],
+    "E_pval_y": [],
+    "M": [
+        "SMU_1905c",
+        "SMU_1906c"
+    ],
+    "S": [
+        "SMU_1907",
+        "SMU_807"
+    ],
+    "R": [
+        "AAN59021.1"
+    ],
+    "M_x": [
+        -3.20541384186951,
+        -2.38474049763064
+    ],
+    "S_x": [
+        -2.04302587040818,
+        -2.23620068154971
+    ],
+    "R_x": [
+        -0.851299779736544
+    ],
+    "M_y": [
+        2.405877429,
+        2.504168002
+    ],
+    "S_y": [
+        1.772565548,
+        1.102083878
+    ],
+    "R_y": [
+        2.07011816
+    ],
+    "M_pval_x": [
+        7.1083737686471705e-25,
+        2.0327275227346197e-11
+    ],
+    "M_pval_y": [
+        1.5e-06,
+        7.35e-06
+    ],
+    "S_pval_x": [
+        4.91770675803468e-07,
+        1.6814771806659901e-31
+    ],
+    "S_pval_y": [
+        6.67e-05,
+        4.41e-06
+    ],
+    "R_pval_x": [
+        0.0009300277371466
+    ],
+    "R_pval_y": [
+        2.7100000000000004e-21
+    ],
+    "COLORS": [
+        "tomato",
+        "darkorange",
+        "olivedrab",
+        "powderblue",
+        "hotpink"
+    ],
+    "params": {
+        "FC cond x": "TSB_versus_Lac_log2FoldChange",
+        "FC cond y": "TSB_versus_Glu_log2FoldChange",
+        "padj cond x": "TSB_versus_Lac_padj",
+        "padj cond y": "TSB_versus_Glu_padj",
+        "incl aver": true,
+        "base_dir": "D:/GED_VIS_PROJECT/Dataset5_REDO",
+        "filename": "preproc_data_red.CSV",
+        "zscore": false,
+        "Treatment1 name": "Lac",
+        "Treatment2 name": "Glu",
+        "Control name": "TSB",
+        "fig_size": 10,
+        "save_dir": "D:/GED_VIS_PROJECT/Dataset5_REDO/Scorecard_restricted_FULL",
+        "colors": [
+            "tomato",
+            "darkorange",
+            "olivedrab",
+            "powderblue",
+            "hotpink"
+        ],
+        "other_colors": [
+            "peru",
+            "khaki",
+            "lavender"
+        ],
+        "th_fold_change": 2,
+        "th_significance": 0.001,
+        "font_size_quadrants": 8,
+        "font_size_examples": 16,
+        "marker_trasp": [
+            0.95,
+            0.8,
+            0.65,
+            0.45
+        ],
+        "rect_trasp": [
+            0.25,
+            0.15,
+            0.4
+        ],
+        "rect_colors": [
+            "silver",
+            "lightgrey",
+            "darkgrey"
+        ],
+        "markers": [
+            "o",
+            "^",
+            "s",
+            "*",
+            "X",
+            "p",
+            "."
+        ],
+        "markers_sizes": [
+            14,
+            12,
+            10,
+            8
+        ],
+        "is_example": false,
+        "use_notation": true,
+        "gene_name": "Name",
+        "multiplication factor": 2,
+        "CSV delimiter": ";",
+        "Log Epsilon": 1e-10,
+        "Scorecard title": "Gene expr. of S. mutans",
+        "labels font size": 18,
+        "Total entries": 1814,
+        "Quadrant entries": 539
+    }
+}
