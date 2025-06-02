@@ -1,0 +1,191 @@
+{
+    "A": [
+        "SA_RS15060",
+        "SA_RS14495",
+        "SA_RS15065",
+        "SA_RS05730",
+        "SA_RS05795",
+        "SA_RS05800",
+        "SA_RS12490",
+        "SA_RS12520",
+        "SA_RS12525",
+        "SA_RS12530"
+    ],
+    "B": [
+        "SA_RS12660"
+    ],
+    "C": [
+        "SA_RS05930",
+        "SA_RS12505",
+        "SA_RS12540"
+    ],
+    "D": [],
+    "E": [],
+    "A_x": [
+        -4.112493607,
+        -4.28255733,
+        -4.248139107,
+        -4.076478143,
+        -4.725845322,
+        -4.404917696,
+        -3.316335024,
+        -3.191609427,
+        -3.949049132,
+        -3.500492451
+    ],
+    "B_x": [
+        -3.991360016
+    ],
+    "C_x": [
+        -2.265573361,
+        -2.750035649,
+        -2.896782262
+    ],
+    "D_x": [],
+    "E_x": [],
+    "A_y": [
+        -4.218885923,
+        -4.468572902,
+        -4.551101885,
+        -3.43396033,
+        -5.166328922,
+        -5.266514896,
+        -3.392927382,
+        -3.559929626,
+        -4.765782687,
+        -4.179440754
+    ],
+    "B_y": [
+        -2.346004126
+    ],
+    "C_y": [
+        -3.03437338,
+        -3.147476303,
+        -3.279835085
+    ],
+    "D_y": [],
+    "E_y": [],
+    "A_pval_x": [
+        0.011562114,
+        0.018421385,
+        0.015078332,
+        0.003653485,
+        0.005193408,
+        0.002546245,
+        3.03e-22,
+        1.04e-10,
+        4.31e-18,
+        1.47e-13
+    ],
+    "A_pval_y": [
+        0.001831514,
+        4.02e-05,
+        9.54e-05,
+        0.000200576,
+        1.03e-06,
+        1.07e-07,
+        6.71e-39,
+        4.06e-14,
+        3.29e-17,
+        1.2e-20
+    ],
+    "B_pval_x": [
+        5.51e-05
+    ],
+    "B_pval_y": [
+        0.004088348
+    ],
+    "C_pval_x": [
+        0.012427313,
+        7.16e-15,
+        0.007893334
+    ],
+    "C_pval_y": [
+        2.37e-05,
+        7.14e-18,
+        0.000311524
+    ],
+    "D_pval_x": [],
+    "D_pval_y": [],
+    "E_pval_x": [],
+    "E_pval_y": [],
+    "COLORS": [
+        "goldenrod",
+        "limegreen",
+        "dodgerblue",
+        "sandybrown",
+        "crimson"
+    ],
+    "params": {
+        "FC cond x": "LorvsUn_log2FoldChange",
+        "FC cond y": "Lor_OxvsUn_log2FoldChange",
+        "padj cond x": "LorvsUn_padj",
+        "padj cond y": "Lor_OxvsUn_padj",
+        "incl aver": false,
+        "base_dir": "D:/GED_VIS_PROJECT/Dataset3_REDO",
+        "filename": "USA100_comp.CSV",
+        "zscore": false,
+        "Treatment1 name": "LorvsUn",
+        "Treatment2 name": "Lor_OxvsUn",
+        "Control name": "Un",
+        "fig_size": 10,
+        "save_dir": "D:/GED_VIS_PROJECT/Dataset3_REDO/Scorecard_STANDARD",
+        "colors": [
+            "goldenrod",
+            "limegreen",
+            "dodgerblue",
+            "sandybrown",
+            "crimson"
+        ],
+        "other_colors": [
+            "darkcyan",
+            "indigo",
+            "orangered"
+        ],
+        "th_fold_change": 2,
+        "th_significance": 0.05,
+        "font_size_quadrants": 8,
+        "font_size_examples": 16,
+        "marker_trasp": [
+            0.95,
+            0.8,
+            0.65,
+            0.45
+        ],
+        "rect_trasp": [
+            0.25,
+            0.15,
+            0.4
+        ],
+        "rect_colors": [
+            "silver",
+            "lightgrey",
+            "darkgrey"
+        ],
+        "markers": [
+            "o",
+            "^",
+            "s",
+            "*",
+            "X",
+            "p",
+            "."
+        ],
+        "markers_sizes": [
+            14,
+            12,
+            10,
+            8
+        ],
+        "is_example": false,
+        "use_notation": false,
+        "gene_name": "gene_id",
+        "multiplication factor": 1.5,
+        "CSV delimiter": ";",
+        "Log Epsilon": 1e-10,
+        "Scorecard title": "MRSA USA100 cultures",
+        "labels font size": 18,
+        "Total entries": 3172,
+        "Quadrant entries": 1297
+    }
+}
