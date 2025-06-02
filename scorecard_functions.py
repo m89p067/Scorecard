@@ -1,6 +1,6 @@
 # Filename: scorecard_functions.py
 # Author: Mauro Nascimben
-# Created: 2024-10-17
+# Created: 2025-06-02
 # Description: Still under development.
 # Import statements
 import numpy as np
@@ -2404,9 +2404,9 @@ def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,tex
         str_y=[str(x) for x in all_y]
         lx=list(map(' '.join, zip(labels_x, str_x)))
         ly=list(map(' '.join, zip(labels_y, str_y)))
-        if len(remove_string)>0:
+        if len(remove_string)>0 and if Position>0:
             res_genes = list(map(lambda st: str.replace(st, remove_string, ""), all_genes))
-        if Position>0:
+        
             y_pos = np.arange(Position)
             if try_adj_test:
                 bars1 =ax.barh( y_pos-offset,all_x, height=height, color= all_colors, align='center', label=lx)
