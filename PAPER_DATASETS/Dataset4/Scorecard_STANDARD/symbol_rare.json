@@ -1,0 +1,387 @@
+{
+    "EF.peg.402": {
+        "Exp Cond": [
+            "Ag_t03 AgXX_t03"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.2404": {
+        "Exp Cond": [
+            "Ag_t03 V2A_t03"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.2582": {
+        "Exp Cond": [
+            "Ag_t03 V2A_t03"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.3020": {
+        "Exp Cond": [
+            "Ag_t03 V2A_t03"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.875": {
+        "Exp Cond": [
+            "Ag_t03 V2A_t03"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1851": {
+        "Exp Cond": [
+            "Ag_t03 V2A_t03"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.3040": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.3041": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.620": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.452": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1458": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.243": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1219": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1074": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.3070": {
+        "Exp Cond": [
+            "Ag_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.328": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.327": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.325": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.324": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.329": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.326": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.8": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.1795": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.886": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.589": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.2438": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.939": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.3034": {
+        "Exp Cond": [
+            "Ag_t90 V2A_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.809": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "B"
+        ]
+    },
+    "EF.peg.951": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "C"
+        ]
+    },
+    "EF.peg.2473": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.111": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.2531": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.2554": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "EF.peg.887": {
+        "Exp Cond": [
+            "V2A_t90 AgXX_t90"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "A"
+        ]
+    }
+}
