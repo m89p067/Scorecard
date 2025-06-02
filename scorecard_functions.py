@@ -26,16 +26,14 @@ import matplotlib
 import matplotlib.ticker as mticker
 from itertools import combinations
 def get_unique_tuples(list_of_tuples):
-    """
-    Detects and returns unique tuples from a list, considering
-    tuples with the same strings (regardless of order) as equivalent.
-    """
-    unique_tuples = set()
+    result_set = set()  # Initialize as a set to automatically handle uniqueness
     for tpl in list_of_tuples:
-        # Sort the tuple to handle equivalent strings regardless of order
-        sorted_tuple = tuple(sorted(tpl))
-        unique_tuples.add(sorted_tuple)
-    return [tuple(t) for t in unique_tuples]
+        if tpl and all(x == tpl[0] for x in tpl):
+            # If all elements are equal (and it's not an empty tuple), skip it (cancel it)
+            continue
+        result_set.add(tpl)  # Add the tuple to the set
+    return list(result_set)  # Convert the set back to a list for the final output
+
 def reformat_name(test_str):
     """Internal utility function to adjust filenames"""
     for i in test_str:
