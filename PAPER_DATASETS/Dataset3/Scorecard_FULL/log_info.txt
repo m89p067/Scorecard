@@ -1,0 +1,958 @@
+Number of comparisons performed :6
+-------------- Comparison 1 of 6
+Comparison : Glu Suc
+Applying fold change thresholds of 2 and 4
+Also, filtering the data using a statistical threshold of 0.001
+Analyzed 1814 entries
+
+In Quadrant1 the <<C>> group contains 2 entries
+In Quadrant1 the <<S>> group contains 1 entries
+In Quadrant1 the <<R>> group contains 6 entries
+Quadrant1 total entries were 529
+
+Quadrant2 total entries were 373
+
+In Quadrant3 the <<A>> group contains 9 entries
+In Quadrant3 the <<B>> group contains 1 entries
+In Quadrant3 the <<C>> group contains 12 entries
+In Quadrant3 the <<E>> group contains 2 entries
+In Quadrant3 the <<M>> group contains 23 entries
+In Quadrant3 the <<S>> group contains 2 entries
+In Quadrant3 the <<R>> group contains 14 entries
+Quadrant3 total entries were 528
+
+In Quadrant4 the <<E>> group contains 1 entries
+In Quadrant4 the <<M>> group contains 2 entries
+In Quadrant4 the <<S>> group contains 5 entries
+In Quadrant4 the <<R>> group contains 8 entries
+Quadrant4 total entries were 384
+
+In total the scorecard identified 27 entries inside the shaded regions of interest
+
+The scorecard also identified 61 entries between F.C. thresholds
+
+-------------- Comparison 2 of 6
+Comparison : Glu Xyl
+Applying fold change thresholds of 2 and 4
+Also, filtering the data using a statistical threshold of 0.001
+Analyzed 1812 entries
+
+In Quadrant1 the <<C>> group contains 1 entries
+In Quadrant1 the <<E>> group contains 4 entries
+In Quadrant1 the <<M>> group contains 2 entries
+In Quadrant1 the <<R>> group contains 6 entries
+Quadrant1 total entries were 445
+
+In Quadrant2 the <<A>> group contains 6 entries
+In Quadrant2 the <<C>> group contains 9 entries
+In Quadrant2 the <<E>> group contains 4 entries
+In Quadrant2 the <<M>> group contains 16 entries
+In Quadrant2 the <<S>> group contains 3 entries
+In Quadrant2 the <<R>> group contains 9 entries
+Quadrant2 total entries were 430
+
+Quadrant3 total entries were 470
+
+In Quadrant4 the <<M>> group contains 1 entries
+In Quadrant4 the <<R>> group contains 1 entries
+Quadrant4 total entries were 467
+
+In total the scorecard identified 24 entries inside the shaded regions of interest
+
+The scorecard also identified 38 entries between F.C. thresholds
+
+-------------- Comparison 3 of 6
+Comparison : Lac Glu
+Applying fold change thresholds of 2 and 4
+Also, filtering the data using a statistical threshold of 0.001
+Analyzed 1814 entries
+
+In Quadrant1 the <<D>> group contains 3 entries
+In Quadrant1 the <<M>> group contains 3 entries
+In Quadrant1 the <<S>> group contains 7 entries
+In Quadrant1 the <<R>> group contains 4 entries
+Quadrant1 total entries were 374
+
+In Quadrant2 the <<M>> group contains 2 entries
+In Quadrant2 the <<S>> group contains 2 entries
+In Quadrant2 the <<R>> group contains 1 entries
+Quadrant2 total entries were 539
+
+Quadrant3 total entries were 389
+
+In Quadrant4 the <<A>> group contains 10 entries
+In Quadrant4 the <<B>> group contains 10 entries
+In Quadrant4 the <<D>> group contains 3 entries
+In Quadrant4 the <<M>> group contains 22 entries
+In Quadrant4 the <<S>> group contains 12 entries
+In Quadrant4 the <<R>> group contains 4 entries
+Quadrant4 total entries were 512
+
+In total the scorecard identified 26 entries inside the shaded regions of interest
+
+The scorecard also identified 57 entries between F.C. thresholds
+
+-------------- Comparison 4 of 6
+Comparison : Lac Suc
+Applying fold change thresholds of 2 and 4
+Also, filtering the data using a statistical threshold of 0.001
+Analyzed 1850 entries
+
+Quadrant1 total entries were 134
+
+In Quadrant2 the <<A>> group contains 1 entries
+In Quadrant2 the <<C>> group contains 2 entries
+In Quadrant2 the <<M>> group contains 10 entries
+In Quadrant2 the <<S>> group contains 10 entries
+In Quadrant2 the <<R>> group contains 14 entries
+Quadrant2 total entries were 790
+
+Quadrant3 total entries were 163
+
+In Quadrant4 the <<A>> group contains 24 entries
+In Quadrant4 the <<B>> group contains 7 entries
+In Quadrant4 the <<C>> group contains 6 entries
+In Quadrant4 the <<M>> group contains 52 entries
+In Quadrant4 the <<S>> group contains 14 entries
+In Quadrant4 the <<R>> group contains 8 entries
+Quadrant4 total entries were 763
+
+In total the scorecard identified 40 entries inside the shaded regions of interest
+
+The scorecard also identified 108 entries between F.C. thresholds
+
+-------------- Comparison 5 of 6
+Comparison : Lac Xyl
+Applying fold change thresholds of 2 and 4
+Also, filtering the data using a statistical threshold of 0.001
+Analyzed 1849 entries
+
+In Quadrant1 the <<A>> group contains 18 entries
+In Quadrant1 the <<B>> group contains 4 entries
+In Quadrant1 the <<C>> group contains 11 entries
+In Quadrant1 the <<M>> group contains 46 entries
+In Quadrant1 the <<S>> group contains 16 entries
+In Quadrant1 the <<R>> group contains 21 entries
+Quadrant1 total entries were 749
+
+Quadrant2 total entries were 139
+
+In Quadrant3 the <<M>> group contains 9 entries
+In Quadrant3 the <<S>> group contains 9 entries
+In Quadrant3 the <<R>> group contains 7 entries
+Quadrant3 total entries were 814
+
+Quadrant4 total entries were 147
+
+In total the scorecard identified 33 entries inside the shaded regions of interest
+
+The scorecard also identified 108 entries between F.C. thresholds
+
+-------------- Comparison 6 of 6
+Comparison : Suc Xyl
+Applying fold change thresholds of 2 and 4
+Also, filtering the data using a statistical threshold of 0.001
+Analyzed 1848 entries
+
+Quadrant1 total entries were 196
+
+In Quadrant2 the <<A>> group contains 14 entries
+In Quadrant2 the <<B>> group contains 6 entries
+In Quadrant2 the <<C>> group contains 14 entries
+In Quadrant2 the <<E>> group contains 1 entries
+In Quadrant2 the <<M>> group contains 32 entries
+In Quadrant2 the <<S>> group contains 14 entries
+In Quadrant2 the <<R>> group contains 23 entries
+Quadrant2 total entries were 692
+
+Quadrant3 total entries were 233
+
+In Quadrant4 the <<B>> group contains 1 entries
+In Quadrant4 the <<M>> group contains 7 entries
+In Quadrant4 the <<S>> group contains 8 entries
+In Quadrant4 the <<R>> group contains 4 entries
+Quadrant4 total entries were 727
+
+In total the scorecard identified 36 entries inside the shaded regions of interest
+
+The scorecard also identified 88 entries between F.C. thresholds
+
+******************** Record counts:
+Symbol : SMU_1905c occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant1], inside region of interest <<C>>
+Entry found in Glu Xyl [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant2], inside region of interest <<C>>
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant4], inside region of interest <<B>>
+Symbol : SMU_1906c occurred 3 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant1], inside region of interest <<C>>
+Entry found in Lac Glu [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant2], inside region of interest <<C>>
+Symbol : SMU_1597c occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<A>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<A>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<A>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<A>>
+Symbol : celR occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<A>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<A>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<A>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<A>>
+Symbol : lacA occurred 3 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<A>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Symbol : lacB occurred 3 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<A>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Symbol : lacC occurred 3 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<A>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Symbol : lacD occurred 3 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<A>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Symbol : ptcA occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<A>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<A>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<A>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<A>>
+Symbol : ptcB occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<A>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<A>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<A>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<A>>
+Symbol : ptcC occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<A>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<A>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<A>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<A>>
+Symbol : bgl occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<B>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<A>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<B>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<A>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<C>>
+Symbol : SMU_1488c occurred 3 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<C>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<C>>
+Symbol : SMU_310 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<C>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<C>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<B>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<A>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<A>>
+Symbol : SMU_314 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<C>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<C>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<C>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<C>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<A>>
+Symbol : SMU_494 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<C>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<C>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<B>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<A>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<A>>
+Symbol : SMU_507 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<C>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<C>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<B>>
+Symbol : SMU_508 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<C>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<C>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<B>>
+Symbol : lacE occurred 3 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<C>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<B>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Symbol : lacF occurred 3 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<C>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<B>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Symbol : lacG occurred 3 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<C>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<B>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Symbol : lacX occurred 3 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<C>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<B>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Symbol : lytS occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<C>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<C>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<B>>
+Symbol : pdhC occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<C>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<C>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<B>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<A>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<A>>
+Symbol : pttB occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<E>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<E>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<D>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<A>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<A>>
+Symbol : treA occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<E>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<E>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<D>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<A>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<A>>
+Symbol : arcC occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant4], inside region of interest <<E>>
+Entry found in Glu Xyl [Quadrant1], inside region of interest <<E>>
+Entry found in Lac Glu [Quadrant1], inside region of interest <<D>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<A>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<A>>
+Symbol : AAN59021.1 occurred 2 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant1], inside region of interest <<S>>
+Entry found in Lac Glu [Quadrant2], inside region of interest <<R>>
+Symbol : SMU_1907 occurred 3 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant1], inside region of interest <<R>>
+Entry found in Lac Glu [Quadrant2], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant2], inside region of interest <<M>>
+Symbol : SMU_1909c occurred 3 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant1], inside region of interest <<R>>
+Entry found in Lac Suc [Quadrant2], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant4], inside region of interest <<S>>
+Symbol : SMU_49 occurred 2 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant1], inside region of interest <<R>>
+Entry found in Lac Suc [Quadrant2], inside region of interest <<R>>
+Symbol : SMU_613 occurred 2 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant1], inside region of interest <<R>>
+Entry found in Lac Suc [Quadrant2], inside region of interest <<R>>
+Symbol : SMU_807 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant1], inside region of interest <<R>>
+Entry found in Glu Xyl [Quadrant4], inside region of interest <<R>>
+Entry found in Lac Glu [Quadrant2], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant4], inside region of interest <<M>>
+Symbol : purD occurred 2 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant1], inside region of interest <<R>>
+Entry found in Lac Suc [Quadrant2], inside region of interest <<R>>
+Symbol : SMU_168 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : SMU_1704 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : SMU_1705 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : SMU_1706 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : SMU_172 occurred 3 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Symbol : SMU_1977c occurred 5 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<S>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<R>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<S>>
+Symbol : SMU_311 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<C>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<C>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<C>>
+Symbol : SMU_312 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<C>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<C>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<C>>
+Symbol : SMU_313 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<C>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<B>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<B>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<A>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<C>>
+Symbol : SMU_491 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : folT occurred 3 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<R>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<R>>
+Symbol : SMU_704c occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : SMU_706c occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : SMU_709 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<S>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<S>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<S>>
+Symbol : SMU_711 occurred 3 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Symbol : adhA occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : adhC occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : galR occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : gldA occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<C>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<C>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<C>>
+Symbol : lplA occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : lytR occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<B>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<B>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<B>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : nrdD occurred 5 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<S>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<R>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<S>>
+Symbol : pfl2 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<M>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<C>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<B>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<B>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<A>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<C>>
+Symbol : adhD occurred 5 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<S>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<R>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : SMU_1116c occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<R>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<R>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : SMU_1546 occurred 3 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<R>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<S>>
+Symbol : SMU_173 occurred 5 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<R>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<S>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<S>>
+Symbol : SMU_180 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<R>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<R>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : SMU_1976c occurred 2 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<R>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<R>>
+Symbol : SMU_2127 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<R>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<R>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : SMU_309 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<R>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<E>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<C>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<C>>
+Symbol : SMU_631 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<R>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<R>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : bglP occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<R>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<E>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<C>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<C>>
+Symbol : galK occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<R>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<R>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : murF occurred 5 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<R>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<S>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<S>>
+Symbol : pdhB occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<R>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<R>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<D>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<B>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<B>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : sgaT occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant3], inside region of interest <<R>>
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<R>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : fruD occurred 3 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant1], inside region of interest <<R>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<R>>
+Symbol : lacD2 occurred 3 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant1], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Symbol : SMU_1105c occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant4], inside region of interest <<S>>
+Entry found in Glu Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant1], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : SMU_1106c occurred 5 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant4], inside region of interest <<S>>
+Entry found in Glu Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Lac Glu [Quadrant1], inside region of interest <<R>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : fruP occurred 2 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Glu [Quadrant1], inside region of interest <<R>>
+Symbol : fruC occurred 2 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Glu [Quadrant1], inside region of interest <<R>>
+Symbol : bglB1 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant4], inside region of interest <<S>>
+Entry found in Glu Xyl [Quadrant1], inside region of interest <<C>>
+Entry found in Lac Glu [Quadrant1], inside region of interest <<M>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<C>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<E>>
+Symbol : SMU_1104c occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant4], inside region of interest <<R>>
+Entry found in Glu Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Lac Glu [Quadrant1], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : aguA occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant4], inside region of interest <<R>>
+Entry found in Glu Xyl [Quadrant1], inside region of interest <<E>>
+Entry found in Lac Glu [Quadrant1], inside region of interest <<D>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<B>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<A>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<C>>
+Symbol : SMU_527 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant4], inside region of interest <<R>>
+Entry found in Glu Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Lac Glu [Quadrant1], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : SMU_984 occurred 5 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant4], inside region of interest <<R>>
+Entry found in Lac Glu [Quadrant1], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<S>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<S>>
+Symbol : ascB occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant4], inside region of interest <<R>>
+Entry found in Glu Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Lac Glu [Quadrant1], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : bglA occurred 5 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant4], inside region of interest <<R>>
+Entry found in Lac Glu [Quadrant1], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<S>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<S>>
+Symbol : bglB2 occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant4], inside region of interest <<R>>
+Entry found in Glu Xyl [Quadrant1], inside region of interest <<E>>
+Entry found in Lac Glu [Quadrant1], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<C>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<C>>
+Symbol : otcA occurred 6 times during the 6 comparisons
+Entry found in Glu Suc [Quadrant4], inside region of interest <<R>>
+Entry found in Glu Xyl [Quadrant1], inside region of interest <<E>>
+Entry found in Lac Glu [Quadrant1], inside region of interest <<D>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<B>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<A>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<C>>
+Symbol : SMU_210c occurred 3 times during the 6 comparisons
+Entry found in Glu Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : aguD occurred 5 times during the 6 comparisons
+Entry found in Glu Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Lac Glu [Quadrant1], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : adhB occurred 5 times during the 6 comparisons
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<R>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : mtlD occurred 5 times during the 6 comparisons
+Entry found in Glu Xyl [Quadrant2], inside region of interest <<R>>
+Entry found in Lac Glu [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Suc [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : SMU_574c occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<A>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<A>>
+Symbol : SMU_609 occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<A>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<A>>
+Symbol : SMU_941c occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<B>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<B>>
+Symbol : folD occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<A>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<B>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<B>>
+Symbol : SMU_940c occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<C>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<B>>
+Symbol : SMU_1006 occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<S>>
+Entry found in Suc Xyl [Quadrant4], inside region of interest <<S>>
+Symbol : SMU_1098c occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant4], inside region of interest <<M>>
+Symbol : SMU_1904c occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant4], inside region of interest <<M>>
+Symbol : SMU_423 occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant4], inside region of interest <<M>>
+Symbol : SMU_87 occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant4], inside region of interest <<M>>
+Symbol : SMU_913 occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant4], inside region of interest <<M>>
+Symbol : SMU_1007 occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<S>>
+Symbol : SMU_1511c occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<S>>
+Symbol : SMU_513 occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant4], inside region of interest <<R>>
+Symbol : SMU_626 occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant4], inside region of interest <<R>>
+Symbol : SMU_836 occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<S>>
+Symbol : SMU_86 occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<S>>
+Symbol : SMU_954 occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<S>>
+Symbol : opuBa occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<S>>
+Symbol : thiD occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<S>>
+Symbol : trpE occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<S>>
+Symbol : SMU_1097c occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant4], inside region of interest <<S>>
+Symbol : SMU_367 occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant4], inside region of interest <<S>>
+Symbol : atpA occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant4], inside region of interest <<S>>
+Symbol : citZ occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant4], inside region of interest <<S>>
+Symbol : idh occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant4], inside region of interest <<S>>
+Symbol : nrgA occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant2], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant4], inside region of interest <<S>>
+Symbol : SMU_124 occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<S>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<S>>
+Symbol : SMU_125 occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<S>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<S>>
+Symbol : SMU_166 occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : SMU_167 occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : SMU_308 occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<C>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<C>>
+Symbol : SMU_503c occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : SMU_528c occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<S>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<S>>
+Symbol : nnrD occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<S>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<S>>
+Symbol : SMU_88c occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : SMU_89c occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : galT occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<S>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<S>>
+Symbol : glgA occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<C>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<C>>
+Symbol : glgC occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : glgD occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<C>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<C>>
+Symbol : oppA occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : pdhA occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : pfl occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : phsG occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<M>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<M>>
+Symbol : SMU_1879 occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<S>>
+Symbol : clpB occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<S>>
+Symbol : dacA occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : galE occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<S>>
+Symbol : gbpC occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<S>>
+Symbol : mtlA2 occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : naoX occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<S>>
+Symbol : pdhD occurred 3 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<M>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : ptnA occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<S>>
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<S>>
+Symbol : SMU_112c occurred 2 times during the 6 comparisons
+Entry found in Lac Suc [Quadrant4], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<S>>
+Symbol : SMU_1038c occurred 2 times during the 6 comparisons
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : SMU_1039c occurred 2 times during the 6 comparisons
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : SMU_105 occurred 2 times during the 6 comparisons
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : SMU_179 occurred 2 times during the 6 comparisons
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : purC occurred 2 times during the 6 comparisons
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : cilA occurred 2 times during the 6 comparisons
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : cilB occurred 2 times during the 6 comparisons
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : citG2 occurred 2 times during the 6 comparisons
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : dexB occurred 2 times during the 6 comparisons
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : gtfA occurred 2 times during the 6 comparisons
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : msmF occurred 2 times during the 6 comparisons
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : msmG occurred 2 times during the 6 comparisons
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : msmK occurred 2 times during the 6 comparisons
+Entry found in Lac Xyl [Quadrant1], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant2], inside region of interest <<R>>
+Symbol : SMU_1193 occurred 2 times during the 6 comparisons
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant4], inside region of interest <<R>>
+Symbol : rl11 occurred 2 times during the 6 comparisons
+Entry found in Lac Xyl [Quadrant3], inside region of interest <<R>>
+Entry found in Suc Xyl [Quadrant4], inside region of interest <<R>>

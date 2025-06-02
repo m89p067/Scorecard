@@ -1,0 +1,3136 @@
+{
+    "SMU_1905c": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q1",
+            "Q4",
+            "Q2",
+            "Q2",
+            "Q3",
+            "Q4"
+        ],
+        "ROI": [
+            "C",
+            "M",
+            "M",
+            "C",
+            "M",
+            "B"
+        ]
+    },
+    "SMU_1906c": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q1",
+            "Q2",
+            "Q2"
+        ],
+        "ROI": [
+            "C",
+            "M",
+            "C"
+        ]
+    },
+    "SMU_1597c": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "celR": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "lacA": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q3",
+            "Q4",
+            "Q4"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "lacB": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q3",
+            "Q4",
+            "Q4"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "lacC": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q3",
+            "Q4",
+            "Q4"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "lacD": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q3",
+            "Q4",
+            "Q4"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "ptcA": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "ptcB": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "ptcC": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A",
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "bgl": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "B",
+            "A",
+            "A",
+            "B",
+            "A",
+            "C"
+        ]
+    },
+    "SMU_1488c": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q3",
+            "Q4",
+            "Q4"
+        ],
+        "ROI": [
+            "C",
+            "M",
+            "C"
+        ]
+    },
+    "SMU_310": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "C",
+            "C",
+            "B",
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "SMU_314": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "C",
+            "C",
+            "M",
+            "C",
+            "C",
+            "A"
+        ]
+    },
+    "SMU_494": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "C",
+            "C",
+            "B",
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "SMU_507": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "C",
+            "M",
+            "M",
+            "C",
+            "M",
+            "B"
+        ]
+    },
+    "SMU_508": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "C",
+            "M",
+            "M",
+            "C",
+            "M",
+            "B"
+        ]
+    },
+    "lacE": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q3",
+            "Q4",
+            "Q4"
+        ],
+        "ROI": [
+            "C",
+            "B",
+            "A"
+        ]
+    },
+    "lacF": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q3",
+            "Q4",
+            "Q4"
+        ],
+        "ROI": [
+            "C",
+            "B",
+            "A"
+        ]
+    },
+    "lacG": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q3",
+            "Q4",
+            "Q4"
+        ],
+        "ROI": [
+            "C",
+            "B",
+            "A"
+        ]
+    },
+    "lacX": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q3",
+            "Q4",
+            "Q4"
+        ],
+        "ROI": [
+            "C",
+            "B",
+            "A"
+        ]
+    },
+    "lytS": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "C",
+            "M",
+            "M",
+            "C",
+            "M",
+            "B"
+        ]
+    },
+    "pdhC": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "C",
+            "C",
+            "B",
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "pttB": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "E",
+            "E",
+            "D",
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "treA": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "E",
+            "E",
+            "D",
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "arcC": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q1",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "E",
+            "E",
+            "D",
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "AAN59021.1": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu"
+        ],
+        "Q": [
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "S",
+            "R"
+        ]
+    },
+    "SMU_1907": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q1",
+            "Q2",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "S",
+            "M"
+        ]
+    },
+    "SMU_1909c": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Suc",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q1",
+            "Q2",
+            "Q4"
+        ],
+        "ROI": [
+            "R",
+            "R",
+            "S"
+        ]
+    },
+    "SMU_49": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "SMU_613": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "SMU_807": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q1",
+            "Q4",
+            "Q2",
+            "Q2",
+            "Q3",
+            "Q4"
+        ],
+        "ROI": [
+            "R",
+            "R",
+            "S",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "purD": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "SMU_168": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_1704": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_1705": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_1706": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_172": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q3",
+            "Q4",
+            "Q4"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_1977c": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "S",
+            "R",
+            "R",
+            "S"
+        ]
+    },
+    "SMU_311": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "C",
+            "M",
+            "M",
+            "C",
+            "C"
+        ]
+    },
+    "SMU_312": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "C",
+            "M",
+            "M",
+            "C",
+            "C"
+        ]
+    },
+    "SMU_313": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "C",
+            "B",
+            "B",
+            "A",
+            "C"
+        ]
+    },
+    "SMU_491": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "folT": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q3",
+            "Q4",
+            "Q4"
+        ],
+        "ROI": [
+            "M",
+            "R",
+            "R"
+        ]
+    },
+    "SMU_704c": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_706c": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_709": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "S",
+            "M",
+            "M",
+            "S",
+            "S"
+        ]
+    },
+    "SMU_711": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q3",
+            "Q4",
+            "Q4"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "adhA": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "adhC": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "galR": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "gldA": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "C",
+            "M",
+            "M",
+            "C",
+            "C"
+        ]
+    },
+    "lplA": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "lytR": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "B",
+            "B",
+            "B",
+            "M"
+        ]
+    },
+    "nrdD": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "S",
+            "R",
+            "R",
+            "S"
+        ]
+    },
+    "pfl2": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "C",
+            "B",
+            "B",
+            "A",
+            "C"
+        ]
+    },
+    "adhD": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "S",
+            "M",
+            "R",
+            "R",
+            "R"
+        ]
+    },
+    "SMU_1116c": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R",
+            "S",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_1546": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Suc",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q4",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R",
+            "S"
+        ]
+    },
+    "SMU_173": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "S",
+            "M",
+            "S",
+            "S"
+        ]
+    },
+    "SMU_180": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R",
+            "S",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_1976c": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q3",
+            "Q4"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "SMU_2127": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R",
+            "S",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_309": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "E",
+            "S",
+            "M",
+            "C",
+            "C"
+        ]
+    },
+    "SMU_631": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R",
+            "S",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "bglP": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "E",
+            "S",
+            "M",
+            "C",
+            "C"
+        ]
+    },
+    "galK": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R",
+            "S",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "murF": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "S",
+            "M",
+            "S",
+            "S"
+        ]
+    },
+    "pdhB": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R",
+            "D",
+            "B",
+            "B",
+            "M"
+        ]
+    },
+    "sgaT": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R",
+            "S",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "fruD": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q4"
+        ],
+        "ROI": [
+            "M",
+            "R",
+            "R"
+        ]
+    },
+    "lacD2": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q4"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_1105c": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q1",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "S",
+            "M",
+            "M",
+            "S",
+            "M",
+            "R"
+        ]
+    },
+    "SMU_1106c": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q1",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "S",
+            "M",
+            "R",
+            "R",
+            "R"
+        ]
+    },
+    "fruP": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu"
+        ],
+        "Q": [
+            "Q4",
+            "Q1"
+        ],
+        "ROI": [
+            "S",
+            "R"
+        ]
+    },
+    "fruC": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu"
+        ],
+        "Q": [
+            "Q4",
+            "Q1"
+        ],
+        "ROI": [
+            "S",
+            "R"
+        ]
+    },
+    "bglB1": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q1",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "S",
+            "C",
+            "M",
+            "S",
+            "C",
+            "E"
+        ]
+    },
+    "SMU_1104c": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q1",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R",
+            "S",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "aguA": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q1",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "E",
+            "D",
+            "B",
+            "A",
+            "C"
+        ]
+    },
+    "SMU_527": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q1",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R",
+            "S",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_984": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "S",
+            "M",
+            "S",
+            "S"
+        ]
+    },
+    "ascB": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q1",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R",
+            "S",
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "bglA": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "S",
+            "M",
+            "S",
+            "S"
+        ]
+    },
+    "bglB2": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q1",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "E",
+            "S",
+            "M",
+            "C",
+            "C"
+        ]
+    },
+    "otcA": {
+        "Exp Cond": [
+            "Glu Suc",
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q1",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "E",
+            "D",
+            "B",
+            "A",
+            "C"
+        ]
+    },
+    "SMU_210c": {
+        "Exp Cond": [
+            "Glu Xyl",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R",
+            "R"
+        ]
+    },
+    "aguD": {
+        "Exp Cond": [
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q1",
+            "Q1",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "S",
+            "S",
+            "M",
+            "R"
+        ]
+    },
+    "adhB": {
+        "Exp Cond": [
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "S",
+            "S",
+            "M",
+            "R"
+        ]
+    },
+    "mtlD": {
+        "Exp Cond": [
+            "Glu Xyl",
+            "Lac Glu",
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q4",
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "S",
+            "S",
+            "M",
+            "R"
+        ]
+    },
+    "SMU_574c": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "SMU_609": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "A",
+            "A",
+            "A"
+        ]
+    },
+    "SMU_941c": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "A",
+            "B",
+            "B"
+        ]
+    },
+    "folD": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "A",
+            "B",
+            "B"
+        ]
+    },
+    "SMU_940c": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "C",
+            "M",
+            "B"
+        ]
+    },
+    "SMU_1006": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q3",
+            "Q4"
+        ],
+        "ROI": [
+            "M",
+            "S",
+            "S"
+        ]
+    },
+    "SMU_1098c": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q3",
+            "Q4"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_1904c": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q3",
+            "Q4"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_423": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q3",
+            "Q4"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_87": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q3",
+            "Q4"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_913": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q3",
+            "Q4"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_1007": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q3"
+        ],
+        "ROI": [
+            "S",
+            "S"
+        ]
+    },
+    "SMU_1511c": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q3"
+        ],
+        "ROI": [
+            "S",
+            "S"
+        ]
+    },
+    "SMU_513": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q3",
+            "Q4"
+        ],
+        "ROI": [
+            "S",
+            "M",
+            "R"
+        ]
+    },
+    "SMU_626": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q3",
+            "Q4"
+        ],
+        "ROI": [
+            "S",
+            "M",
+            "R"
+        ]
+    },
+    "SMU_836": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q3"
+        ],
+        "ROI": [
+            "S",
+            "S"
+        ]
+    },
+    "SMU_86": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q3"
+        ],
+        "ROI": [
+            "S",
+            "S"
+        ]
+    },
+    "SMU_954": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q3"
+        ],
+        "ROI": [
+            "S",
+            "S"
+        ]
+    },
+    "opuBa": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q3"
+        ],
+        "ROI": [
+            "S",
+            "S"
+        ]
+    },
+    "thiD": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q3"
+        ],
+        "ROI": [
+            "S",
+            "S"
+        ]
+    },
+    "trpE": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q3"
+        ],
+        "ROI": [
+            "S",
+            "S"
+        ]
+    },
+    "SMU_1097c": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q4"
+        ],
+        "ROI": [
+            "R",
+            "S"
+        ]
+    },
+    "SMU_367": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q4"
+        ],
+        "ROI": [
+            "R",
+            "S"
+        ]
+    },
+    "atpA": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q4"
+        ],
+        "ROI": [
+            "R",
+            "S"
+        ]
+    },
+    "citZ": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q4"
+        ],
+        "ROI": [
+            "R",
+            "S"
+        ]
+    },
+    "idh": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q4"
+        ],
+        "ROI": [
+            "R",
+            "S"
+        ]
+    },
+    "nrgA": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q2",
+            "Q4"
+        ],
+        "ROI": [
+            "R",
+            "S"
+        ]
+    },
+    "SMU_124": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "S",
+            "S"
+        ]
+    },
+    "SMU_125": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "S",
+            "S"
+        ]
+    },
+    "SMU_166": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_167": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_308": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "C",
+            "C"
+        ]
+    },
+    "SMU_503c": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_528c": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "S",
+            "S"
+        ]
+    },
+    "nnrD": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "S",
+            "S"
+        ]
+    },
+    "SMU_88c": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_89c": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "galT": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "S",
+            "S"
+        ]
+    },
+    "glgA": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "C",
+            "C"
+        ]
+    },
+    "glgC": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "glgD": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "C",
+            "C"
+        ]
+    },
+    "oppA": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "pdhA": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "pfl": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "phsG": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "M",
+            "M",
+            "M"
+        ]
+    },
+    "SMU_1879": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1"
+        ],
+        "ROI": [
+            "S",
+            "S"
+        ]
+    },
+    "clpB": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1"
+        ],
+        "ROI": [
+            "S",
+            "S"
+        ]
+    },
+    "dacA": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "S",
+            "M",
+            "R"
+        ]
+    },
+    "galE": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1"
+        ],
+        "ROI": [
+            "S",
+            "S"
+        ]
+    },
+    "gbpC": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1"
+        ],
+        "ROI": [
+            "S",
+            "S"
+        ]
+    },
+    "mtlA2": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "S",
+            "M",
+            "R"
+        ]
+    },
+    "naoX": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1"
+        ],
+        "ROI": [
+            "S",
+            "S"
+        ]
+    },
+    "pdhD": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "S",
+            "M",
+            "R"
+        ]
+    },
+    "ptnA": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q1"
+        ],
+        "ROI": [
+            "S",
+            "S"
+        ]
+    },
+    "SMU_112c": {
+        "Exp Cond": [
+            "Lac Suc",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "S"
+        ]
+    },
+    "SMU_1038c": {
+        "Exp Cond": [
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "SMU_1039c": {
+        "Exp Cond": [
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "SMU_105": {
+        "Exp Cond": [
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "SMU_179": {
+        "Exp Cond": [
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "purC": {
+        "Exp Cond": [
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "cilA": {
+        "Exp Cond": [
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "cilB": {
+        "Exp Cond": [
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "citG2": {
+        "Exp Cond": [
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "dexB": {
+        "Exp Cond": [
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "gtfA": {
+        "Exp Cond": [
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "msmF": {
+        "Exp Cond": [
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "msmG": {
+        "Exp Cond": [
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "msmK": {
+        "Exp Cond": [
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q1",
+            "Q2"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "SMU_1193": {
+        "Exp Cond": [
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q4"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    },
+    "rl11": {
+        "Exp Cond": [
+            "Lac Xyl",
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q3",
+            "Q4"
+        ],
+        "ROI": [
+            "R",
+            "R"
+        ]
+    }
+}

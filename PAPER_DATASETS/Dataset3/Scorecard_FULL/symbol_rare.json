@@ -1,0 +1,310 @@
+{
+    "cah": {
+        "Exp Cond": [
+            "Glu Suc"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "S"
+        ]
+    },
+    "SMU_1975c": {
+        "Exp Cond": [
+            "Glu Suc"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "R"
+        ]
+    },
+    "SMU_209c": {
+        "Exp Cond": [
+            "Glu Xyl"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "R"
+        ]
+    },
+    "SMU_18": {
+        "Exp Cond": [
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q2"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "SMU_575c": {
+        "Exp Cond": [
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q4"
+        ],
+        "ROI": [
+            "A"
+        ]
+    },
+    "SMU_150": {
+        "Exp Cond": [
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q2"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "SMU_189": {
+        "Exp Cond": [
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q2"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "SMU_1908c": {
+        "Exp Cond": [
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q2"
+        ],
+        "ROI": [
+            "R"
+        ]
+    },
+    "SMU_516": {
+        "Exp Cond": [
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q2"
+        ],
+        "ROI": [
+            "R"
+        ]
+    },
+    "SMU_833": {
+        "Exp Cond": [
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q2"
+        ],
+        "ROI": [
+            "R"
+        ]
+    },
+    "atpD": {
+        "Exp Cond": [
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q2"
+        ],
+        "ROI": [
+            "R"
+        ]
+    },
+    "SMU_1752c": {
+        "Exp Cond": [
+            "Lac Suc"
+        ],
+        "Q": [
+            "Q4"
+        ],
+        "ROI": [
+            "R"
+        ]
+    },
+    "SMU_1862": {
+        "Exp Cond": [
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "SMU_1956c": {
+        "Exp Cond": [
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "SMU_207c": {
+        "Exp Cond": [
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "glgB": {
+        "Exp Cond": [
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "ptnC": {
+        "Exp Cond": [
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "M"
+        ]
+    },
+    "mtlR": {
+        "Exp Cond": [
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "R"
+        ]
+    },
+    "SMU_138": {
+        "Exp Cond": [
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "R"
+        ]
+    },
+    "SMU_1957": {
+        "Exp Cond": [
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "R"
+        ]
+    },
+    "SMU_1958c": {
+        "Exp Cond": [
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "R"
+        ]
+    },
+    "mtlA1": {
+        "Exp Cond": [
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q1"
+        ],
+        "ROI": [
+            "R"
+        ]
+    },
+    "SMU_1545c": {
+        "Exp Cond": [
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "R"
+        ]
+    },
+    "SMU_1782": {
+        "Exp Cond": [
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "R"
+        ]
+    },
+    "cshA": {
+        "Exp Cond": [
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "R"
+        ]
+    },
+    "SMU_925": {
+        "Exp Cond": [
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "R"
+        ]
+    },
+    "SMU_929c": {
+        "Exp Cond": [
+            "Lac Xyl"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "R"
+        ]
+    },
+    "SMU_40": {
+        "Exp Cond": [
+            "Suc Xyl"
+        ],
+        "Q": [
+            "Q4"
+        ],
+        "ROI": [
+            "M"
+        ]
+    }
+}
