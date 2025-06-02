@@ -1,0 +1,246 @@
+{
+    "A": [
+        "SMU_1597c",
+        "celR",
+        "lacA",
+        "lacB",
+        "lacC",
+        "lacD",
+        "ptcA",
+        "ptcB",
+        "ptcC"
+    ],
+    "B": [
+        "bgl"
+    ],
+    "C": [
+        "SMU_1488c",
+        "SMU_310",
+        "SMU_314",
+        "SMU_494",
+        "SMU_507",
+        "SMU_508",
+        "lacE",
+        "lacF",
+        "lacG",
+        "lacX",
+        "lytS",
+        "pdhC"
+    ],
+    "D": [],
+    "E": [
+        "pttB",
+        "treA"
+    ],
+    "A_x": [
+        -6.064545924,
+        -5.503414562,
+        -4.906823141,
+        -4.551781603,
+        -4.272764022,
+        -4.471891729,
+        -5.567065261,
+        -5.042171335,
+        -6.476038662
+    ],
+    "B_x": [
+        -4.192978068
+    ],
+    "C_x": [
+        -3.547403352,
+        -2.18238614,
+        -3.269250234,
+        -2.473805378,
+        -3.031993812,
+        -2.980133557,
+        -3.193537452,
+        -3.558481593,
+        -3.028338861,
+        -2.892462989,
+        -2.414711231,
+        -2.420068938
+    ],
+    "D_x": [],
+    "E_x": [
+        -1.853312921,
+        -1.469142546
+    ],
+    "A_y": [
+        -6.615574931,
+        -6.903327188,
+        -6.266822949,
+        -7.024897363,
+        -6.35987643,
+        -6.950899174,
+        -6.879002964,
+        -6.4703375,
+        -7.035707439
+    ],
+    "B_y": [
+        -3.880511712
+    ],
+    "C_y": [
+        -5.291544273,
+        -4.072084034,
+        -4.002518734,
+        -4.060962738,
+        -4.972855141,
+        -4.722019301,
+        -4.501686085,
+        -4.534875698,
+        -4.588861603,
+        -4.264717746,
+        -4.040929115,
+        -4.08466107
+    ],
+    "D_y": [],
+    "E_y": [
+        -5.023813509,
+        -4.938609053
+    ],
+    "A_pval_x": [
+        4.2e-62,
+        1.22e-96,
+        3.05e-26,
+        2.21e-18,
+        9.35e-16,
+        3.49e-17,
+        2.5599999999999998e-61,
+        8.61e-73,
+        1.38e-63
+    ],
+    "A_pval_y": [
+        6.71e-09,
+        5.2099999999999995e-93,
+        1.49e-38,
+        1.9e-47,
+        9.51e-49,
+        1.12e-50,
+        4.3e-92,
+        9.68e-56,
+        2.44e-44
+    ],
+    "B_pval_x": [
+        2.89e-46
+    ],
+    "B_pval_y": [
+        3.72e-62
+    ],
+    "C_pval_x": [
+        2.48e-06,
+        8.68e-07,
+        1.3400000000000002e-21,
+        4.2e-08,
+        1.19e-17,
+        3.45e-32,
+        3.26e-09,
+        5.53e-09,
+        1.95e-06,
+        9.56e-06,
+        4.7e-21,
+        1.29e-10
+    ],
+    "C_pval_y": [
+        1.43e-07,
+        6.230000000000001e-32,
+        1.97e-36,
+        3.8600000000000003e-22,
+        1.33e-71,
+        9.330000000000001e-58,
+        1.72e-33,
+        6.46e-23,
+        3.26e-31,
+        1.33e-18,
+        1.6099999999999998e-69,
+        1.52e-47
+    ],
+    "D_pval_x": [],
+    "D_pval_y": [],
+    "E_pval_x": [
+        1.97e-10,
+        5.09e-05
+    ],
+    "E_pval_y": [
+        5.66e-101,
+        9.31e-80
+    ],
+    "COLORS": [
+        "tomato",
+        "darkorange",
+        "olivedrab",
+        "powderblue",
+        "hotpink"
+    ],
+    "params": {
+        "FC cond x": "TSB_versus_Glu_log2FoldChange",
+        "FC cond y": "TSB_versus_Suc_log2FoldChange",
+        "padj cond x": "TSB_versus_Glu_padj",
+        "padj cond y": "TSB_versus_Suc_padj",
+        "incl aver": false,
+        "base_dir": "D:/GED_VIS_PROJECT/Dataset5_REDO",
+        "filename": "preproc_data_red.CSV",
+        "zscore": false,
+        "Treatment1 name": "Glu",
+        "Treatment2 name": "Suc",
+        "Control name": "TSB",
+        "fig_size": 10,
+        "save_dir": "D:/GED_VIS_PROJECT/Dataset5_REDO/Scorecard_STANDARD_restricted",
+        "colors": [
+            "tomato",
+            "darkorange",
+            "olivedrab",
+            "powderblue",
+            "hotpink"
+        ],
+        "other_colors": [
+            "peru",
+            "khaki",
+            "lavender"
+        ],
+        "th_fold_change": 2,
+        "th_significance": 0.001,
+        "font_size_quadrants": 8,
+        "font_size_examples": 16,
+        "marker_trasp": [
+            0.95,
+            0.8,
+            0.65,
+            0.45
+        ],
+        "rect_trasp": [
+            0.25,
+            0.15,
+            0.4
+        ],
+        "rect_colors": [
+            "silver",
+            "lightgrey",
+            "darkgrey"
+        ],
+        "markers": [
+            "o",
+            "^",
+            "s",
+            "*",
+            "X",
+            "p",
+            "."
+        ],
+        "markers_sizes": [
+            14,
+            12,
+            10,
+            8
+        ],
+        "is_example": false,
+        "use_notation": true,
+        "gene_name": "Name",
+        "multiplication factor": 2,
+        "CSV delimiter": ";",
+        "Log Epsilon": 1e-10,
+        "Scorecard title": "Gene expr. of S. mutans",
+        "labels font size": 18,
+        "Total entries": 1814,
+        "Quadrant entries": 528
+    }
+}
