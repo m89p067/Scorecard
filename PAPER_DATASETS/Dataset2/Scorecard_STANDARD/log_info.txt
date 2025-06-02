@@ -1,0 +1,3791 @@
+Number of comparisons performed :120
+-------------- Comparison 1 of 120
+Comparison : Cmpd8vsLor Cmpd8_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3177 entries
+
+Quadrant1 total entries were 428
+
+In Quadrant2 the <<A>> group contains 5 entries
+In Quadrant2 the <<B>> group contains 1 entries
+Quadrant2 total entries were 1036
+
+Quadrant3 total entries were 505
+
+Quadrant4 total entries were 1208
+
+In total the scorecard identified 6 entries inside the shaded regions of interest
+
+-------------- Comparison 2 of 120
+Comparison : Cmpd8vsLor Cmpd8_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3180 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+Quadrant1 total entries were 1141
+
+In Quadrant2 the <<B>> group contains 1 entries
+Quadrant2 total entries were 491
+
+In Quadrant3 the <<A>> group contains 2 entries
+In Quadrant3 the <<B>> group contains 1 entries
+In Quadrant3 the <<D>> group contains 1 entries
+Quadrant3 total entries were 1062
+
+Quadrant4 total entries were 486
+
+In total the scorecard identified 7 entries inside the shaded regions of interest
+
+-------------- Comparison 3 of 120
+Comparison : Cmpd8vsLor Lor_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3167 entries
+
+Quadrant1 total entries were 387
+
+In Quadrant2 the <<A>> group contains 7 entries
+In Quadrant2 the <<C>> group contains 5 entries
+In Quadrant2 the <<E>> group contains 6 entries
+Quadrant2 total entries were 1170
+
+Quadrant3 total entries were 361
+
+In Quadrant4 the <<A>> group contains 3 entries
+In Quadrant4 the <<B>> group contains 1 entries
+Quadrant4 total entries were 1249
+
+In total the scorecard identified 22 entries inside the shaded regions of interest
+
+-------------- Comparison 4 of 120
+Comparison : Cmpd8vsLor Lor_OxvsCmpd8_Ox
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3164 entries
+
+Quadrant1 total entries were 473
+
+In Quadrant2 the <<A>> group contains 3 entries
+In Quadrant2 the <<B>> group contains 2 entries
+In Quadrant2 the <<C>> group contains 2 entries
+Quadrant2 total entries were 1067
+
+Quadrant3 total entries were 473
+
+In Quadrant4 the <<A>> group contains 2 entries
+In Quadrant4 the <<B>> group contains 1 entries
+Quadrant4 total entries were 1151
+
+In total the scorecard identified 10 entries inside the shaded regions of interest
+
+-------------- Comparison 5 of 120
+Comparison : Cmpd8vsLor Lor_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3164 entries
+
+Quadrant1 total entries were 684
+
+In Quadrant2 the <<A>> group contains 1 entries
+In Quadrant2 the <<B>> group contains 1 entries
+In Quadrant2 the <<D>> group contains 4 entries
+Quadrant2 total entries were 871
+
+Quadrant3 total entries were 679
+
+Quadrant4 total entries were 930
+
+In total the scorecard identified 6 entries inside the shaded regions of interest
+
+-------------- Comparison 6 of 120
+Comparison : Cmpd8vsLor OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3169 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<C>> group contains 2 entries
+Quadrant1 total entries were 1148
+
+In Quadrant2 the <<B>> group contains 1 entries
+Quadrant2 total entries were 503
+
+In Quadrant3 the <<A>> group contains 2 entries
+Quadrant3 total entries were 1046
+
+Quadrant4 total entries were 472
+
+In total the scorecard identified 7 entries inside the shaded regions of interest
+
+-------------- Comparison 7 of 120
+Comparison : Cmpd8vsLor OxvsUn
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3163 entries
+
+Quadrant1 total entries were 679
+
+In Quadrant2 the <<A>> group contains 6 entries
+In Quadrant2 the <<C>> group contains 1 entries
+Quadrant2 total entries were 809
+
+Quadrant3 total entries were 732
+
+Quadrant4 total entries were 943
+
+In total the scorecard identified 7 entries inside the shaded regions of interest
+
+-------------- Comparison 8 of 120
+Comparison : Cmpd8vsUn Cmpd8vsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3173 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+Quadrant1 total entries were 898
+
+Quadrant2 total entries were 738
+
+In Quadrant3 the <<A>> group contains 1 entries
+In Quadrant3 the <<C>> group contains 2 entries
+In Quadrant3 the <<E>> group contains 1 entries
+Quadrant3 total entries were 855
+
+In Quadrant4 the <<E>> group contains 1 entries
+Quadrant4 total entries were 682
+
+In total the scorecard identified 7 entries inside the shaded regions of interest
+
+-------------- Comparison 9 of 120
+Comparison : Cmpd8vsUn Cmpd8_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3173 entries
+
+Quadrant1 total entries were 696
+
+In Quadrant2 the <<A>> group contains 1 entries
+In Quadrant2 the <<C>> group contains 2 entries
+In Quadrant2 the <<E>> group contains 1 entries
+Quadrant2 total entries were 764
+
+Quadrant3 total entries were 829
+
+Quadrant4 total entries were 884
+
+In total the scorecard identified 4 entries inside the shaded regions of interest
+
+-------------- Comparison 10 of 120
+Comparison : Cmpd8vsUn Cmpd8_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3172 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+Quadrant1 total entries were 888
+
+Quadrant2 total entries were 744
+
+In Quadrant3 the <<B>> group contains 1 entries
+Quadrant3 total entries were 854
+
+In Quadrant4 the <<E>> group contains 1 entries
+Quadrant4 total entries were 686
+
+In total the scorecard identified 4 entries inside the shaded regions of interest
+
+-------------- Comparison 11 of 120
+Comparison : Cmpd8vsUn Cmpd8_OxvsOx
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3170 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<C>> group contains 2 entries
+Quadrant1 total entries were 1061
+
+Quadrant2 total entries were 517
+
+In Quadrant3 the <<A>> group contains 9 entries
+In Quadrant3 the <<C>> group contains 3 entries
+Quadrant3 total entries were 1082
+
+Quadrant4 total entries were 510
+
+In total the scorecard identified 16 entries inside the shaded regions of interest
+
+-------------- Comparison 12 of 120
+Comparison : Cmpd8vsUn Cmpd8_OxvsUn
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3183 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<C>> group contains 2 entries
+Quadrant1 total entries were 1108
+
+In Quadrant2 the <<E>> group contains 1 entries
+Quadrant2 total entries were 381
+
+In Quadrant3 the <<A>> group contains 4 entries
+In Quadrant3 the <<B>> group contains 4 entries
+Quadrant3 total entries were 1229
+
+Quadrant4 total entries were 465
+
+In total the scorecard identified 13 entries inside the shaded regions of interest
+
+-------------- Comparison 13 of 120
+Comparison : Cmpd8vsUn Lor_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3167 entries
+
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 711
+
+In Quadrant2 the <<A>> group contains 1 entries
+In Quadrant2 the <<B>> group contains 4 entries
+In Quadrant2 the <<C>> group contains 2 entries
+In Quadrant2 the <<E>> group contains 3 entries
+Quadrant2 total entries were 846
+
+Quadrant3 total entries were 741
+
+In Quadrant4 the <<A>> group contains 2 entries
+Quadrant4 total entries were 869
+
+In total the scorecard identified 13 entries inside the shaded regions of interest
+
+-------------- Comparison 14 of 120
+Comparison : Cmpd8vsUn Lor_OxvsCmpd8_Ox
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3162 entries
+
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 709
+
+In Quadrant2 the <<A>> group contains 1 entries
+In Quadrant2 the <<B>> group contains 2 entries
+In Quadrant2 the <<C>> group contains 1 entries
+In Quadrant2 the <<D>> group contains 1 entries
+Quadrant2 total entries were 831
+
+Quadrant3 total entries were 762
+
+In Quadrant4 the <<A>> group contains 2 entries
+Quadrant4 total entries were 860
+
+In total the scorecard identified 8 entries inside the shaded regions of interest
+
+-------------- Comparison 15 of 120
+Comparison : Cmpd8vsUn Lor_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3158 entries
+
+Quadrant1 total entries were 771
+
+In Quadrant2 the <<B>> group contains 1 entries
+In Quadrant2 the <<E>> group contains 1 entries
+Quadrant2 total entries were 785
+
+Quadrant3 total entries were 807
+
+Quadrant4 total entries were 795
+
+In total the scorecard identified 2 entries inside the shaded regions of interest
+
+-------------- Comparison 16 of 120
+Comparison : Cmpd8vsUn Lor_OxvsOx
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3155 entries
+
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 903
+
+Quadrant2 total entries were 641
+
+In Quadrant3 the <<B>> group contains 3 entries
+In Quadrant3 the <<D>> group contains 3 entries
+Quadrant3 total entries were 952
+
+Quadrant4 total entries were 659
+
+In total the scorecard identified 7 entries inside the shaded regions of interest
+
+-------------- Comparison 17 of 120
+Comparison : Cmpd8vsUn Lor_OxvsUn
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3168 entries
+
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 960
+
+In Quadrant2 the <<A>> group contains 1 entries
+In Quadrant2 the <<C>> group contains 2 entries
+In Quadrant2 the <<E>> group contains 3 entries
+Quadrant2 total entries were 558
+
+In Quadrant3 the <<B>> group contains 1 entries
+Quadrant3 total entries were 1049
+
+Quadrant4 total entries were 601
+
+In total the scorecard identified 8 entries inside the shaded regions of interest
+
+-------------- Comparison 18 of 120
+Comparison : Cmpd8vsUn OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3171 entries
+
+Quadrant1 total entries were 413
+
+In Quadrant2 the <<A>> group contains 8 entries
+In Quadrant2 the <<C>> group contains 5 entries
+In Quadrant2 the <<E>> group contains 2 entries
+Quadrant2 total entries were 1114
+
+Quadrant3 total entries were 477
+
+In Quadrant4 the <<A>> group contains 2 entries
+Quadrant4 total entries were 1167
+
+In total the scorecard identified 17 entries inside the shaded regions of interest
+
+-------------- Comparison 19 of 120
+Comparison : Cmpd8vsUn OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3165 entries
+
+Quadrant1 total entries were 615
+
+In Quadrant2 the <<A>> group contains 2 entries
+In Quadrant2 the <<B>> group contains 5 entries
+In Quadrant2 the <<C>> group contains 1 entries
+Quadrant2 total entries were 1041
+
+Quadrant3 total entries were 557
+
+In Quadrant4 the <<E>> group contains 1 entries
+Quadrant4 total entries were 952
+
+In total the scorecard identified 9 entries inside the shaded regions of interest
+
+-------------- Comparison 20 of 120
+Comparison : Cmpd8_OxvsCmpd8 Cmpd8_OxvsOx
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3183 entries
+
+Quadrant1 total entries were 1012
+
+Quadrant2 total entries were 580
+
+Quadrant3 total entries were 1122
+
+In Quadrant4 the <<A>> group contains 1 entries
+In Quadrant4 the <<B>> group contains 1 entries
+Quadrant4 total entries were 469
+
+In total the scorecard identified 2 entries inside the shaded regions of interest
+
+-------------- Comparison 21 of 120
+Comparison : Cmpd8_OxvsCmpd8 Lor_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3174 entries
+
+In Quadrant1 the <<A>> group contains 5 entries
+In Quadrant1 the <<C>> group contains 3 entries
+In Quadrant1 the <<E>> group contains 4 entries
+Quadrant1 total entries were 1108
+
+Quadrant2 total entries were 456
+
+Quadrant3 total entries were 1257
+
+Quadrant4 total entries were 353
+
+In total the scorecard identified 12 entries inside the shaded regions of interest
+
+-------------- Comparison 22 of 120
+Comparison : Cmpd8_OxvsCmpd8 Lor_OxvsCmpd8_Ox
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3178 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<B>> group contains 1 entries
+Quadrant1 total entries were 823
+
+Quadrant2 total entries were 722
+
+Quadrant3 total entries were 975
+
+Quadrant4 total entries were 658
+
+In total the scorecard identified 3 entries inside the shaded regions of interest
+
+-------------- Comparison 23 of 120
+Comparison : Cmpd8_OxvsLor Cmpd8vsUn
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3172 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+Quadrant1 total entries were 888
+
+In Quadrant2 the <<D>> group contains 1 entries
+Quadrant2 total entries were 686
+
+In Quadrant3 the <<C>> group contains 1 entries
+Quadrant3 total entries were 854
+
+Quadrant4 total entries were 744
+
+In total the scorecard identified 4 entries inside the shaded regions of interest
+
+-------------- Comparison 24 of 120
+Comparison : Cmpd8_OxvsLor Cmpd8_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3185 entries
+
+In Quadrant1 the <<C>> group contains 1 entries
+Quadrant1 total entries were 936
+
+In Quadrant2 the <<C>> group contains 1 entries
+In Quadrant2 the <<E>> group contains 1 entries
+Quadrant2 total entries were 545
+
+Quadrant3 total entries were 991
+
+Quadrant4 total entries were 713
+
+In total the scorecard identified 3 entries inside the shaded regions of interest
+
+-------------- Comparison 25 of 120
+Comparison : Cmpd8_OxvsLor Lor_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3173 entries
+
+In Quadrant1 the <<C>> group contains 1 entries
+Quadrant1 total entries were 730
+
+In Quadrant2 the <<A>> group contains 1 entries
+In Quadrant2 the <<C>> group contains 1 entries
+In Quadrant2 the <<E>> group contains 1 entries
+Quadrant2 total entries were 840
+
+Quadrant3 total entries were 698
+
+In Quadrant4 the <<A>> group contains 2 entries
+Quadrant4 total entries were 905
+
+In total the scorecard identified 6 entries inside the shaded regions of interest
+
+-------------- Comparison 26 of 120
+Comparison : Cmpd8_OxvsLor Lor_OxvsCmpd8_Ox
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3183 entries
+
+Quadrant1 total entries were 551
+
+In Quadrant2 the <<A>> group contains 1 entries
+In Quadrant2 the <<C>> group contains 1 entries
+In Quadrant2 the <<E>> group contains 1 entries
+Quadrant2 total entries were 999
+
+Quadrant3 total entries were 535
+
+In Quadrant4 the <<A>> group contains 2 entries
+Quadrant4 total entries were 1098
+
+In total the scorecard identified 5 entries inside the shaded regions of interest
+
+-------------- Comparison 27 of 120
+Comparison : Cmpd8_OxvsLor Lor_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3175 entries
+
+In Quadrant1 the <<C>> group contains 1 entries
+Quadrant1 total entries were 927
+
+Quadrant2 total entries were 639
+
+Quadrant3 total entries were 911
+
+Quadrant4 total entries were 698
+
+In total the scorecard identified 1 entries inside the shaded regions of interest
+
+-------------- Comparison 28 of 120
+Comparison : Cmpd8_OxvsLor OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3179 entries
+
+Quadrant1 total entries were 1102
+
+Quadrant2 total entries were 559
+
+In Quadrant3 the <<A>> group contains 2 entries
+Quadrant3 total entries were 990
+
+Quadrant4 total entries were 528
+
+In total the scorecard identified 2 entries inside the shaded regions of interest
+
+-------------- Comparison 29 of 120
+Comparison : Cmpd8_OxvsLor OxvsUn
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3174 entries
+
+In Quadrant1 the <<C>> group contains 1 entries
+Quadrant1 total entries were 866
+
+In Quadrant2 the <<C>> group contains 1 entries
+In Quadrant2 the <<E>> group contains 1 entries
+Quadrant2 total entries were 631
+
+Quadrant3 total entries were 912
+
+Quadrant4 total entries were 765
+
+In total the scorecard identified 3 entries inside the shaded regions of interest
+
+-------------- Comparison 30 of 120
+Comparison : Cmpd8_OxvsOx Cmpd8vsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3171 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+Quadrant1 total entries were 717
+
+Quadrant2 total entries were 910
+
+In Quadrant3 the <<A>> group contains 1 entries
+In Quadrant3 the <<C>> group contains 1 entries
+In Quadrant3 the <<D>> group contains 1 entries
+Quadrant3 total entries were 680
+
+In Quadrant4 the <<E>> group contains 1 entries
+Quadrant4 total entries were 864
+
+In total the scorecard identified 6 entries inside the shaded regions of interest
+
+-------------- Comparison 31 of 120
+Comparison : Cmpd8_OxvsOx Cmpd8vsUn
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3170 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<B>> group contains 2 entries
+Quadrant1 total entries were 1061
+
+Quadrant2 total entries were 510
+
+In Quadrant3 the <<A>> group contains 9 entries
+In Quadrant3 the <<B>> group contains 3 entries
+Quadrant3 total entries were 1082
+
+Quadrant4 total entries were 517
+
+In total the scorecard identified 16 entries inside the shaded regions of interest
+
+-------------- Comparison 32 of 120
+Comparison : Cmpd8_OxvsOx Cmpd8_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3183 entries
+
+Quadrant1 total entries were 1012
+
+In Quadrant2 the <<A>> group contains 1 entries
+In Quadrant2 the <<C>> group contains 1 entries
+Quadrant2 total entries were 469
+
+Quadrant3 total entries were 1122
+
+Quadrant4 total entries were 580
+
+In total the scorecard identified 2 entries inside the shaded regions of interest
+
+-------------- Comparison 33 of 120
+Comparison : Cmpd8_OxvsOx Cmpd8_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3190 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<B>> group contains 2 entries
+Quadrant1 total entries were 961
+
+Quadrant2 total entries were 688
+
+In Quadrant3 the <<B>> group contains 1 entries
+Quadrant3 total entries were 910
+
+In Quadrant4 the <<E>> group contains 1 entries
+Quadrant4 total entries were 631
+
+In total the scorecard identified 6 entries inside the shaded regions of interest
+
+-------------- Comparison 34 of 120
+Comparison : Cmpd8_OxvsOx Lor_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3171 entries
+
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 873
+
+In Quadrant2 the <<A>> group contains 1 entries
+In Quadrant2 the <<B>> group contains 7 entries
+In Quadrant2 the <<C>> group contains 1 entries
+In Quadrant2 the <<E>> group contains 1 entries
+Quadrant2 total entries were 696
+
+In Quadrant3 the <<A>> group contains 1 entries
+In Quadrant3 the <<C>> group contains 1 entries
+Quadrant3 total entries were 895
+
+In Quadrant4 the <<A>> group contains 2 entries
+Quadrant4 total entries were 707
+
+In total the scorecard identified 15 entries inside the shaded regions of interest
+
+-------------- Comparison 35 of 120
+Comparison : Cmpd8_OxvsOx Lor_OxvsCmpd8_Ox
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3182 entries
+
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 716
+
+In Quadrant2 the <<A>> group contains 1 entries
+In Quadrant2 the <<B>> group contains 2 entries
+In Quadrant2 the <<C>> group contains 1 entries
+In Quadrant2 the <<D>> group contains 3 entries
+Quadrant2 total entries were 833
+
+Quadrant3 total entries were 757
+
+In Quadrant4 the <<A>> group contains 2 entries
+In Quadrant4 the <<B>> group contains 1 entries
+In Quadrant4 the <<D>> group contains 1 entries
+Quadrant4 total entries were 876
+
+In total the scorecard identified 12 entries inside the shaded regions of interest
+
+-------------- Comparison 36 of 120
+Comparison : Cmpd8_OxvsOx Lor_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3168 entries
+
+Quadrant1 total entries were 824
+
+In Quadrant2 the <<B>> group contains 1 entries
+In Quadrant2 the <<D>> group contains 1 entries
+Quadrant2 total entries were 743
+
+Quadrant3 total entries were 850
+
+Quadrant4 total entries were 751
+
+In total the scorecard identified 2 entries inside the shaded regions of interest
+
+-------------- Comparison 37 of 120
+Comparison : Cmpd8_OxvsOx Lor_OxvsOx
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3176 entries
+
+In Quadrant1 the <<D>> group contains 2 entries
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 1105
+
+Quadrant2 total entries were 449
+
+In Quadrant3 the <<A>> group contains 2 entries
+In Quadrant3 the <<B>> group contains 5 entries
+In Quadrant3 the <<C>> group contains 4 entries
+In Quadrant3 the <<D>> group contains 4 entries
+In Quadrant3 the <<E>> group contains 2 entries
+Quadrant3 total entries were 1156
+
+Quadrant4 total entries were 466
+
+In total the scorecard identified 20 entries inside the shaded regions of interest
+
+-------------- Comparison 38 of 120
+Comparison : Cmpd8_OxvsOx OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3185 entries
+
+Quadrant1 total entries were 415
+
+In Quadrant2 the <<A>> group contains 6 entries
+In Quadrant2 the <<B>> group contains 6 entries
+In Quadrant2 the <<C>> group contains 4 entries
+Quadrant2 total entries were 1260
+
+Quadrant3 total entries were 352
+
+In Quadrant4 the <<E>> group contains 1 entries
+Quadrant4 total entries were 1158
+
+In total the scorecard identified 17 entries inside the shaded regions of interest
+
+-------------- Comparison 39 of 120
+Comparison : Cmpd8_OxvsUn Cmpd8vsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3174 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+Quadrant1 total entries were 610
+
+Quadrant2 total entries were 1020
+
+Quadrant3 total entries were 661
+
+In Quadrant4 the <<A>> group contains 2 entries
+In Quadrant4 the <<C>> group contains 2 entries
+In Quadrant4 the <<E>> group contains 1 entries
+Quadrant4 total entries were 883
+
+In total the scorecard identified 7 entries inside the shaded regions of interest
+
+-------------- Comparison 40 of 120
+Comparison : Cmpd8_OxvsUn Cmpd8_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3185 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<C>> group contains 1 entries
+Quadrant1 total entries were 1096
+
+Quadrant2 total entries were 383
+
+Quadrant3 total entries were 1294
+
+Quadrant4 total entries were 412
+
+In total the scorecard identified 3 entries inside the shaded regions of interest
+
+-------------- Comparison 41 of 120
+Comparison : Cmpd8_OxvsUn Cmpd8_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3192 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<B>> group contains 3 entries
+Quadrant1 total entries were 971
+
+Quadrant2 total entries were 678
+
+Quadrant3 total entries were 1006
+
+In Quadrant4 the <<C>> group contains 1 entries
+In Quadrant4 the <<E>> group contains 1 entries
+Quadrant4 total entries were 537
+
+In total the scorecard identified 7 entries inside the shaded regions of interest
+
+-------------- Comparison 42 of 120
+Comparison : Cmpd8_OxvsUn Cmpd8_OxvsOx
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3190 entries
+
+In Quadrant1 the <<A>> group contains 4 entries
+Quadrant1 total entries were 1166
+
+Quadrant2 total entries were 426
+
+In Quadrant3 the <<A>> group contains 7 entries
+In Quadrant3 the <<B>> group contains 1 entries
+In Quadrant3 the <<C>> group contains 5 entries
+In Quadrant3 the <<E>> group contains 1 entries
+Quadrant3 total entries were 1256
+
+Quadrant4 total entries were 342
+
+In total the scorecard identified 18 entries inside the shaded regions of interest
+
+-------------- Comparison 43 of 120
+Comparison : Cmpd8_OxvsUn LorvsUn
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3183 entries
+
+In Quadrant1 the <<A>> group contains 1 entries
+In Quadrant1 the <<B>> group contains 2 entries
+In Quadrant1 the <<C>> group contains 1 entries
+In Quadrant1 the <<D>> group contains 1 entries
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 1107
+
+Quadrant2 total entries were 402
+
+In Quadrant3 the <<A>> group contains 5 entries
+In Quadrant3 the <<C>> group contains 5 entries
+In Quadrant3 the <<E>> group contains 1 entries
+Quadrant3 total entries were 1294
+
+Quadrant4 total entries were 380
+
+In total the scorecard identified 17 entries inside the shaded regions of interest
+
+-------------- Comparison 44 of 120
+Comparison : Cmpd8_OxvsUn Lor_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3171 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<B>> group contains 1 entries
+In Quadrant1 the <<C>> group contains 3 entries
+In Quadrant1 the <<E>> group contains 5 entries
+Quadrant1 total entries were 948
+
+In Quadrant2 the <<B>> group contains 1 entries
+Quadrant2 total entries were 619
+
+In Quadrant3 the <<A>> group contains 1 entries
+In Quadrant3 the <<C>> group contains 3 entries
+Quadrant3 total entries were 1059
+
+In Quadrant4 the <<A>> group contains 2 entries
+Quadrant4 total entries were 545
+
+In total the scorecard identified 18 entries inside the shaded regions of interest
+
+-------------- Comparison 45 of 120
+Comparison : Cmpd8_OxvsUn Lor_OxvsCmpd8_Ox
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3181 entries
+
+In Quadrant1 the <<C>> group contains 1 entries
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 754
+
+In Quadrant2 the <<B>> group contains 1 entries
+Quadrant2 total entries were 794
+
+Quadrant3 total entries were 879
+
+In Quadrant4 the <<A>> group contains 2 entries
+In Quadrant4 the <<B>> group contains 1 entries
+In Quadrant4 the <<D>> group contains 1 entries
+Quadrant4 total entries were 754
+
+In total the scorecard identified 7 entries inside the shaded regions of interest
+
+-------------- Comparison 46 of 120
+Comparison : Cmpd8_OxvsUn Lor_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3168 entries
+
+In Quadrant1 the <<A>> group contains 1 entries
+In Quadrant1 the <<D>> group contains 1 entries
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 916
+
+Quadrant2 total entries were 648
+
+Quadrant3 total entries were 1031
+
+Quadrant4 total entries were 573
+
+In total the scorecard identified 3 entries inside the shaded regions of interest
+
+-------------- Comparison 47 of 120
+Comparison : Cmpd8_OxvsUn Lor_OxvsOx
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3168 entries
+
+In Quadrant1 the <<C>> group contains 1 entries
+In Quadrant1 the <<D>> group contains 2 entries
+Quadrant1 total entries were 1022
+
+Quadrant2 total entries were 532
+
+In Quadrant3 the <<A>> group contains 3 entries
+In Quadrant3 the <<B>> group contains 3 entries
+In Quadrant3 the <<C>> group contains 5 entries
+In Quadrant3 the <<D>> group contains 1 entries
+In Quadrant3 the <<E>> group contains 2 entries
+Quadrant3 total entries were 1145
+
+Quadrant4 total entries were 469
+
+In total the scorecard identified 17 entries inside the shaded regions of interest
+
+-------------- Comparison 48 of 120
+Comparison : Cmpd8_OxvsUn Lor_OxvsUn
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3178 entries
+
+In Quadrant1 the <<A>> group contains 3 entries
+In Quadrant1 the <<B>> group contains 2 entries
+In Quadrant1 the <<C>> group contains 3 entries
+In Quadrant1 the <<E>> group contains 5 entries
+Quadrant1 total entries were 1119
+
+Quadrant2 total entries were 409
+
+In Quadrant3 the <<A>> group contains 4 entries
+In Quadrant3 the <<B>> group contains 1 entries
+In Quadrant3 the <<C>> group contains 6 entries
+In Quadrant3 the <<E>> group contains 1 entries
+Quadrant3 total entries were 1284
+
+Quadrant4 total entries were 366
+
+In total the scorecard identified 25 entries inside the shaded regions of interest
+
+-------------- Comparison 49 of 120
+Comparison : Cmpd8_OxvsUn OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3173 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<C>> group contains 1 entries
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 618
+
+In Quadrant2 the <<A>> group contains 5 entries
+In Quadrant2 the <<C>> group contains 5 entries
+In Quadrant2 the <<E>> group contains 1 entries
+Quadrant2 total entries were 917
+
+Quadrant3 total entries were 763
+
+In Quadrant4 the <<A>> group contains 2 entries
+In Quadrant4 the <<B>> group contains 2 entries
+Quadrant4 total entries were 875
+
+In total the scorecard identified 19 entries inside the shaded regions of interest
+
+-------------- Comparison 50 of 120
+Comparison : Cmpd8_OxvsUn OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3176 entries
+
+In Quadrant1 the <<B>> group contains 1 entries
+Quadrant1 total entries were 588
+
+In Quadrant2 the <<A>> group contains 5 entries
+In Quadrant2 the <<B>> group contains 2 entries
+In Quadrant2 the <<C>> group contains 4 entries
+In Quadrant2 the <<E>> group contains 1 entries
+Quadrant2 total entries were 1076
+
+Quadrant3 total entries were 608
+
+In Quadrant4 the <<C>> group contains 1 entries
+In Quadrant4 the <<E>> group contains 1 entries
+Quadrant4 total entries were 904
+
+In total the scorecard identified 15 entries inside the shaded regions of interest
+
+-------------- Comparison 51 of 120
+Comparison : LorvsUn Cmpd8vsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3172 entries
+
+Quadrant1 total entries were 373
+
+In Quadrant2 the <<A>> group contains 1 entries
+In Quadrant2 the <<B>> group contains 1 entries
+Quadrant2 total entries were 1249
+
+Quadrant3 total entries were 409
+
+In Quadrant4 the <<A>> group contains 4 entries
+In Quadrant4 the <<C>> group contains 4 entries
+Quadrant4 total entries were 1141
+
+In total the scorecard identified 10 entries inside the shaded regions of interest
+
+-------------- Comparison 52 of 120
+Comparison : LorvsUn Cmpd8vsUn
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3175 entries
+
+In Quadrant1 the <<D>> group contains 1 entries
+Quadrant1 total entries were 1055
+
+Quadrant2 total entries were 511
+
+In Quadrant3 the <<A>> group contains 1 entries
+In Quadrant3 the <<C>> group contains 2 entries
+Quadrant3 total entries were 1163
+
+In Quadrant4 the <<A>> group contains 1 entries
+In Quadrant4 the <<D>> group contains 1 entries
+Quadrant4 total entries were 446
+
+In total the scorecard identified 6 entries inside the shaded regions of interest
+
+-------------- Comparison 53 of 120
+Comparison : LorvsUn Cmpd8_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3166 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<C>> group contains 3 entries
+Quadrant1 total entries were 920
+
+Quadrant2 total entries were 542
+
+Quadrant3 total entries were 1119
+
+Quadrant4 total entries were 585
+
+In total the scorecard identified 5 entries inside the shaded regions of interest
+
+-------------- Comparison 54 of 120
+Comparison : LorvsUn Cmpd8_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3179 entries
+
+In Quadrant1 the <<B>> group contains 1 entries
+Quadrant1 total entries were 570
+
+Quadrant2 total entries were 1058
+
+Quadrant3 total entries were 604
+
+In Quadrant4 the <<A>> group contains 2 entries
+In Quadrant4 the <<B>> group contains 1 entries
+Quadrant4 total entries were 947
+
+In total the scorecard identified 4 entries inside the shaded regions of interest
+
+-------------- Comparison 55 of 120
+Comparison : LorvsUn Cmpd8_OxvsOx
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3174 entries
+
+In Quadrant1 the <<D>> group contains 1 entries
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 1027
+
+Quadrant2 total entries were 549
+
+In Quadrant3 the <<A>> group contains 4 entries
+In Quadrant3 the <<B>> group contains 4 entries
+In Quadrant3 the <<C>> group contains 2 entries
+Quadrant3 total entries were 1118
+
+In Quadrant4 the <<A>> group contains 1 entries
+Quadrant4 total entries were 480
+
+In total the scorecard identified 13 entries inside the shaded regions of interest
+
+-------------- Comparison 56 of 120
+Comparison : LorvsUn Cmpd8_OxvsUn
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3183 entries
+
+In Quadrant1 the <<A>> group contains 1 entries
+In Quadrant1 the <<B>> group contains 1 entries
+In Quadrant1 the <<C>> group contains 2 entries
+In Quadrant1 the <<D>> group contains 1 entries
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 1107
+
+Quadrant2 total entries were 380
+
+In Quadrant3 the <<A>> group contains 5 entries
+In Quadrant3 the <<B>> group contains 5 entries
+In Quadrant3 the <<D>> group contains 1 entries
+Quadrant3 total entries were 1294
+
+Quadrant4 total entries were 402
+
+In total the scorecard identified 17 entries inside the shaded regions of interest
+
+-------------- Comparison 57 of 120
+Comparison : LorvsUn Lor_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3160 entries
+
+In Quadrant1 the <<A>> group contains 3 entries
+In Quadrant1 the <<C>> group contains 7 entries
+In Quadrant1 the <<E>> group contains 9 entries
+Quadrant1 total entries were 992
+
+In Quadrant2 the <<B>> group contains 1 entries
+Quadrant2 total entries were 568
+
+In Quadrant3 the <<A>> group contains 5 entries
+In Quadrant3 the <<B>> group contains 2 entries
+In Quadrant3 the <<C>> group contains 1 entries
+Quadrant3 total entries were 1092
+
+Quadrant4 total entries were 508
+
+In total the scorecard identified 28 entries inside the shaded regions of interest
+
+-------------- Comparison 58 of 120
+Comparison : LorvsUn Lor_OxvsCmpd8_Ox
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3163 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<C>> group contains 3 entries
+Quadrant1 total entries were 930
+
+In Quadrant2 the <<B>> group contains 1 entries
+Quadrant2 total entries were 615
+
+In Quadrant3 the <<B>> group contains 1 entries
+Quadrant3 total entries were 1044
+
+Quadrant4 total entries were 574
+
+In total the scorecard identified 7 entries inside the shaded regions of interest
+
+-------------- Comparison 59 of 120
+Comparison : LorvsUn Lor_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3167 entries
+
+In Quadrant1 the <<A>> group contains 1 entries
+In Quadrant1 the <<B>> group contains 1 entries
+Quadrant1 total entries were 807
+
+Quadrant2 total entries were 751
+
+Quadrant3 total entries were 903
+
+Quadrant4 total entries were 706
+
+In total the scorecard identified 2 entries inside the shaded regions of interest
+
+-------------- Comparison 60 of 120
+Comparison : LorvsUn Lor_OxvsOx
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3159 entries
+
+In Quadrant1 the <<A>> group contains 1 entries
+In Quadrant1 the <<C>> group contains 1 entries
+Quadrant1 total entries were 1095
+
+Quadrant2 total entries were 453
+
+In Quadrant3 the <<A>> group contains 10 entries
+In Quadrant3 the <<B>> group contains 1 entries
+In Quadrant3 the <<C>> group contains 3 entries
+In Quadrant3 the <<E>> group contains 2 entries
+Quadrant3 total entries were 1207
+
+Quadrant4 total entries were 404
+
+In total the scorecard identified 18 entries inside the shaded regions of interest
+
+-------------- Comparison 61 of 120
+Comparison : LorvsUn Lor_OxvsUn
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3172 entries
+
+In Quadrant1 the <<A>> group contains 3 entries
+In Quadrant1 the <<C>> group contains 8 entries
+In Quadrant1 the <<E>> group contains 8 entries
+Quadrant1 total entries were 1145
+
+Quadrant2 total entries were 377
+
+In Quadrant3 the <<A>> group contains 10 entries
+In Quadrant3 the <<B>> group contains 1 entries
+In Quadrant3 the <<C>> group contains 3 entries
+Quadrant3 total entries were 1297
+
+Quadrant4 total entries were 353
+
+In total the scorecard identified 33 entries inside the shaded regions of interest
+
+-------------- Comparison 62 of 120
+Comparison : LorvsUn OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3164 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<C>> group contains 6 entries
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 605
+
+In Quadrant2 the <<A>> group contains 3 entries
+In Quadrant2 the <<C>> group contains 2 entries
+Quadrant2 total entries were 926
+
+Quadrant3 total entries were 736
+
+In Quadrant4 the <<D>> group contains 1 entries
+Quadrant4 total entries were 897
+
+In total the scorecard identified 15 entries inside the shaded regions of interest
+
+-------------- Comparison 63 of 120
+Comparison : LorvsUn OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3173 entries
+
+In Quadrant1 the <<B>> group contains 1 entries
+Quadrant1 total entries were 362
+
+In Quadrant2 the <<A>> group contains 9 entries
+In Quadrant2 the <<C>> group contains 4 entries
+Quadrant2 total entries were 1293
+
+Quadrant3 total entries were 367
+
+In Quadrant4 the <<A>> group contains 2 entries
+Quadrant4 total entries were 1151
+
+In total the scorecard identified 16 entries inside the shaded regions of interest
+
+-------------- Comparison 64 of 120
+Comparison : Lor_OxvsCmpd8 LorvsUn
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3160 entries
+
+In Quadrant1 the <<A>> group contains 3 entries
+In Quadrant1 the <<B>> group contains 7 entries
+In Quadrant1 the <<D>> group contains 9 entries
+Quadrant1 total entries were 992
+
+Quadrant2 total entries were 508
+
+In Quadrant3 the <<A>> group contains 5 entries
+In Quadrant3 the <<B>> group contains 1 entries
+In Quadrant3 the <<C>> group contains 2 entries
+Quadrant3 total entries were 1092
+
+In Quadrant4 the <<C>> group contains 1 entries
+Quadrant4 total entries were 568
+
+In total the scorecard identified 28 entries inside the shaded regions of interest
+
+-------------- Comparison 65 of 120
+Comparison : Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3175 entries
+
+In Quadrant1 the <<A>> group contains 6 entries
+In Quadrant1 the <<B>> group contains 12 entries
+In Quadrant1 the <<D>> group contains 3 entries
+Quadrant1 total entries were 1294
+
+Quadrant2 total entries were 268
+
+In Quadrant3 the <<A>> group contains 3 entries
+In Quadrant3 the <<B>> group contains 2 entries
+Quadrant3 total entries were 1326
+
+Quadrant4 total entries were 287
+
+In total the scorecard identified 26 entries inside the shaded regions of interest
+
+-------------- Comparison 66 of 120
+Comparison : Lor_OxvsCmpd8 Lor_OxvsOx
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3166 entries
+
+In Quadrant1 the <<A>> group contains 1 entries
+In Quadrant1 the <<B>> group contains 2 entries
+In Quadrant1 the <<D>> group contains 2 entries
+Quadrant1 total entries were 1240
+
+Quadrant2 total entries were 324
+
+In Quadrant3 the <<A>> group contains 6 entries
+In Quadrant3 the <<B>> group contains 1 entries
+In Quadrant3 the <<C>> group contains 7 entries
+Quadrant3 total entries were 1265
+
+Quadrant4 total entries were 337
+
+In total the scorecard identified 19 entries inside the shaded regions of interest
+
+-------------- Comparison 67 of 120
+Comparison : Lor_OxvsCmpd8 Lor_OxvsUn
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3168 entries
+
+In Quadrant1 the <<A>> group contains 20 entries
+In Quadrant1 the <<B>> group contains 3 entries
+In Quadrant1 the <<C>> group contains 1 entries
+Quadrant1 total entries were 1289
+
+Quadrant2 total entries were 249
+
+In Quadrant3 the <<A>> group contains 6 entries
+In Quadrant3 the <<C>> group contains 3 entries
+Quadrant3 total entries were 1342
+
+Quadrant4 total entries were 288
+
+In total the scorecard identified 33 entries inside the shaded regions of interest
+
+-------------- Comparison 68 of 120
+Comparison : Lor_OxvsCmpd8 OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3169 entries
+
+In Quadrant1 the <<A>> group contains 11 entries
+In Quadrant1 the <<B>> group contains 9 entries
+In Quadrant1 the <<C>> group contains 7 entries
+Quadrant1 total entries were 945
+
+Quadrant2 total entries were 580
+
+In Quadrant3 the <<A>> group contains 2 entries
+Quadrant3 total entries were 1030
+
+In Quadrant4 the <<D>> group contains 1 entries
+Quadrant4 total entries were 614
+
+In total the scorecard identified 30 entries inside the shaded regions of interest
+
+-------------- Comparison 69 of 120
+Comparison : Lor_OxvsCmpd8_Ox OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3165 entries
+
+In Quadrant1 the <<C>> group contains 1 entries
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 697
+
+In Quadrant2 the <<C>> group contains 1 entries
+In Quadrant2 the <<E>> group contains 1 entries
+Quadrant2 total entries were 963
+
+Quadrant3 total entries were 659
+
+In Quadrant4 the <<A>> group contains 1 entries
+Quadrant4 total entries were 846
+
+In total the scorecard identified 5 entries inside the shaded regions of interest
+
+-------------- Comparison 70 of 120
+Comparison : Lor_OxvsCmpd8_Ox OxvsUn
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3164 entries
+
+In Quadrant1 the <<A>> group contains 3 entries
+In Quadrant1 the <<B>> group contains 1 entries
+In Quadrant1 the <<C>> group contains 2 entries
+Quadrant1 total entries were 838
+
+Quadrant2 total entries were 655
+
+Quadrant3 total entries were 964
+
+Quadrant4 total entries were 707
+
+In total the scorecard identified 6 entries inside the shaded regions of interest
+
+-------------- Comparison 71 of 120
+Comparison : Lor_OxvsLor Cmpd8_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3161 entries
+
+In Quadrant1 the <<A>> group contains 1 entries
+In Quadrant1 the <<C>> group contains 1 entries
+In Quadrant1 the <<D>> group contains 1 entries
+In Quadrant1 the <<E>> group contains 3 entries
+Quadrant1 total entries were 986
+
+Quadrant2 total entries were 477
+
+Quadrant3 total entries were 1123
+
+Quadrant4 total entries were 575
+
+In total the scorecard identified 6 entries inside the shaded regions of interest
+
+-------------- Comparison 72 of 120
+Comparison : Lor_OxvsLor Lor_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3166 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<C>> group contains 8 entries
+In Quadrant1 the <<E>> group contains 11 entries
+Quadrant1 total entries were 1279
+
+Quadrant2 total entries were 299
+
+Quadrant3 total entries were 1291
+
+Quadrant4 total entries were 297
+
+In total the scorecard identified 21 entries inside the shaded regions of interest
+
+-------------- Comparison 73 of 120
+Comparison : Lor_OxvsLor Lor_OxvsCmpd8_Ox
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3170 entries
+
+In Quadrant1 the <<B>> group contains 1 entries
+In Quadrant1 the <<C>> group contains 4 entries
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 1200
+
+Quadrant2 total entries were 361
+
+Quadrant3 total entries were 1232
+
+Quadrant4 total entries were 377
+
+In total the scorecard identified 6 entries inside the shaded regions of interest
+
+-------------- Comparison 74 of 120
+Comparison : Lor_OxvsLor OxvsUn
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3160 entries
+
+In Quadrant1 the <<A>> group contains 1 entries
+In Quadrant1 the <<B>> group contains 1 entries
+In Quadrant1 the <<C>> group contains 2 entries
+In Quadrant1 the <<E>> group contains 4 entries
+Quadrant1 total entries were 935
+
+Quadrant2 total entries were 553
+
+Quadrant3 total entries were 1046
+
+Quadrant4 total entries were 626
+
+In total the scorecard identified 8 entries inside the shaded regions of interest
+
+-------------- Comparison 75 of 120
+Comparison : Lor_OxvsOx Cmpd8vsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3154 entries
+
+Quadrant1 total entries were 484
+
+In Quadrant2 the <<A>> group contains 2 entries
+In Quadrant2 the <<B>> group contains 3 entries
+Quadrant2 total entries were 1135
+
+Quadrant3 total entries were 473
+
+In Quadrant4 the <<A>> group contains 1 entries
+Quadrant4 total entries were 1062
+
+In total the scorecard identified 6 entries inside the shaded regions of interest
+
+-------------- Comparison 76 of 120
+Comparison : Lor_OxvsOx Cmpd8_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3161 entries
+
+Quadrant1 total entries were 984
+
+Quadrant2 total entries were 481
+
+Quadrant3 total entries were 1130
+
+Quadrant4 total entries were 566
+
+In total the scorecard identified 0 entries inside the shaded regions of interest
+
+-------------- Comparison 77 of 120
+Comparison : Lor_OxvsOx Cmpd8_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3167 entries
+
+Quadrant1 total entries were 708
+
+Quadrant2 total entries were 924
+
+Quadrant3 total entries were 688
+
+In Quadrant4 the <<A>> group contains 1 entries
+Quadrant4 total entries were 847
+
+In total the scorecard identified 1 entries inside the shaded regions of interest
+
+-------------- Comparison 78 of 120
+Comparison : Lor_OxvsOx Lor_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3166 entries
+
+In Quadrant1 the <<A>> group contains 1 entries
+In Quadrant1 the <<C>> group contains 2 entries
+In Quadrant1 the <<E>> group contains 2 entries
+Quadrant1 total entries were 1240
+
+Quadrant2 total entries were 337
+
+In Quadrant3 the <<A>> group contains 6 entries
+In Quadrant3 the <<B>> group contains 7 entries
+In Quadrant3 the <<C>> group contains 1 entries
+Quadrant3 total entries were 1265
+
+Quadrant4 total entries were 324
+
+In total the scorecard identified 19 entries inside the shaded regions of interest
+
+-------------- Comparison 79 of 120
+Comparison : Lor_OxvsOx Lor_OxvsCmpd8_Ox
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3173 entries
+
+In Quadrant1 the <<A>> group contains 1 entries
+Quadrant1 total entries were 1177
+
+Quadrant2 total entries were 384
+
+In Quadrant3 the <<B>> group contains 1 entries
+In Quadrant3 the <<C>> group contains 1 entries
+In Quadrant3 the <<D>> group contains 3 entries
+Quadrant3 total entries were 1223
+
+Quadrant4 total entries were 389
+
+In total the scorecard identified 6 entries inside the shaded regions of interest
+
+-------------- Comparison 80 of 120
+Comparison : Lor_OxvsOx Lor_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3164 entries
+
+In Quadrant1 the <<C>> group contains 1 entries
+Quadrant1 total entries were 1137
+
+Quadrant2 total entries were 438
+
+Quadrant3 total entries were 1162
+
+Quadrant4 total entries were 427
+
+In total the scorecard identified 1 entries inside the shaded regions of interest
+
+-------------- Comparison 81 of 120
+Comparison : Lor_OxvsOx OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3169 entries
+
+Quadrant1 total entries were 444
+
+In Quadrant2 the <<A>> group contains 11 entries
+In Quadrant2 the <<B>> group contains 2 entries
+In Quadrant2 the <<C>> group contains 4 entries
+Quadrant2 total entries were 1227
+
+Quadrant3 total entries were 395
+
+In Quadrant4 the <<A>> group contains 1 entries
+In Quadrant4 the <<B>> group contains 1 entries
+Quadrant4 total entries were 1103
+
+In total the scorecard identified 19 entries inside the shaded regions of interest
+
+-------------- Comparison 82 of 120
+Comparison : Lor_OxvsUn Cmpd8vsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3160 entries
+
+Quadrant1 total entries were 473
+
+In Quadrant2 the <<A>> group contains 1 entries
+In Quadrant2 the <<B>> group contains 1 entries
+In Quadrant2 the <<C>> group contains 1 entries
+Quadrant2 total entries were 1150
+
+Quadrant3 total entries were 489
+
+In Quadrant4 the <<A>> group contains 7 entries
+In Quadrant4 the <<B>> group contains 5 entries
+In Quadrant4 the <<D>> group contains 5 entries
+Quadrant4 total entries were 1048
+
+In total the scorecard identified 20 entries inside the shaded regions of interest
+
+-------------- Comparison 83 of 120
+Comparison : Lor_OxvsUn Cmpd8_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3161 entries
+
+In Quadrant1 the <<A>> group contains 5 entries
+In Quadrant1 the <<B>> group contains 3 entries
+In Quadrant1 the <<D>> group contains 3 entries
+Quadrant1 total entries were 1029
+
+Quadrant2 total entries were 430
+
+Quadrant3 total entries were 1207
+
+Quadrant4 total entries were 495
+
+In total the scorecard identified 11 entries inside the shaded regions of interest
+
+-------------- Comparison 84 of 120
+Comparison : Lor_OxvsUn Cmpd8_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3171 entries
+
+In Quadrant1 the <<B>> group contains 1 entries
+Quadrant1 total entries were 754
+
+Quadrant2 total entries were 875
+
+Quadrant3 total entries were 765
+
+In Quadrant4 the <<A>> group contains 1 entries
+In Quadrant4 the <<B>> group contains 1 entries
+In Quadrant4 the <<D>> group contains 1 entries
+Quadrant4 total entries were 777
+
+In total the scorecard identified 4 entries inside the shaded regions of interest
+
+-------------- Comparison 85 of 120
+Comparison : Lor_OxvsUn Cmpd8_OxvsOx
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3170 entries
+
+In Quadrant1 the <<C>> group contains 2 entries
+In Quadrant1 the <<D>> group contains 1 entries
+Quadrant1 total entries were 966
+
+Quadrant2 total entries were 607
+
+In Quadrant3 the <<A>> group contains 2 entries
+In Quadrant3 the <<B>> group contains 4 entries
+In Quadrant3 the <<C>> group contains 1 entries
+In Quadrant3 the <<D>> group contains 1 entries
+Quadrant3 total entries were 1035
+
+In Quadrant4 the <<A>> group contains 1 entries
+In Quadrant4 the <<B>> group contains 1 entries
+In Quadrant4 the <<D>> group contains 1 entries
+Quadrant4 total entries were 562
+
+In total the scorecard identified 14 entries inside the shaded regions of interest
+
+-------------- Comparison 86 of 120
+Comparison : Lor_OxvsUn Lor_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3168 entries
+
+In Quadrant1 the <<A>> group contains 20 entries
+In Quadrant1 the <<B>> group contains 1 entries
+In Quadrant1 the <<C>> group contains 3 entries
+Quadrant1 total entries were 1289
+
+Quadrant2 total entries were 288
+
+In Quadrant3 the <<A>> group contains 6 entries
+In Quadrant3 the <<B>> group contains 3 entries
+Quadrant3 total entries were 1342
+
+Quadrant4 total entries were 249
+
+In total the scorecard identified 33 entries inside the shaded regions of interest
+
+-------------- Comparison 87 of 120
+Comparison : Lor_OxvsUn Lor_OxvsCmpd8_Ox
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3170 entries
+
+In Quadrant1 the <<A>> group contains 6 entries
+In Quadrant1 the <<B>> group contains 11 entries
+In Quadrant1 the <<D>> group contains 1 entries
+Quadrant1 total entries were 1175
+
+Quadrant2 total entries were 385
+
+In Quadrant3 the <<B>> group contains 1 entries
+In Quadrant3 the <<D>> group contains 2 entries
+Quadrant3 total entries were 1245
+
+Quadrant4 total entries were 365
+
+In total the scorecard identified 21 entries inside the shaded regions of interest
+
+-------------- Comparison 88 of 120
+Comparison : Lor_OxvsUn Lor_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3169 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<B>> group contains 7 entries
+In Quadrant1 the <<D>> group contains 10 entries
+Quadrant1 total entries were 1201
+
+Quadrant2 total entries were 374
+
+Quadrant3 total entries were 1256
+
+Quadrant4 total entries were 338
+
+In total the scorecard identified 19 entries inside the shaded regions of interest
+
+-------------- Comparison 89 of 120
+Comparison : Lor_OxvsUn Lor_OxvsOx
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3169 entries
+
+In Quadrant1 the <<A>> group contains 1 entries
+In Quadrant1 the <<B>> group contains 2 entries
+In Quadrant1 the <<C>> group contains 1 entries
+In Quadrant1 the <<D>> group contains 2 entries
+Quadrant1 total entries were 1293
+
+Quadrant2 total entries were 271
+
+In Quadrant3 the <<A>> group contains 11 entries
+In Quadrant3 the <<B>> group contains 2 entries
+In Quadrant3 the <<C>> group contains 5 entries
+Quadrant3 total entries were 1359
+
+Quadrant4 total entries were 246
+
+In total the scorecard identified 24 entries inside the shaded regions of interest
+
+-------------- Comparison 90 of 120
+Comparison : Lor_OxvsUn OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3159 entries
+
+In Quadrant1 the <<A>> group contains 10 entries
+In Quadrant1 the <<B>> group contains 8 entries
+In Quadrant1 the <<C>> group contains 1 entries
+Quadrant1 total entries were 757
+
+In Quadrant2 the <<A>> group contains 1 entries
+In Quadrant2 the <<C>> group contains 1 entries
+Quadrant2 total entries were 772
+
+Quadrant3 total entries were 865
+
+In Quadrant4 the <<D>> group contains 1 entries
+Quadrant4 total entries were 765
+
+In total the scorecard identified 22 entries inside the shaded regions of interest
+
+-------------- Comparison 91 of 120
+Comparison : Lor_OxvsUn OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3164 entries
+
+In Quadrant1 the <<B>> group contains 1 entries
+In Quadrant1 the <<D>> group contains 1 entries
+Quadrant1 total entries were 600
+
+In Quadrant2 the <<A>> group contains 8 entries
+In Quadrant2 the <<B>> group contains 1 entries
+In Quadrant2 the <<C>> group contains 4 entries
+Quadrant2 total entries were 1059
+
+Quadrant3 total entries were 581
+
+In Quadrant4 the <<A>> group contains 1 entries
+Quadrant4 total entries were 924
+
+In total the scorecard identified 16 entries inside the shaded regions of interest
+
+-------------- Comparison 92 of 120
+Comparison : OxvsCmpd8 Cmpd8vsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3170 entries
+
+Quadrant1 total entries were 652
+
+In Quadrant2 the <<A>> group contains 2 entries
+Quadrant2 total entries were 984
+
+In Quadrant3 the <<E>> group contains 1 entries
+Quadrant3 total entries were 660
+
+In Quadrant4 the <<A>> group contains 6 entries
+In Quadrant4 the <<B>> group contains 3 entries
+In Quadrant4 the <<D>> group contains 1 entries
+Quadrant4 total entries were 874
+
+In total the scorecard identified 13 entries inside the shaded regions of interest
+
+-------------- Comparison 93 of 120
+Comparison : OxvsCmpd8 Cmpd8_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3174 entries
+
+In Quadrant1 the <<A>> group contains 5 entries
+In Quadrant1 the <<B>> group contains 1 entries
+Quadrant1 total entries were 859
+
+Quadrant2 total entries were 602
+
+Quadrant3 total entries were 1042
+
+Quadrant4 total entries were 671
+
+In total the scorecard identified 6 entries inside the shaded regions of interest
+
+-------------- Comparison 94 of 120
+Comparison : OxvsCmpd8 Cmpd8_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3173 entries
+
+In Quadrant1 the <<B>> group contains 1 entries
+Quadrant1 total entries were 805
+
+In Quadrant2 the <<A>> group contains 2 entries
+Quadrant2 total entries were 830
+
+In Quadrant3 the <<E>> group contains 1 entries
+Quadrant3 total entries were 807
+
+In Quadrant4 the <<B>> group contains 1 entries
+In Quadrant4 the <<D>> group contains 1 entries
+Quadrant4 total entries were 731
+
+In total the scorecard identified 6 entries inside the shaded regions of interest
+
+-------------- Comparison 95 of 120
+Comparison : OxvsCmpd8 Cmpd8_OxvsOx
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3181 entries
+
+Quadrant1 total entries were 390
+
+In Quadrant2 the <<A>> group contains 2 entries
+In Quadrant2 the <<C>> group contains 2 entries
+Quadrant2 total entries were 1182
+
+Quadrant3 total entries were 451
+
+In Quadrant4 the <<A>> group contains 13 entries
+In Quadrant4 the <<B>> group contains 2 entries
+Quadrant4 total entries were 1158
+
+In total the scorecard identified 19 entries inside the shaded regions of interest
+
+-------------- Comparison 96 of 120
+Comparison : OxvsCmpd8 Lor_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3169 entries
+
+In Quadrant1 the <<A>> group contains 11 entries
+In Quadrant1 the <<B>> group contains 7 entries
+In Quadrant1 the <<C>> group contains 9 entries
+Quadrant1 total entries were 945
+
+In Quadrant2 the <<E>> group contains 1 entries
+Quadrant2 total entries were 614
+
+In Quadrant3 the <<A>> group contains 2 entries
+Quadrant3 total entries were 1030
+
+Quadrant4 total entries were 580
+
+In total the scorecard identified 30 entries inside the shaded regions of interest
+
+-------------- Comparison 97 of 120
+Comparison : OxvsCmpd8 Lor_OxvsCmpd8_Ox
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3166 entries
+
+In Quadrant1 the <<A>> group contains 5 entries
+In Quadrant1 the <<B>> group contains 6 entries
+In Quadrant1 the <<D>> group contains 3 entries
+Quadrant1 total entries were 862
+
+In Quadrant2 the <<E>> group contains 1 entries
+Quadrant2 total entries were 682
+
+In Quadrant3 the <<A>> group contains 2 entries
+Quadrant3 total entries were 951
+
+Quadrant4 total entries were 671
+
+In total the scorecard identified 17 entries inside the shaded regions of interest
+
+-------------- Comparison 98 of 120
+Comparison : OxvsCmpd8 Lor_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3157 entries
+
+In Quadrant1 the <<A>> group contains 1 entries
+In Quadrant1 the <<B>> group contains 5 entries
+In Quadrant1 the <<C>> group contains 1 entries
+In Quadrant1 the <<D>> group contains 6 entries
+Quadrant1 total entries were 914
+
+Quadrant2 total entries were 646
+
+Quadrant3 total entries were 984
+
+Quadrant4 total entries were 613
+
+In total the scorecard identified 13 entries inside the shaded regions of interest
+
+-------------- Comparison 99 of 120
+Comparison : OxvsCmpd8 Lor_OxvsOx
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3168 entries
+
+Quadrant1 total entries were 608
+
+In Quadrant2 the <<E>> group contains 1 entries
+Quadrant2 total entries were 938
+
+Quadrant3 total entries were 685
+
+In Quadrant4 the <<A>> group contains 1 entries
+In Quadrant4 the <<B>> group contains 6 entries
+In Quadrant4 the <<D>> group contains 4 entries
+Quadrant4 total entries were 937
+
+In total the scorecard identified 12 entries inside the shaded regions of interest
+
+-------------- Comparison 100 of 120
+Comparison : OxvsCmpd8 OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3175 entries
+
+In Quadrant1 the <<A>> group contains 6 entries
+In Quadrant1 the <<B>> group contains 7 entries
+Quadrant1 total entries were 1176
+
+Quadrant2 total entries were 496
+
+In Quadrant3 the <<E>> group contains 1 entries
+Quadrant3 total entries were 1132
+
+Quadrant4 total entries were 371
+
+In total the scorecard identified 14 entries inside the shaded regions of interest
+
+-------------- Comparison 101 of 120
+Comparison : OxvsLor Cmpd8vsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3169 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<B>> group contains 2 entries
+Quadrant1 total entries were 1148
+
+Quadrant2 total entries were 472
+
+In Quadrant3 the <<A>> group contains 2 entries
+Quadrant3 total entries were 1046
+
+In Quadrant4 the <<C>> group contains 1 entries
+Quadrant4 total entries were 503
+
+In total the scorecard identified 7 entries inside the shaded regions of interest
+
+-------------- Comparison 102 of 120
+Comparison : OxvsLor Cmpd8_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3166 entries
+
+In Quadrant1 the <<C>> group contains 1 entries
+Quadrant1 total entries were 673
+
+Quadrant2 total entries were 795
+
+Quadrant3 total entries were 713
+
+Quadrant4 total entries were 985
+
+In total the scorecard identified 1 entries inside the shaded regions of interest
+
+-------------- Comparison 103 of 120
+Comparison : OxvsLor Cmpd8_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3179 entries
+
+Quadrant1 total entries were 1102
+
+Quadrant2 total entries were 528
+
+In Quadrant3 the <<A>> group contains 2 entries
+Quadrant3 total entries were 990
+
+Quadrant4 total entries were 559
+
+In total the scorecard identified 2 entries inside the shaded regions of interest
+
+-------------- Comparison 104 of 120
+Comparison : OxvsLor Lor_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3161 entries
+
+In Quadrant1 the <<B>> group contains 3 entries
+In Quadrant1 the <<C>> group contains 1 entries
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 707
+
+In Quadrant2 the <<A>> group contains 1 entries
+Quadrant2 total entries were 855
+
+Quadrant3 total entries were 647
+
+In Quadrant4 the <<A>> group contains 3 entries
+In Quadrant4 the <<B>> group contains 5 entries
+Quadrant4 total entries were 952
+
+In total the scorecard identified 14 entries inside the shaded regions of interest
+
+-------------- Comparison 105 of 120
+Comparison : OxvsLor Lor_OxvsCmpd8_Ox
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3165 entries
+
+In Quadrant1 the <<B>> group contains 1 entries
+In Quadrant1 the <<D>> group contains 1 entries
+Quadrant1 total entries were 697
+
+In Quadrant2 the <<A>> group contains 1 entries
+Quadrant2 total entries were 846
+
+Quadrant3 total entries were 659
+
+In Quadrant4 the <<B>> group contains 1 entries
+In Quadrant4 the <<D>> group contains 1 entries
+Quadrant4 total entries were 963
+
+In total the scorecard identified 5 entries inside the shaded regions of interest
+
+-------------- Comparison 106 of 120
+Comparison : OxvsLor Lor_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3167 entries
+
+In Quadrant1 the <<C>> group contains 1 entries
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 882
+
+Quadrant2 total entries were 676
+
+Quadrant3 total entries were 842
+
+Quadrant4 total entries were 767
+
+In total the scorecard identified 2 entries inside the shaded regions of interest
+
+-------------- Comparison 107 of 120
+Comparison : OxvsUn Cmpd8vsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3163 entries
+
+Quadrant1 total entries were 679
+
+Quadrant2 total entries were 943
+
+Quadrant3 total entries were 732
+
+In Quadrant4 the <<A>> group contains 6 entries
+In Quadrant4 the <<B>> group contains 1 entries
+Quadrant4 total entries were 809
+
+In total the scorecard identified 7 entries inside the shaded regions of interest
+
+-------------- Comparison 108 of 120
+Comparison : OxvsUn Cmpd8vsUn
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3171 entries
+
+Quadrant1 total entries were 865
+
+Quadrant2 total entries were 698
+
+Quadrant3 total entries were 990
+
+In Quadrant4 the <<A>> group contains 1 entries
+In Quadrant4 the <<B>> group contains 2 entries
+In Quadrant4 the <<D>> group contains 1 entries
+Quadrant4 total entries were 618
+
+In total the scorecard identified 4 entries inside the shaded regions of interest
+
+-------------- Comparison 109 of 120
+Comparison : OxvsUn Cmpd8_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3164 entries
+
+In Quadrant1 the <<A>> group contains 5 entries
+In Quadrant1 the <<B>> group contains 1 entries
+Quadrant1 total entries were 863
+
+Quadrant2 total entries were 601
+
+Quadrant3 total entries were 1072
+
+Quadrant4 total entries were 628
+
+In total the scorecard identified 6 entries inside the shaded regions of interest
+
+-------------- Comparison 110 of 120
+Comparison : OxvsUn Cmpd8_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3174 entries
+
+In Quadrant1 the <<B>> group contains 1 entries
+Quadrant1 total entries were 866
+
+Quadrant2 total entries were 765
+
+Quadrant3 total entries were 912
+
+In Quadrant4 the <<B>> group contains 1 entries
+In Quadrant4 the <<D>> group contains 1 entries
+Quadrant4 total entries were 631
+
+In total the scorecard identified 3 entries inside the shaded regions of interest
+
+-------------- Comparison 111 of 120
+Comparison : OxvsUn Cmpd8_OxvsOx
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3183 entries
+
+Quadrant1 total entries were 597
+
+Quadrant2 total entries were 975
+
+Quadrant3 total entries were 703
+
+In Quadrant4 the <<A>> group contains 1 entries
+In Quadrant4 the <<B>> group contains 1 entries
+In Quadrant4 the <<E>> group contains 1 entries
+Quadrant4 total entries were 908
+
+In total the scorecard identified 3 entries inside the shaded regions of interest
+
+-------------- Comparison 112 of 120
+Comparison : OxvsUn Cmpd8_OxvsUn
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3180 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<B>> group contains 1 entries
+Quadrant1 total entries were 938
+
+Quadrant2 total entries were 550
+
+Quadrant3 total entries were 1138
+
+Quadrant4 total entries were 554
+
+In total the scorecard identified 3 entries inside the shaded regions of interest
+
+-------------- Comparison 113 of 120
+Comparison : OxvsUn LorvsUn
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3174 entries
+
+In Quadrant1 the <<A>> group contains 2 entries
+In Quadrant1 the <<B>> group contains 5 entries
+Quadrant1 total entries were 863
+
+Quadrant2 total entries were 637
+
+Quadrant3 total entries were 1051
+
+Quadrant4 total entries were 623
+
+In total the scorecard identified 7 entries inside the shaded regions of interest
+
+-------------- Comparison 114 of 120
+Comparison : OxvsUn Lor_OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3159 entries
+
+In Quadrant1 the <<A>> group contains 7 entries
+In Quadrant1 the <<C>> group contains 7 entries
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 924
+
+Quadrant2 total entries were 639
+
+Quadrant3 total entries were 1033
+
+Quadrant4 total entries were 563
+
+In total the scorecard identified 15 entries inside the shaded regions of interest
+
+-------------- Comparison 115 of 120
+Comparison : OxvsUn Lor_OxvsCmpd8_Ox
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3164 entries
+
+In Quadrant1 the <<A>> group contains 3 entries
+In Quadrant1 the <<B>> group contains 2 entries
+In Quadrant1 the <<C>> group contains 1 entries
+Quadrant1 total entries were 838
+
+Quadrant2 total entries were 707
+
+Quadrant3 total entries were 964
+
+Quadrant4 total entries were 655
+
+In total the scorecard identified 6 entries inside the shaded regions of interest
+
+-------------- Comparison 116 of 120
+Comparison : OxvsUn Lor_OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3160 entries
+
+In Quadrant1 the <<A>> group contains 1 entries
+In Quadrant1 the <<B>> group contains 2 entries
+In Quadrant1 the <<C>> group contains 1 entries
+In Quadrant1 the <<D>> group contains 4 entries
+Quadrant1 total entries were 935
+
+Quadrant2 total entries were 626
+
+Quadrant3 total entries were 1046
+
+Quadrant4 total entries were 553
+
+In total the scorecard identified 8 entries inside the shaded regions of interest
+
+-------------- Comparison 117 of 120
+Comparison : OxvsUn Lor_OxvsOx
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3169 entries
+
+Quadrant1 total entries were 725
+
+Quadrant2 total entries were 822
+
+Quadrant3 total entries were 846
+
+Quadrant4 total entries were 776
+
+In total the scorecard identified 0 entries inside the shaded regions of interest
+
+-------------- Comparison 118 of 120
+Comparison : OxvsUn Lor_OxvsUn
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3172 entries
+
+In Quadrant1 the <<A>> group contains 7 entries
+In Quadrant1 the <<C>> group contains 7 entries
+Quadrant1 total entries were 971
+
+Quadrant2 total entries were 551
+
+Quadrant3 total entries were 1137
+
+Quadrant4 total entries were 513
+
+In total the scorecard identified 14 entries inside the shaded regions of interest
+
+-------------- Comparison 119 of 120
+Comparison : OxvsUn OxvsCmpd8
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3173 entries
+
+In Quadrant1 the <<A>> group contains 7 entries
+In Quadrant1 the <<C>> group contains 2 entries
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 1050
+
+Quadrant2 total entries were 496
+
+Quadrant3 total entries were 1175
+
+Quadrant4 total entries were 452
+
+In total the scorecard identified 10 entries inside the shaded regions of interest
+
+-------------- Comparison 120 of 120
+Comparison : OxvsUn OxvsLor
+Applying fold change thresholds of 2 and 3.0
+Also, filtering the data using a statistical threshold of 0.05
+Analyzed 3178 entries
+
+In Quadrant1 the <<B>> group contains 1 entries
+In Quadrant1 the <<E>> group contains 1 entries
+Quadrant1 total entries were 1003
+
+Quadrant2 total entries were 670
+
+Quadrant3 total entries were 1004
+
+Quadrant4 total entries were 501
+
+In total the scorecard identified 2 entries inside the shaded regions of interest
+
+******************** Record counts:
+Symbol : Novel00071 occurred 51 times during the 120 comparisons
+Entry found in Cmpd8vsLor Cmpd8_OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8vsLor Lor_OxvsLor [Quadrant2], inside region of interest <<D>>
+Entry found in Cmpd8vsLor OxvsUn [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8vsLor [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8vsUn Lor_OxvsUn [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8vsUn OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<C>>
+Entry found in LorvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8_Ox OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsLor Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsLor OxvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsUn Cmpd8vsUn [Quadrant4], inside region of interest <<B>>
+Entry found in OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn Cmpd8_OxvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsUn LorvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Symbol : Novel00072 occurred 41 times during the 120 comparisons
+Entry found in Cmpd8vsLor Cmpd8_OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Lor_OxvsLor [Quadrant2], inside region of interest <<D>>
+Entry found in Cmpd8vsLor OxvsUn [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn LorvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<C>>
+Entry found in LorvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn Cmpd8_OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsLor Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsLor OxvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn Cmpd8_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn LorvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Symbol : SA_RS03110 occurred 71 times during the 120 comparisons
+Entry found in Cmpd8vsLor Cmpd8_OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Cmpd8_OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Lor_OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsLor OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8vsLor OxvsUn [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8vsLor [Quadrant3], inside region of interest <<E>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsCmpd8 [Quadrant2], inside region of interest <<E>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsUn [Quadrant2], inside region of interest <<E>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<E>>
+Entry found in Cmpd8vsUn Lor_OxvsLor [Quadrant2], inside region of interest <<E>>
+Entry found in Cmpd8vsUn Lor_OxvsUn [Quadrant2], inside region of interest <<E>>
+Entry found in Cmpd8vsUn OxvsCmpd8 [Quadrant2], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsLor Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsLor Lor_OxvsLor [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsLor OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn LorvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in LorvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8vsUn [Quadrant4], inside region of interest <<D>>
+Entry found in LorvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in LorvsUn Cmpd8_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in LorvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in LorvsUn OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsLor Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsLor OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsLor [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsLor Cmpd8vsLor [Quadrant4], inside region of interest <<C>>
+Entry found in OxvsLor Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsLor Lor_OxvsLor [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsUn Cmpd8vsUn [Quadrant4], inside region of interest <<D>>
+Entry found in OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn Cmpd8_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsUn Cmpd8_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn LorvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn OxvsLor [Quadrant1], inside region of interest <<B>>
+Symbol : SA_RS08315 occurred 64 times during the 120 comparisons
+Entry found in Cmpd8vsLor Cmpd8_OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Cmpd8_OxvsLor [Quadrant3], inside region of interest <<D>>
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Lor_OxvsLor [Quadrant2], inside region of interest <<D>>
+Entry found in Cmpd8vsLor OxvsUn [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8vsLor [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8vsUn Lor_OxvsUn [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8vsUn OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsCmpd8 Cmpd8_OxvsOx [Quadrant4], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsLor Cmpd8_OxvsCmpd8 [Quadrant2], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsLor Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsLor OxvsUn [Quadrant2], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsLor [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsOx Cmpd8_OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<C>>
+Entry found in LorvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<C>>
+Entry found in LorvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8_Ox OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsLor Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsLor OxvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsLor [Quadrant4], inside region of interest <<D>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsOx [Quadrant4], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsLor [Quadrant4], inside region of interest <<D>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsOx [Quadrant4], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsUn Cmpd8vsUn [Quadrant4], inside region of interest <<B>>
+Entry found in OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn Cmpd8_OxvsLor [Quadrant4], inside region of interest <<D>>
+Entry found in OxvsUn Cmpd8_OxvsOx [Quadrant4], inside region of interest <<B>>
+Entry found in OxvsUn LorvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Symbol : SA_RS13430 occurred 75 times during the 120 comparisons
+Entry found in Cmpd8vsLor Cmpd8_OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Cmpd8_OxvsLor [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Lor_OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8vsLor OxvsUn [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8vsLor [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsLor [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Lor_OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8vsUn Lor_OxvsUn [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsUn OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsCmpd8 Cmpd8_OxvsOx [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsLor Cmpd8vsUn [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsLor Cmpd8_OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsLor Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsLor OxvsUn [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsLor [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Cmpd8_OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Cmpd8_OxvsLor [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in LorvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8vsUn [Quadrant4], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8_OxvsLor [Quadrant4], inside region of interest <<B>>
+Entry found in LorvsUn Cmpd8_OxvsOx [Quadrant4], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in LorvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8_Ox OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsLor Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsLor OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsLor [Quadrant4], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsOx [Quadrant4], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsLor [Quadrant4], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsOx [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsUn Cmpd8vsUn [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn Cmpd8_OxvsLor [Quadrant4], inside region of interest <<B>>
+Entry found in OxvsUn Cmpd8_OxvsOx [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsUn LorvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Symbol : SA_RS08310 occurred 36 times during the 120 comparisons
+Entry found in Cmpd8vsLor Cmpd8_OxvsCmpd8 [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8vsLor Lor_OxvsLor [Quadrant2], inside region of interest <<D>>
+Entry found in Cmpd8vsLor OxvsUn [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8_Ox OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsLor OxvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsUn LorvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Symbol : SA_RS12345 occurred 31 times during the 120 comparisons
+Entry found in Cmpd8vsLor Cmpd8_OxvsLor [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8_Ox [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8vsLor [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsLor [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsOx [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8_Ox [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8vsUn OxvsCmpd8 [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsLor Cmpd8vsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsLor Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsLor Lor_OxvsCmpd8_Ox [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsLor [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Cmpd8_OxvsLor [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8_Ox [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Cmpd8vsLor [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsLor [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsOx [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn OxvsCmpd8 [Quadrant4], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8vsLor [Quadrant2], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsOx [Quadrant2], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant3], inside region of interest <<A>>
+Symbol : SA_RS12350 occurred 31 times during the 120 comparisons
+Entry found in Cmpd8vsLor Cmpd8_OxvsLor [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8_Ox [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8vsLor [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsLor [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsOx [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8_Ox [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8vsUn OxvsCmpd8 [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsLor Cmpd8vsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsLor Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsLor Lor_OxvsCmpd8_Ox [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsLor [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Cmpd8_OxvsLor [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8_Ox [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Cmpd8vsLor [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsLor [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsOx [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn OxvsCmpd8 [Quadrant4], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8vsLor [Quadrant2], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsOx [Quadrant2], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant3], inside region of interest <<A>>
+Symbol : SA_RS13405 occurred 69 times during the 120 comparisons
+Entry found in Cmpd8vsLor Cmpd8_OxvsLor [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsLor OxvsLor [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8vsLor [Quadrant4], inside region of interest <<E>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsLor [Quadrant4], inside region of interest <<E>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<E>>
+Entry found in Cmpd8vsUn Lor_OxvsOx [Quadrant1], inside region of interest <<E>>
+Entry found in Cmpd8vsUn Lor_OxvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in Cmpd8vsUn OxvsLor [Quadrant4], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsLor Cmpd8vsUn [Quadrant2], inside region of interest <<D>>
+Entry found in Cmpd8_OxvsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsLor Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsLor OxvsLor [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsLor [Quadrant4], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsOx Cmpd8_OxvsLor [Quadrant4], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant1], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsOx OxvsLor [Quadrant4], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsLor [Quadrant4], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn LorvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsOx [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn OxvsLor [Quadrant4], inside region of interest <<C>>
+Entry found in LorvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8vsUn [Quadrant1], inside region of interest <<D>>
+Entry found in LorvsUn Cmpd8_OxvsLor [Quadrant4], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8_OxvsOx [Quadrant1], inside region of interest <<D>>
+Entry found in LorvsUn Cmpd8_OxvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsOx [Quadrant1], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in LorvsUn OxvsCmpd8 [Quadrant4], inside region of interest <<D>>
+Entry found in LorvsUn OxvsLor [Quadrant4], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsOx [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant4], inside region of interest <<D>>
+Entry found in Lor_OxvsCmpd8_Ox OxvsLor [Quadrant4], inside region of interest <<A>>
+Entry found in Lor_OxvsOx Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in Lor_OxvsOx Cmpd8_OxvsLor [Quadrant4], inside region of interest <<A>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsOx OxvsLor [Quadrant4], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsLor [Quadrant4], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsOx [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant4], inside region of interest <<D>>
+Entry found in Lor_OxvsUn OxvsLor [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8vsLor [Quadrant3], inside region of interest <<E>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsLor [Quadrant3], inside region of interest <<E>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<E>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<E>>
+Entry found in OxvsCmpd8 Lor_OxvsOx [Quadrant2], inside region of interest <<E>>
+Entry found in OxvsCmpd8 OxvsLor [Quadrant3], inside region of interest <<E>>
+Entry found in OxvsLor Cmpd8vsLor [Quadrant3], inside region of interest <<A>>
+Entry found in OxvsLor Cmpd8_OxvsLor [Quadrant3], inside region of interest <<A>>
+Entry found in OxvsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in OxvsLor Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<A>>
+Symbol : SA_RS14270 occurred 13 times during the 120 comparisons
+Entry found in Cmpd8vsLor Cmpd8_OxvsLor [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8vsLor OxvsLor [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsLor OxvsLor [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsLor [Quadrant4], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn LorvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn OxvsLor [Quadrant4], inside region of interest <<E>>
+Entry found in LorvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8_OxvsLor [Quadrant4], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8_OxvsUn [Quadrant1], inside region of interest <<D>>
+Entry found in LorvsUn OxvsLor [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsLor Cmpd8vsLor [Quadrant3], inside region of interest <<A>>
+Entry found in OxvsLor Cmpd8_OxvsLor [Quadrant3], inside region of interest <<A>>
+Symbol : SA_RS03400 occurred 24 times during the 120 comparisons
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<E>>
+Entry found in Cmpd8vsUn Lor_OxvsUn [Quadrant2], inside region of interest <<E>>
+Entry found in Cmpd8vsUn OxvsCmpd8 [Quadrant2], inside region of interest <<E>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in LorvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8vsLor [Quadrant4], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Symbol : SA_RS14740 occurred 31 times during the 120 comparisons
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8vsLor OxvsUn [Quadrant2], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8_Ox OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsLor OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8vsLor [Quadrant4], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<B>>
+Entry found in OxvsUn LorvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Symbol : SA_RS09375 occurred 20 times during the 120 comparisons
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<C>>
+Symbol : SA_RS09770 occurred 30 times during the 120 comparisons
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8_Ox OxvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8vsLor [Quadrant4], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Symbol : SA_RS12150 occurred 16 times during the 120 comparisons
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<E>>
+Entry found in Cmpd8vsUn Lor_OxvsUn [Quadrant2], inside region of interest <<E>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Symbol : SA_RS01210 occurred 18 times during the 120 comparisons
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsOx [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<D>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant1], inside region of interest <<B>>
+Symbol : SA_RS09705 occurred 18 times during the 120 comparisons
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<E>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<D>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsOx [Quadrant4], inside region of interest <<D>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<C>>
+Symbol : SA_RS09755 occurred 11 times during the 120 comparisons
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Symbol : SA_RS09760 occurred 20 times during the 120 comparisons
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<D>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<C>>
+Symbol : SA_RS09765 occurred 20 times during the 120 comparisons
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<D>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<C>>
+Symbol : SA_RS12755 occurred 17 times during the 120 comparisons
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<E>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsOx [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant4], inside region of interest <<D>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Symbol : SA_RS12530 occurred 26 times during the 120 comparisons
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<A>>
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8_Ox [Quadrant4], inside region of interest <<B>>
+Entry found in Cmpd8vsLor OxvsLor [Quadrant1], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8vsLor [Quadrant2], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsCmpd8_Ox [Quadrant3], inside region of interest <<B>>
+Entry found in LorvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8_Ox OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in Lor_OxvsOx Cmpd8vsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8_Ox [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsOx OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in OxvsLor Cmpd8vsLor [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsLor Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsLor Lor_OxvsCmpd8_Ox [Quadrant4], inside region of interest <<B>>
+Symbol : SA_RS12545 occurred 11 times during the 120 comparisons
+Entry found in Cmpd8vsLor Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<B>>
+Entry found in Cmpd8vsLor OxvsLor [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Lor_OxvsOx Cmpd8vsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsOx OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant2], inside region of interest <<C>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Lor_OxvsUn OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in OxvsLor Cmpd8vsLor [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsLor Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<B>>
+Symbol : SA_RS12520 occurred 23 times during the 120 comparisons
+Entry found in Cmpd8vsLor OxvsLor [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn LorvsUn [Quadrant3], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn OxvsLor [Quadrant2], inside region of interest <<E>>
+Entry found in LorvsUn Cmpd8vsLor [Quadrant2], inside region of interest <<B>>
+Entry found in LorvsUn Cmpd8_OxvsUn [Quadrant3], inside region of interest <<D>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<B>>
+Entry found in LorvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant3], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant3], inside region of interest <<C>>
+Entry found in Lor_OxvsOx Cmpd8vsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsOx OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8vsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in OxvsLor Cmpd8vsLor [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsLor Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<B>>
+Symbol : SA_RS12550 occurred 14 times during the 120 comparisons
+Entry found in Cmpd8vsLor OxvsLor [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in LorvsUn OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8_Ox OxvsLor [Quadrant2], inside region of interest <<E>>
+Entry found in Lor_OxvsOx Cmpd8vsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8_Ox [Quadrant3], inside region of interest <<D>>
+Entry found in Lor_OxvsOx OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Lor_OxvsUn OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in OxvsLor Cmpd8vsLor [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsLor Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<B>>
+Entry found in OxvsLor Lor_OxvsCmpd8_Ox [Quadrant4], inside region of interest <<D>>
+Symbol : SA_RS14250 occurred 14 times during the 120 comparisons
+Entry found in Cmpd8vsUn Cmpd8_OxvsOx [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsUn [Quadrant1], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Cmpd8_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8_Ox [Quadrant4], inside region of interest <<D>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant1], inside region of interest <<D>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsOx [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant4], inside region of interest <<D>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsOx [Quadrant1], inside region of interest <<D>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn OxvsCmpd8 [Quadrant4], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsOx [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsOx [Quadrant2], inside region of interest <<C>>
+Symbol : SA_RS14255 occurred 17 times during the 120 comparisons
+Entry found in Cmpd8vsUn Cmpd8_OxvsOx [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsUn [Quadrant1], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Cmpd8_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8_Ox [Quadrant4], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant1], inside region of interest <<D>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsOx [Quadrant1], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn LorvsUn [Quadrant1], inside region of interest <<D>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant4], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsOx [Quadrant1], inside region of interest <<D>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn OxvsCmpd8 [Quadrant4], inside region of interest <<B>>
+Entry found in LorvsUn Cmpd8_OxvsOx [Quadrant1], inside region of interest <<E>>
+Entry found in LorvsUn Cmpd8_OxvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsOx [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsOx [Quadrant2], inside region of interest <<C>>
+Symbol : SA_RS01295 occurred 13 times during the 120 comparisons
+Entry found in Cmpd8vsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsUn [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8vsUn OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsUn OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in LorvsUn Cmpd8vsUn [Quadrant3], inside region of interest <<C>>
+Entry found in LorvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in LorvsUn OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsOx [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 OxvsLor [Quadrant1], inside region of interest <<B>>
+Symbol : SA_RS03775 occurred 20 times during the 120 comparisons
+Entry found in Cmpd8vsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsUn [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<D>>
+Entry found in Cmpd8vsUn Lor_OxvsOx [Quadrant3], inside region of interest <<D>>
+Entry found in Cmpd8vsUn OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsUn OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<D>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant3], inside region of interest <<D>>
+Entry found in Cmpd8_OxvsOx OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsOx [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<D>>
+Entry found in OxvsCmpd8 Lor_OxvsOx [Quadrant4], inside region of interest <<D>>
+Entry found in OxvsCmpd8 OxvsLor [Quadrant1], inside region of interest <<B>>
+Symbol : SA_RS03780 occurred 20 times during the 120 comparisons
+Entry found in Cmpd8vsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsUn [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8vsUn Lor_OxvsOx [Quadrant3], inside region of interest <<D>>
+Entry found in Cmpd8vsUn OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsUn OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant3], inside region of interest <<D>>
+Entry found in Cmpd8_OxvsOx OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsOx [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsOx [Quadrant4], inside region of interest <<D>>
+Entry found in OxvsCmpd8 OxvsLor [Quadrant1], inside region of interest <<B>>
+Symbol : SA_RS05690 occurred 15 times during the 120 comparisons
+Entry found in Cmpd8vsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Lor_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8vsUn OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsUn OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsOx [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsOx [Quadrant4], inside region of interest <<B>>
+Entry found in OxvsCmpd8 OxvsLor [Quadrant1], inside region of interest <<B>>
+Symbol : SA_RS05695 occurred 15 times during the 120 comparisons
+Entry found in Cmpd8vsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Lor_OxvsOx [Quadrant3], inside region of interest <<D>>
+Entry found in Cmpd8vsUn OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsUn OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant3], inside region of interest <<D>>
+Entry found in Cmpd8_OxvsOx OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<D>>
+Entry found in Cmpd8_OxvsUn OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsOx [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsOx [Quadrant4], inside region of interest <<D>>
+Entry found in OxvsCmpd8 OxvsLor [Quadrant1], inside region of interest <<B>>
+Symbol : SA_RS10065 occurred 24 times during the 120 comparisons
+Entry found in Cmpd8vsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsUn [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8vsUn Lor_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8vsUn OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in LorvsUn Cmpd8vsUn [Quadrant3], inside region of interest <<C>>
+Entry found in LorvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in LorvsUn OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in LorvsUn OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsOx OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsOx [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsOx [Quadrant4], inside region of interest <<B>>
+Entry found in OxvsCmpd8 OxvsLor [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Symbol : SA_RS12660 occurred 44 times during the 120 comparisons
+Entry found in Cmpd8vsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8vsUn Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8vsUn Lor_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8vsUn Lor_OxvsUn [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8vsUn OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8vsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn LorvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8vsUn [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<B>>
+Entry found in LorvsUn Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<B>>
+Entry found in LorvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<B>>
+Entry found in LorvsUn OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in LorvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant4], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8_Ox OxvsLor [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsOx OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Lor_OxvsUn OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsOx [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsOx [Quadrant4], inside region of interest <<B>>
+Entry found in OxvsCmpd8 OxvsLor [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsLor Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Symbol : SA_RS13770 occurred 4 times during the 120 comparisons
+Entry found in Cmpd8vsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8vsUn Cmpd8_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Symbol : SA_RS05670 occurred 11 times during the 120 comparisons
+Entry found in Cmpd8vsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8vsUn OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsUn [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn OxvsCmpd8 [Quadrant2], inside region of interest <<E>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsOx [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsOx [Quadrant4], inside region of interest <<B>>
+Symbol : SA_RS12670 occurred 17 times during the 120 comparisons
+Entry found in Cmpd8vsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8vsUn OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsLor [Quadrant3], inside region of interest <<D>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsUn [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<D>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsLor [Quadrant2], inside region of interest <<D>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant3], inside region of interest <<D>>
+Entry found in Cmpd8_OxvsOx OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsCmpd8 Cmpd8vsLor [Quadrant4], inside region of interest <<D>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsOx [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<D>>
+Entry found in OxvsCmpd8 Lor_OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in OxvsCmpd8 Lor_OxvsOx [Quadrant4], inside region of interest <<D>>
+Entry found in OxvsCmpd8 OxvsLor [Quadrant1], inside region of interest <<B>>
+Symbol : SA_RS12675 occurred 24 times during the 120 comparisons
+Entry found in Cmpd8vsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8vsUn OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8vsUn OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsOx Cmpd8vsUn [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8 [Quadrant2], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8_Ox [Quadrant2], inside region of interest <<D>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsOx OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn OxvsCmpd8 [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8_Ox OxvsLor [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsOx OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsOx [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<D>>
+Entry found in OxvsCmpd8 Lor_OxvsOx [Quadrant4], inside region of interest <<B>>
+Entry found in OxvsCmpd8 OxvsLor [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsLor Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<D>>
+Entry found in OxvsUn Cmpd8_OxvsOx [Quadrant4], inside region of interest <<E>>
+Entry found in OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in OxvsUn OxvsLor [Quadrant1], inside region of interest <<E>>
+Symbol : SA_RS09835 occurred 28 times during the 120 comparisons
+Entry found in Cmpd8_OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsOx [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsLor Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsLor OxvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsOx Lor_OxvsLor [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsCmpd8 [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn OxvsLor [Quadrant1], inside region of interest <<D>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsCmpd8 Lor_OxvsLor [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in OxvsLor Lor_OxvsLor [Quadrant1], inside region of interest <<E>>
+Entry found in OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<C>>
+Symbol : SA_RS05800 occurred 25 times during the 120 comparisons
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn LorvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsOx OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in OxvsLor Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<A>>
+Symbol : SA_RS05795 occurred 18 times during the 120 comparisons
+Entry found in Cmpd8_OxvsOx Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn LorvsUn [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<C>>
+Entry found in LorvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in LorvsUn Cmpd8_OxvsUn [Quadrant3], inside region of interest <<B>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Symbol : SA_RS05730 occurred 22 times during the 120 comparisons
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsOx OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn LorvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in LorvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsOx OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsOx [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsOx [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 OxvsLor [Quadrant1], inside region of interest <<A>>
+Symbol : SA_RS15060 occurred 16 times during the 120 comparisons
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsOx OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn LorvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in LorvsUn Cmpd8_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsOx OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Symbol : SA_RS12490 occurred 22 times during the 120 comparisons
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsOx OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn LorvsUn [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in LorvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in LorvsUn Cmpd8_OxvsUn [Quadrant3], inside region of interest <<B>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<B>>
+Entry found in LorvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant3], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant3], inside region of interest <<C>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsOx OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in OxvsLor Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<B>>
+Symbol : SA_RS12525 occurred 15 times during the 120 comparisons
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsOx OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn LorvsUn [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in LorvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in LorvsUn Cmpd8_OxvsUn [Quadrant3], inside region of interest <<B>>
+Entry found in LorvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsOx OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Symbol : SA_RS01280 occurred 8 times during the 120 comparisons
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant3], inside region of interest <<E>>
+Entry found in LorvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<E>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Lor_OxvsOx Cmpd8vsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8_Ox [Quadrant3], inside region of interest <<D>>
+Entry found in Lor_OxvsOx OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Symbol : SA_RS03250 occurred 8 times during the 120 comparisons
+Entry found in Cmpd8_OxvsOx Lor_OxvsOx [Quadrant3], inside region of interest <<E>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<E>>
+Entry found in LorvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<E>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8_Ox [Quadrant3], inside region of interest <<D>>
+Entry found in Lor_OxvsOx OxvsLor [Quadrant2], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Symbol : SA_RS09190 occurred 11 times during the 120 comparisons
+Entry found in Cmpd8_OxvsOx OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn LorvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in Cmpd8_OxvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn OxvsCmpd8 [Quadrant2], inside region of interest <<A>>
+Entry found in LorvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsOx [Quadrant4], inside region of interest <<A>>
+Entry found in OxvsCmpd8 OxvsLor [Quadrant1], inside region of interest <<A>>
+Symbol : SA_RS12680 occurred 5 times during the 120 comparisons
+Entry found in Cmpd8_OxvsOx OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in Lor_OxvsOx OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in OxvsCmpd8 Cmpd8_OxvsOx [Quadrant4], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsOx [Quadrant4], inside region of interest <<B>>
+Entry found in OxvsCmpd8 OxvsLor [Quadrant1], inside region of interest <<A>>
+Symbol : SA_RS05000 occurred 7 times during the 120 comparisons
+Entry found in Cmpd8_OxvsUn LorvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in LorvsUn Cmpd8_OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Symbol : SA_RS14495 occurred 14 times during the 120 comparisons
+Entry found in Cmpd8_OxvsUn LorvsUn [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<C>>
+Entry found in LorvsUn Cmpd8_OxvsUn [Quadrant3], inside region of interest <<B>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Symbol : SA_RS15065 occurred 14 times during the 120 comparisons
+Entry found in Cmpd8_OxvsUn LorvsUn [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<C>>
+Entry found in LorvsUn Cmpd8_OxvsUn [Quadrant3], inside region of interest <<B>>
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Symbol : SA_RS06495 occurred 3 times during the 120 comparisons
+Entry found in Cmpd8_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<B>>
+Symbol : SA_RS12505 occurred 8 times during the 120 comparisons
+Entry found in Cmpd8_OxvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant3], inside region of interest <<C>>
+Entry found in Lor_OxvsUn Cmpd8_OxvsOx [Quadrant3], inside region of interest <<D>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant3], inside region of interest <<D>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsUn OxvsLor [Quadrant2], inside region of interest <<B>>
+Symbol : SA_RS12750 occurred 15 times during the 120 comparisons
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsOx [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<E>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Symbol : SA_RS12540 occurred 13 times during the 120 comparisons
+Entry found in LorvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in LorvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<C>>
+Entry found in LorvsUn OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 LorvsUn [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsOx OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsUn OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in OxvsLor Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<A>>
+Symbol : SA_RS12710 occurred 3 times during the 120 comparisons
+Entry found in LorvsUn Lor_OxvsOx [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsOx OxvsLor [Quadrant4], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant1], inside region of interest <<C>>
+Symbol : SA_RS12535 occurred 8 times during the 120 comparisons
+Entry found in LorvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in LorvsUn OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsOx OxvsLor [Quadrant2], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsOx [Quadrant3], inside region of interest <<C>>
+Entry found in Lor_OxvsUn OxvsLor [Quadrant2], inside region of interest <<C>>
+Entry found in OxvsLor Lor_OxvsCmpd8 [Quadrant4], inside region of interest <<B>>
+Symbol : SA_RS05930 occurred 2 times during the 120 comparisons
+Entry found in LorvsUn Lor_OxvsUn [Quadrant3], inside region of interest <<C>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant3], inside region of interest <<D>>
+Symbol : Novel00428 occurred 12 times during the 120 comparisons
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsUn Lor_OxvsLor [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsLor [Quadrant1], inside region of interest <<B>>
+Symbol : Novel00429 occurred 9 times during the 120 comparisons
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsCmpd8 OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in Lor_OxvsLor Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in Lor_OxvsUn OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<A>>
+Entry found in OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<B>>
+Entry found in OxvsCmpd8 Lor_OxvsLor [Quadrant1], inside region of interest <<B>>
+Symbol : Novel00070 occurred 3 times during the 120 comparisons
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant1], inside region of interest <<D>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsUn [Quadrant1], inside region of interest <<B>>
+Entry found in Lor_OxvsUn Lor_OxvsCmpd8 [Quadrant1], inside region of interest <<C>>
+Symbol : SA_RS12195 occurred 4 times during the 120 comparisons
+Entry found in Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox [Quadrant3], inside region of interest <<A>>
+Entry found in Lor_OxvsCmpd8 Lor_OxvsOx [Quadrant3], inside region of interest <<B>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8 [Quadrant3], inside region of interest <<C>>
+Entry found in Lor_OxvsOx Lor_OxvsCmpd8_Ox [Quadrant3], inside region of interest <<C>>

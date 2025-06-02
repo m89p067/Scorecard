@@ -1,0 +1,13 @@
+{
+    "SA_RS12190": {
+        "Exp Cond": [
+            "Lor_OxvsCmpd8 Lor_OxvsCmpd8_Ox"
+        ],
+        "Q": [
+            "Q3"
+        ],
+        "ROI": [
+            "B"
+        ]
+    }
+}
