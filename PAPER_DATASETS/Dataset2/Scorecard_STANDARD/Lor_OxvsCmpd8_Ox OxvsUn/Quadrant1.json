@@ -1,0 +1,151 @@
+{
+    "A": [
+        "SA_RS08315",
+        "SA_RS14740",
+        "SA_RS13430"
+    ],
+    "B": [
+        "SA_RS09770"
+    ],
+    "C": [
+        "Novel00071",
+        "SA_RS08310"
+    ],
+    "D": [],
+    "E": [],
+    "A_x": [
+        3.453566574,
+        3.267257387,
+        4.435266017
+    ],
+    "B_x": [
+        3.321429526
+    ],
+    "C_x": [
+        2.49634741,
+        2.968368983
+    ],
+    "D_x": [],
+    "E_x": [],
+    "A_y": [
+        3.025061839,
+        3.515224205,
+        3.667980448
+    ],
+    "B_y": [
+        2.834778396
+    ],
+    "C_y": [
+        3.867887448,
+        3.176381455
+    ],
+    "D_y": [],
+    "E_y": [],
+    "A_pval_x": [
+        3.47e-09,
+        0.003470453,
+        6.45e-15
+    ],
+    "A_pval_y": [
+        0.002117539,
+        0.000626328,
+        0.000626328
+    ],
+    "B_pval_x": [
+        1.85e-07
+    ],
+    "B_pval_y": [
+        0.02062755
+    ],
+    "C_pval_x": [
+        0.00056352,
+        1.65e-06
+    ],
+    "C_pval_y": [
+        0.002117539,
+        0.027888952
+    ],
+    "D_pval_x": [],
+    "D_pval_y": [],
+    "E_pval_x": [],
+    "E_pval_y": [],
+    "COLORS": [
+        "goldenrod",
+        "limegreen",
+        "dodgerblue",
+        "sandybrown",
+        "crimson"
+    ],
+    "params": {
+        "FC cond x": "Lor_OxvsCmpd8_Ox_log2FoldChange",
+        "FC cond y": "OxvsUn_log2FoldChange",
+        "padj cond x": "Lor_OxvsCmpd8_Ox_padj",
+        "padj cond y": "OxvsUn_padj",
+        "incl aver": false,
+        "base_dir": "D:/GED_VIS_PROJECT/Dataset3_REDO",
+        "filename": "USA100_comp.CSV",
+        "zscore": false,
+        "Treatment1 name": "Lor_OxvsCmpd8_Ox",
+        "Treatment2 name": "OxvsUn",
+        "Control name": "Un",
+        "fig_size": 10,
+        "save_dir": "D:/GED_VIS_PROJECT/Dataset3_REDO/Scorecard_STANDARD",
+        "colors": [
+            "goldenrod",
+            "limegreen",
+            "dodgerblue",
+            "sandybrown",
+            "crimson"
+        ],
+        "other_colors": [
+            "darkcyan",
+            "indigo",
+            "orangered"
+        ],
+        "th_fold_change": 2,
+        "th_significance": 0.05,
+        "font_size_quadrants": 8,
+        "font_size_examples": 16,
+        "marker_trasp": [
+            0.95,
+            0.8,
+            0.65,
+            0.45
+        ],
+        "rect_trasp": [
+            0.25,
+            0.15,
+            0.4
+        ],
+        "rect_colors": [
+            "silver",
+            "lightgrey",
+            "darkgrey"
+        ],
+        "markers": [
+            "o",
+            "^",
+            "s",
+            "*",
+            "X",
+            "p",
+            "."
+        ],
+        "markers_sizes": [
+            14,
+            12,
+            10,
+            8
+        ],
+        "is_example": false,
+        "use_notation": false,
+        "gene_name": "gene_id",
+        "multiplication factor": 1.5,
+        "CSV delimiter": ";",
+        "Log Epsilon": 1e-10,
+        "Scorecard title": "MRSA USA100 cultures",
+        "labels font size": 18,
+        "Total entries": 3164,
+        "Quadrant entries": 838
+    }
+}
