@@ -1,1 +1,1 @@
-Code and data as reported in the academic article *A Scorecard for information synthesis in multiple experiments]{A scorecard for information synthesis in multiple experimental conditions: application to bacterial biofilm matrix transcriptomics*
+Code and data as reported in the academic article *A scorecard for information synthesis in multiple experimental conditions: application to bacterial biofilm matrix transcriptomics*
