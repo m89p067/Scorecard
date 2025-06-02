@@ -2404,7 +2404,7 @@ def multiple_bars(my_directory,height=0.4, try_adj_test=False,text_adj_x=0.1,tex
         str_y=[str(x) for x in all_y]
         lx=list(map(' '.join, zip(labels_x, str_x)))
         ly=list(map(' '.join, zip(labels_y, str_y)))
-        if len(remove_string)>0 and if Position>0:
+        if len(remove_string)>0 and Position>0:
             res_genes = list(map(lambda st: str.replace(st, remove_string, ""), all_genes))
         
             y_pos = np.arange(Position)
