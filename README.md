@@ -5,6 +5,8 @@ This collection of functions creates a scorecard to compare wet-lab experimental
 
 ![Scorecard example](examples/Scorecard_examples.png?raw=True)
 
+Additional information available in : Nascimben, M., Rimondini, L. A Scorecard for Information Synthesis in Multiple Experimental Conditions: Application to Bacterial Biofilm Matrix Transcriptomics. Curr Microbiol 82, 497 (2025). https://doi.org/10.1007/s00284-025-04435-3
+
 ## Quick introduction
 At the beginning of the file include the import statement, for example:
 ```
