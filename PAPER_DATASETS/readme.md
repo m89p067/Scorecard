@@ -1,1 +1,1 @@
-Code and data as reported in the academic article *A scorecard for information synthesis in multiple experimental conditions: application to bacterial biofilm matrix transcriptomics*
+Code and data as reported in the academic article *Nascimben, M., Rimondini, L. A Scorecard for Information Synthesis in Multiple Experimental Conditions: Application to Bacterial Biofilm Matrix Transcriptomics. Curr Microbiol 82, 497 (2025). https://doi.org/10.1007/s00284-025-04435-3*
